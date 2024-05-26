@@ -1,11 +1,25 @@
 'use client'
 
+import { useEffect, useState } from 'react'
 import { Card, CardContent, CardMedia, Typography, Box, Grid, Container, CircularProgress } from '@mui/material'
 import Link from 'next/link'
 import useGithubStats from 'react-github-user-stats'
 
 const GithubStats = () => {
   const { userData: user }: any = useGithubStats("lluuvvii")
+  const [val, setVal] = useState([])
+
+  const getData = async () => {
+    const response = await fetch('https://github-contributions-api.jogruber.de/v4/lluuvvii')
+
+    const data = await response.json()
+
+    setVal(data)
+  }
+
+  useEffect(() => {
+    getData()
+  }, [])
 
   return (
     <>
@@ -56,6 +70,8 @@ const GithubStats = () => {
                 GitHub Profile
               </Link>
             </Typography>
+            <Typography variant='h2'>Github Contribution Stats</Typography>
+            <Typography>{JSON.stringify(val)}</Typography>
           </CardContent>
         </Card >
       }
