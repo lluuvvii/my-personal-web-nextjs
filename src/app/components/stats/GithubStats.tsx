@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { Card, CardContent, CardMedia, Typography, Box, Grid, Container, FormControl, InputLabel, Select, MenuItem, CardActions, LinearProgress } from '@mui/material'
+import { Card, CardContent, CardMedia, Typography, Box, FormControl, InputLabel, Select, MenuItem, CardActions, LinearProgress } from '@mui/material'
 import Link from 'next/link'
 import useGithubStats from 'react-github-user-stats'
 import GitHubCalendar from 'react-github-calendar'
