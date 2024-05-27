@@ -1,5 +1,7 @@
+'use client'
+
 import { Box, Container } from '@mui/material'
-import GithubStats from '../components/stats/GithubStats'
+import GithubStats from './components/stats/GithubStats'
 
 const Home = () => {
   return (
