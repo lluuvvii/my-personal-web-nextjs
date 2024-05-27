@@ -17,10 +17,10 @@ const GithubStats = () => {
 
   return (
     <Card sx={{ maxWidth: 600, margin: 'auto', mt: 4 }} variant='outlined'>
-      {user ? <CardMedia component="img" alt={user.name} height="140" image={user.avatar_url} /> : null}
+      {user ? <CardMedia component="img" alt={user.name} image={user.avatar_url} sx={{ height: 140 }} /> : null}
       <CardContent>
         {!user ?
-          <Box sx={{ width: '100%' }}>
+          <Box sx={{ width: '100%', mb: 2 }}>
             <LinearProgress />
           </Box>
           :
