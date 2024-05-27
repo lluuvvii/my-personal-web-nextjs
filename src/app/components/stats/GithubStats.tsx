@@ -7,7 +7,7 @@ import useGithubStats from 'react-github-user-stats'
 import GitHubCalendar from 'react-github-calendar'
 
 const GithubStats = () => {
-  const { userData: user }: any = useGithubStats("lluuvvii")
+  const { userData: user }: any = useGithubStats('lluuvvii')
   const currentYear = new Date().getFullYear()
   const [year, setYear] = useState<string>(currentYear.toString())
 
