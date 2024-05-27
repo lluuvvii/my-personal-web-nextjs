@@ -1,12 +1,19 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { Card, CardContent, CardMedia, Typography, Box, Grid, Container, CircularProgress } from '@mui/material'
+import { Card, CardContent, CardMedia, Typography, Box, Grid, Container, CircularProgress, FormControl, InputLabel, Select, MenuItem } from '@mui/material'
 import Link from 'next/link'
 import useGithubStats from 'react-github-user-stats'
+import GitHubCalendar from 'react-github-calendar'
+
+type GitHubCalendarComponentProps = {
+  username: string;
+};
 
 const GithubStats = () => {
   const { userData: user }: any = useGithubStats("lluuvvii")
+  const currentYear = new Date().getFullYear()
+  const [year, setYear] = useState<string>(currentYear.toString())
   const [val, setVal] = useState([])
 
   const getData = async () => {
@@ -20,6 +27,10 @@ const GithubStats = () => {
   useEffect(() => {
     getData()
   }, [])
+
+  const handleChange = (event: any) => {
+    setYear(event.target.value as string)
+  }
 
   return (
     <>
@@ -70,10 +81,32 @@ const GithubStats = () => {
                 GitHub Profile
               </Link>
             </Typography>
-            <Typography variant='h2'>Github Contribution Stats</Typography>
-            <Typography>{JSON.stringify(val)}</Typography>
+            <Card>
+              <CardContent>
+                <Typography variant="h5" component="div" gutterBottom>
+                  GitHub Contributions
+                </Typography>
+                <FormControl fullWidth variant="outlined" margin="normal">
+                  <InputLabel id="year-select-label">Year</InputLabel>
+                  <Select
+                    labelId="year-select-label"
+                    id="year-select"
+                    value={year}
+                    onChange={handleChange}
+                    label="Year"
+                  >
+                    {Array.from({ length: 5 }, (_, i) => currentYear - i).map(yearOption => (
+                      <MenuItem key={yearOption} value={yearOption.toString()}>
+                        {yearOption}
+                      </MenuItem>
+                    ))}
+                  </Select>
+                </FormControl>
+                <GitHubCalendar username='lluuvvii' colorScheme="light" year={parseInt(year)} />
+              </CardContent>
+            </Card>
           </CardContent>
-        </Card >
+        </Card>
       }
     </>
   )
