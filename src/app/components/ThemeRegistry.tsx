@@ -2,10 +2,13 @@
 
 import { ReactNode } from 'react';
 import { CssBaseline, ThemeProvider, createTheme } from '@mui/material';
+import { grey, red } from '@mui/material/colors';
 
 const theme = createTheme({
   palette: {
     mode: 'light',
+    primary: red,
+    secondary: grey
   },
 });
 

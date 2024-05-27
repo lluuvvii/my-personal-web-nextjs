@@ -1,18 +1,12 @@
-import { Box, Container, Typography, Button } from '@mui/material'
-import Link from 'next/link'
+import { Box, Container } from '@mui/material'
+import { ReactNode } from 'react'
+import GithubStats from '../components/stats/GithubStats'
 
-const Home = () => {
+const Home = ({ children }: { children: ReactNode }) => {
   return (
     <Container>
       <Box sx={{ my: 4 }}>
-        <Typography variant="h3" component="h1" gutterBottom>
-          Welcome to My Portfolio
-        </Typography>
-        <Link href="/stats" passHref>
-          <Button variant="contained" color="primary">
-            View GitHub Stats
-          </Button>
-        </Link>
+        <GithubStats />
       </Box>
     </Container>
   )
