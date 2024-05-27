@@ -1,5 +1,3 @@
-'use client'
-
 import { Box, Container } from '@mui/material'
 import GithubStats from '../components/stats/GithubStats'
 
