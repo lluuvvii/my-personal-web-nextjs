@@ -72,7 +72,7 @@ const GithubStats = () => {
                 onChange={handleChange}
                 label="Year"
               >
-                {Array.from({ length: currentYear - 2021 }, (_, i) => currentYear - i).map(yearOption => (
+                {Array.from({ length: currentYear - 2022 + 1 }, (_, i) => currentYear - i).map(yearOption => (
                   <MenuItem key={yearOption} value={yearOption.toString()}>
                     {yearOption}
                   </MenuItem>
