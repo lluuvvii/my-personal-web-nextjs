@@ -12,6 +12,9 @@ const config: Config = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        'blue-pattern': "url('/path/to/blue-pattern.png')",
+        'red-pattern': "url('/path/to/red-pattern.png')",
+        'yellow-pattern': "url('/path/to/yellow-pattern.png')",
       },
     },
   },
