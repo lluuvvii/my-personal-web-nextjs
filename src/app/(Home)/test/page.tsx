@@ -1,30 +1,23 @@
 'use client'
 
 import ZigzagContainer from '@/app/components/materials/ZigzagContainer';
-import { AppBar, Box, Button, Collapse, Drawer, Grid, Slide, Stack, Typography } from '@mui/material';
+import { AppBar, Box, Button, Collapse, Container, Drawer, Grid, Slide, Stack, Typography, useScrollTrigger } from '@mui/material';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useEffect, useState } from 'react';
+
+const HideOnScroll = ({ children }: any) => {
+  const trigger = useScrollTrigger();
+
+  return (
+    <Slide appear={false} direction="down" in={!trigger} timeout={400}>
+      {children}
+    </Slide>
+  );
+};
 
 const BackgroundContainer = () => {
   const [open, setOpen] = useState(false)
-  const [defaultWidth, setDefaultWidth] = useState('100px');
-  const [defaultHeight, setDefaultHeight] = useState('100px');
-
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const handleResize = () => {
-        setDefaultWidth(`${window.innerWidth}px`);
-        setDefaultHeight(`${window.innerHeight}px`);
-      };
-
-      handleResize(); // Set default size on mount
-      window.addEventListener('resize', handleResize);
-
-      return () => {
-        window.removeEventListener('resize', handleResize);
-      };
-    }
-  }, []);
   return (
     <>
       <Drawer
@@ -37,9 +30,9 @@ const BackgroundContainer = () => {
           },
         }}>
         <Slide in={open} direction="right" timeout={400}>
-          <Box sx={{ height: '100vh', width: '220px' }}>
+          <Box sx={{ width: '220px' }}>
             <Box sx={{ overflow: 'hidden', transform: 'translate(-15%, 0%)' }}>
-              <Box sx={{ transform: 'rotate(3deg)' }}>
+              <Box sx={{ transform: 'rotate(3deg)', marginLeft: '-5%' }}>
                 <ZigzagContainer width="200px" height="100vh" color="red">
                   <Grid container padding="50px">
                     <Grid item>
@@ -56,17 +49,27 @@ const BackgroundContainer = () => {
           </Box>
         </Slide>
       </Drawer>
-      <AppBar position="static" color="transparent" sx={{ boxShadow: 'none' }}>
-        <Slide in={open} direction="down" timeout={400}>
+      <HideOnScroll>
+        <AppBar position="fixed" color="transparent" sx={{ boxShadow: 'none' }}>
           <Box sx={{ height: 100 }}>
             <Box sx={{ overflow: 'hidden', transform: 'translate(0%, -50%)' }}>
-              <Box sx={{ transform: 'rotate(-3deg)', marginBottom: '5%' }}>
-                <ZigzagContainer width="100%" height="200px" color="blue" />
+              <Box sx={{ transform: 'rotate(3deg)', marginBottom: '5%' }}>
+                <ZigzagContainer width="100%" height="200px" color="blue">
+                  <Grid container padding="50px" justifyContent="flex-end">
+                    <Grid item>
+                      <Stack direction="column" spacing={2}>
+                        <Typography color="white">Hallo</Typography>
+                        <Typography color="white">Hallo</Typography>
+                        <Typography color="white">Hallo</Typography>
+                      </Stack>
+                    </Grid>
+                  </Grid>
+                </ZigzagContainer>
               </Box>
             </Box>
           </Box>
-        </Slide>
-      </AppBar>
+        </AppBar>
+      </HideOnScroll>
       <Grid container spacing={1} alignItems="center" justifyContent="center">
         {/* <Grid item>
           <ZigzagContainer width="800px" height="500px" color="black">
@@ -101,8 +104,100 @@ const BackgroundContainer = () => {
         <Grid item>
           <Typography variant='overline' sx={{ fontSize: 20 }}>Reference : Sonic Generations UI theme</Typography>
           <Image src="/assets/img/sonic_generations_background_by_sonicguru_d66i4ax.png" alt="sonicbg" width={500} height={500} />
+          <Image src="/assets/img/sonic_generations_background_by_sonicguru_d66i4ax.png" alt="sonicbg" width={500} height={500} />
+          <Image src="/assets/img/sonic_generations_background_by_sonicguru_d66i4ax.png" alt="sonicbg" width={500} height={500} />
+          <Image src="/assets/img/sonic_generations_background_by_sonicguru_d66i4ax.png" alt="sonicbg" width={500} height={500} />
+          <Image src="/assets/img/sonic_generations_background_by_sonicguru_d66i4ax.png" alt="sonicbg" width={500} height={500} />
+          <Image src="/assets/img/sonic_generations_background_by_sonicguru_d66i4ax.png" alt="sonicbg" width={500} height={500} />
+          <Image src="/assets/img/sonic_generations_background_by_sonicguru_d66i4ax.png" alt="sonicbg" width={500} height={500} />
+          <Image src="/assets/img/sonic_generations_background_by_sonicguru_d66i4ax.png" alt="sonicbg" width={500} height={500} />
+          <Image src="/assets/img/sonic_generations_background_by_sonicguru_d66i4ax.png" alt="sonicbg" width={500} height={500} />
         </Grid>
       </Grid>
+      <Box component="footer">
+        <ZigzagContainer width="100%" height="200px" color="yellow">
+          {/* <Container maxWidth="lg">
+            <Grid container spacing={4}>
+              <Grid item xs={12} sm={4}>
+                <Typography variant="h6" gutterBottom>
+                  Company
+                </Typography>
+                <ul>
+                  <li>
+                    <Link href="#">
+                      About Us
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="#">
+                      Careers
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="#">
+                      Press
+                    </Link>
+                  </li>
+                </ul>
+              </Grid>
+              <Grid item xs={12} sm={4}>
+                <Typography variant="h6" gutterBottom>
+                  Support
+                </Typography>
+                <ul>
+                  <li>
+                    <Link href="#">
+                      Contact Us
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="#">
+                      Help Center
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="#">
+                      Privacy Policy
+                    </Link>
+                  </li>
+                </ul>
+              </Grid>
+              <Grid item xs={12} sm={4}>
+                <Typography variant="h6" gutterBottom>
+                  Follow Us
+                </Typography>
+                <ul>
+                  <li>
+                    <Link href="#">
+                      Facebook
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="#">
+                      Twitter
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="#">
+                      Instagram
+                    </Link>
+                  </li>
+                </ul>
+              </Grid>
+            </Grid>
+            <Box mt={5}>
+              <Typography variant="body2" color="text.secondary" align="center">
+                {'© '}
+                <Link color="inherit" href="https://yourwebsite.com/">
+                  Your Website
+                </Link>{' '}
+                {new Date().getFullYear()}
+                {'.'}
+              </Typography>
+            </Box>
+          </Container> */}
+        </ZigzagContainer>
+      </Box>
     </>
   );
 };
