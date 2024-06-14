@@ -103,7 +103,33 @@ const BackgroundContainer = (props: Props) => {
           </ZigzagContainer>
         </Grid> */}
         <Grid item>
-          <Button onClick={() => setOpen(!open)} variant='contained' color='secondary' sx={{ color: 'error.main' }}>Show</Button>
+          <Box
+            component={motion.div}
+            whileHover={{ scale: 1.2 }}
+            whileTap={{ scale: 1 }}
+          >
+            <Button
+              // onClick={() => setOpen(!open)}
+              variant='contained'
+              sx={{
+                color: 'error.main',
+                border: '5px solid',
+                borderColor: 'error.main',
+                borderRadius: '10px',
+                backgroundColor: 'white',
+                '&:hover': {
+                  backgroundColor: 'secondary.main',
+                  borderColor: 'error.main',
+                },
+                '&:active': {
+                  backgroundColor: 'secondary.main',
+                  borderColor: 'error.main',
+                },
+              }}
+            >
+              Show
+            </Button>
+          </Box>
         </Grid>
         <Grid item>
           <Box
@@ -119,9 +145,8 @@ const BackgroundContainer = (props: Props) => {
               backgroundColor: 'red',
               filter: 'drop-shadow(-2px 3px 5px rgba(0,0,0,0.5))'
             }}
-            initial={{ scale: 0.8 }}
-            whileHover={{ scale: 1 }}
-            whileTap={{ scale: 0.8 }}
+            whileHover={{ scale: 1.2 }}
+            whileTap={{ scale: 1 }}
           >
             <Box
               component={motion.div}
