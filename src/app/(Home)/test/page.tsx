@@ -1,13 +1,21 @@
 'use client'
 
 import ZigzagContainer from '@/app/components/materials/ZigzagContainer';
-import { AppBar, Box, Button, Collapse, Container, Drawer, Grid, List, ListItem, ListItemText, Slide, Stack, Typography, useScrollTrigger } from '@mui/material';
+import { AppBar, Box, Button, Collapse, Container, Drawer, Grid, List, ListItem, ListItemText, Slide, Stack, Toolbar, Typography, useScrollTrigger } from '@mui/material';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
-const HideOnScroll = ({ children }: any) => {
-  const trigger = useScrollTrigger();
+interface Props {
+  window?: () => Window;
+  children: React.ReactElement;
+}
+
+const HideOnScroll = (props: Props) => {
+  const { children, window } = props;
+  const trigger = useScrollTrigger({
+    target: window ? window() : undefined,
+  });
 
   return (
     <Slide appear={false} direction="down" in={!trigger} timeout={400}>
@@ -16,10 +24,31 @@ const HideOnScroll = ({ children }: any) => {
   );
 };
 
-const BackgroundContainer = () => {
+const BackgroundContainer = (props: Props) => {
   const [open, setOpen] = useState(false)
   return (
-    <Container>
+    <>
+      <HideOnScroll {...props}>
+        <AppBar position="fixed" color="transparent" sx={{ boxShadow: 'none' }}>
+          <Box sx={{ height: 100 }}>
+            <Box sx={{ overflow: 'hidden', transform: 'translate(0%, -50%)' }}>
+              <Box sx={{ transform: 'rotate(3deg)', marginBottom: '5%' }}>
+                <ZigzagContainer width="100%" height="200px" color="blue">
+                  <Grid container padding="50px" justifyContent="flex-end">
+                    <Grid item>
+                      <Stack direction="column" spacing={2}>
+                        <Typography color="white">Hallo</Typography>
+                        <Typography color="white">Hallo</Typography>
+                        <Typography color="white">Hallo</Typography>
+                      </Stack>
+                    </Grid>
+                  </Grid>
+                </ZigzagContainer>
+              </Box>
+            </Box>
+          </Box>
+        </AppBar>
+      </HideOnScroll>
       <Drawer
         anchor="left"
         open={open}
@@ -50,28 +79,7 @@ const BackgroundContainer = () => {
           </Box>
         </Slide>
       </Drawer>
-      <HideOnScroll>
-        <AppBar position="fixed" color="transparent" sx={{ boxShadow: 'none' }}>
-          <Box sx={{ height: 100 }}>
-            <Box sx={{ overflow: 'hidden', transform: 'translate(0%, -50%)' }}>
-              <Box sx={{ transform: 'rotate(3deg)', marginBottom: '5%' }}>
-                <ZigzagContainer width="100%" height="200px" color="blue">
-                  <Grid container padding="50px" justifyContent="flex-end">
-                    <Grid item>
-                      <Stack direction="column" spacing={2}>
-                        <Typography color="white">Hallo</Typography>
-                        <Typography color="white">Hallo</Typography>
-                        <Typography color="white">Hallo</Typography>
-                      </Stack>
-                    </Grid>
-                  </Grid>
-                </ZigzagContainer>
-              </Box>
-            </Box>
-          </Box>
-        </AppBar>
-      </HideOnScroll>
-      <Grid container spacing={1} alignItems="center" justifyContent="center">
+      <Grid container spacing={1} alignItems="center" justifyContent="center" sx={{ mt: 12 }}>
         {/* <Grid item>
           <ZigzagContainer width="800px" height="500px" color="black">
             <Box sx={{ transform: 'translate(0%, 10%)', position: 'absolute' }}>
@@ -100,7 +108,7 @@ const BackgroundContainer = () => {
           </ZigzagContainer>
         </Grid> */}
         <Grid item>
-          <Button onClick={() => setOpen(!open)} variant='contained' sx={{ color: 'error.main', backgroundColor: 'secondary.main' }}>Show</Button>
+          <Button onClick={() => setOpen(!open)} variant='contained' color='secondary' sx={{ color: 'error.main' }}>Show</Button>
         </Grid>
         <Grid item>
           <Typography variant='overline' sx={{ fontSize: 20 }}>Reference : Sonic Generations UI theme</Typography>
@@ -113,6 +121,56 @@ const BackgroundContainer = () => {
           <Image src="/assets/img/sonic_generations_background_by_sonicguru_d66i4ax.png" alt="sonicbg" width={500} height={500} />
           <Image src="/assets/img/sonic_generations_background_by_sonicguru_d66i4ax.png" alt="sonicbg" width={500} height={500} />
           <Image src="/assets/img/sonic_generations_background_by_sonicguru_d66i4ax.png" alt="sonicbg" width={500} height={500} />
+        </Grid>
+        <Grid item>
+          <Box
+            sx={{
+              position: 'relative',
+              width: '100px',
+              height: '100px',
+              borderRadius: '50%',
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              backgroundColor: 'red', // Warna lingkaran luar dengan opasitas
+              // '&::before': {
+              //   content: '""',
+              //   position: 'absolute',
+              //   top: '5%',
+              //   left: '5%',
+              //   width: '90px',
+              //   height: '90px',
+              //   backgroundColor: 'white', // Warna lingkaran dalam
+              //   borderRadius: '50%',
+              // },
+            }}
+          >
+            <Box
+              sx={{
+                position: 'relative',
+                width: '90px',
+                height: '90px',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                borderRadius: '50%',
+                backgroundColor: 'white', // Warna lingkaran luar dengan opasitas
+              }}
+            >
+              <Box
+                sx={{
+                  position: 'relative',
+                  width: '80px',
+                  height: '80px',
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  borderRadius: '50%',
+                  backgroundColor: 'red', // Warna lingkaran luar dengan opasitas
+                }}
+              ></Box>
+            </Box>
+          </Box>
         </Grid>
       </Grid>
       <Box component="footer">
@@ -199,7 +257,7 @@ const BackgroundContainer = () => {
           </Container> */}
         </ZigzagContainer>
       </Box>
-    </Container>
+    </>
   );
 };
 
