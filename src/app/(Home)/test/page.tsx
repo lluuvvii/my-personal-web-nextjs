@@ -109,7 +109,7 @@ const BackgroundContainer = (props: Props) => {
             whileTap={{ scale: 1 }}
           >
             <Button
-              // onClick={() => setOpen(!open)}
+              onClick={() => setOpen(!open)}
               variant='contained'
               sx={{
                 color: 'error.main',
