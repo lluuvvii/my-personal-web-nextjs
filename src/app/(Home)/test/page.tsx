@@ -5,6 +5,7 @@ import { AppBar, Box, Button, Collapse, Container, Drawer, Grid, List, ListItem,
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
+import { motion } from 'framer-motion';
 
 interface Props {
   window?: () => Window;
@@ -30,22 +31,16 @@ const BackgroundContainer = (props: Props) => {
     <>
       <HideOnScroll {...props}>
         <AppBar position="fixed" color="transparent" sx={{ boxShadow: 'none' }}>
-          <Box sx={{ height: 100 }}>
-            <Box sx={{ overflow: 'hidden', transform: 'translate(0%, -50%)' }}>
-              <Box sx={{ transform: 'rotate(3deg)', marginBottom: '5%' }}>
-                <ZigzagContainer width="100%" height="200px" color="blue">
-                  <Grid container padding="50px" justifyContent="flex-end">
-                    <Grid item>
-                      <Stack direction="column" spacing={2}>
-                        <Typography color="white">Hallo</Typography>
-                        <Typography color="white">Hallo</Typography>
-                        <Typography color="white">Hallo</Typography>
-                      </Stack>
-                    </Grid>
-                  </Grid>
-                </ZigzagContainer>
-              </Box>
-            </Box>
+          <Box>
+            <ZigzagContainer width="100%" height="100px" color="blue" bottom>
+              <Grid container padding="25px" justifyContent="flex-end">
+                <Grid item>
+                  <Stack direction="column" spacing={2}>
+                    <Typography color="white">Hallo</Typography>
+                  </Stack>
+                </Grid>
+              </Grid>
+            </ZigzagContainer>
           </Box>
         </AppBar>
       </HideOnScroll>
@@ -62,8 +57,8 @@ const BackgroundContainer = (props: Props) => {
         <Slide in={open} direction="right" timeout={400}>
           <Box sx={{ width: '220px' }}>
             <Box sx={{ overflow: 'hidden', transform: 'translate(-15%, 0%)' }}>
-              <Box sx={{ transform: 'rotate(3deg)', marginLeft: '-5%' }}>
-                <ZigzagContainer width="200px" height="100vh" color="red">
+              <Box sx={{ marginLeft: '-5%' }}>
+                <ZigzagContainer width="200px" height="100vh" color="red" right>
                   <Grid container padding="50px">
                     <Grid item>
                       <Stack direction="column" spacing={2}>
@@ -111,19 +106,8 @@ const BackgroundContainer = (props: Props) => {
           <Button onClick={() => setOpen(!open)} variant='contained' color='secondary' sx={{ color: 'error.main' }}>Show</Button>
         </Grid>
         <Grid item>
-          <Typography variant='overline' sx={{ fontSize: 20 }}>Reference : Sonic Generations UI theme</Typography>
-          <Image src="/assets/img/sonic_generations_background_by_sonicguru_d66i4ax.png" alt="sonicbg" width={500} height={500} />
-          <Image src="/assets/img/sonic_generations_background_by_sonicguru_d66i4ax.png" alt="sonicbg" width={500} height={500} />
-          <Image src="/assets/img/sonic_generations_background_by_sonicguru_d66i4ax.png" alt="sonicbg" width={500} height={500} />
-          <Image src="/assets/img/sonic_generations_background_by_sonicguru_d66i4ax.png" alt="sonicbg" width={500} height={500} />
-          <Image src="/assets/img/sonic_generations_background_by_sonicguru_d66i4ax.png" alt="sonicbg" width={500} height={500} />
-          <Image src="/assets/img/sonic_generations_background_by_sonicguru_d66i4ax.png" alt="sonicbg" width={500} height={500} />
-          <Image src="/assets/img/sonic_generations_background_by_sonicguru_d66i4ax.png" alt="sonicbg" width={500} height={500} />
-          <Image src="/assets/img/sonic_generations_background_by_sonicguru_d66i4ax.png" alt="sonicbg" width={500} height={500} />
-          <Image src="/assets/img/sonic_generations_background_by_sonicguru_d66i4ax.png" alt="sonicbg" width={500} height={500} />
-        </Grid>
-        <Grid item>
           <Box
+            component={motion.div}
             sx={{
               position: 'relative',
               width: '100px',
@@ -132,17 +116,66 @@ const BackgroundContainer = (props: Props) => {
               display: 'flex',
               justifyContent: 'center',
               alignItems: 'center',
-              backgroundColor: 'red', // Warna lingkaran luar dengan opasitas
-              // '&::before': {
-              //   content: '""',
-              //   position: 'absolute',
-              //   top: '5%',
-              //   left: '5%',
-              //   width: '90px',
-              //   height: '90px',
-              //   backgroundColor: 'white', // Warna lingkaran dalam
-              //   borderRadius: '50%',
-              // },
+              backgroundColor: 'red',
+              filter: 'drop-shadow(-2px 3px 5px rgba(0,0,0,0.5))'
+            }}
+            initial={{ scale: 0.8 }}
+            whileHover={{ scale: 1 }}
+            whileTap={{ scale: 0.8 }}
+          >
+            <Box
+              component={motion.div}
+              sx={{
+                position: 'relative',
+                width: '90px',
+                height: '90px',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                borderRadius: '50%',
+                backgroundColor: 'white',
+              }}
+            >
+              <Box
+                component={motion.div}
+                sx={{
+                  position: 'relative',
+                  width: '80px',
+                  height: '80px',
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  borderRadius: '50%',
+                  backgroundColor: 'red',
+                }}
+              >
+                <Box
+                  component={motion.div}
+                  sx={{
+                    position: 'relative',
+                    width: '60px',
+                    height: '60px',
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    borderRadius: '50%',
+                    backgroundColor: 'white',
+                  }}
+                >
+                </Box>
+              </Box>
+            </Box>
+          </Box>
+          {/* <Box
+            sx={{
+              position: 'relative',
+              width: '100px',
+              height: '100px',
+              borderRadius: '50%',
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              backgroundColor: 'red',
             }}
           >
             <Box
@@ -154,7 +187,7 @@ const BackgroundContainer = (props: Props) => {
                 justifyContent: 'center',
                 alignItems: 'center',
                 borderRadius: '50%',
-                backgroundColor: 'white', // Warna lingkaran luar dengan opasitas
+                backgroundColor: 'white',
               }}
             >
               <Box
@@ -166,18 +199,31 @@ const BackgroundContainer = (props: Props) => {
                   justifyContent: 'center',
                   alignItems: 'center',
                   borderRadius: '50%',
-                  backgroundColor: 'red', // Warna lingkaran luar dengan opasitas
+                  backgroundColor: 'red',
                 }}
-              ></Box>
+              >
+              </Box>
             </Box>
-          </Box>
+          </Box> */}
+        </Grid>
+        <Grid item>
+          <Typography variant='overline' sx={{ fontSize: 20 }}>Reference : Sonic Generations UI theme</Typography>
+        </Grid>
+        <Grid item>
+          <Image src="/assets/img/sonic_generations_background_by_sonicguru_d66i4ax.png" alt="sonicbg" width={500} height={500} />
+          <Image src="/assets/img/sonic_generations_background_by_sonicguru_d66i4ax.png" alt="sonicbg" width={500} height={500} />
+          <Image src="/assets/img/sonic_generations_background_by_sonicguru_d66i4ax.png" alt="sonicbg" width={500} height={500} />
+          <Image src="/assets/img/sonic_generations_background_by_sonicguru_d66i4ax.png" alt="sonicbg" width={500} height={500} />
+          <Image src="/assets/img/sonic_generations_background_by_sonicguru_d66i4ax.png" alt="sonicbg" width={500} height={500} />
+          <Image src="/assets/img/sonic_generations_background_by_sonicguru_d66i4ax.png" alt="sonicbg" width={500} height={500} />
+          <Image src="/assets/img/sonic_generations_background_by_sonicguru_d66i4ax.png" alt="sonicbg" width={500} height={500} />
         </Grid>
       </Grid>
       <Box component="footer">
-        <ZigzagContainer width="100%" height="200px" color="yellow">
-          {/* <Container maxWidth="lg">
-            <Grid container spacing={4}>
-              <Grid item xs={12} sm={4}>
+        <ZigzagContainer width="100%" height="500px" color="yellow" top>
+          <Grid container spacing={4} justifyContent='center' alignItems='center'>
+            <Grid item xs={12} sm={4}>
+              <Stack direction='column' alignItems='center'>
                 <Typography variant="h6" gutterBottom>
                   Company
                 </Typography>
@@ -198,8 +244,10 @@ const BackgroundContainer = (props: Props) => {
                     </Link>
                   </li>
                 </ul>
-              </Grid>
-              <Grid item xs={12} sm={4}>
+              </Stack>
+            </Grid>
+            <Grid item xs={12} sm={4}>
+              <Stack direction='column' alignItems='center'>
                 <Typography variant="h6" gutterBottom>
                   Support
                 </Typography>
@@ -220,8 +268,10 @@ const BackgroundContainer = (props: Props) => {
                     </Link>
                   </li>
                 </ul>
-              </Grid>
-              <Grid item xs={12} sm={4}>
+              </Stack>
+            </Grid>
+            <Grid item xs={12} sm={4}>
+              <Stack direction='column' alignItems='center'>
                 <Typography variant="h6" gutterBottom>
                   Follow Us
                 </Typography>
@@ -242,19 +292,19 @@ const BackgroundContainer = (props: Props) => {
                     </Link>
                   </li>
                 </ul>
-              </Grid>
+              </Stack>
             </Grid>
-            <Box mt={5}>
-              <Typography variant="body2" color="text.secondary" align="center">
-                {'© '}
-                <Link color="inherit" href="https://yourwebsite.com/">
-                  Your Website
-                </Link>{' '}
-                {new Date().getFullYear()}
-                {'.'}
-              </Typography>
-            </Box>
-          </Container> */}
+          </Grid>
+          <Box mt={5}>
+            <Typography variant="body2" color="text.secondary" align="center">
+              {'© '}
+              <Link color="inherit" href="https://yourwebsite.com/">
+                Your Website
+              </Link>{' '}
+              {new Date().getFullYear()}
+              {'.'}
+            </Typography>
+          </Box>
         </ZigzagContainer>
       </Box>
     </>
