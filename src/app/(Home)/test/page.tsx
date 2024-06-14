@@ -1,7 +1,7 @@
 'use client'
 
 import ZigzagContainer from '@/app/components/materials/ZigzagContainer';
-import { AppBar, Box, Button, Collapse, Container, Drawer, Grid, Slide, Stack, Typography, useScrollTrigger } from '@mui/material';
+import { AppBar, Box, Button, Collapse, Container, Drawer, Grid, List, ListItem, ListItemText, Slide, Stack, Typography, useScrollTrigger } from '@mui/material';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
@@ -19,8 +19,9 @@ const HideOnScroll = ({ children }: any) => {
 const BackgroundContainer = () => {
   const [open, setOpen] = useState(false)
   return (
-    <>
+    <Container>
       <Drawer
+        anchor="left"
         open={open}
         onClose={() => setOpen(!open)}
         sx={{
@@ -99,7 +100,7 @@ const BackgroundContainer = () => {
           </ZigzagContainer>
         </Grid> */}
         <Grid item>
-          <Button onClick={() => setOpen(!open)} variant='contained'>Show</Button>
+          <Button onClick={() => setOpen(!open)} variant='contained' sx={{ color: 'error.main', backgroundColor: 'secondary.main' }}>Show</Button>
         </Grid>
         <Grid item>
           <Typography variant='overline' sx={{ fontSize: 20 }}>Reference : Sonic Generations UI theme</Typography>
@@ -198,7 +199,7 @@ const BackgroundContainer = () => {
           </Container> */}
         </ZigzagContainer>
       </Box>
-    </>
+    </Container>
   );
 };
 
