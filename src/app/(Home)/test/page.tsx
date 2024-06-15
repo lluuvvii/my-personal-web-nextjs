@@ -1,29 +1,30 @@
 'use client'
 
 import ZigzagContainer from '@/app/components/materials/ZigzagContainer'
-import { AppBar, Box, Button, Collapse, Container, Drawer, Grid, List, ListItem, ListItemText, Slide, Stack, Toolbar, Typography, useScrollTrigger } from '@mui/material'
+import { AppBar, Box, Button, Drawer, Grid, Slide, Stack, Typography, useScrollTrigger } from '@mui/material'
 import Image from 'next/image'
 import Link from 'next/link'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { motion } from 'framer-motion'
+import Star from '@/app/components/materials/Star'
 
 interface Props {
-  window?: () => Window;
-  children: React.ReactElement;
+  window?: () => Window
+  children: React.ReactElement
 }
 
 const HideOnScroll = (props: Props) => {
-  const { children, window } = props;
+  const { children, window } = props
   const trigger = useScrollTrigger({
     target: window ? window() : undefined,
-  });
+  })
 
   return (
     <Slide appear={false} direction='down' in={!trigger} timeout={400}>
       {children}
     </Slide>
-  );
-};
+  )
+}
 
 const BackgroundContainer = (props: Props) => {
   const [open, setOpen] = useState(false)
@@ -31,16 +32,157 @@ const BackgroundContainer = (props: Props) => {
     <>
       <HideOnScroll {...props}>
         <AppBar position='fixed' color='transparent' sx={{ boxShadow: 'none' }}>
-          <Box>
+          <Box component='header'>
             <ZigzagContainer width='100%' height='100px' color='blue' bottom>
-              <Grid container padding='25px' justifyContent='flex-end'>
+              <Grid container p={2}>
                 <Grid item>
-                  <Stack direction='column' spacing={2}>
-                    <Typography color='white'>Hallo</Typography>
-                  </Stack>
+                  <Box
+                    component={motion.div}
+                    whileHover={{ scale: 1.2 }}
+                    whileTap={{ scale: 1 }}
+                  >
+                    <Button
+                      onClick={() => setOpen(!open)}
+                      variant='contained'
+                      sx={{
+                        color: 'error.main',
+                        border: '5px solid',
+                        borderColor: 'error.main',
+                        borderRadius: '10px',
+                        backgroundColor: 'white',
+                        '&:hover': {
+                          backgroundColor: 'white',
+                          borderColor: 'error.main',
+                        },
+                        '&:active': {
+                          backgroundColor: 'white.main',
+                          borderColor: 'error.main',
+                        },
+                      }}
+                    >
+                      Show
+                    </Button>
+                  </Box>
                 </Grid>
               </Grid>
             </ZigzagContainer>
+            <Box
+              component={motion.div}
+              sx={{
+                position: 'relative',
+                width: '100px',
+                height: '100px',
+                borderRadius: '50%',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                backgroundColor: 'red',
+                filter: 'drop-shadow(-2px 3px 5px rgba(0,0,0,0.5))',
+                top: '-70px',
+                left: '-60px'
+              }}
+              whileHover={{ scale: 1.2 }}
+              whileTap={{ scale: 1 }}
+            >
+              <Box
+                component={motion.div}
+                sx={{
+                  width: '90px',
+                  height: '90px',
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  borderRadius: '50%',
+                  backgroundColor: 'white',
+                }}
+              >
+                <Box
+                  component={motion.div}
+                  sx={{
+                    width: '80px',
+                    height: '80px',
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    borderRadius: '50%',
+                    backgroundColor: 'red',
+                  }}
+                >
+                  <Box
+                    component={motion.div}
+                    sx={{
+                      width: '60px',
+                      height: '60px',
+                      display: 'flex',
+                      justifyContent: 'center',
+                      alignItems: 'center',
+                      borderRadius: '50%',
+                      backgroundColor: 'white',
+                    }}
+                  >
+                  </Box>
+                </Box>
+              </Box>
+            </Box>
+            <Box
+              component={motion.div}
+              sx={{
+                position: 'relative',
+                width: '70px',
+                height: '70px',
+                borderRadius: '50%',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                backgroundColor: 'blue',
+                filter: 'drop-shadow(-2px 3px 5px rgba(0,0,0,0.5))',
+                top: '-150px',
+                left: '40%'
+              }}
+              whileHover={{ scale: 1.2 }}
+              whileTap={{ scale: 1 }}
+            >
+              <Box
+                component={motion.div}
+                sx={{
+                  width: '60px',
+                  height: '60px',
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  borderRadius: '50%',
+                  backgroundColor: 'yellow',
+                }}
+              >
+                <Box
+                  component={motion.div}
+                  sx={{
+                    width: '50px',
+                    height: '50px',
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    borderRadius: '50%',
+                    backgroundColor: 'blue',
+                  }}
+                >
+                  <Box
+                    component={motion.div}
+                    sx={{
+                      width: '30px',
+                      height: '30px',
+                      display: 'flex',
+                      justifyContent: 'center',
+                      alignItems: 'center',
+                      borderRadius: '50%',
+                      backgroundColor: 'yellow',
+                    }}
+                  >
+                  </Box>
+                </Box>
+              </Box>
+            </Box>
+            <Star width={100} height={100} color='white' />
           </Box>
         </AppBar>
       </HideOnScroll>
@@ -50,27 +192,20 @@ const BackgroundContainer = (props: Props) => {
         onClose={() => setOpen(!open)}
         sx={{
           '& .MuiPaper-root': {
-            backgroundColor: 'transparent', // Set your desired transparency
+            backgroundColor: 'transparent',
             boxShadow: 'none',
           },
         }}>
         <Slide in={open} direction='right' timeout={400}>
           <Box sx={{ width: '220px' }}>
-            <Box sx={{ overflow: 'hidden', transform: 'translate(-15%, 0%)' }}>
-              <Box sx={{ marginLeft: '-5%' }}>
-                <ZigzagContainer width='200px' height='100vh' color='red' right>
-                  <Grid container padding='50px'>
-                    <Grid item>
-                      <Stack direction='column' spacing={2}>
-                        <Typography color='white'>Hallo</Typography>
-                        <Typography color='white'>Hallo</Typography>
-                        <Typography color='white'>Hallo</Typography>
-                      </Stack>
-                    </Grid>
-                  </Grid>
-                </ZigzagContainer>
-              </Box>
-            </Box>
+            <ZigzagContainer width='200px' height='100vh' color='red' right>
+              <Grid container padding='50px'>
+                <Grid item>
+                  <Typography color='white'>Hallo</Typography>
+                  <Typography color='white'>Hallo</Typography>
+                </Grid>
+              </Grid>
+            </ZigzagContainer>
           </Box>
         </Slide>
       </Drawer>
@@ -103,136 +238,7 @@ const BackgroundContainer = (props: Props) => {
           </ZigzagContainer>
         </Grid> */}
         <Grid item>
-          <Box
-            component={motion.div}
-            whileHover={{ scale: 1.2 }}
-            whileTap={{ scale: 1 }}
-          >
-            <Button
-              onClick={() => setOpen(!open)}
-              variant='contained'
-              sx={{
-                color: 'error.main',
-                border: '5px solid',
-                borderColor: 'error.main',
-                borderRadius: '10px',
-                backgroundColor: 'white',
-                '&:hover': {
-                  backgroundColor: 'white',
-                  borderColor: 'error.main',
-                },
-                '&:active': {
-                  backgroundColor: 'white.main',
-                  borderColor: 'error.main',
-                },
-              }}
-            >
-              Show
-            </Button>
-          </Box>
-        </Grid>
-        <Grid item>
-          <Box
-            component={motion.div}
-            sx={{
-              position: 'relative',
-              width: '100px',
-              height: '100px',
-              borderRadius: '50%',
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-              backgroundColor: 'red',
-              filter: 'drop-shadow(-2px 3px 5px rgba(0,0,0,0.5))'
-            }}
-            whileHover={{ scale: 1.2 }}
-            whileTap={{ scale: 1 }}
-          >
-            <Box
-              component={motion.div}
-              sx={{
-                position: 'relative',
-                width: '90px',
-                height: '90px',
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                borderRadius: '50%',
-                backgroundColor: 'white',
-              }}
-            >
-              <Box
-                component={motion.div}
-                sx={{
-                  position: 'relative',
-                  width: '80px',
-                  height: '80px',
-                  display: 'flex',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  borderRadius: '50%',
-                  backgroundColor: 'red',
-                }}
-              >
-                <Box
-                  component={motion.div}
-                  sx={{
-                    position: 'relative',
-                    width: '60px',
-                    height: '60px',
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    borderRadius: '50%',
-                    backgroundColor: 'white',
-                  }}
-                >
-                </Box>
-              </Box>
-            </Box>
-          </Box>
-          {/* <Box
-            sx={{
-              position: 'relative',
-              width: '100px',
-              height: '100px',
-              borderRadius: '50%',
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-              backgroundColor: 'red',
-            }}
-          >
-            <Box
-              sx={{
-                position: 'relative',
-                width: '90px',
-                height: '90px',
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                borderRadius: '50%',
-                backgroundColor: 'white',
-              }}
-            >
-              <Box
-                sx={{
-                  position: 'relative',
-                  width: '80px',
-                  height: '80px',
-                  display: 'flex',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  borderRadius: '50%',
-                  backgroundColor: 'red',
-                }}
-              >
-              </Box>
-            </Box>
-          </Box> */}
-        </Grid>
-        <Grid item>
-          <Typography variant='overline' sx={{ fontSize: 20 }}>Reference : Sonic Generations UI theme</Typography>
+          <Typography variant='overline'>Reference : Sonic Generations UI theme</Typography>
         </Grid>
         <Grid item>
           <Image src='/assets/img/sonic_generations_background_by_sonicguru_d66i4ax.png' alt='sonicbg' width={500} height={500} />
@@ -244,81 +250,57 @@ const BackgroundContainer = (props: Props) => {
           <Image src='/assets/img/sonic_generations_background_by_sonicguru_d66i4ax.png' alt='sonicbg' width={500} height={500} />
         </Grid>
       </Grid>
-      <ZigzagContainer width='100%' height='200px' color='yellow' top>
-        <Box component='footer' sx={{ backgroundColor: 'yellow' }}>
-          <Grid container>
-            <Grid item xs={12} mt={4}>
-              <Stack direction='row' alignItems='center' justifyContent='center'>
+      <Box component='footer' mt={4}>
+        <ZigzagContainer width='100%' height='200px' color='yellow' top>
+          <Grid container spacing={4}>
+            <Grid item xs={12}>
+              <Stack direction='row' alignItems='center' justifyContent='space-around'>
                 <Stack direction='column' alignItems='center'>
                   <Typography variant='h6' gutterBottom>
                     Company
                   </Typography>
-                  <ul>
-                    <li>
-                      <Link href='#'>
-                        About Us
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href='#'>
-                        Careers
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href='#'>
-                        Press
-                      </Link>
-                    </li>
-                  </ul>
+                  <Link href='#'>
+                    About Us
+                  </Link>
+                  <Link href='#'>
+                    Careers
+                  </Link>
+                  <Link href='#'>
+                    Press
+                  </Link>
                 </Stack>
                 <Stack direction='column' alignItems='center'>
                   <Typography variant='h6' gutterBottom>
                     Support
                   </Typography>
-                  <ul>
-                    <li>
-                      <Link href='#'>
-                        Contact Us
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href='#'>
-                        Help Center
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href='#'>
-                        Privacy Policy
-                      </Link>
-                    </li>
-                  </ul>
+                  <Link href='#'>
+                    Contact Us
+                  </Link>
+                  <Link href='#'>
+                    Help Center
+                  </Link>
+                  <Link href='#'>
+                    Privacy Policy
+                  </Link>
                 </Stack>
                 <Stack direction='column' alignItems='center'>
                   <Typography variant='h6' gutterBottom>
                     Follow Us
                   </Typography>
-                  <ul>
-                    <li>
-                      <Link href='#'>
-                        Facebook
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href='#'>
-                        Twitter
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href='#'>
-                        Instagram
-                      </Link>
-                    </li>
-                  </ul>
+                  <Link href='#'>
+                    Facebook
+                  </Link>
+                  <Link href='#'>
+                    Twitter
+                  </Link>
+                  <Link href='#'>
+                    Instagram
+                  </Link>
                 </Stack>
               </Stack>
             </Grid>
             <Grid item xs={12}>
-              <Box mt={2}>
+              <Box>
                 <Typography variant='body2' color='text.secondary' align='center'>
                   {'© '}
                   <Link color='inherit' href='https://yourwebsite.com/'>
@@ -330,8 +312,8 @@ const BackgroundContainer = (props: Props) => {
               </Box>
             </Grid>
           </Grid>
-        </Box>
-      </ZigzagContainer>
+        </ZigzagContainer>
+      </Box>
     </>
   )
 }
