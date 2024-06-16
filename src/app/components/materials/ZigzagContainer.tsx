@@ -114,7 +114,7 @@ const ZigzagContainer: React.FC<ZigzagContainerProps> = ({
 
   const clipPathValue = useMemo(
     () => generateClipPath(computedWidth, computedHeight),
-    [computedWidth, computedHeight, generateClipPath]
+    [computedWidth, computedHeight]
   )
 
   return (

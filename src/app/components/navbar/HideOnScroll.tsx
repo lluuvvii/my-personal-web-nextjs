@@ -1,24 +1,15 @@
-'use client'
-
 import { Slide, useScrollTrigger } from "@mui/material"
-import React, { useEffect } from "react"
+import { ReactElement } from "react";
 
-interface HideOnScrollProps {
-  children?: React.ReactNode | any
+interface Props {
+  window?: () => Window | undefined
+  children?: ReactElement | any
 }
 
-const HideOnScroll: React.FC<HideOnScrollProps> = ({ children }) => {
-  const getWindow = () => {
-    return window
-  }
-
+const HideOnScroll = ({ window, children }: Props) => {
   const trigger = useScrollTrigger({
-    target: getWindow() ? window : undefined,
-  })
-
-  useEffect(() => {
-    getWindow()
-  }, [])
+    target: window ? window() : undefined,
+  });
 
   return (
     <Slide appear={false} direction='down' in={!trigger} timeout={400}>
