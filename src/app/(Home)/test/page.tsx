@@ -4,7 +4,7 @@ import ZigzagContainer from '@/app/components/materials/ZigzagContainer'
 import { AppBar, Box, Button, Drawer, Grid, Slide, Stack, Typography, useScrollTrigger } from '@mui/material'
 import Image from 'next/image'
 import Link from 'next/link'
-import { useState } from 'react'
+import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import Star from '@/app/components/materials/Star'
 
@@ -13,7 +13,7 @@ interface Props {
   children: React.ReactElement
 }
 
-const HideOnScroll = (props: Props) => {
+const HideOnScroll: React.FC<Props> = (props) => {
   const { children, window } = props
   const trigger = useScrollTrigger({
     target: window ? window() : undefined,
@@ -26,7 +26,7 @@ const HideOnScroll = (props: Props) => {
   )
 }
 
-const BackgroundContainer = (props: Props) => {
+const BackgroundContainer: React.FC<Props> = (props) => {
   const [open, setOpen] = useState(false)
   return (
     <>
