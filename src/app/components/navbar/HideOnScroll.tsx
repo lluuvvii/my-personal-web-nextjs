@@ -1,3 +1,5 @@
+'use client'
+
 import { Slide, useScrollTrigger } from "@mui/material"
 import React, { useEffect } from "react"
 
