@@ -53,7 +53,7 @@ const Navbar = () => {
             whileTap={{ scale: 1 }}
           >
           </Box>
-          <ZigzagContainer width='100%' height='100px' color='blue' bottom>
+          <ZigzagContainer width='100%' height='100px' color='blue' toColor='rgba(107, 106, 255, 1)' toGradient='50deg' bottom>
             <Grid container p={2}>
               <Grid item>
                 {/* spikes */}

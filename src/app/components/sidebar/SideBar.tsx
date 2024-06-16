@@ -16,7 +16,7 @@ const SideBar = ({ open, setOpen }: any) => {
       }}>
       <Slide in={open} direction='right' timeout={400}>
         <Box sx={{ width: '220px' }}>
-          <ZigzagContainer width='200px' height='100vh' color='red' right>
+          <ZigzagContainer width='200px' height='100vh' color='red' toColor='rgba(255, 129, 129, 1)' toGradient='180deg' right>
             <Grid container padding='50px'>
               <Grid item>
                 <Typography color='white'>Hallo</Typography>

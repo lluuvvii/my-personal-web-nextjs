@@ -7,6 +7,8 @@ interface ZigzagContainerProps {
   width?: string
   height?: string
   color?: string
+  toColor?: string
+  toGradient?: string
   children?: React.ReactNode
   top?: any
   bottom?: any
@@ -18,6 +20,8 @@ const ZigzagContainer: React.FC<ZigzagContainerProps> = ({
   width = '100px',
   height = '100px',
   color = 'transparent',
+  toColor = color,
+  toGradient = 'to right',
   children,
   top,
   bottom,
@@ -63,6 +67,7 @@ const ZigzagContainer: React.FC<ZigzagContainerProps> = ({
     width: `${computedWidth}px`,
     height: `${computedHeight}px`,
     backgroundColor: color,
+    background: toColor ? `linear-gradient(${toGradient}, ${color}, ${toColor})` : ''
   }
 
   const zigzagSize = 20 // Base size for one zigzag unit
