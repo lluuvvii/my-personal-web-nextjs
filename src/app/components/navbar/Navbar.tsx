@@ -15,78 +15,61 @@ const Navbar = () => {
     <HideOnScroll>
       <AppBar position='fixed' color='transparent' sx={{ boxShadow: 'none' }}>
         <Box component='header'>
+          <Box
+            component={motion.div}
+            sx={{
+              position: 'absolute',
+              width: '60px',
+              height: '60px',
+              borderRadius: '50%',
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              backgroundColor: 'transparent',
+              border: '15px solid black',
+              filter: 'drop-shadow(-2px 3px 5px rgba(0,0,0,0.5))',
+              top: '60px',
+              left: '20px'
+            }}
+            whileHover={{ scale: 1.2 }}
+            whileTap={{ scale: 1 }}
+          >
+          </Box>
+          <Box
+            component={motion.div}
+            sx={{
+              position: 'absolute',
+              width: '40px',
+              height: '40px',
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              backgroundColor: 'black',
+              clipPath: 'polygon(100% 50%,83.81% 59.06%,93.3% 75%,74.75% 74.75%,75% 93.3%,59.06% 83.81%,50% 100%,40.94% 83.81%,25% 93.3%,25.25% 74.75%,6.7% 75%,16.19% 59.06%,0% 50%,16.19% 40.94%,6.7% 25%,25.25% 25.25%,25% 6.7%,40.94% 16.19%,50% 0%,59.06% 16.19%,75% 6.7%,74.75% 25.25%,93.3% 25%,83.81% 40.94%)',
+              top: '75px',
+              left: '65px'
+            }}
+            whileHover={{ scale: 1.2 }}
+            whileTap={{ scale: 1 }}
+          >
+          </Box>
           <ZigzagContainer width='100%' height='100px' color='blue' bottom>
             <Grid container p={2}>
               <Grid item>
-                {/* big Stars */}
-                <Box
-                  component={motion.div}
-                  sx={{
-                    position: 'absolute',
-                    width: '200px',
-                    height: '200px',
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    backgroundColor: 'red',
-                    clipPath: 'polygon(100% 50%,74.27% 67.63%,65.45% 97.55%,40.73% 78.53%,9.55% 79.39%,20% 50%,9.55% 20.61%,40.73% 21.47%,65.45% 2.45%,74.27% 32.37%,100% 50%,74.27% 67.63%,calc(74.27% - 24.27px) calc(67.63% - 17.63px),calc(100% - 50px) calc(50% - 0px),calc(74.27% - 24.27px) calc(32.37% - -17.63px),calc(65.45% - 15.45px) calc(2.45% - -47.55px),calc(40.73% - -9.27px) calc(21.47% - -28.53px),calc(9.55% - -40.45px) calc(20.61% - -29.39px),calc(20% - -30px) calc(50% - 0px),calc(9.55% - -40.45px) calc(79.39% - 29.39px),calc(40.73% - -9.27px) calc(78.53% - 28.53px),calc(65.45% - 15.45px) calc(97.55% - 47.55px),calc(74.27% - 24.27px) calc(67.63% - 17.63px),calc(100% - 50px) calc(50% - 0px))',
-                    top: '-20px',
-                    left: '100px'
-                  }}
-                  whileHover={{ scale: 1.2 }}
-                  whileTap={{ scale: 1 }}
-                >
-                </Box>
-                <Box
-                  component={motion.div}
-                  sx={{
-                    position: 'absolute',
-                    width: '200px',
-                    height: '200px',
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    backgroundColor: 'red',
-                    clipPath: 'polygon(100% 50%,74.27% 67.63%,65.45% 97.55%,40.73% 78.53%,9.55% 79.39%,20% 50%,9.55% 20.61%,40.73% 21.47%,65.45% 2.45%,74.27% 32.37%,100% 50%,74.27% 67.63%,calc(74.27% - 24.27px) calc(67.63% - 17.63px),calc(100% - 50px) calc(50% - 0px),calc(74.27% - 24.27px) calc(32.37% - -17.63px),calc(65.45% - 15.45px) calc(2.45% - -47.55px),calc(40.73% - -9.27px) calc(21.47% - -28.53px),calc(9.55% - -40.45px) calc(20.61% - -29.39px),calc(20% - -30px) calc(50% - 0px),calc(9.55% - -40.45px) calc(79.39% - 29.39px),calc(40.73% - -9.27px) calc(78.53% - 28.53px),calc(65.45% - 15.45px) calc(97.55% - 47.55px),calc(74.27% - 24.27px) calc(67.63% - 17.63px),calc(100% - 50px) calc(50% - 0px))',
-                    top: '-20px',
-                    left: '120px'
-                  }}
-                  whileHover={{ scale: 1.2 }}
-                  whileTap={{ scale: 1 }}
-                >
-                </Box>
-                <Box
-                  component={motion.div}
-                  sx={{
-                    position: 'absolute',
-                    width: '200px',
-                    height: '200px',
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    backgroundColor: 'white',
-                    clipPath: 'polygon(100% 50%,74.27% 67.63%,65.45% 97.55%,40.73% 78.53%,9.55% 79.39%,20% 50%,9.55% 20.61%,40.73% 21.47%,65.45% 2.45%,74.27% 32.37%,100% 50%,74.27% 67.63%,calc(74.27% - 24.27px) calc(67.63% - 17.63px),calc(100% - 50px) calc(50% - 0px),calc(74.27% - 24.27px) calc(32.37% - -17.63px),calc(65.45% - 15.45px) calc(2.45% - -47.55px),calc(40.73% - -9.27px) calc(21.47% - -28.53px),calc(9.55% - -40.45px) calc(20.61% - -29.39px),calc(20% - -30px) calc(50% - 0px),calc(9.55% - -40.45px) calc(79.39% - 29.39px),calc(40.73% - -9.27px) calc(78.53% - 28.53px),calc(65.45% - 15.45px) calc(97.55% - 47.55px),calc(74.27% - 24.27px) calc(67.63% - 17.63px),calc(100% - 50px) calc(50% - 0px))',
-                    top: '-20px',
-                    left: '140px'
-                  }}
-                  whileHover={{ scale: 1.2 }}
-                  whileTap={{ scale: 1 }}
-                >
-                </Box>
                 {/* spikes */}
                 <Box
                   component={motion.div}
                   sx={{
                     position: 'absolute',
-                    width: '50px',
-                    height: '50px',
+                    width: '80px',
+                    height: '80px',
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
                     backgroundColor: 'yellow',
                     clipPath: 'polygon(100% 50%,83.81% 59.06%,93.3% 75%,74.75% 74.75%,75% 93.3%,59.06% 83.81%,50% 100%,40.94% 83.81%,25% 93.3%,25.25% 74.75%,6.7% 75%,16.19% 59.06%,0% 50%,16.19% 40.94%,6.7% 25%,25.25% 25.25%,25% 6.7%,40.94% 16.19%,50% 0%,59.06% 16.19%,75% 6.7%,74.75% 25.25%,93.3% 25%,83.81% 40.94%)',
-                    top: '70px',
-                    left: '55px'
+                    top: '45px',
+                    left: '60px'
                   }}
                   whileHover={{ scale: 1.2 }}
                   whileTap={{ scale: 1 }}
@@ -101,8 +84,8 @@ const Navbar = () => {
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
-                    backgroundColor: 'white',
-                    clipPath: 'polygon(100% 50%,83.81% 59.06%,93.3% 75%,74.75% 74.75%,75% 93.3%,59.06% 83.81%,50% 100%,40.94% 83.81%,25% 93.3%,25.25% 74.75%,6.7% 75%,16.19% 59.06%,0% 50%,16.19% 40.94%,6.7% 25%,25.25% 25.25%,25% 6.7%,40.94% 16.19%,50% 0%,59.06% 16.19%,75% 6.7%,74.75% 25.25%,93.3% 25%,83.81% 40.94%)',
+                    backgroundColor: 'blue',
+                    clipPath: 'polygon(100% 50%,83.81% 59.06%,93.3% 75%,74.75% 74.75%,75% 93.3%,59.06% 83.81%,50% 100%,40.94% 83.81%,25% 93.3%,25.25% 74.75%,6.7% 75%,16.19% 59.06%,0% 50%,16.19% 40.94%,6.7% 25%,25.25% 25.25%,25% 6.7%,40.94% 16.19%,50% 0%,59.06% 16.19%,75% 6.7%,74.75% 25.25%,93.3% 25%,83.81% 40.94%,100% 50%,83.81% 59.06%,calc(83.81% - 6.76px) calc(59.06% - 1.81px),calc(100% - 10px) calc(50% - 0px),calc(83.81% - 6.76px) calc(40.94% - -1.81px),calc(93.3% - 8.66px) calc(25% - -5px),calc(74.75% - 4.95px) calc(25.25% - -4.95px),calc(75% - 5px) calc(6.7% - -8.66px),calc(59.06% - 1.81px) calc(16.19% - -6.76px),calc(50% - 0px) calc(0% - -10px),calc(40.94% - -1.81px) calc(16.19% - -6.76px),calc(25% - -5px) calc(6.7% - -8.66px),calc(25.25% - -4.95px) calc(25.25% - -4.95px),calc(6.7% - -8.66px) calc(25% - -5px),calc(16.19% - -6.76px) calc(40.94% - -1.81px),calc(0% - -10px) calc(50% - 0px),calc(16.19% - -6.76px) calc(59.06% - 1.81px),calc(6.7% - -8.66px) calc(75% - 5px),calc(25.25% - -4.95px) calc(74.75% - 4.95px),calc(25% - -5px) calc(93.3% - 8.66px),calc(40.94% - -1.81px) calc(83.81% - 6.76px),calc(50% - 0px) calc(100% - 10px),calc(59.06% - 1.81px) calc(83.81% - 6.76px),calc(75% - 5px) calc(93.3% - 8.66px),calc(74.75% - 4.95px) calc(74.75% - 4.95px),calc(93.3% - 8.66px) calc(75% - 5px),calc(83.81% - 6.76px) calc(59.06% - 1.81px),calc(100% - 10px) calc(50% - 0px))',
                     top: '70px',
                     left: '65px'
                   }}
@@ -122,8 +105,8 @@ const Navbar = () => {
                     alignItems: 'center',
                     backgroundColor: 'yellow',
                     clipPath: 'polygon(100% 50%,74.27% 67.63%,65.45% 97.55%,40.73% 78.53%,9.55% 79.39%,20% 50%,9.55% 20.61%,40.73% 21.47%,65.45% 2.45%,74.27% 32.37%)',
-                    top: '60px',
-                    left: '10px'
+                    top: '0px',
+                    left: '5px'
                   }}
                   whileHover={{ scale: 1.2 }}
                   whileTap={{ scale: 1 }}
@@ -133,15 +116,15 @@ const Navbar = () => {
                   component={motion.div}
                   sx={{
                     position: 'absolute',
-                    width: '30px',
-                    height: '30px',
+                    width: '15px',
+                    height: '15px',
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
-                    backgroundColor: 'red',
+                    backgroundColor: 'yellow',
                     clipPath: 'polygon(100% 50%,74.27% 67.63%,65.45% 97.55%,40.73% 78.53%,9.55% 79.39%,20% 50%,9.55% 20.61%,40.73% 21.47%,65.45% 2.45%,74.27% 32.37%)',
-                    top: '60px',
-                    left: '20px'
+                    top: '0px',
+                    left: '30px'
                   }}
                   whileHover={{ scale: 1.2 }}
                   whileTap={{ scale: 1 }}
@@ -157,65 +140,10 @@ const Navbar = () => {
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
-                    backgroundColor: 'red',
-                    clipPath: 'polygon(100% 50%,83.81% 59.06%,93.3% 75%,74.75% 74.75%,75% 93.3%,59.06% 83.81%,50% 100%,40.94% 83.81%,25% 93.3%,25.25% 74.75%,6.7% 75%,16.19% 59.06%,0% 50%,16.19% 40.94%,6.7% 25%,25.25% 25.25%,25% 6.7%,40.94% 16.19%,50% 0%,59.06% 16.19%,75% 6.7%,74.75% 25.25%,93.3% 25%,83.81% 40.94%)',
-                    top: '0px',
-                    left: '40px'
-                  }}
-                  whileHover={{ scale: 1.2 }}
-                  whileTap={{ scale: 1 }}
-                >
-                </Box>
-                <Box
-                  component={motion.div}
-                  sx={{
-                    position: 'absolute',
-                    width: '50px',
-                    height: '50px',
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center',
                     backgroundColor: 'yellow',
-                    clipPath: 'polygon(100% 50%,83.81% 59.06%,93.3% 75%,74.75% 74.75%,75% 93.3%,59.06% 83.81%,50% 100%,40.94% 83.81%,25% 93.3%,25.25% 74.75%,6.7% 75%,16.19% 59.06%,0% 50%,16.19% 40.94%,6.7% 25%,25.25% 25.25%,25% 6.7%,40.94% 16.19%,50% 0%,59.06% 16.19%,75% 6.7%,74.75% 25.25%,93.3% 25%,83.81% 40.94%)',
+                    clipPath: 'polygon(100% 50%,83.81% 59.06%,93.3% 75%,74.75% 74.75%,75% 93.3%,59.06% 83.81%,50% 100%,40.94% 83.81%,25% 93.3%,25.25% 74.75%,6.7% 75%,16.19% 59.06%,0% 50%,16.19% 40.94%,6.7% 25%,25.25% 25.25%,25% 6.7%,40.94% 16.19%,50% 0%,59.06% 16.19%,75% 6.7%,74.75% 25.25%,93.3% 25%,83.81% 40.94%,100% 50%,83.81% 59.06%,calc(83.81% - 6.76px) calc(59.06% - 1.81px),calc(100% - 10px) calc(50% - 0px),calc(83.81% - 6.76px) calc(40.94% - -1.81px),calc(93.3% - 8.66px) calc(25% - -5px),calc(74.75% - 4.95px) calc(25.25% - -4.95px),calc(75% - 5px) calc(6.7% - -8.66px),calc(59.06% - 1.81px) calc(16.19% - -6.76px),calc(50% - 0px) calc(0% - -10px),calc(40.94% - -1.81px) calc(16.19% - -6.76px),calc(25% - -5px) calc(6.7% - -8.66px),calc(25.25% - -4.95px) calc(25.25% - -4.95px),calc(6.7% - -8.66px) calc(25% - -5px),calc(16.19% - -6.76px) calc(40.94% - -1.81px),calc(0% - -10px) calc(50% - 0px),calc(16.19% - -6.76px) calc(59.06% - 1.81px),calc(6.7% - -8.66px) calc(75% - 5px),calc(25.25% - -4.95px) calc(74.75% - 4.95px),calc(25% - -5px) calc(93.3% - 8.66px),calc(40.94% - -1.81px) calc(83.81% - 6.76px),calc(50% - 0px) calc(100% - 10px),calc(59.06% - 1.81px) calc(83.81% - 6.76px),calc(75% - 5px) calc(93.3% - 8.66px),calc(74.75% - 4.95px) calc(74.75% - 4.95px),calc(93.3% - 8.66px) calc(75% - 5px),calc(83.81% - 6.76px) calc(59.06% - 1.81px),calc(100% - 10px) calc(50% - 0px))',
                     top: '0px',
                     left: '50px'
-                  }}
-                  whileHover={{ scale: 1.2 }}
-                  whileTap={{ scale: 1 }}
-                >
-                </Box>
-                {/* triangles */}
-                <Box
-                  component={motion.div}
-                  sx={{
-                    position: 'absolute',
-                    width: '50px',
-                    height: '50px',
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    backgroundColor: 'white',
-                    clipPath: 'polygon(100% 50%,25% 93.3%,25% 6.7%)',
-                    bottom: '-15px',
-                    left: '120px'
-                  }}
-                  whileHover={{ scale: 1.2 }}
-                  whileTap={{ scale: 1 }}
-                >
-                </Box>
-                <Box
-                  component={motion.div}
-                  sx={{
-                    position: 'absolute',
-                    width: '50px',
-                    height: '50px',
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    backgroundColor: 'yellow',
-                    clipPath: 'polygon(100% 50%,25% 93.3%,25% 6.7%)',
-                    bottom: '-15px',
-                    left: '130px'
                   }}
                   whileHover={{ scale: 1.2 }}
                   whileTap={{ scale: 1 }}
@@ -317,10 +245,10 @@ const Navbar = () => {
               justifyContent: 'center',
               alignItems: 'center',
               backgroundColor: 'transparent',
-              border: '20px solid white',
+              border: '20px solid blue',
               filter: 'drop-shadow(-2px 3px 5px rgba(0,0,0,0.5))',
-              top: '20px',
-              left: '-65px'
+              top: '35px',
+              left: '-60px'
             }}
             whileHover={{ scale: 1.2 }}
             whileTap={{ scale: 1 }}
@@ -336,7 +264,7 @@ const Navbar = () => {
                 alignItems: 'center',
                 borderRadius: '50%',
                 backgroundColor: 'transparent',
-                border: '5px solid red'
+                border: '5px solid yellow'
               }}
             >
             </Box>
@@ -351,7 +279,7 @@ const Navbar = () => {
                 alignItems: 'center',
                 borderRadius: '50%',
                 backgroundColor: 'transparent',
-                border: '5px solid red'
+                border: '5px solid yellow'
               }}
             >
             </Box>

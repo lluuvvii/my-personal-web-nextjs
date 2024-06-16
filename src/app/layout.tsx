@@ -5,7 +5,7 @@ import "./globals.css";
 import React from 'react';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { red, blue, yellow } from '@mui/material/colors';
-import { CssBaseline } from "@mui/material";
+import { Box, CssBaseline } from "@mui/material";
 import Navbar from "./components/navbar/Navbar";
 
 const theme = createTheme({
@@ -40,7 +40,9 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <Navbar />
         <ThemeProvider theme={theme}>
           <CssBaseline />
-          {children}
+          <Box sx={{ mt: 14 }}>
+            {children}
+          </Box>
         </ThemeProvider>
       </body>
     </html>

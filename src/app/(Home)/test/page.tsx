@@ -7,7 +7,7 @@ import React, { useState } from 'react'
 const BackgroundContainer = () => {
   return (
     <>
-      <Grid container spacing={1} alignItems='center' justifyContent='center' sx={{ mt: 12 }}>
+      <Grid container spacing={1} alignItems='center' justifyContent='center'>
         {/* <Grid item>
           <ZigzagContainer width='800px' height='500px' color='black'>
             <Box sx={{ transform: 'translate(0%, 10%)', position: 'absolute' }}>
