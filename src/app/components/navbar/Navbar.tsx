@@ -60,8 +60,8 @@ const Navbar = ({ window }: Props) => {
                 top: '75px',
                 left: '65px'
               }}
-              whileHover={{ scale: 1.2 }}
-              whileTap={{ scale: 1 }}
+              animate={{ rotate: -360 }}
+              transition={{ repeat: Infinity, duration: 15, ease: 'linear' }}
             >
             </Box>
           </Slide>
@@ -84,8 +84,8 @@ const Navbar = ({ window }: Props) => {
                       top: '45px',
                       left: '60px'
                     }}
-                    whileHover={{ scale: 1.2 }}
-                    whileTap={{ scale: 1 }}
+                    animate={{ rotate: 360 }}
+                    transition={{ repeat: Infinity, duration: 5, ease: 'linear' }}
                   >
                   </Box>
                 </Slide>
@@ -104,8 +104,8 @@ const Navbar = ({ window }: Props) => {
                       top: '70px',
                       left: '65px'
                     }}
-                    whileHover={{ scale: 1.2 }}
-                    whileTap={{ scale: 1 }}
+                    animate={{ rotate: -360 }}
+                    transition={{ repeat: Infinity, duration: 12, ease: 'linear' }}
                   >
                   </Box>
                 </Slide>
@@ -125,8 +125,8 @@ const Navbar = ({ window }: Props) => {
                       top: '0px',
                       left: '5px'
                     }}
-                    whileHover={{ scale: 1.2 }}
-                    whileTap={{ scale: 1 }}
+                    animate={{ rotate: 360 }}
+                    transition={{ repeat: Infinity, duration: 5, ease: 'linear' }}
                   >
                   </Box>
                 </Slide>
@@ -145,8 +145,8 @@ const Navbar = ({ window }: Props) => {
                       top: '0px',
                       left: '30px'
                     }}
-                    whileHover={{ scale: 1.2 }}
-                    whileTap={{ scale: 1 }}
+                    animate={{ rotate: -360 }}
+                    transition={{ repeat: Infinity, duration: 5, ease: 'linear' }}
                   >
                   </Box>
                 </Slide>
@@ -166,8 +166,8 @@ const Navbar = ({ window }: Props) => {
                       top: '0px',
                       left: '50px'
                     }}
-                    whileHover={{ scale: 1.2 }}
-                    whileTap={{ scale: 1 }}
+                    animate={{ rotate: 360 }}
+                    transition={{ repeat: Infinity, duration: 10, ease: 'linear' }}
                   >
                   </Box>
                 </Slide>
