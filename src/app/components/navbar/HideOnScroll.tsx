@@ -1,5 +1,5 @@
-import { Slide, useScrollTrigger } from "@mui/material"
-import { ReactElement } from "react";
+import { Slide, useScrollTrigger } from '@mui/material'
+import { ReactElement } from 'react'
 
 interface Props {
   window?: () => Window | undefined
@@ -9,10 +9,10 @@ interface Props {
 const HideOnScroll = ({ window, children }: Props) => {
   const trigger = useScrollTrigger({
     target: window ? window() : undefined,
-  });
+  })
 
   return (
-    <Slide appear={false} direction='down' in={!trigger} timeout={400}>
+    <Slide appear={true} direction='right' in={!trigger} timeout={200}>
       {children}
     </Slide>
   )
