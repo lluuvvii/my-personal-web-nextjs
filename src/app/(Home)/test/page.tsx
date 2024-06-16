@@ -1,36 +1,19 @@
 'use client'
 
 import ZigzagContainer from '@/app/components/materials/ZigzagContainer'
-import { AppBar, Box, Button, Drawer, Grid, Slide, Stack, Typography, useScrollTrigger } from '@mui/material'
+import { AppBar, Box, Button, Drawer, Grid, Slide, Stack, Typography } from '@mui/material'
 import Image from 'next/image'
 import Link from 'next/link'
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import Star from '@/app/components/materials/Star'
+import HideOnScroll from '@/app/components/navbar/HideOnScroll'
 
-interface Props {
-  window?: () => Window
-  children: React.ReactElement
-}
-
-const HideOnScroll: React.FC<Props> = (props) => {
-  const { children, window } = props
-  const trigger = useScrollTrigger({
-    target: window ? window() : undefined,
-  })
-
-  return (
-    <Slide appear={false} direction='down' in={!trigger} timeout={400}>
-      {children}
-    </Slide>
-  )
-}
-
-const BackgroundContainer: React.FC<Props> = (props) => {
+const BackgroundContainer = () => {
   const [open, setOpen] = useState(false)
   return (
     <>
-      <HideOnScroll {...props}>
+      <HideOnScroll>
         <AppBar position='fixed' color='transparent' sx={{ boxShadow: 'none' }}>
           <Box component='header'>
             <ZigzagContainer width='100%' height='100px' color='blue' bottom>
