@@ -7,7 +7,7 @@ interface HideOnScrollProps {
 
 const HideOnScroll: React.FC<HideOnScrollProps> = ({ children }) => {
   const trigger = useScrollTrigger({
-    target: window ? window : undefined,
+    target: typeof window !== 'undefined' ? window : undefined
   })
 
   return (
