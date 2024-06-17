@@ -65,7 +65,7 @@ const Navbar = ({ window }: Props) => {
             >
             </Box>
           </Slide>
-          <ZigzagContainer width='100%' height='100px' color='blue' toColor='rgba(107, 106, 255, 1)' toGradient='50deg' bottom>
+          <ZigzagContainer width='100%' height='100px' color='blue' toColor='#008cff' toGradient='50deg' bottom>
             <Grid container p={2}>
               <Grid item>
                 {/* spikes */}
@@ -109,6 +109,27 @@ const Navbar = ({ window }: Props) => {
                   >
                   </Box>
                 </Slide>
+                {/* striped circle */}
+                <Slide direction='right' appear={true} in={!open && !trigger} timeout={400}>
+                  <Box
+                    component={motion.div}
+                    sx={{
+                      position: 'absolute',
+                      width: '95px',
+                      height: '95px',
+                      borderRadius: '50%',
+                      display: 'flex',
+                      justifyContent: 'center',
+                      alignItems: 'center',
+                      background: 'repeating-linear-gradient(135deg, yellow, yellow 8px, transparent 8px, transparent 11px)',
+                      filter: 'drop-shadow(-2px 3px 5px rgba(0,0,0,0.5))',
+                      top: '-20px',
+                      left: '-30px',
+                    }}
+                    whileHover={{ scale: 1.2 }}
+                    whileTap={{ scale: 1 }}
+                  ></Box>
+                </Slide>
                 {/* little stars */}
                 <Slide direction='right' appear={true} in={!open && !trigger} timeout={300}>
                   <Box
@@ -120,7 +141,7 @@ const Navbar = ({ window }: Props) => {
                       display: 'flex',
                       justifyContent: 'center',
                       alignItems: 'center',
-                      backgroundColor: 'yellow',
+                      backgroundColor: 'blue',
                       clipPath: 'polygon(100% 50%,74.27% 67.63%,65.45% 97.55%,40.73% 78.53%,9.55% 79.39%,20% 50%,9.55% 20.61%,40.73% 21.47%,65.45% 2.45%,74.27% 32.37%)',
                       top: '0px',
                       left: '5px'
@@ -140,7 +161,7 @@ const Navbar = ({ window }: Props) => {
                       display: 'flex',
                       justifyContent: 'center',
                       alignItems: 'center',
-                      backgroundColor: 'yellow',
+                      backgroundColor: 'blue',
                       clipPath: 'polygon(100% 50%,74.27% 67.63%,65.45% 97.55%,40.73% 78.53%,9.55% 79.39%,20% 50%,9.55% 20.61%,40.73% 21.47%,65.45% 2.45%,74.27% 32.37%)',
                       top: '0px',
                       left: '30px'
