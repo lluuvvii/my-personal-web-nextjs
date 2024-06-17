@@ -7,9 +7,43 @@ import ZigzagContainer from '../materials/ZigzagContainer'
 import { useState } from 'react'
 import SideBar from '../sidebar/SideBar'
 import { IconArrowBigRightLinesFilled } from '@tabler/icons-react'
+import { useEffect } from 'react'
 
 interface Props {
   window?: () => Window | undefined
+}
+
+const BoxWithLongShadow = ({ fontSize = '100px', shadowLength = 50 }: any) => {
+  useEffect(() => {
+    const box = document.querySelector('.box') as HTMLElement | null;
+    if (box) {
+      let shadow = '';
+      for (let i = 0; i < shadowLength; i++) {
+        shadow += `${shadow ? ',' : ''}-${i * 1}px -${i * 1}px 0 blue`
+      }
+      box.style.textShadow = shadow
+    }
+  }, [])
+
+  return (
+    <div
+      className='box'
+      style={{
+        position: 'absolute',
+        color: 'white',
+        width: '100%',
+        // fontWeight: 500,
+        fontSize: `${fontSize}`,
+        outline: 'none',
+        textAlign: 'center',
+        textShadow: '1px 1px 0 blue',
+        WebkitTextStroke: '1px blue'
+      }}
+    // contentEditable={true}
+    >
+      ★
+    </div>
+  )
 }
 
 const Navbar = ({ window }: Props) => {
@@ -229,56 +263,72 @@ const Navbar = ({ window }: Props) => {
               </Grid>
             </Grid>
           </ZigzagContainer>
-          {/* <Box
-            component={motion.div}
-            sx={{
-              position: 'absolute',
-              width: '60px',
-              height: '60px',
-              borderRadius: '50%',
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-              backgroundColor: 'transparent',
-              border: '20px solid yellow',
-              filter: 'drop-shadow(-2px 3px 5px rgba(0,0,0,0.5))',
-              top: '50px',
-              left: '-20px'
-            }}
-            whileHover={{ scale: 1.2 }}
-            whileTap={{ scale: 1 }}
-          >
+          <Slide direction='right' appear={true} in={!open && !trigger} timeout={300}>
+            <Box
+              component={motion.div}
+              width='100px'
+              height='100px'
+              position='absolute'
+              sx={{
+                top: '85px',
+                left: '0px'
+              }}
+            >
+              <BoxWithLongShadow fontSize='30px' shadowLength={100} />
+            </Box>
+          </Slide>
+          <Slide direction='right' appear={true} in={!open && !trigger} timeout={300}>
             <Box
               component={motion.div}
               sx={{
                 position: 'absolute',
-                width: '50px',
-                height: '50px',
+                width: '60px',
+                height: '60px',
+                borderRadius: '50%',
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
-                borderRadius: '50%',
                 backgroundColor: 'transparent',
-                border: '5px solid blue'
+                border: '20px solid yellow',
+                filter: 'drop-shadow(-2px 3px 5px rgba(0,0,0,0.5))',
+                top: '-40px',
+                left: '90px'
               }}
+              whileHover={{ scale: 1.2 }}
+              whileTap={{ scale: 1 }}
             >
+              <Box
+                component={motion.div}
+                sx={{
+                  position: 'absolute',
+                  width: '50px',
+                  height: '50px',
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  borderRadius: '50%',
+                  backgroundColor: 'transparent',
+                  border: '5px solid blue'
+                }}
+              >
+              </Box>
+              <Box
+                component={motion.div}
+                sx={{
+                  position: 'absolute',
+                  width: '70px',
+                  height: '70px',
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  borderRadius: '50%',
+                  backgroundColor: 'transparent',
+                  border: '5px solid blue'
+                }}
+              >
+              </Box>
             </Box>
-            <Box
-              component={motion.div}
-              sx={{
-                position: 'absolute',
-                width: '70px',
-                height: '70px',
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                borderRadius: '50%',
-                backgroundColor: 'transparent',
-                border: '5px solid blue'
-              }}
-            >
-            </Box>
-          </Box> */}
+          </Slide>
           <Slide direction='right' appear={true} in={!open && !trigger} timeout={300}>
             <Box
               component={motion.div}
@@ -331,68 +381,9 @@ const Navbar = ({ window }: Props) => {
               </Box>
             </Box>
           </Slide>
-          {/* <Box
-            component={motion.div}
-            sx={{
-              position: 'absolute',
-              width: '70px',
-              height: '70px',
-              borderRadius: '50%',
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-              backgroundColor: 'blue',
-              filter: 'drop-shadow(-2px 3px 5px rgba(0,0,0,0.5))',
-              top: '40px',
-              left: '40%'
-            }}
-            whileHover={{ scale: 1.2 }}
-            whileTap={{ scale: 1 }}
-          >
-            <Box
-              component={motion.div}
-              sx={{
-                width: '60px',
-                height: '60px',
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                borderRadius: '50%',
-                backgroundColor: 'yellow',
-              }}
-            >
-              <Box
-                component={motion.div}
-                sx={{
-                  width: '50px',
-                  height: '50px',
-                  display: 'flex',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  borderRadius: '50%',
-                  backgroundColor: 'blue',
-                }}
-              >
-                <Box
-                  component={motion.div}
-                  sx={{
-                    width: '30px',
-                    height: '30px',
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    borderRadius: '50%',
-                    backgroundColor: 'yellow',
-                    filter: 'drop-shadow(-2px 3px 5px rgba(0,0,0,0.5))'
-                  }}
-                >
-                </Box>
-              </Box>
-            </Box>
-          </Box> */}
         </Box>
       </AppBar>
-    </HideOnScroll>
+    </HideOnScroll >
   )
 }
 
