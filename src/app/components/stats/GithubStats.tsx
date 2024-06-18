@@ -19,9 +19,9 @@ const GithubStats = () => {
 
   return (
     <Grid container spacing={2}>
-      <Grid item>
-        <Card sx={{ maxWidth: 600, margin: 'auto' }} variant='outlined'>
-          {user ? <CardMedia component="img" alt={user.name} image={user.avatar_url} sx={{ height: 140 }} /> : null}
+      <Grid item xs={12}>
+        <Card variant='outlined'>
+          {user ? <CardMedia component="img" alt={user.name} image={user.avatar_url} sx={{ height: 100 }} /> : null}
           <CardContent>
             {!user ?
               <Box sx={{ width: '100%', mb: 2 }}>

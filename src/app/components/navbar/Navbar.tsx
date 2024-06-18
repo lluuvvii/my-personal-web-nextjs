@@ -7,43 +7,10 @@ import ZigzagContainer from '../materials/ZigzagContainer'
 import { useState } from 'react'
 import SideBar from '../sidebar/SideBar'
 import { IconArrowBigRightLinesFilled } from '@tabler/icons-react'
-import { useEffect } from 'react'
+import StarLongShadow from '../materials/StarLongShadow'
 
 interface Props {
   window?: () => Window | undefined
-}
-
-const BoxWithLongShadow = ({ fontSize = '100px', shadowLength = 50 }: any) => {
-  useEffect(() => {
-    const box = document.querySelector('.box') as HTMLElement | null;
-    if (box) {
-      let shadow = '';
-      for (let i = 0; i < shadowLength; i++) {
-        shadow += `${shadow ? ',' : ''}-${i * 1}px -${i * 1}px 0 blue`
-      }
-      box.style.textShadow = shadow
-    }
-  }, [])
-
-  return (
-    <div
-      className='box'
-      style={{
-        position: 'absolute',
-        color: 'white',
-        width: '100%',
-        // fontWeight: 500,
-        fontSize: `${fontSize}`,
-        outline: 'none',
-        textAlign: 'center',
-        textShadow: '1px 1px 0 blue',
-        WebkitTextStroke: '1px blue'
-      }}
-    // contentEditable={true}
-    >
-      ★
-    </div>
-  )
 }
 
 const Navbar = ({ window }: Props) => {
@@ -97,6 +64,18 @@ const Navbar = ({ window }: Props) => {
               animate={{ rotate: -360 }}
               transition={{ repeat: Infinity, duration: 15, ease: 'linear' }}
             >
+            </Box>
+          </Slide>
+          <Slide direction='right' appear={true} in={!open && !trigger} timeout={300}>
+            <Box
+              position='absolute'
+              sx={{
+                top: '135px',
+                left: '40px'
+              }}
+            >
+              {/* <BoxWithLongShadow fontSize='30px' shadowLength={100} /> */}
+              <StarLongShadow fontSize='25px' shadowLength={150} transform='rotate(180deg)' />
             </Box>
           </Slide>
           <ZigzagContainer width='100%' height='100px' color='blue' toColor='#008cff' toGradient='50deg' bottom>
@@ -180,8 +159,6 @@ const Navbar = ({ window }: Props) => {
                       top: '0px',
                       left: '5px'
                     }}
-                    animate={{ rotate: 360 }}
-                    transition={{ repeat: Infinity, duration: 5, ease: 'linear' }}
                   >
                   </Box>
                 </Slide>
@@ -200,8 +177,6 @@ const Navbar = ({ window }: Props) => {
                       top: '0px',
                       left: '30px'
                     }}
-                    animate={{ rotate: -360 }}
-                    transition={{ repeat: Infinity, duration: 5, ease: 'linear' }}
                   >
                   </Box>
                 </Slide>
@@ -263,21 +238,30 @@ const Navbar = ({ window }: Props) => {
               </Grid>
             </Grid>
           </ZigzagContainer>
-          <Slide direction='right' appear={true} in={!open && !trigger} timeout={300}>
+          <Slide direction='down' appear={true} in={!open && !trigger} timeout={100}>
             <Box
-              component={motion.div}
-              width='100px'
-              height='100px'
               position='absolute'
               sx={{
-                top: '85px',
-                left: '0px'
+                top: '80px',
+                left: '200px'
               }}
             >
-              <BoxWithLongShadow fontSize='30px' shadowLength={100} />
+              {/* <BoxWithLongShadow fontSize='30px' shadowLength={100} /> */}
+              <StarLongShadow fontSize='50px' shadowLength={150} transform='rotate(180deg)' />
             </Box>
           </Slide>
-          <Slide direction='right' appear={true} in={!open && !trigger} timeout={300}>
+          <Slide direction='down' appear={true} in={!open && !trigger} timeout={100}>
+            <Box
+              position='absolute'
+              sx={{
+                top: '110px',
+                left: '200px'
+              }}
+            >
+              <StarLongShadow fontSize='30px' shadowLength={250} transform='rotate(180deg)' />
+            </Box>
+          </Slide>
+          <Slide direction='down' appear={true} in={!open && !trigger} timeout={200}>
             <Box
               component={motion.div}
               sx={{
@@ -329,7 +313,7 @@ const Navbar = ({ window }: Props) => {
               </Box>
             </Box>
           </Slide>
-          <Slide direction='right' appear={true} in={!open && !trigger} timeout={300}>
+          <Slide direction='down' appear={true} in={!open && !trigger} timeout={200}>
             <Box
               component={motion.div}
               sx={{
