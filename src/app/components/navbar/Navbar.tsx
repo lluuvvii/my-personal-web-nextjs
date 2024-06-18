@@ -242,23 +242,23 @@ const Navbar = ({ window }: Props) => {
             <Box
               position='absolute'
               sx={{
-                top: '80px',
+                top: '110px',
                 left: '200px'
               }}
             >
-              {/* <BoxWithLongShadow fontSize='30px' shadowLength={100} /> */}
-              <StarLongShadow fontSize='50px' shadowLength={150} transform='rotate(180deg)' />
+              <StarLongShadow fontSize='30px' shadowLength={250} transform='rotate(180deg)' />
             </Box>
           </Slide>
           <Slide direction='down' appear={true} in={!open && !trigger} timeout={100}>
             <Box
               position='absolute'
               sx={{
-                top: '110px',
+                top: '85px',
                 left: '200px'
               }}
             >
-              <StarLongShadow fontSize='30px' shadowLength={250} transform='rotate(180deg)' />
+              {/* <BoxWithLongShadow fontSize='30px' shadowLength={100} /> */}
+              <StarLongShadow fontSize='50px' shadowLength={150} transform='rotate(180deg)' />
             </Box>
           </Slide>
           <Slide direction='down' appear={true} in={!open && !trigger} timeout={200}>
