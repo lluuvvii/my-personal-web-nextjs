@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 import HideOnScroll from '@/app/components/navbar/HideOnScroll'
 import { AppBar, Box, Button, Grid, Slide, useScrollTrigger } from '@mui/material'
 import ZigzagContainer from '../materials/ZigzagContainer'
-import { useState } from 'react'
+import { memo, useMemo, useState } from 'react'
 import SideBar from '../sidebar/SideBar'
 import { IconArrowBigRightLinesFilled } from '@tabler/icons-react'
 import StarLongShadow from '../materials/StarLongShadow'
@@ -13,12 +13,16 @@ interface Props {
   window?: () => Window | undefined
 }
 
+const MemoizedStarLongShadow = memo(StarLongShadow)
+
 const Navbar = ({ window }: Props) => {
   const [open, setOpen] = useState(false)
 
   const trigger = useScrollTrigger({
     target: window ? window() : undefined,
   })
+
+  const handleToggle = useMemo(() => () => setOpen((prevOpen) => !prevOpen), [])
 
   return (
     <HideOnScroll>
@@ -75,7 +79,7 @@ const Navbar = ({ window }: Props) => {
               }}
             >
               {/* <BoxWithLongShadow fontSize='30px' shadowLength={100} /> */}
-              <StarLongShadow fontSize='25px' shadowLength={150} transform='rotate(180deg)' />
+              <MemoizedStarLongShadow fontSize='25px' shadowLength={150} transform='rotate(180deg)' />
             </Box>
           </Slide>
           <ZigzagContainer width='100%' height='100px' color='blue' toColor='#008cff' toGradient='50deg' bottom>
@@ -203,7 +207,7 @@ const Navbar = ({ window }: Props) => {
                 </Slide>
               </Grid>
               <Grid item>
-                <SideBar open={open} setOpen={setOpen} />
+                <SideBar open={open} setOpen={handleToggle} />
               </Grid>
               <Grid item>
                 <Slide direction='right' appear={true} in={!open && !trigger} timeout={300}>
@@ -213,7 +217,7 @@ const Navbar = ({ window }: Props) => {
                     whileTap={{ scale: 1 }}
                   >
                     <Button
-                      onClick={() => setOpen(!open)}
+                      onClick={handleToggle}
                       variant='contained'
                       sx={{
                         color: 'error.main',
