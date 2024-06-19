@@ -369,6 +369,27 @@ const Navbar = ({ window }: Props) => {
               </Box>
             </Box>
           </Slide>
+          <Box
+            sx={{
+              position: 'absolute',
+              '& svg': {
+                filter: 'drop-shadow(20px 0 10px rgba(0,0,0,0.5))',
+              },
+              transform: 'scale(0.5)',
+              top: 0,
+              left: 100
+            }}>
+            <svg
+              width="200px"
+              height="500px"
+              fill="blue"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect x="0" y="80" width="100%" height="100%" fill="blue" />
+              <path d="M100 .587l30.52 62.76L200 81.25l-50 48.5L161.92 200 100 165.83 38.08 200 50 129.75 0 81.25l69.44-13.29z" />
+              <path d="M100 .587l30.52 62.76L200 81.25l-50 48.5L161.92 200 100 165.83 38.08 200 50 129.75 0 81.25l69.44-13.29z" transform='scale(0.7) translate(43, 43)' fill='white' />
+            </svg>
+          </Box>
         </Box>
       </AppBar>
     </HideOnScroll >

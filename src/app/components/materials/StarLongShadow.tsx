@@ -17,7 +17,7 @@ const StarLongShadow: React.FC<StarLongShadowProps> = ({ fontSize = '100px', sha
     if (box) {
       let shadow = ''
       for (let i = 0; i < shadowLength; i++) {
-        shadow += `${shadow ? ',' : ''}${i * 0.5}px ${i * 0.5}px 0 blue`
+        shadow += `${shadow ? ',' : ''}${i * 1}px ${i * 1}px 0 blue`
       }
       box.style.textShadow = shadow
     }
