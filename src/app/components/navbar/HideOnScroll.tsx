@@ -1,20 +1,23 @@
-import { Slide, useScrollTrigger } from '@mui/material'
+import { Slide } from '@mui/material'
 import { ReactElement } from 'react'
 
 interface Props {
-  window?: () => Window | undefined
+  open?: boolean
+  trigger?: boolean
   children?: ReactElement | any
 }
 
-const HideOnScroll = ({ window, children }: Props) => {
-  const trigger = useScrollTrigger({
-    target: window ? window() : undefined,
-  })
+const HideOnScroll = ({ children, trigger, open }: Props) => {
 
   return (
-    <Slide appear={true} direction='right' in={!trigger} timeout={200}>
-      {children}
-    </Slide>
+    <>
+      <Slide appear={true} direction='right' in={!open ? !trigger && !open : false} timeout={300}>
+        {children}
+      </Slide>
+      <Slide appear={true} direction='left' in={open ? !trigger && open : false} timeout={300}>
+        {children}
+      </Slide>
+    </>
   )
 }
 
