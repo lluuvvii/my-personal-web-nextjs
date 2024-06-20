@@ -250,160 +250,152 @@ const Navbar = ({ window }: Props) => {
                   <path d="M100 0.587l30.52 66.76L200 81.25l-50 48.5L161.92 200 100 165.83 38.08 200 50 129.75 0 81.25l69.44-13.29z" transform='scale(0.7) translate(42.5, 47)' fill='white' />
                 </svg>
               </div>
-            </Box>
-          </Slide>
-          <Slide direction='down' appear={true} in={!open && !trigger} timeout={100}>
-            <Box
-              sx={{
-                position: 'absolute',
-                '& svg': {
-                  filter: 'drop-shadow(-2px 3px 10px rgba(0,0,0,0.5))',
-                },
-                top: '75px',
-                left: '195px'
-              }}>
-              <div style={{ transform: 'scale(0.1) rotate(135deg)', width: '1px', height: '1px' }}>
-                <svg
-                  width="200px"
-                  height="1000px"
-                  fill="blue"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <rect x="0" y="80" width="100%" height="100%" fill="blue" />
-                  <path d="M100 0.587l30.52 66.76L200 81.25l-50 48.5L161.92 200 100 165.83 38.08 200 50 129.75 0 81.25l69.44-13.29z" />
-                  <path d="M100 0.587l30.52 66.76L200 81.25l-50 48.5L161.92 200 100 165.83 38.08 200 50 129.75 0 81.25l69.44-13.29z" transform='scale(0.7) translate(42.5, 47)' fill='white' />
-                </svg>
-              </div>
-            </Box>
-          </Slide>
-          <Slide direction='down' appear={true} in={!open && !trigger} timeout={100}>
-            <Box
-              sx={{
-                position: 'absolute',
-                '& svg': {
-                  filter: 'drop-shadow(-2px 3px 10px rgba(0,0,0,0.5))',
-                },
-                top: '120px',
-                left: '45px'
-              }}>
-              <div style={{ transform: 'scale(0.1) rotate(135deg)', width: '1px', height: '1px' }}>
-                <svg
-                  width="200px"
-                  height="1000px"
-                  fill="blue"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <rect x="0" y="80" width="100%" height="100%" fill="blue" />
-                  <path d="M100 0.587l30.52 66.76L200 81.25l-50 48.5L161.92 200 100 165.83 38.08 200 50 129.75 0 81.25l69.44-13.29z" />
-                  <path d="M100 0.587l30.52 66.76L200 81.25l-50 48.5L161.92 200 100 165.83 38.08 200 50 129.75 0 81.25l69.44-13.29z" transform='scale(0.7) translate(42.5, 47)' fill='white' />
-                </svg>
-              </div>
-            </Box>
-          </Slide>
-          <Slide direction='down' appear={true} in={!open && !trigger} timeout={100}>
-            <Box
-              component={motion.div}
-              sx={{
-                position: 'absolute',
-                width: '60px',
-                height: '60px',
-                borderRadius: '50%',
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                backgroundColor: 'transparent',
-                border: '20px solid yellow',
-                filter: 'drop-shadow(-2px 3px 5px rgba(0,0,0,0.5))',
-                top: '-40px',
-                left: '90px'
-              }}
-              whileHover={{ scale: 1.2 }}
-              whileTap={{ scale: 1 }}
-            >
               <Box
-                component={motion.div}
                 sx={{
                   position: 'absolute',
-                  width: '50px',
-                  height: '50px',
-                  display: 'flex',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  borderRadius: '50%',
-                  backgroundColor: 'transparent',
-                  border: '5px solid blue'
-                }}
-              >
+                  '& svg': {
+                    filter: 'drop-shadow(-2px 3px 10px rgba(0,0,0,0.5))',
+                  },
+                  top: '-10px',
+                  left: '-45px'
+                }}>
+                <div style={{ transform: 'scale(0.1) rotate(135deg)', width: '1px', height: '1px' }}>
+                  <svg
+                    width="200px"
+                    height="1000px"
+                    fill="blue"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <rect x="0" y="80" width="100%" height="100%" fill="blue" />
+                    <path d="M100 0.587l30.52 66.76L200 81.25l-50 48.5L161.92 200 100 165.83 38.08 200 50 129.75 0 81.25l69.44-13.29z" />
+                    <path d="M100 0.587l30.52 66.76L200 81.25l-50 48.5L161.92 200 100 165.83 38.08 200 50 129.75 0 81.25l69.44-13.29z" transform='scale(0.7) translate(42.5, 47)' fill='white' />
+                  </svg>
+                </div>
               </Box>
               <Box
-                component={motion.div}
                 sx={{
                   position: 'absolute',
-                  width: '70px',
-                  height: '70px',
-                  display: 'flex',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  borderRadius: '50%',
-                  backgroundColor: 'transparent',
-                  border: '5px solid blue'
-                }}
-              >
+                  '& svg': {
+                    filter: 'drop-shadow(-2px 3px 10px rgba(0,0,0,0.5))',
+                  },
+                  top: '35px',
+                  left: '-190px'
+                }}>
+                <div style={{ transform: 'scale(0.1) rotate(135deg)', width: '1px', height: '1px' }}>
+                  <svg
+                    width="200px"
+                    height="1000px"
+                    fill="blue"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <rect x="0" y="80" width="100%" height="100%" fill="blue" />
+                    <path d="M100 0.587l30.52 66.76L200 81.25l-50 48.5L161.92 200 100 165.83 38.08 200 50 129.75 0 81.25l69.44-13.29z" />
+                    <path d="M100 0.587l30.52 66.76L200 81.25l-50 48.5L161.92 200 100 165.83 38.08 200 50 129.75 0 81.25l69.44-13.29z" transform='scale(0.7) translate(42.5, 47)' fill='white' />
+                  </svg>
+                </div>
               </Box>
             </Box>
           </Slide>
-          <Slide direction='down' appear={true} in={!open && !trigger} timeout={100}>
+          <Box
+            component={motion.div}
+            sx={{
+              position: 'absolute',
+              width: '60px',
+              height: '60px',
+              borderRadius: '50%',
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              backgroundColor: 'transparent',
+              border: '20px solid yellow',
+              filter: 'drop-shadow(-2px 3px 5px rgba(0,0,0,0.5))',
+              top: '-40px',
+              left: '90px'
+            }}
+            whileHover={{ scale: 1.2 }}
+            whileTap={{ scale: 1 }}
+          >
             <Box
               component={motion.div}
               sx={{
                 position: 'absolute',
-                width: '95px',
-                height: '95px',
-                borderRadius: '50%',
+                width: '50px',
+                height: '50px',
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
+                borderRadius: '50%',
                 backgroundColor: 'transparent',
-                border: '20px solid blue',
-                filter: 'drop-shadow(-2px 3px 5px rgba(0,0,0,0.5))',
-                top: '35px',
-                left: '-60px'
+                border: '5px solid blue'
               }}
-              whileHover={{ scale: 1.2 }}
-              whileTap={{ scale: 1 }}
             >
-              <Box
-                component={motion.div}
-                sx={{
-                  position: 'absolute',
-                  width: '90px',
-                  height: '90px',
-                  display: 'flex',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  borderRadius: '50%',
-                  backgroundColor: 'transparent',
-                  border: '5px solid yellow'
-                }}
-              >
-              </Box>
-              <Box
-                component={motion.div}
-                sx={{
-                  position: 'absolute',
-                  width: '70px',
-                  height: '70px',
-                  display: 'flex',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  borderRadius: '50%',
-                  backgroundColor: 'transparent',
-                  border: '5px solid yellow'
-                }}
-              >
-              </Box>
             </Box>
-          </Slide>
+            <Box
+              component={motion.div}
+              sx={{
+                position: 'absolute',
+                width: '70px',
+                height: '70px',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                borderRadius: '50%',
+                backgroundColor: 'transparent',
+                border: '5px solid blue'
+              }}
+            >
+            </Box>
+          </Box>
+          <Box
+            component={motion.div}
+            sx={{
+              position: 'absolute',
+              width: '95px',
+              height: '95px',
+              borderRadius: '50%',
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              backgroundColor: 'transparent',
+              border: '20px solid blue',
+              filter: 'drop-shadow(-2px 3px 5px rgba(0,0,0,0.5))',
+              top: '35px',
+              left: '-60px'
+            }}
+            whileHover={{ scale: 1.2 }}
+            whileTap={{ scale: 1 }}
+          >
+            <Box
+              component={motion.div}
+              sx={{
+                position: 'absolute',
+                width: '90px',
+                height: '90px',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                borderRadius: '50%',
+                backgroundColor: 'transparent',
+                border: '5px solid yellow'
+              }}
+            >
+            </Box>
+            <Box
+              component={motion.div}
+              sx={{
+                position: 'absolute',
+                width: '70px',
+                height: '70px',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                borderRadius: '50%',
+                backgroundColor: 'transparent',
+                border: '5px solid yellow'
+              }}
+            >
+            </Box>
+          </Box>
         </Box>
       </AppBar>
     </HideOnScroll >
