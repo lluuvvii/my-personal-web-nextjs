@@ -4,16 +4,13 @@ import { motion } from 'framer-motion'
 import HideOnScroll from '@/app/components/navbar/HideOnScroll'
 import { AppBar, Box, Button, Grid, Slide, useScrollTrigger } from '@mui/material'
 import ZigzagContainer from '../materials/ZigzagContainer'
-import { memo, useMemo, useState } from 'react'
+import { useMemo, useState } from 'react'
 import SideBar from '../sidebar/SideBar'
 import { IconArrowBigRightLinesFilled } from '@tabler/icons-react'
-import StarLongShadow from '../materials/StarLongShadow'
 
 interface Props {
   window?: () => Window | undefined
 }
-
-const MemoizedStarLongShadow = memo(StarLongShadow)
 
 const Navbar = ({ window }: Props) => {
   const [open, setOpen] = useState(false)
@@ -68,18 +65,6 @@ const Navbar = ({ window }: Props) => {
               animate={{ rotate: -360 }}
               transition={{ repeat: Infinity, duration: 15, ease: 'linear' }}
             >
-            </Box>
-          </Slide>
-          <Slide direction='right' appear={true} in={!open && !trigger} timeout={300}>
-            <Box
-              position='absolute'
-              sx={{
-                top: '135px',
-                left: '40px'
-              }}
-            >
-              {/* <BoxWithLongShadow fontSize='30px' shadowLength={100} /> */}
-              <MemoizedStarLongShadow fontSize='25px' shadowLength={150} transform='rotate(180deg)' />
             </Box>
           </Slide>
           <ZigzagContainer width='100%' height='100px' color='blue' toColor='#008cff' toGradient='50deg' bottom>
@@ -242,27 +227,77 @@ const Navbar = ({ window }: Props) => {
               </Grid>
             </Grid>
           </ZigzagContainer>
-          <Slide direction='down' appear={true} in={!open && !trigger} timeout={100}>
+          {/* stars long shadow */}
+          <Slide direction='down' appear={true} in={!open && !trigger} timeout={300}>
             <Box
-              position='absolute'
               sx={{
-                top: '110px',
-                left: '200px'
-              }}
-            >
-              <StarLongShadow fontSize='30px' shadowLength={250} transform='rotate(180deg)' />
+                position: 'absolute',
+                '& svg': {
+                  filter: 'drop-shadow(-2px 3px 10px rgba(0,0,0,0.5))',
+                },
+                top: '80px',
+                left: '240px'
+              }}>
+              <div style={{ transform: 'scale(0.2) rotate(135deg)', width: '1px', height: '1px' }}>
+                <svg
+                  width="200px"
+                  height="700px"
+                  fill="blue"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect x="0" y="80" width="100%" height="100%" fill="blue" />
+                  <path d="M100 0.587l30.52 66.76L200 81.25l-50 48.5L161.92 200 100 165.83 38.08 200 50 129.75 0 81.25l69.44-13.29z" />
+                  <path d="M100 0.587l30.52 66.76L200 81.25l-50 48.5L161.92 200 100 165.83 38.08 200 50 129.75 0 81.25l69.44-13.29z" transform='scale(0.7) translate(42.5, 47)' fill='white' />
+                </svg>
+              </div>
             </Box>
           </Slide>
-          <Slide direction='down' appear={true} in={!open && !trigger} timeout={100}>
+          <Slide direction='down' appear={true} in={!open && !trigger} timeout={300}>
             <Box
-              position='absolute'
               sx={{
-                top: '85px',
-                left: '200px'
-              }}
-            >
-              {/* <BoxWithLongShadow fontSize='30px' shadowLength={100} /> */}
-              <StarLongShadow fontSize='50px' shadowLength={150} transform='rotate(180deg)' />
+                position: 'absolute',
+                '& svg': {
+                  filter: 'drop-shadow(-2px 3px 10px rgba(0,0,0,0.5))',
+                },
+                top: '75px',
+                left: '195px'
+              }}>
+              <div style={{ transform: 'scale(0.1) rotate(135deg)', width: '1px', height: '1px' }}>
+                <svg
+                  width="200px"
+                  height="1000px"
+                  fill="blue"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect x="0" y="80" width="100%" height="100%" fill="blue" />
+                  <path d="M100 0.587l30.52 66.76L200 81.25l-50 48.5L161.92 200 100 165.83 38.08 200 50 129.75 0 81.25l69.44-13.29z" />
+                  <path d="M100 0.587l30.52 66.76L200 81.25l-50 48.5L161.92 200 100 165.83 38.08 200 50 129.75 0 81.25l69.44-13.29z" transform='scale(0.7) translate(42.5, 47)' fill='white' />
+                </svg>
+              </div>
+            </Box>
+          </Slide>
+          <Slide direction='down' appear={true} in={!open && !trigger} timeout={300}>
+            <Box
+              sx={{
+                position: 'absolute',
+                '& svg': {
+                  filter: 'drop-shadow(-2px 3px 10px rgba(0,0,0,0.5))',
+                },
+                top: '120px',
+                left: '45px'
+              }}>
+              <div style={{ transform: 'scale(0.1) rotate(135deg)', width: '1px', height: '1px' }}>
+                <svg
+                  width="200px"
+                  height="1000px"
+                  fill="blue"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect x="0" y="80" width="100%" height="100%" fill="blue" />
+                  <path d="M100 0.587l30.52 66.76L200 81.25l-50 48.5L161.92 200 100 165.83 38.08 200 50 129.75 0 81.25l69.44-13.29z" />
+                  <path d="M100 0.587l30.52 66.76L200 81.25l-50 48.5L161.92 200 100 165.83 38.08 200 50 129.75 0 81.25l69.44-13.29z" transform='scale(0.7) translate(42.5, 47)' fill='white' />
+                </svg>
+              </div>
             </Box>
           </Slide>
           <Slide direction='down' appear={true} in={!open && !trigger} timeout={200}>
@@ -369,27 +404,6 @@ const Navbar = ({ window }: Props) => {
               </Box>
             </Box>
           </Slide>
-          <Box
-            sx={{
-              position: 'absolute',
-              '& svg': {
-                filter: 'drop-shadow(20px 0 10px rgba(0,0,0,0.5))',
-              },
-              transform: 'scale(0.5)',
-              top: 0,
-              left: 100
-            }}>
-            <svg
-              width="200px"
-              height="500px"
-              fill="blue"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <rect x="0" y="80" width="100%" height="100%" fill="blue" />
-              <path d="M100 .587l30.52 62.76L200 81.25l-50 48.5L161.92 200 100 165.83 38.08 200 50 129.75 0 81.25l69.44-13.29z" />
-              <path d="M100 .587l30.52 62.76L200 81.25l-50 48.5L161.92 200 100 165.83 38.08 200 50 129.75 0 81.25l69.44-13.29z" transform='scale(0.7) translate(43, 43)' fill='white' />
-            </svg>
-          </Box>
         </Box>
       </AppBar>
     </HideOnScroll >
