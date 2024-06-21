@@ -1,8 +1,9 @@
 import ZigzagContainer from '@/app/components/materials/ZigzagContainer'
-import { AppBar, Box, Button, Drawer, Grid, Slide, Stack, Typography } from '@mui/material'
+import { Box, Grid, Stack, Typography } from '@mui/material'
 import Image from 'next/image'
 import Link from 'next/link'
-import React, { useState } from 'react'
+import React from 'react'
+import AudioPlayer from '@/app/components/audio/AudioPlayer'
 
 const BackgroundContainer = () => {
   return (
@@ -37,6 +38,7 @@ const BackgroundContainer = () => {
         </Grid> */}
         <Grid item>
           <Typography variant='overline'>Reference : Sonic Generations UI theme</Typography>
+          <AudioPlayer />
         </Grid>
         <Grid item>
           <Image src='/assets/img/sonic_generations_background_by_sonicguru_d66i4ax.png' alt='sonicbg' width={500} height={500} />
