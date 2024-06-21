@@ -724,7 +724,7 @@ const Navbar = ({ window }: Props) => {
             <ReactAudioPlayer
               src="/assets/music/sonic_gallery.weba"
               autoPlay={true}
-              controls={false}
+              controls={true}
               loop={true}
             />
           </Box>
