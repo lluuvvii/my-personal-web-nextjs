@@ -3,7 +3,13 @@
 import React from 'react'
 import ReactAudioPlayer from 'react-audio-player'
 
-const AudioPlayer = () => {
+interface AudioPlayerProps {
+  autoPlay?: boolean
+  controls?: boolean
+  loop?: boolean
+}
+
+const AudioPlayer: React.FC<AudioPlayerProps> = ({ autoPlay = false, controls = true, loop }) => {
   return (
     <>
       <ReactAudioPlayer
@@ -11,6 +17,7 @@ const AudioPlayer = () => {
         autoPlay={false}
         controls
         loop
+        style={{ border: '5px solid red', borderRadius: '50px' }}
       />
     </>
   )
