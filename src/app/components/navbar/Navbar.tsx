@@ -4,39 +4,37 @@ import { motion } from 'framer-motion'
 import HideOnScroll from '@/app/components/navbar/HideOnScroll'
 import { AppBar, Box, Button, Grid, useScrollTrigger } from '@mui/material'
 import ZigzagContainer from '../materials/ZigzagContainer'
-import { useMemo, useState, useEffect } from 'react'
+import { useMemo, useState } from 'react'
 import { IconArrowBigLeftLinesFilled, IconArrowBigRightLinesFilled } from '@tabler/icons-react'
+import { useSearchParams, useRouter } from 'next/navigation'
 
 interface Props {
   window?: () => Window | undefined
 }
 
 const Navbar = ({ window }: Props) => {
-  const [open, setOpen] = useState(false)
-  const [color, setColor] = useState('')
-  const [gradientColor, setGradientColor] = useState('')
+  const router = useRouter()
+  const searchParams = useSearchParams()
+  const [open, setOpen] = useState(searchParams.get('navright') === 'false' ? false : true)
+  const [color, setColor] = useState(searchParams.get('navright') === 'false' ? 'blue' : 'red')
+  const [gradientColor, setGradientColor] = useState(searchParams.get('navright') === 'false' ? '#008cff' : '#ff6054')
 
   const handleChangeColor = () => {
-    if (color !== '') {
-      if (color === 'blue') {
-        setTimeout(() => {
-          setColor('red')
-          setGradientColor('#ff6054')
-        }, 200)
-      }
-      if (color === 'red') {
-        setTimeout(() => {
-          setColor('blue')
-          setGradientColor('#008cff')
-        }, 200)
-      }
+    if (color === 'blue') {
+      router.push('/test?navright=true')
+      setTimeout(() => {
+        setColor('red')
+        setGradientColor('#ff6054')
+      }, 200)
+    }
+    if (color === 'red') {
+      router.push('/test?navright=false')
+      setTimeout(() => {
+        setColor('blue')
+        setGradientColor('#008cff')
+      }, 200)
     }
   }
-
-  useEffect(() => {
-    setColor('blue')
-    setGradientColor('#008cff')
-  }, [])
 
   const trigger = useScrollTrigger({
     target: window ? window() : undefined,

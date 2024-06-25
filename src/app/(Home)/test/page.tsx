@@ -9,33 +9,6 @@ const BackgroundContainer = () => {
   return (
     <>
       <Grid container spacing={1} alignItems='center' justifyContent='center'>
-        {/* <Grid item>
-          <ZigzagContainer width='800px' height='500px' color='black'>
-            <Box sx={{ transform: 'translate(0%, 10%)', position: 'absolute' }}>
-              <ZigzagContainer width='200px' height='400px'>
-                <Slide in={open} direction='right' timeout={400}>
-                  <Box sx={{ transform: 'translate(0%, 10%)', position: 'absolute' }}>
-                    <ZigzagContainer width='200px' height='400px' color='red' />
-                  </Box>
-                </Slide>
-              </ZigzagContainer>
-            </Box>
-            <Slide in={open} direction='down' timeout={400}>
-              <Box sx={{ transform: 'translate(0%, 0%)', position: 'absolute' }}>
-                <ZigzagContainer width='800px' height='100px' color='blue' />
-              </Box>
-            </Slide>
-            <Box sx={{ transform: 'translate(0%, 150%)' }}>
-              <ZigzagContainer width='800px' height='200px'>
-                <Slide in={open} direction='up' timeout={400}>
-                  <Box sx={{ transform: 'translate(0%, 0%)', position: 'absolute' }}>
-                    <ZigzagContainer width='800px' height='200px' color='yellow' />
-                  </Box>
-                </Slide>
-              </ZigzagContainer>
-            </Box>
-          </ZigzagContainer>
-        </Grid> */}
         <Grid item>
           <Typography variant='overline'>Reference : Sonic Generations UI theme</Typography>
           <AudioPlayer />
