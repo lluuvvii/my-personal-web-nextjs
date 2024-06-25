@@ -67,7 +67,6 @@ const Navbar = ({ window }: Props) => {
                 }}
                 whileHover={{ scale: 1.2 }}
                 whileTap={{ scale: 1 }}
-                animate={{ rotate: trigger ? 360 : 0 }}
                 transition={{
                   type: 'spring',
                   stiffness: 300,
@@ -144,7 +143,7 @@ const Navbar = ({ window }: Props) => {
                         display: 'flex',
                         justifyContent: 'center',
                         alignItems: 'center',
-                        background: 'repeating-linear-gradient(135deg, yellow, yellow 8px, transparent 8px, transparent 11px)',
+                        background: 'repeating-linear-gradient(135deg, yellow, yellow 8px, transparent 8px, transparent 15px)',
                         filter: 'drop-shadow(-2px 3px 5px rgba(0,0,0,0.5))',
                         top: '-20px',
                         left: '-30px',
@@ -402,7 +401,6 @@ const Navbar = ({ window }: Props) => {
                 }}
                 whileHover={{ scale: 1.2 }}
                 whileTap={{ scale: 1 }}
-                animate={{ rotate: trigger ? 360 : 0 }}
                 transition={{
                   type: 'spring',
                   stiffness: 300,
@@ -479,7 +477,7 @@ const Navbar = ({ window }: Props) => {
                         display: 'flex',
                         justifyContent: 'center',
                         alignItems: 'center',
-                        background: 'repeating-linear-gradient(135deg, yellow, yellow 8px, transparent 8px, transparent 11px)',
+                        background: 'repeating-linear-gradient(135deg, yellow, yellow 8px, transparent 8px, transparent 15px)',
                         filter: 'drop-shadow(-2px 3px 5px rgba(0,0,0,0.5))',
                         top: '-20px',
                         left: '-30px',
