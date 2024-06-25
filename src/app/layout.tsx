@@ -2,7 +2,7 @@
 
 import { Inter } from "next/font/google";
 import "./globals.css";
-import React from 'react';
+import React, { Suspense } from 'react';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { red, blue, yellow } from '@mui/material/colors';
 import { Box, CssBaseline } from "@mui/material";
@@ -37,13 +37,15 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <title>Luvi Portfolio</title>
       </head>
       <body className={inter.className}>
-        <Navbar />
-        <ThemeProvider theme={theme}>
-          <CssBaseline />
-          <Box sx={{ mt: 15 }}>
-            {children}
-          </Box>
-        </ThemeProvider>
+        <Suspense>
+          <Navbar />
+          <ThemeProvider theme={theme}>
+            <CssBaseline />
+            <Box sx={{ mt: 15 }}>
+              {children}
+            </Box>
+          </ThemeProvider>
+        </Suspense>
       </body>
     </html>
   );
