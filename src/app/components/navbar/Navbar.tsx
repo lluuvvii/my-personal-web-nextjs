@@ -6,7 +6,7 @@ import { AppBar, Box, Button, Grid, useScrollTrigger } from '@mui/material'
 import ZigzagContainer from '../materials/ZigzagContainer'
 import { useMemo, useState } from 'react'
 import { IconArrowBigLeftLinesFilled, IconArrowBigRightLinesFilled } from '@tabler/icons-react'
-import { useSearchParams, useRouter } from 'next/navigation'
+import { useSearchParams, useRouter, usePathname } from 'next/navigation'
 
 interface Props {
   window?: () => Window | undefined
@@ -15,20 +15,21 @@ interface Props {
 const Navbar = ({ window }: Props) => {
   const router = useRouter()
   const searchParams = useSearchParams()
-  const [open, setOpen] = useState(searchParams.get('navright') === 'false' ? false : true)
-  const [color, setColor] = useState(searchParams.get('navright') === 'false' ? 'blue' : 'red')
-  const [gradientColor, setGradientColor] = useState(searchParams.get('navright') === 'false' ? '#008cff' : '#ff6054')
+  const pathname = usePathname()
+  const [open, setOpen] = useState(searchParams.get('navright') === 'false' || searchParams.get('navright') === null ? false : true)
+  const [color, setColor] = useState(searchParams.get('navright') === 'false' || searchParams.get('navright') === null ? 'blue' : 'red')
+  const [gradientColor, setGradientColor] = useState(searchParams.get('navright') === 'false' || searchParams.get('navright') === null ? '#008cff' : '#ff6054')
 
   const handleChangeColor = () => {
     if (color === 'blue') {
-      router.push('/test?navright=true')
+      router.push(`${pathname}?navright=${!open}`)
       setTimeout(() => {
         setColor('red')
         setGradientColor('#ff6054')
       }, 200)
     }
     if (color === 'red') {
-      router.push('/test?navright=false')
+      router.push(`${pathname}?navright=${!open}`)
       setTimeout(() => {
         setColor('blue')
         setGradientColor('#008cff')
