@@ -65,12 +65,13 @@ const Navbar = ({ window }: Props) => {
                   top: '60px',
                   left: '20px'
                 }}
-                whileHover={{ scale: 1.2 }}
-                whileTap={{ scale: 1 }}
+                initial={{ scale: !trigger ? 0 : 1 }}
+                animate={{ scale: !trigger ? 1 : 0 }}
                 transition={{
                   type: 'spring',
-                  stiffness: 300,
+                  stiffness: 500,
                   damping: 20,
+                  delay: 0.4
                 }}
               >
               </Box>
@@ -148,8 +149,16 @@ const Navbar = ({ window }: Props) => {
                         top: '-20px',
                         left: '-30px',
                       }}
-                      whileHover={{ scale: 1.2 }}
-                      whileTap={{ scale: 1 }}></Box>
+                      initial={{ scale: !trigger ? 0 : 1 }}
+                      animate={{ scale: !trigger ? 1 : 0 }}
+                      transition={{
+                        type: 'spring',
+                        stiffness: 500,
+                        damping: 20,
+                        delay: 0.4
+                      }}
+                    >
+                    </Box>
                     {/* spikes */}
                     <Box
                       component={motion.div}
@@ -171,6 +180,7 @@ const Navbar = ({ window }: Props) => {
                     </Box>
                     {/* stars long shadow */}
                     <Box
+                      component={motion.div}
                       sx={{
                         position: 'absolute',
                         '& svg': {
@@ -178,7 +188,16 @@ const Navbar = ({ window }: Props) => {
                         },
                         top: '80px',
                         left: '240px'
-                      }}>
+                      }}
+                      initial={{ scale: !trigger ? 0 : 1 }}
+                      animate={{ scale: !trigger ? 1 : 0 }}
+                      transition={{
+                        type: 'spring',
+                        stiffness: 500,
+                        damping: 20,
+                        delay: 0.4
+                      }}
+                    >
                       <div style={{ transform: 'scale(0.2) rotate(135deg)', width: '1px', height: '1px' }}>
                         <svg
                           width='200px'
@@ -220,6 +239,13 @@ const Navbar = ({ window }: Props) => {
                       component={motion.div}
                       whileHover={{ scale: 1.2 }}
                       whileTap={{ scale: 1 }}
+                      initial={{ scale: !trigger ? 0 : 1 }}
+                      animate={{ scale: !trigger ? 1 : 0 }}
+                      transition={{
+                        type: 'spring',
+                        stiffness: 500,
+                        damping: 20
+                      }}
                     >
                       <Button
                         onClick={() => {
@@ -259,6 +285,7 @@ const Navbar = ({ window }: Props) => {
               </ZigzagContainer>
               {/* star long shadow */}
               <Box
+                component={motion.div}
                 sx={{
                   position: 'absolute',
                   '& svg': {
@@ -266,7 +293,16 @@ const Navbar = ({ window }: Props) => {
                   },
                   top: '120px',
                   left: '50px'
-                }}>
+                }}
+                initial={{ scale: !trigger ? 0 : 1 }}
+                animate={{ scale: !trigger ? 1 : 0 }}
+                transition={{
+                  type: 'spring',
+                  stiffness: 500,
+                  damping: 20,
+                  delay: 0.4
+                }}
+              >
                 <div style={{ transform: 'scale(0.1) rotate(135deg)', width: '1px', height: '1px' }}>
                   <svg
                     width='200px'
@@ -296,8 +332,14 @@ const Navbar = ({ window }: Props) => {
                   top: '-40px',
                   left: '90px'
                 }}
-                whileHover={{ scale: 1.2 }}
-                whileTap={{ scale: 1 }}
+                initial={{ scale: !trigger ? 0 : 1 }}
+                animate={{ scale: !trigger ? 1 : 0 }}
+                transition={{
+                  type: 'spring',
+                  stiffness: 500,
+                  damping: 20,
+                  delay: 0.4
+                }}
               >
                 <Box
                   component={motion.div}
@@ -346,8 +388,14 @@ const Navbar = ({ window }: Props) => {
                   top: '35px',
                   left: '-60px'
                 }}
-                whileHover={{ scale: 1.2 }}
-                whileTap={{ scale: 1 }}
+                initial={{ scale: !trigger ? 0 : 1 }}
+                animate={{ scale: !trigger ? 1 : 0 }}
+                transition={{
+                  type: 'spring',
+                  stiffness: 500,
+                  damping: 20,
+                  delay: 0.4
+                }}
               >
                 <Box
                   component={motion.div}
@@ -399,12 +447,13 @@ const Navbar = ({ window }: Props) => {
                   top: '60px',
                   left: '20px'
                 }}
-                whileHover={{ scale: 1.2 }}
-                whileTap={{ scale: 1 }}
+                initial={{ scale: !trigger ? 0 : 1 }}
+                animate={{ scale: !trigger ? 1 : 0 }}
                 transition={{
                   type: 'spring',
-                  stiffness: 300,
+                  stiffness: 500,
                   damping: 20,
+                  delay: 0.4
                 }}
               >
               </Box>
@@ -482,8 +531,16 @@ const Navbar = ({ window }: Props) => {
                         top: '-20px',
                         left: '-30px',
                       }}
-                      whileHover={{ scale: 1.2 }}
-                      whileTap={{ scale: 1 }}></Box>
+                      initial={{ scale: !trigger ? 0 : 1 }}
+                      animate={{ scale: !trigger ? 1 : 0 }}
+                      transition={{
+                        type: 'spring',
+                        stiffness: 500,
+                        damping: 20,
+                        delay: 0.4
+                      }}
+                    >
+                    </Box>
                     {/* spikes */}
                     <Box
                       component={motion.div}
@@ -505,6 +562,7 @@ const Navbar = ({ window }: Props) => {
                     </Box>
                     {/* stars long shadow */}
                     <Box
+                      component={motion.div}
                       sx={{
                         position: 'absolute',
                         '& svg': {
@@ -512,7 +570,16 @@ const Navbar = ({ window }: Props) => {
                         },
                         top: '80px',
                         left: '240px'
-                      }}>
+                      }}
+                      initial={{ scale: !trigger ? 0 : 1 }}
+                      animate={{ scale: !trigger ? 1 : 0 }}
+                      transition={{
+                        type: 'spring',
+                        stiffness: 500,
+                        damping: 20,
+                        delay: 0.4
+                      }}
+                    >
                       <div style={{ transform: 'scale(0.2) rotate(135deg)', width: '1px', height: '1px' }}>
                         <svg
                           width='200px'
@@ -554,6 +621,13 @@ const Navbar = ({ window }: Props) => {
                       component={motion.div}
                       whileHover={{ scale: 1.2 }}
                       whileTap={{ scale: 1 }}
+                      initial={{ scale: !trigger ? 0 : 1 }}
+                      animate={{ scale: !trigger ? 1 : 0 }}
+                      transition={{
+                        type: 'spring',
+                        stiffness: 500,
+                        damping: 20
+                      }}
                     >
                       <Button
                         onClick={() => {
@@ -593,6 +667,7 @@ const Navbar = ({ window }: Props) => {
               </ZigzagContainer>
               {/* star long shadow */}
               <Box
+                component={motion.div}
                 sx={{
                   position: 'absolute',
                   '& svg': {
@@ -600,7 +675,16 @@ const Navbar = ({ window }: Props) => {
                   },
                   top: '120px',
                   left: '50px'
-                }}>
+                }}
+                initial={{ scale: !trigger ? 0 : 1 }}
+                animate={{ scale: !trigger ? 1 : 0 }}
+                transition={{
+                  type: 'spring',
+                  stiffness: 500,
+                  damping: 20,
+                  delay: 0.4
+                }}
+              >
                 <div style={{ transform: 'scale(0.1) rotate(135deg)', width: '1px', height: '1px' }}>
                   <svg
                     width='200px'
@@ -630,8 +714,14 @@ const Navbar = ({ window }: Props) => {
                   top: '-40px',
                   left: '90px'
                 }}
-                whileHover={{ scale: 1.2 }}
-                whileTap={{ scale: 1 }}
+                initial={{ scale: !trigger ? 0 : 1 }}
+                animate={{ scale: !trigger ? 1 : 0 }}
+                transition={{
+                  type: 'spring',
+                  stiffness: 500,
+                  damping: 20,
+                  delay: 0.4
+                }}
               >
                 <Box
                   component={motion.div}
@@ -680,8 +770,14 @@ const Navbar = ({ window }: Props) => {
                   top: '35px',
                   left: '-60px'
                 }}
-                whileHover={{ scale: 1.2 }}
-                whileTap={{ scale: 1 }}
+                initial={{ scale: !trigger ? 0 : 1 }}
+                animate={{ scale: !trigger ? 1 : 0 }}
+                transition={{
+                  type: 'spring',
+                  stiffness: 500,
+                  damping: 20,
+                  delay: 0.4
+                }}
               >
                 <Box
                   component={motion.div}
