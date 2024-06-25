@@ -22,14 +22,14 @@ const Navbar = ({ window }: Props) => {
 
   const handleChangeColor = () => {
     if (color === 'blue') {
-      router.push(`${pathname}?navright=${!open}`)
+      router.push(`${pathname}?navright=${!open}`, { scroll: false })
       setTimeout(() => {
         setColor('red')
         setGradientColor('#ff6054')
       }, 200)
     }
     if (color === 'red') {
-      router.push(`${pathname}?navright=${!open}`)
+      router.push(`${pathname}?navright=${!open}`, { scroll: false })
       setTimeout(() => {
         setColor('blue')
         setGradientColor('#008cff')
