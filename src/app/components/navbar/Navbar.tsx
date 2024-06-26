@@ -50,32 +50,59 @@ const Navbar = ({ window }: Props) => {
         <AppBar position='fixed' color='transparent' sx={{ boxShadow: 'none' }}>
           <Box component='header'>
             {!open ?
-              <Box
-                component={motion.div}
-                sx={{
-                  position: 'absolute',
-                  width: '60px',
-                  height: '60px',
-                  borderRadius: '50%',
-                  display: 'flex',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  backgroundColor: 'transparent',
-                  border: '15px solid black',
-                  filter: 'drop-shadow(-2px 3px 5px rgba(0,0,0,0.5))',
-                  top: '60px',
-                  left: '20px'
-                }}
-                initial={{ scale: !trigger ? 0 : 1 }}
-                animate={{ scale: !trigger ? 1 : 0 }}
-                transition={{
-                  type: 'spring',
-                  stiffness: 500,
-                  damping: 20,
-                  delay: 0.4
-                }}
-              >
-              </Box>
+              <>
+                <Box
+                  component={motion.div}
+                  sx={{
+                    position: 'absolute',
+                    width: '60px',
+                    height: '60px',
+                    borderRadius: '50%',
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    backgroundColor: 'transparent',
+                    border: '15px solid black',
+                    filter: 'drop-shadow(-2px 3px 5px rgba(0,0,0,0.5))',
+                    top: '60px',
+                    left: '20px'
+                  }}
+                  initial={{ scale: !trigger ? 0 : 1 }}
+                  animate={{ scale: !trigger ? 1 : 0 }}
+                  transition={{
+                    type: 'spring',
+                    stiffness: 500,
+                    damping: 20,
+                    delay: 0.4
+                  }}
+                >
+                </Box>
+                <Box
+                  component={motion.div}
+                  sx={{
+                    position: 'absolute',
+                    width: '95px',
+                    height: '95px',
+                    borderRadius: '50%',
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    background: 'repeating-linear-gradient(135deg, red, red 8px, transparent 8px, transparent 15px)',
+                    filter: 'drop-shadow(-2px 3px 5px rgba(0,0,0,0.5))',
+                    top: '30px',
+                    right: '-20px',
+                  }}
+                  initial={{ scale: !trigger ? 0 : 1 }}
+                  animate={{ scale: !trigger ? 1 : 0 }}
+                  transition={{
+                    type: 'spring',
+                    stiffness: 500,
+                    damping: 20,
+                    delay: 0.4
+                  }}
+                >
+                </Box>
+              </>
               : null}
             <Box
               component={motion.div}
@@ -335,7 +362,7 @@ const Navbar = ({ window }: Props) => {
                     justifyContent: 'center',
                     alignItems: 'center',
                     backgroundColor: 'transparent',
-                    border: '20px solid yellow',
+                    border: '20px solid white',
                     filter: 'drop-shadow(-2px 3px 5px rgba(0,0,0,0.5))',
                     top: '-40px',
                     left: '90px'
@@ -445,32 +472,59 @@ const Navbar = ({ window }: Props) => {
         <AppBar position='fixed' color='transparent' sx={{ boxShadow: 'none' }}>
           <Box component='header'>
             {open ?
-              <Box
-                component={motion.div}
-                sx={{
-                  position: 'absolute',
-                  width: '60px',
-                  height: '60px',
-                  borderRadius: '50%',
-                  display: 'flex',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  backgroundColor: 'transparent',
-                  border: '15px solid black',
-                  filter: 'drop-shadow(-2px 3px 5px rgba(0,0,0,0.5))',
-                  top: '60px',
-                  left: '20px'
-                }}
-                initial={{ scale: !trigger ? 0 : 1 }}
-                animate={{ scale: !trigger ? 1 : 0 }}
-                transition={{
-                  type: 'spring',
-                  stiffness: 500,
-                  damping: 20,
-                  delay: 0.4
-                }}
-              >
-              </Box>
+              <>
+                <Box
+                  component={motion.div}
+                  sx={{
+                    position: 'absolute',
+                    width: '60px',
+                    height: '60px',
+                    borderRadius: '50%',
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    backgroundColor: 'transparent',
+                    border: '15px solid black',
+                    filter: 'drop-shadow(-2px 3px 5px rgba(0,0,0,0.5))',
+                    top: '60px',
+                    left: '20px'
+                  }}
+                  initial={{ scale: !trigger ? 0 : 1 }}
+                  animate={{ scale: !trigger ? 1 : 0 }}
+                  transition={{
+                    type: 'spring',
+                    stiffness: 500,
+                    damping: 20,
+                    delay: 0.4
+                  }}
+                >
+                </Box>
+                <Box
+                  component={motion.div}
+                  sx={{
+                    position: 'absolute',
+                    width: '95px',
+                    height: '95px',
+                    borderRadius: '50%',
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    background: 'repeating-linear-gradient(135deg, blue, blue 8px, transparent 8px, transparent 15px)',
+                    filter: 'drop-shadow(-2px 3px 5px rgba(0,0,0,0.5))',
+                    top: '30px',
+                    right: '-20px',
+                  }}
+                  initial={{ scale: !trigger ? 0 : 1 }}
+                  animate={{ scale: !trigger ? 1 : 0 }}
+                  transition={{
+                    type: 'spring',
+                    stiffness: 500,
+                    damping: 20,
+                    delay: 0.4
+                  }}
+                >
+                </Box>
+              </>
               : null}
             <Box
               component={motion.div}
