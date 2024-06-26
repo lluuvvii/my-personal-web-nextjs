@@ -3,13 +3,14 @@
 import React from 'react'
 import ReactAudioPlayer from 'react-audio-player'
 
-interface AudioPlayerProps {
-  autoPlay?: boolean
-  controls?: boolean
-  loop?: boolean
-}
+// interface AudioPlayerProps {
+//   autoPlay?: boolean
+//   controls?: boolean
+//   loop?: boolean
+// }
 
-const AudioPlayer: React.FC<AudioPlayerProps> = ({ autoPlay = false, controls = true, loop }) => {
+const AudioPlayer = () => {
+  
   return (
     <>
       <ReactAudioPlayer
