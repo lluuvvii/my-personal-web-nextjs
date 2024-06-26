@@ -11,7 +11,7 @@ const HideOnScroll = ({ children, trigger, open }: Props) => {
 
   return (
     <>
-      <Slide appear={true} direction='right' in={!open ? !trigger && !open : false} timeout={200} style={{ transitionDelay: !open && !trigger ? '200ms' : '0ms' }}>
+      <Slide appear={true} direction='right' in={!trigger && !open ? true : false} timeout={200} style={{ transitionDelay: !open && !trigger ? '200ms' : '0ms' }}>
         {children}
       </Slide>
     </>
