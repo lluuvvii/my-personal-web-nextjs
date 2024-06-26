@@ -61,12 +61,14 @@ const Navbar = ({ window }: Props) => {
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
+                    cursor: 'pointer',
                     backgroundColor: 'transparent',
                     border: '15px solid black',
                     filter: 'drop-shadow(-2px 3px 5px rgba(0,0,0,0.5))',
                     top: '60px',
                     left: '20px'
                   }}
+                  drag
                   initial={{ scale: !trigger ? 0 : 1 }}
                   animate={{ scale: !trigger ? 1 : 0 }}
                   transition={{
@@ -87,11 +89,13 @@ const Navbar = ({ window }: Props) => {
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
+                    cursor: 'pointer',
                     background: 'repeating-linear-gradient(135deg, red, red 8px, transparent 8px, transparent 15px)',
                     filter: 'drop-shadow(-2px 3px 5px rgba(0,0,0,0.5))',
                     top: '30px',
                     right: '-20px',
                   }}
+                  drag
                   initial={{ scale: !trigger ? 0 : 1 }}
                   animate={{ scale: !trigger ? 1 : 0 }}
                   transition={{
@@ -113,11 +117,13 @@ const Navbar = ({ window }: Props) => {
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
+                cursor: 'pointer',
                 backgroundColor: 'black',
                 clipPath: 'polygon(100% 50%,83.81% 59.06%,93.3% 75%,74.75% 74.75%,75% 93.3%,59.06% 83.81%,50% 100%,40.94% 83.81%,25% 93.3%,25.25% 74.75%,6.7% 75%,16.19% 59.06%,0% 50%,16.19% 40.94%,6.7% 25%,25.25% 25.25%,25% 6.7%,40.94% 16.19%,50% 0%,59.06% 16.19%,75% 6.7%,74.75% 25.25%,93.3% 25%,83.81% 40.94%)',
                 top: '75px',
                 left: '65px'
               }}
+              drag
               animate={{ rotate: -360 }}
               transition={{ repeat: Infinity, duration: 15, ease: 'linear' }}
             >
@@ -135,11 +141,13 @@ const Navbar = ({ window }: Props) => {
                       display: 'flex',
                       justifyContent: 'center',
                       alignItems: 'center',
+                      cursor: 'pointer',
                       backgroundColor: 'yellow',
                       clipPath: 'polygon(100% 50%,83.81% 59.06%,93.3% 75%,74.75% 74.75%,75% 93.3%,59.06% 83.81%,50% 100%,40.94% 83.81%,25% 93.3%,25.25% 74.75%,6.7% 75%,16.19% 59.06%,0% 50%,16.19% 40.94%,6.7% 25%,25.25% 25.25%,25% 6.7%,40.94% 16.19%,50% 0%,59.06% 16.19%,75% 6.7%,74.75% 25.25%,93.3% 25%,83.81% 40.94%)',
                       top: '45px',
                       left: '60px'
                     }}
+                    drag
                     animate={{ rotate: 360 }}
                     transition={{ repeat: Infinity, duration: 5, ease: 'linear' }}
                   >
@@ -153,11 +161,13 @@ const Navbar = ({ window }: Props) => {
                       display: 'flex',
                       justifyContent: 'center',
                       alignItems: 'center',
+                      cursor: 'pointer',
                       backgroundColor: color,
                       clipPath: 'polygon(100% 50%,83.81% 59.06%,93.3% 75%,74.75% 74.75%,75% 93.3%,59.06% 83.81%,50% 100%,40.94% 83.81%,25% 93.3%,25.25% 74.75%,6.7% 75%,16.19% 59.06%,0% 50%,16.19% 40.94%,6.7% 25%,25.25% 25.25%,25% 6.7%,40.94% 16.19%,50% 0%,59.06% 16.19%,75% 6.7%,74.75% 25.25%,93.3% 25%,83.81% 40.94%,100% 50%,83.81% 59.06%,calc(83.81% - 6.76px) calc(59.06% - 1.81px),calc(100% - 10px) calc(50% - 0px),calc(83.81% - 6.76px) calc(40.94% - -1.81px),calc(93.3% - 8.66px) calc(25% - -5px),calc(74.75% - 4.95px) calc(25.25% - -4.95px),calc(75% - 5px) calc(6.7% - -8.66px),calc(59.06% - 1.81px) calc(16.19% - -6.76px),calc(50% - 0px) calc(0% - -10px),calc(40.94% - -1.81px) calc(16.19% - -6.76px),calc(25% - -5px) calc(6.7% - -8.66px),calc(25.25% - -4.95px) calc(25.25% - -4.95px),calc(6.7% - -8.66px) calc(25% - -5px),calc(16.19% - -6.76px) calc(40.94% - -1.81px),calc(0% - -10px) calc(50% - 0px),calc(16.19% - -6.76px) calc(59.06% - 1.81px),calc(6.7% - -8.66px) calc(75% - 5px),calc(25.25% - -4.95px) calc(74.75% - 4.95px),calc(25% - -5px) calc(93.3% - 8.66px),calc(40.94% - -1.81px) calc(83.81% - 6.76px),calc(50% - 0px) calc(100% - 10px),calc(59.06% - 1.81px) calc(83.81% - 6.76px),calc(75% - 5px) calc(93.3% - 8.66px),calc(74.75% - 4.95px) calc(74.75% - 4.95px),calc(93.3% - 8.66px) calc(75% - 5px),calc(83.81% - 6.76px) calc(59.06% - 1.81px),calc(100% - 10px) calc(50% - 0px))',
                       top: '70px',
                       left: '65px'
                     }}
+                    drag
                     animate={{ rotate: -360 }}
                     transition={{ repeat: Infinity, duration: 12, ease: 'linear' }}
                   >
@@ -174,11 +184,13 @@ const Navbar = ({ window }: Props) => {
                         display: 'flex',
                         justifyContent: 'center',
                         alignItems: 'center',
+                        cursor: 'pointer',
                         background: 'repeating-linear-gradient(135deg, yellow, yellow 8px, transparent 8px, transparent 15px)',
                         filter: 'drop-shadow(-2px 3px 5px rgba(0,0,0,0.5))',
                         top: '-20px',
                         left: '-30px',
                       }}
+                      drag
                       initial={{ scale: !trigger ? 0 : 1 }}
                       animate={{ scale: !trigger ? 1 : 0 }}
                       transition={{
@@ -200,11 +212,13 @@ const Navbar = ({ window }: Props) => {
                       display: 'flex',
                       justifyContent: 'center',
                       alignItems: 'center',
+                      cursor: 'pointer',
                       backgroundColor: 'yellow',
                       clipPath: 'polygon(100% 50%,83.81% 59.06%,93.3% 75%,74.75% 74.75%,75% 93.3%,59.06% 83.81%,50% 100%,40.94% 83.81%,25% 93.3%,25.25% 74.75%,6.7% 75%,16.19% 59.06%,0% 50%,16.19% 40.94%,6.7% 25%,25.25% 25.25%,25% 6.7%,40.94% 16.19%,50% 0%,59.06% 16.19%,75% 6.7%,74.75% 25.25%,93.3% 25%,83.81% 40.94%,100% 50%,83.81% 59.06%,calc(83.81% - 6.76px) calc(59.06% - 1.81px),calc(100% - 10px) calc(50% - 0px),calc(83.81% - 6.76px) calc(40.94% - -1.81px),calc(93.3% - 8.66px) calc(25% - -5px),calc(74.75% - 4.95px) calc(25.25% - -4.95px),calc(75% - 5px) calc(6.7% - -8.66px),calc(59.06% - 1.81px) calc(16.19% - -6.76px),calc(50% - 0px) calc(0% - -10px),calc(40.94% - -1.81px) calc(16.19% - -6.76px),calc(25% - -5px) calc(6.7% - -8.66px),calc(25.25% - -4.95px) calc(25.25% - -4.95px),calc(6.7% - -8.66px) calc(25% - -5px),calc(16.19% - -6.76px) calc(40.94% - -1.81px),calc(0% - -10px) calc(50% - 0px),calc(16.19% - -6.76px) calc(59.06% - 1.81px),calc(6.7% - -8.66px) calc(75% - 5px),calc(25.25% - -4.95px) calc(74.75% - 4.95px),calc(25% - -5px) calc(93.3% - 8.66px),calc(40.94% - -1.81px) calc(83.81% - 6.76px),calc(50% - 0px) calc(100% - 10px),calc(59.06% - 1.81px) calc(83.81% - 6.76px),calc(75% - 5px) calc(93.3% - 8.66px),calc(74.75% - 4.95px) calc(74.75% - 4.95px),calc(93.3% - 8.66px) calc(75% - 5px),calc(83.81% - 6.76px) calc(59.06% - 1.81px),calc(100% - 10px) calc(50% - 0px))',
                       top: '0px',
                       left: '50px'
                     }}
+                    drag
                     animate={{ rotate: 360 }}
                     transition={{ repeat: Infinity, duration: 10, ease: 'linear' }}
                   >
@@ -218,9 +232,11 @@ const Navbar = ({ window }: Props) => {
                         '& svg': {
                           filter: 'drop-shadow(-2px 3px 10px rgba(0,0,0,0.5))',
                         },
+                        cursor: 'pointer',
                         top: '80px',
                         left: '240px'
                       }}
+                      drag
                       initial={{ scale: !trigger ? 0 : 1 }}
                       animate={{ scale: !trigger ? 1 : 0 }}
                       transition={{
@@ -270,6 +286,8 @@ const Navbar = ({ window }: Props) => {
                 <Grid item>
                   <Box
                     component={motion.div}
+                    sx={{ cursor: 'pointer' }}
+                    drag
                     whileHover={{ scale: 1.2 }}
                     whileTap={{ scale: 1 }}
                     initial={{ scale: !trigger ? 0 : 1 }}
@@ -326,9 +344,11 @@ const Navbar = ({ window }: Props) => {
                     '& svg': {
                       filter: 'drop-shadow(-2px 3px 10px rgba(0,0,0,0.5))',
                     },
+                    cursor: 'pointer',
                     top: '120px',
                     left: '50px'
                   }}
+                  drag
                   initial={{ scale: !trigger ? 0 : 1 }}
                   animate={{ scale: !trigger ? 1 : 0 }}
                   transition={{
@@ -361,12 +381,14 @@ const Navbar = ({ window }: Props) => {
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
+                    cursor: 'pointer',
                     backgroundColor: 'transparent',
                     border: '20px solid white',
                     filter: 'drop-shadow(-2px 3px 5px rgba(0,0,0,0.5))',
                     top: '-40px',
                     left: '90px'
                   }}
+                  drag
                   initial={{ scale: !trigger ? 0 : 1 }}
                   animate={{ scale: !trigger ? 1 : 0 }}
                   transition={{
@@ -417,12 +439,14 @@ const Navbar = ({ window }: Props) => {
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
+                    cursor: 'pointer',
                     backgroundColor: 'transparent',
                     border: `20px solid ${color}`,
                     filter: 'drop-shadow(-2px 3px 5px rgba(0,0,0,0.5))',
                     top: '35px',
                     left: '-60px'
                   }}
+                  drag
                   initial={{ scale: !trigger ? 0 : 1 }}
                   animate={{ scale: !trigger ? 1 : 0 }}
                   transition={{
@@ -483,12 +507,14 @@ const Navbar = ({ window }: Props) => {
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
+                    cursor: 'pointer',
                     backgroundColor: 'transparent',
                     border: '15px solid black',
                     filter: 'drop-shadow(-2px 3px 5px rgba(0,0,0,0.5))',
                     top: '60px',
                     left: '20px'
                   }}
+                  drag
                   initial={{ scale: !trigger ? 0 : 1 }}
                   animate={{ scale: !trigger ? 1 : 0 }}
                   transition={{
@@ -509,11 +535,13 @@ const Navbar = ({ window }: Props) => {
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
+                    cursor: 'pointer',
                     background: 'repeating-linear-gradient(135deg, blue, blue 8px, transparent 8px, transparent 15px)',
                     filter: 'drop-shadow(-2px 3px 5px rgba(0,0,0,0.5))',
                     top: '30px',
                     right: '-20px',
                   }}
+                  drag
                   initial={{ scale: !trigger ? 0 : 1 }}
                   animate={{ scale: !trigger ? 1 : 0 }}
                   transition={{
@@ -535,11 +563,13 @@ const Navbar = ({ window }: Props) => {
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
+                cursor: 'pointer',
                 backgroundColor: 'black',
                 clipPath: 'polygon(100% 50%,83.81% 59.06%,93.3% 75%,74.75% 74.75%,75% 93.3%,59.06% 83.81%,50% 100%,40.94% 83.81%,25% 93.3%,25.25% 74.75%,6.7% 75%,16.19% 59.06%,0% 50%,16.19% 40.94%,6.7% 25%,25.25% 25.25%,25% 6.7%,40.94% 16.19%,50% 0%,59.06% 16.19%,75% 6.7%,74.75% 25.25%,93.3% 25%,83.81% 40.94%)',
                 top: '75px',
                 left: '65px'
               }}
+              drag
               animate={{ rotate: -360 }}
               transition={{ repeat: Infinity, duration: 15, ease: 'linear' }}
             >
@@ -557,11 +587,13 @@ const Navbar = ({ window }: Props) => {
                       display: 'flex',
                       justifyContent: 'center',
                       alignItems: 'center',
+                      cursor: 'pointer',
                       backgroundColor: 'yellow',
                       clipPath: 'polygon(100% 50%,83.81% 59.06%,93.3% 75%,74.75% 74.75%,75% 93.3%,59.06% 83.81%,50% 100%,40.94% 83.81%,25% 93.3%,25.25% 74.75%,6.7% 75%,16.19% 59.06%,0% 50%,16.19% 40.94%,6.7% 25%,25.25% 25.25%,25% 6.7%,40.94% 16.19%,50% 0%,59.06% 16.19%,75% 6.7%,74.75% 25.25%,93.3% 25%,83.81% 40.94%)',
                       top: '45px',
                       left: '60px'
                     }}
+                    drag
                     animate={{ rotate: 360 }}
                     transition={{ repeat: Infinity, duration: 5, ease: 'linear' }}
                   >
@@ -575,11 +607,13 @@ const Navbar = ({ window }: Props) => {
                       display: 'flex',
                       justifyContent: 'center',
                       alignItems: 'center',
+                      cursor: 'pointer',
                       backgroundColor: color,
                       clipPath: 'polygon(100% 50%,83.81% 59.06%,93.3% 75%,74.75% 74.75%,75% 93.3%,59.06% 83.81%,50% 100%,40.94% 83.81%,25% 93.3%,25.25% 74.75%,6.7% 75%,16.19% 59.06%,0% 50%,16.19% 40.94%,6.7% 25%,25.25% 25.25%,25% 6.7%,40.94% 16.19%,50% 0%,59.06% 16.19%,75% 6.7%,74.75% 25.25%,93.3% 25%,83.81% 40.94%,100% 50%,83.81% 59.06%,calc(83.81% - 6.76px) calc(59.06% - 1.81px),calc(100% - 10px) calc(50% - 0px),calc(83.81% - 6.76px) calc(40.94% - -1.81px),calc(93.3% - 8.66px) calc(25% - -5px),calc(74.75% - 4.95px) calc(25.25% - -4.95px),calc(75% - 5px) calc(6.7% - -8.66px),calc(59.06% - 1.81px) calc(16.19% - -6.76px),calc(50% - 0px) calc(0% - -10px),calc(40.94% - -1.81px) calc(16.19% - -6.76px),calc(25% - -5px) calc(6.7% - -8.66px),calc(25.25% - -4.95px) calc(25.25% - -4.95px),calc(6.7% - -8.66px) calc(25% - -5px),calc(16.19% - -6.76px) calc(40.94% - -1.81px),calc(0% - -10px) calc(50% - 0px),calc(16.19% - -6.76px) calc(59.06% - 1.81px),calc(6.7% - -8.66px) calc(75% - 5px),calc(25.25% - -4.95px) calc(74.75% - 4.95px),calc(25% - -5px) calc(93.3% - 8.66px),calc(40.94% - -1.81px) calc(83.81% - 6.76px),calc(50% - 0px) calc(100% - 10px),calc(59.06% - 1.81px) calc(83.81% - 6.76px),calc(75% - 5px) calc(93.3% - 8.66px),calc(74.75% - 4.95px) calc(74.75% - 4.95px),calc(93.3% - 8.66px) calc(75% - 5px),calc(83.81% - 6.76px) calc(59.06% - 1.81px),calc(100% - 10px) calc(50% - 0px))',
                       top: '70px',
                       left: '65px'
                     }}
+                    drag
                     animate={{ rotate: -360 }}
                     transition={{ repeat: Infinity, duration: 12, ease: 'linear' }}
                   >
@@ -596,11 +630,13 @@ const Navbar = ({ window }: Props) => {
                         display: 'flex',
                         justifyContent: 'center',
                         alignItems: 'center',
+                        cursor: 'pointer',
                         background: 'repeating-linear-gradient(135deg, yellow, yellow 8px, transparent 8px, transparent 15px)',
                         filter: 'drop-shadow(-2px 3px 5px rgba(0,0,0,0.5))',
                         top: '-20px',
                         left: '-30px',
                       }}
+                      drag
                       initial={{ scale: !trigger ? 0 : 1 }}
                       animate={{ scale: !trigger ? 1 : 0 }}
                       transition={{
@@ -622,11 +658,13 @@ const Navbar = ({ window }: Props) => {
                       display: 'flex',
                       justifyContent: 'center',
                       alignItems: 'center',
+                      cursor: 'pointer',
                       backgroundColor: 'yellow',
                       clipPath: 'polygon(100% 50%,83.81% 59.06%,93.3% 75%,74.75% 74.75%,75% 93.3%,59.06% 83.81%,50% 100%,40.94% 83.81%,25% 93.3%,25.25% 74.75%,6.7% 75%,16.19% 59.06%,0% 50%,16.19% 40.94%,6.7% 25%,25.25% 25.25%,25% 6.7%,40.94% 16.19%,50% 0%,59.06% 16.19%,75% 6.7%,74.75% 25.25%,93.3% 25%,83.81% 40.94%,100% 50%,83.81% 59.06%,calc(83.81% - 6.76px) calc(59.06% - 1.81px),calc(100% - 10px) calc(50% - 0px),calc(83.81% - 6.76px) calc(40.94% - -1.81px),calc(93.3% - 8.66px) calc(25% - -5px),calc(74.75% - 4.95px) calc(25.25% - -4.95px),calc(75% - 5px) calc(6.7% - -8.66px),calc(59.06% - 1.81px) calc(16.19% - -6.76px),calc(50% - 0px) calc(0% - -10px),calc(40.94% - -1.81px) calc(16.19% - -6.76px),calc(25% - -5px) calc(6.7% - -8.66px),calc(25.25% - -4.95px) calc(25.25% - -4.95px),calc(6.7% - -8.66px) calc(25% - -5px),calc(16.19% - -6.76px) calc(40.94% - -1.81px),calc(0% - -10px) calc(50% - 0px),calc(16.19% - -6.76px) calc(59.06% - 1.81px),calc(6.7% - -8.66px) calc(75% - 5px),calc(25.25% - -4.95px) calc(74.75% - 4.95px),calc(25% - -5px) calc(93.3% - 8.66px),calc(40.94% - -1.81px) calc(83.81% - 6.76px),calc(50% - 0px) calc(100% - 10px),calc(59.06% - 1.81px) calc(83.81% - 6.76px),calc(75% - 5px) calc(93.3% - 8.66px),calc(74.75% - 4.95px) calc(74.75% - 4.95px),calc(93.3% - 8.66px) calc(75% - 5px),calc(83.81% - 6.76px) calc(59.06% - 1.81px),calc(100% - 10px) calc(50% - 0px))',
                       top: '0px',
                       left: '50px'
                     }}
+                    drag
                     animate={{ rotate: 360 }}
                     transition={{ repeat: Infinity, duration: 10, ease: 'linear' }}
                   >
@@ -640,9 +678,11 @@ const Navbar = ({ window }: Props) => {
                         '& svg': {
                           filter: 'drop-shadow(-2px 3px 10px rgba(0,0,0,0.5))',
                         },
+                        cursor: 'pointer',
                         top: '80px',
                         left: '240px'
                       }}
+                      drag
                       initial={{ scale: !trigger ? 0 : 1 }}
                       animate={{ scale: !trigger ? 1 : 0 }}
                       transition={{
@@ -692,6 +732,8 @@ const Navbar = ({ window }: Props) => {
                 <Grid item>
                   <Box
                     component={motion.div}
+                    sx={{ cursor: 'pointer' }}
+                    drag
                     whileHover={{ scale: 1.2 }}
                     whileTap={{ scale: 1 }}
                     initial={{ scale: !trigger ? 0 : 1 }}
@@ -748,9 +790,11 @@ const Navbar = ({ window }: Props) => {
                     '& svg': {
                       filter: 'drop-shadow(-2px 3px 10px rgba(0,0,0,0.5))',
                     },
+                    cursor: 'pointer',
                     top: '120px',
                     left: '50px'
                   }}
+                  drag
                   initial={{ scale: !trigger ? 0 : 1 }}
                   animate={{ scale: !trigger ? 1 : 0 }}
                   transition={{
@@ -783,12 +827,14 @@ const Navbar = ({ window }: Props) => {
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
+                    cursor: 'pointer',
                     backgroundColor: 'transparent',
                     border: `20px solid ${color}`,
                     filter: 'drop-shadow(-2px 3px 5px rgba(0,0,0,0.5))',
                     top: '-40px',
                     left: '90px'
                   }}
+                  drag
                   initial={{ scale: !trigger ? 0 : 1 }}
                   animate={{ scale: !trigger ? 1 : 0 }}
                   transition={{
@@ -839,12 +885,14 @@ const Navbar = ({ window }: Props) => {
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
+                    cursor: 'pointer',
                     backgroundColor: 'transparent',
                     border: `20px solid ${color}`,
                     filter: 'drop-shadow(-2px 3px 5px rgba(0,0,0,0.5))',
                     top: '35px',
                     left: '-60px'
                   }}
+                  drag
                   initial={{ scale: !trigger ? 0 : 1 }}
                   animate={{ scale: !trigger ? 1 : 0 }}
                   transition={{
