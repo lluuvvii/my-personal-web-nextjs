@@ -324,14 +324,6 @@ const Navbar = ({ window }: Props) => {
                     </Button>
                   </Box>
                 </Grid>
-                {/* <Grid item>
-                      <ReactAudioPlayer
-                        src="/assets/music/sonic_gallery.weba"
-                        autoPlay
-                        controls
-                        loop
-                      />
-                    </Grid> */}
               </Grid>
             </ZigzagContainer>
             {/* star long shadow */}
@@ -770,14 +762,6 @@ const Navbar = ({ window }: Props) => {
                     </Button>
                   </Box>
                 </Grid>
-                {/* <Grid item>
-                    <ReactAudioPlayer
-                      src="/assets/music/sonic_gallery.weba"
-                      autoPlay
-                      controls
-                      loop
-                    />
-                  </Grid> */}
               </Grid>
             </ZigzagContainer>
             {/* star long shadow */}
