@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import HideOnScroll from '@/app/components/navbar/HideOnScroll'
-import { AppBar, Box, Button, Grid, useScrollTrigger } from '@mui/material'
+import { AppBar, Box, Button, Dialog, DialogActions, DialogContentText, Grid, useScrollTrigger } from '@mui/material'
 import ZigzagContainer from '../materials/ZigzagContainer'
 import { useMemo, useState } from 'react'
 import { IconArrowBigLeftLinesFilled, IconArrowBigRightLinesFilled } from '@tabler/icons-react'
@@ -20,6 +20,7 @@ const Navbar = ({ window }: Props) => {
   const [open, setOpen] = useState(searchParams.get('navright') === 'false' || searchParams.get('navright') === null ? false : true)
   const [color, setColor] = useState(searchParams.get('navright') === 'false' || searchParams.get('navright') === null ? 'blue' : 'red')
   const [gradientColor, setGradientColor] = useState(searchParams.get('navright') === 'false' || searchParams.get('navright') === null ? '#008cff' : '#ff6054')
+  const [openMusic, setOpenMusic] = useState(true)
 
   const handleChangeColor = () => {
     if (color === 'blue') {
@@ -922,6 +923,31 @@ const Navbar = ({ window }: Props) => {
           </Box>
         </AppBar>
       </HideOnScrollRight>
+      <Dialog
+        open={openMusic}
+        onClose={() => setOpenMusic(!openMusic)}
+      >
+        <Box
+          component={motion.div}
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          transition={{
+            type: 'spring',
+            stiffness: 200,
+            damping: 20,
+            delay: 0.4
+          }}>
+          <DialogContentText>
+            yayaya
+          </DialogContentText>
+          <DialogActions>
+            <Button onClick={() => setOpenMusic(!openMusic)}>Disagree</Button>
+            <Button onClick={() => setOpenMusic(!openMusic)} autoFocus>
+              Agree
+            </Button>
+          </DialogActions>
+        </Box>
+      </Dialog>
     </>
   )
 }

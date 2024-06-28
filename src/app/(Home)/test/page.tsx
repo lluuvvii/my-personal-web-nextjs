@@ -3,7 +3,6 @@ import { Box, Grid, Stack, Typography } from '@mui/material'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
-import AudioPlayer from '@/app/components/audio/AudioPlayer'
 
 const BackgroundContainer = () => {
   return (
@@ -11,7 +10,6 @@ const BackgroundContainer = () => {
       <Grid container spacing={1} alignItems='center' justifyContent='center'>
         <Grid item>
           <Typography variant='overline'>Reference : Sonic Generations UI theme</Typography>
-          <AudioPlayer />
         </Grid>
         <Grid item>
           <Image src='/assets/img/sonic_generations_background_by_sonicguru_d66i4ax.png' alt='sonicbg' width={500} height={500} />
