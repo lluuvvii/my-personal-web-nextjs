@@ -525,7 +525,7 @@ const Navbar = ({ window }: Props) => {
                     type: 'spring',
                     stiffness: 500,
                     damping: 20,
-                    delay: 0.4
+                    delay: 0.55
                   }}
                 >
                 </Box>
@@ -552,7 +552,7 @@ const Navbar = ({ window }: Props) => {
                     type: 'spring',
                     stiffness: 500,
                     damping: 20,
-                    delay: 0.4
+                    delay: 0.7
                   }}
                 >
                 </Box>
@@ -647,7 +647,7 @@ const Navbar = ({ window }: Props) => {
                         type: 'spring',
                         stiffness: 500,
                         damping: 20,
-                        delay: 0.4
+                        delay: 0.5
                       }}
                     >
                     </Box>
@@ -693,7 +693,7 @@ const Navbar = ({ window }: Props) => {
                         type: 'spring',
                         stiffness: 500,
                         damping: 20,
-                        delay: 0.4
+                        delay: 0.65
                       }}
                     >
                       <div style={{ transform: 'scale(0.2) rotate(135deg)', width: '1px', height: '1px' }}>
@@ -797,7 +797,7 @@ const Navbar = ({ window }: Props) => {
                     type: 'spring',
                     stiffness: 500,
                     damping: 20,
-                    delay: 0.4
+                    delay: 0.45
                   }}
                 >
                   <div style={{ transform: 'scale(0.1) rotate(135deg)', width: '1px', height: '1px' }}>
@@ -837,7 +837,7 @@ const Navbar = ({ window }: Props) => {
                     type: 'spring',
                     stiffness: 500,
                     damping: 20,
-                    delay: 0.4
+                    delay: 0.6
                   }}
                 >
                   <Box
