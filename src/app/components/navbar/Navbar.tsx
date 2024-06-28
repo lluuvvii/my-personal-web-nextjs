@@ -1,17 +1,28 @@
 'use client'
 
+import React from 'react'
 import { motion } from 'framer-motion'
 import HideOnScroll from '@/app/components/navbar/HideOnScroll'
-import { AppBar, Box, Button, Dialog, DialogActions, DialogContentText, Grid, useScrollTrigger } from '@mui/material'
+import { AppBar, Box, Button, Dialog, DialogActions, DialogContentText, DialogTitle, Grid, Stack, Typography, useScrollTrigger, Zoom } from '@mui/material'
+import { TransitionProps } from '@mui/material/transitions'
 import ZigzagContainer from '../materials/ZigzagContainer'
 import { useMemo, useState } from 'react'
-import { IconArrowBigLeftLinesFilled, IconArrowBigRightLinesFilled } from '@tabler/icons-react'
+import { IconArrowBigLeftLinesFilled, IconArrowBigRightLinesFilled, IconVolume, IconVolumeOff } from '@tabler/icons-react'
 import { useSearchParams, useRouter, usePathname } from 'next/navigation'
 import HideOnScrollRight from './HideOnScrollRight'
 
 interface Props {
   window?: () => Window | undefined
 }
+
+const Transition = React.forwardRef(function Transition(
+  props: TransitionProps & {
+    children: React.ReactElement<any, any>
+  },
+  ref: React.Ref<unknown>,
+) {
+  return <Zoom ref={ref} {...props} />
+})
 
 const Navbar = ({ window }: Props) => {
   const router = useRouter()
@@ -924,29 +935,94 @@ const Navbar = ({ window }: Props) => {
         </AppBar>
       </HideOnScrollRight>
       <Dialog
+        PaperComponent={({ children }) => (
+          <Box
+            sx={{
+              padding: '10px',
+              background: 'linear-gradient(135deg, #008cff, blue)',
+              borderRadius: '20px',
+              width: '300px',
+              height: '200px'
+            }}>
+            <Box sx={{ backgroundColor: 'white', borderRadius: '10px', padding: '10px' }}>
+              {children}
+            </Box>
+          </Box>
+        )}
         open={openMusic}
         onClose={() => setOpenMusic(!openMusic)}
+        TransitionComponent={Transition}
+        keepMounted
       >
-        <Box
-          component={motion.div}
-          initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
-          transition={{
-            type: 'spring',
-            stiffness: 200,
-            damping: 20,
-            delay: 0.4
-          }}>
-          <DialogContentText>
-            yayaya
-          </DialogContentText>
-          <DialogActions>
-            <Button onClick={() => setOpenMusic(!openMusic)}>Disagree</Button>
-            <Button onClick={() => setOpenMusic(!openMusic)} autoFocus>
-              Agree
+        <DialogTitle>
+          <Stack direction='column' justifyContent='center' alignItems='center'>
+            <Typography variant='h5'>Hear the music?</Typography>
+          </Stack>
+        </DialogTitle>
+        <DialogActions>
+          <Box
+            component={motion.div}
+            whileHover={{ scale: 1.2 }}
+            whileTap={{ scale: 1 }}
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            transition={{
+              type: 'spring',
+              stiffness: 500,
+              damping: 20
+            }}
+          >
+            <Button onClick={() => setOpenMusic(!openMusic)} variant='contained'
+              sx={{
+                color: 'blue',
+                border: '5px solid',
+                borderColor: 'blue',
+                borderRadius: '10px',
+                backgroundColor: 'white',
+                '&:hover': {
+                  backgroundColor: 'white',
+                  borderColor: 'blue',
+                },
+                '&:active': {
+                  backgroundColor: 'white.main',
+                  borderColor: 'blue',
+                },
+              }}>
+              <IconVolume />
             </Button>
-          </DialogActions>
-        </Box>
+          </Box>
+          <Box
+            component={motion.div}
+            whileHover={{ scale: 1.2 }}
+            whileTap={{ scale: 1 }}
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            transition={{
+              type: 'spring',
+              stiffness: 500,
+              damping: 20
+            }}
+          >
+            <Button onClick={() => setOpenMusic(!openMusic)} variant='contained' autoFocus
+              sx={{
+                color: 'red',
+                border: '5px solid',
+                borderColor: 'red',
+                borderRadius: '10px',
+                backgroundColor: 'white',
+                '&:hover': {
+                  backgroundColor: 'white',
+                  borderColor: 'red',
+                },
+                '&:active': {
+                  backgroundColor: 'white.main',
+                  borderColor: 'red',
+                },
+              }}>
+              <IconVolumeOff />
+            </Button>
+          </Box>
+        </DialogActions>
       </Dialog>
     </>
   )
