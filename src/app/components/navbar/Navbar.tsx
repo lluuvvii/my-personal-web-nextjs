@@ -10,6 +10,7 @@ import { useMemo, useState } from 'react'
 import { IconArrowBigLeftLinesFilled, IconArrowBigRightLinesFilled, IconVolume, IconVolumeOff } from '@tabler/icons-react'
 import { useSearchParams, useRouter, usePathname } from 'next/navigation'
 import HideOnScrollRight from './HideOnScrollRight'
+import AudioPlayer from '../audio/AudioPlayer'
 
 interface Props {
   window?: () => Window | undefined
@@ -31,6 +32,7 @@ const Navbar = ({ window }: Props) => {
   const [open, setOpen] = useState(searchParams.get('navright') === 'false' || searchParams.get('navright') === null ? false : true)
   const [color, setColor] = useState(searchParams.get('navright') === 'false' || searchParams.get('navright') === null ? 'blue' : 'red')
   const [openMusic, setOpenMusic] = useState(true)
+  const [startAutoplay, setStartAutoplay] = useState(false)
 
   const handleChangeColor = () => {
     if (color === 'blue') {
@@ -328,6 +330,43 @@ const Navbar = ({ window }: Props) => {
                       }}
                     >
                       <IconArrowBigLeftLinesFilled />
+                    </Button>
+                  </Box>
+                </Grid>
+                <Grid item>
+                  <Box
+                    component={motion.div}
+                    whileHover={{ scale: 1.2 }}
+                    whileTap={{ scale: 1 }}
+                    initial={{ scale: 0 }}
+                    animate={{ scale: 1 }}
+                    transition={{
+                      type: 'spring',
+                      stiffness: 500,
+                      damping: 20
+                    }}
+                  >
+                    <Button onClick={() => setStartAutoplay(!startAutoplay)} variant='contained' autoFocus
+                      sx={{
+                        color: !startAutoplay ? 'blue' : 'red',
+                        border: '5px solid',
+                        borderColor: !startAutoplay ? 'blue' : 'red',
+                        borderRadius: '10px',
+                        backgroundColor: 'white',
+                        '&:hover': {
+                          backgroundColor: 'white',
+                          borderColor: !startAutoplay ? 'blue' : 'red',
+                        },
+                        '&:active': {
+                          backgroundColor: 'white.main',
+                          borderColor: !startAutoplay ? 'blue' : 'red',
+                        },
+                      }}>
+                      {startAutoplay ?
+                        <IconVolumeOff />
+                        :
+                        <IconVolume />
+                      }
                     </Button>
                   </Box>
                 </Grid>
@@ -1058,7 +1097,12 @@ const Navbar = ({ window }: Props) => {
               damping: 20
             }}
           >
-            <Button onClick={() => setOpenMusic(!openMusic)} variant='contained'
+            <Button
+              onClick={() => {
+                setOpenMusic(!openMusic)
+                setStartAutoplay(!startAutoplay)
+              }}
+              variant='contained'
               sx={{
                 color: 'blue',
                 border: '5px solid',
@@ -1109,7 +1153,8 @@ const Navbar = ({ window }: Props) => {
             </Button>
           </Box>
         </DialogActions>
-      </Dialog >
+      </Dialog>
+      <AudioPlayer autoPlay={startAutoplay} />
     </>
   )
 }
