@@ -295,8 +295,6 @@ const Navbar = ({ window }: Props) => {
                 <Grid item>
                   <Box
                     component={motion.div}
-                    sx={{ cursor: 'pointer' }}
-                    drag
                     whileHover={{ scale: 1.2 }}
                     whileTap={{ scale: 1 }}
                     initial={{ scale: !trigger ? 0 : 1 }}
@@ -733,8 +731,6 @@ const Navbar = ({ window }: Props) => {
                 <Grid item>
                   <Box
                     component={motion.div}
-                    sx={{ cursor: 'pointer' }}
-                    drag
                     whileHover={{ scale: 1.2 }}
                     whileTap={{ scale: 1 }}
                     initial={{ scale: !trigger ? 0 : 1 }}
@@ -935,12 +931,97 @@ const Navbar = ({ window }: Props) => {
         PaperComponent={({ children }) => (
           <Box
             sx={{
+              position: 'absolute',
               padding: '10px',
               background: 'linear-gradient(135deg, #008cff, blue)',
               borderRadius: '20px',
+              filter: 'drop-shadow(-2px 3px 5px rgba(0,0,0,0.5))',
               width: '300px',
               height: '200px'
             }}>
+            {/* striped circle */}
+            <Box
+              component={motion.div}
+              sx={{
+                position: 'absolute',
+                width: '40px',
+                height: '40px',
+                borderRadius: '50%',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                background: 'repeating-linear-gradient(45deg, #008cff, #008cff 5px, transparent 5px, transparent 9px)',
+                top: '-15px',
+                left: '20px',
+              }}
+            >
+            </Box>
+            <Box
+              component={motion.div}
+              sx={{
+                position: 'absolute',
+                width: '40px',
+                height: '40px',
+                borderRadius: '50%',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                background: 'repeating-linear-gradient(45deg, blue, blue 5px, transparent 5px, transparent 9px)',
+                bottom: '15px',
+                right: '-20px',
+              }}
+            >
+            </Box>
+            {/* spike */}
+            <Box
+              sx={{
+                position: 'absolute',
+                width: '60px',
+                height: '60px',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                cursor: 'pointer',
+                backgroundColor: '#008cff',
+                clipPath: 'polygon(100% 50%,83.81% 59.06%,93.3% 75%,74.75% 74.75%,75% 93.3%,59.06% 83.81%,50% 100%,40.94% 83.81%,25% 93.3%,25.25% 74.75%,6.7% 75%,16.19% 59.06%,0% 50%,16.19% 40.94%,6.7% 25%,25.25% 25.25%,25% 6.7%,40.94% 16.19%,50% 0%,59.06% 16.19%,75% 6.7%,74.75% 25.25%,93.3% 25%,83.81% 40.94%)',
+                top: '-20px',
+                left: '-20px'
+              }}
+            >
+            </Box>
+            {/* circle */}
+            <Box
+              sx={{
+                position: 'absolute',
+                width: '60px',
+                height: '60px',
+                borderRadius: '50%',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                backgroundColor: 'transparent',
+                border: '7px solid blue',
+                bottom: '-20px',
+                right: '-20px'
+              }}
+            >
+            </Box>
+            <Box
+              component={motion.div}
+              sx={{
+                position: 'absolute',
+                width: '40px',
+                height: '40px',
+                borderRadius: '50%',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                backgroundColor: 'blue',
+                bottom: '-15px',
+                right: '20px',
+              }}
+            >
+            </Box>
             <Box sx={{ backgroundColor: 'white', borderRadius: '10px', padding: '10px' }}>
               {children}
             </Box>
@@ -953,7 +1034,15 @@ const Navbar = ({ window }: Props) => {
       >
         <DialogTitle>
           <Stack direction='column' justifyContent='center' alignItems='center'>
-            <Typography variant='h5'>Hear the music?</Typography>
+            <Typography
+              variant='h5'
+              sx={{
+                fontFamily: 'Nunito, Arial, sans-serif',
+                fontWeight: 700,
+                color: 'white',
+                textShadow: '0px 2px 1px rgba(0,0,0,1), 0px -1px 1px rgba(0,0,0,1), 1px -0.5px 1px rgba(0,0,0,1), 1px 1.5px 1px rgba(0,0,0,1), -1px -0.5px 1px rgba(0,0,0,1), -1px 1.5px 1px rgba(0,0,0,1)'
+              }}
+            >Hear the music?</Typography>
           </Stack>
         </DialogTitle>
         <DialogActions>
@@ -1020,7 +1109,7 @@ const Navbar = ({ window }: Props) => {
             </Button>
           </Box>
         </DialogActions>
-      </Dialog>
+      </Dialog >
     </>
   )
 }
