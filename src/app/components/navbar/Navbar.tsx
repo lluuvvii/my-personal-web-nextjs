@@ -346,7 +346,7 @@ const Navbar = ({ window }: Props) => {
                       damping: 20
                     }}
                   >
-                    <Button onClick={() => setStartAutoplay(!startAutoplay)} variant='contained' autoFocus
+                    <Button onClick={() => setStartAutoplay(!startAutoplay)} variant='contained'
                       sx={{
                         color: !startAutoplay ? 'blue' : 'red',
                         border: '5px solid',
@@ -1133,7 +1133,7 @@ const Navbar = ({ window }: Props) => {
               damping: 20
             }}
           >
-            <Button onClick={() => setOpenMusic(!openMusic)} variant='contained' autoFocus
+            <Button onClick={() => setOpenMusic(!openMusic)} variant='contained'
               sx={{
                 color: 'red',
                 border: '5px solid',
