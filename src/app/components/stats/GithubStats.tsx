@@ -59,6 +59,9 @@ const GithubStats = () => {
                   <Link href={user.url} target="_blank" rel="noopener noreferrer">
                     GitHub Profile
                   </Link>
+                  <Link href={'/test'} rel="noopener noreferrer">
+                    Test Page
+                  </Link>
                 </CardActions>
               </>
             }
