@@ -30,7 +30,6 @@ const Navbar = ({ window }: Props) => {
   const pathname = usePathname()
   const [open, setOpen] = useState(searchParams.get('navright') === 'false' || searchParams.get('navright') === null ? false : true)
   const [color, setColor] = useState(searchParams.get('navright') === 'false' || searchParams.get('navright') === null ? 'blue' : 'red')
-  const [gradientColor, setGradientColor] = useState(searchParams.get('navright') === 'false' || searchParams.get('navright') === null ? '#008cff' : '#ff6054')
   const [openMusic, setOpenMusic] = useState(true)
 
   const handleChangeColor = () => {
@@ -38,14 +37,12 @@ const Navbar = ({ window }: Props) => {
       router.push(`${pathname}?navright=${!open}`, { scroll: false })
       setTimeout(() => {
         setColor('red')
-        setGradientColor('#ff6054')
       }, 200)
     }
     if (color === 'red') {
       router.push(`${pathname}?navright=${!open}`, { scroll: false })
       setTimeout(() => {
         setColor('blue')
-        setGradientColor('#008cff')
       }, 200)
     }
   }
@@ -61,7 +58,7 @@ const Navbar = ({ window }: Props) => {
       <HideOnScroll trigger={trigger} open={open}>
         <AppBar position='fixed' color='transparent' sx={{ boxShadow: 'none' }}>
           <Box component='header'>
-            {!open ?
+            {!open && !trigger ?
               <>
                 <Box
                   component={motion.div}
@@ -87,7 +84,7 @@ const Navbar = ({ window }: Props) => {
                     type: 'spring',
                     stiffness: 500,
                     damping: 20,
-                    delay: 0.4
+                    delay: 0.55
                   }}
                 >
                 </Box>
@@ -114,7 +111,7 @@ const Navbar = ({ window }: Props) => {
                     type: 'spring',
                     stiffness: 500,
                     damping: 20,
-                    delay: 0.4
+                    delay: 0.7
                   }}
                 >
                 </Box>
@@ -140,7 +137,7 @@ const Navbar = ({ window }: Props) => {
               transition={{ repeat: Infinity, duration: 15, ease: 'linear' }}
             >
             </Box>
-            <ZigzagContainer width='100%' height='100px' color={color} toColor={gradientColor} toGradient='50deg' bottom>
+            <ZigzagContainer width='100%' height='100px' color={'blue'} toColor={'#008cff'} toGradient='50deg' bottom>
               <Grid container p={2} spacing={1}>
                 <Grid item>
                   {/* spikes */}
@@ -174,7 +171,7 @@ const Navbar = ({ window }: Props) => {
                       justifyContent: 'center',
                       alignItems: 'center',
                       cursor: 'pointer',
-                      backgroundColor: color,
+                      backgroundColor: 'blue',
                       clipPath: 'polygon(100% 50%,83.81% 59.06%,93.3% 75%,74.75% 74.75%,75% 93.3%,59.06% 83.81%,50% 100%,40.94% 83.81%,25% 93.3%,25.25% 74.75%,6.7% 75%,16.19% 59.06%,0% 50%,16.19% 40.94%,6.7% 25%,25.25% 25.25%,25% 6.7%,40.94% 16.19%,50% 0%,59.06% 16.19%,75% 6.7%,74.75% 25.25%,93.3% 25%,83.81% 40.94%,100% 50%,83.81% 59.06%,calc(83.81% - 6.76px) calc(59.06% - 1.81px),calc(100% - 10px) calc(50% - 0px),calc(83.81% - 6.76px) calc(40.94% - -1.81px),calc(93.3% - 8.66px) calc(25% - -5px),calc(74.75% - 4.95px) calc(25.25% - -4.95px),calc(75% - 5px) calc(6.7% - -8.66px),calc(59.06% - 1.81px) calc(16.19% - -6.76px),calc(50% - 0px) calc(0% - -10px),calc(40.94% - -1.81px) calc(16.19% - -6.76px),calc(25% - -5px) calc(6.7% - -8.66px),calc(25.25% - -4.95px) calc(25.25% - -4.95px),calc(6.7% - -8.66px) calc(25% - -5px),calc(16.19% - -6.76px) calc(40.94% - -1.81px),calc(0% - -10px) calc(50% - 0px),calc(16.19% - -6.76px) calc(59.06% - 1.81px),calc(6.7% - -8.66px) calc(75% - 5px),calc(25.25% - -4.95px) calc(74.75% - 4.95px),calc(25% - -5px) calc(93.3% - 8.66px),calc(40.94% - -1.81px) calc(83.81% - 6.76px),calc(50% - 0px) calc(100% - 10px),calc(59.06% - 1.81px) calc(83.81% - 6.76px),calc(75% - 5px) calc(93.3% - 8.66px),calc(74.75% - 4.95px) calc(74.75% - 4.95px),calc(93.3% - 8.66px) calc(75% - 5px),calc(83.81% - 6.76px) calc(59.06% - 1.81px),calc(100% - 10px) calc(50% - 0px))',
                       top: '70px',
                       left: '65px'
@@ -185,7 +182,7 @@ const Navbar = ({ window }: Props) => {
                   >
                   </Box>
                   {/* striped circle */}
-                  {!open ?
+                  {!open && !trigger ?
                     <Box
                       component={motion.div}
                       sx={{
@@ -209,7 +206,7 @@ const Navbar = ({ window }: Props) => {
                         type: 'spring',
                         stiffness: 500,
                         damping: 20,
-                        delay: 0.4
+                        delay: 0.5
                       }}
                     >
                     </Box>
@@ -236,7 +233,7 @@ const Navbar = ({ window }: Props) => {
                   >
                   </Box>
                   {/* stars long shadow */}
-                  {!open ?
+                  {!open && !trigger ?
                     <Box
                       component={motion.div}
                       sx={{
@@ -255,17 +252,17 @@ const Navbar = ({ window }: Props) => {
                         type: 'spring',
                         stiffness: 500,
                         damping: 20,
-                        delay: 0.4
+                        delay: 0.65
                       }}
                     >
                       <div style={{ transform: 'scale(0.2) rotate(135deg)', width: '1px', height: '1px' }}>
                         <svg
                           width='200px'
                           height='700px'
-                          fill={color}
+                          fill={'blue'}
                           xmlns='http://www.w3.org/2000/svg'
                         >
-                          <rect x='0' y='80' width='100%' height='100%' fill={color} />
+                          <rect x='0' y='80' width='100%' height='100%' fill={'blue'} />
                           <path d='M100 0.587l30.52 66.76L200 81.25l-50 48.5L161.92 200 100 165.83 38.08 200 50 129.75 0 81.25l69.44-13.29z' />
                           <path d='M100 0.587l30.52 66.76L200 81.25l-50 48.5L161.92 200 100 165.83 38.08 200 50 129.75 0 81.25l69.44-13.29z' transform='scale(0.7) translate(42.5, 47)' fill='white' />
                         </svg>
@@ -283,10 +280,10 @@ const Navbar = ({ window }: Props) => {
                           <svg
                             width='200px'
                             height='1000px'
-                            fill={color}
+                            fill={'blue'}
                             xmlns='http://www.w3.org/2000/svg'
                           >
-                            <rect x='0' y='80' width='100%' height='100%' fill={color} />
+                            <rect x='0' y='80' width='100%' height='100%' fill={'blue'} />
                             <path d='M100 0.587l30.52 66.76L200 81.25l-50 48.5L161.92 200 100 165.83 38.08 200 50 129.75 0 81.25l69.44-13.29z' />
                             <path d='M100 0.587l30.52 66.76L200 81.25l-50 48.5L161.92 200 100 165.83 38.08 200 50 129.75 0 81.25l69.44-13.29z' transform='scale(0.7) translate(42.5, 47)' fill='white' />
                           </svg>
@@ -317,18 +314,18 @@ const Navbar = ({ window }: Props) => {
                       }}
                       variant='contained'
                       sx={{
-                        color: color,
+                        color: 'blue',
                         border: '5px solid',
-                        borderColor: color,
+                        borderColor: 'blue',
                         borderRadius: '10px',
                         backgroundColor: 'white',
                         '&:hover': {
                           backgroundColor: 'white',
-                          borderColor: color,
+                          borderColor: 'blue',
                         },
                         '&:active': {
                           backgroundColor: 'white.main',
-                          borderColor: color,
+                          borderColor: 'blue',
                         },
                       }}
                     >
@@ -339,7 +336,7 @@ const Navbar = ({ window }: Props) => {
               </Grid>
             </ZigzagContainer>
             {/* star long shadow */}
-            {!open ?
+            {!open && !trigger ?
               <>
                 <Box
                   component={motion.div}
@@ -359,17 +356,17 @@ const Navbar = ({ window }: Props) => {
                     type: 'spring',
                     stiffness: 500,
                     damping: 20,
-                    delay: 0.4
+                    delay: 0.45
                   }}
                 >
                   <div style={{ transform: 'scale(0.1) rotate(135deg)', width: '1px', height: '1px' }}>
                     <svg
                       width='200px'
                       height='1000px'
-                      fill={color}
+                      fill={'blue'}
                       xmlns='http://www.w3.org/2000/svg'
                     >
-                      <rect x='0' y='80' width='100%' height='100%' fill={color} />
+                      <rect x='0' y='80' width='100%' height='100%' fill={'blue'} />
                       <path d='M100 0.587l30.52 66.76L200 81.25l-50 48.5L161.92 200 100 165.83 38.08 200 50 129.75 0 81.25l69.44-13.29z' />
                       <path d='M100 0.587l30.52 66.76L200 81.25l-50 48.5L161.92 200 100 165.83 38.08 200 50 129.75 0 81.25l69.44-13.29z' transform='scale(0.7) translate(42.5, 47)' fill='white' />
                     </svg>
@@ -399,7 +396,7 @@ const Navbar = ({ window }: Props) => {
                     type: 'spring',
                     stiffness: 500,
                     damping: 20,
-                    delay: 0.4
+                    delay: 0.6
                   }}
                 >
                   <Box
@@ -413,7 +410,7 @@ const Navbar = ({ window }: Props) => {
                       alignItems: 'center',
                       borderRadius: '50%',
                       backgroundColor: 'transparent',
-                      border: `5px solid ${color}`
+                      border: `5px solid ${'blue'}`
                     }}
                   >
                   </Box>
@@ -428,7 +425,7 @@ const Navbar = ({ window }: Props) => {
                       alignItems: 'center',
                       borderRadius: '50%',
                       backgroundColor: 'transparent',
-                      border: `5px solid ${color}`
+                      border: `5px solid ${'blue'}`
                     }}
                   >
                   </Box>
@@ -445,7 +442,7 @@ const Navbar = ({ window }: Props) => {
                     alignItems: 'center',
                     cursor: 'pointer',
                     backgroundColor: 'transparent',
-                    border: `20px solid ${color}`,
+                    border: `20px solid ${'blue'}`,
                     filter: 'drop-shadow(-2px 3px 5px rgba(0,0,0,0.5))',
                     top: '35px',
                     left: '-60px'
@@ -499,7 +496,7 @@ const Navbar = ({ window }: Props) => {
       <HideOnScrollRight trigger={trigger} open={open}>
         <AppBar position='fixed' color='transparent' sx={{ boxShadow: 'none' }}>
           <Box component='header'>
-            {open ?
+            {open && !trigger ?
               <>
                 <Box
                   component={motion.div}
@@ -578,7 +575,7 @@ const Navbar = ({ window }: Props) => {
               transition={{ repeat: Infinity, duration: 15, ease: 'linear' }}
             >
             </Box>
-            <ZigzagContainer width='100%' height='100px' color={color} toColor={gradientColor} toGradient='50deg' bottom>
+            <ZigzagContainer width='100%' height='100px' color={'red'} toColor={'#ff6054'} toGradient='50deg' bottom>
               <Grid container p={2} spacing={1}>
                 <Grid item>
                   {/* spikes */}
@@ -612,7 +609,7 @@ const Navbar = ({ window }: Props) => {
                       justifyContent: 'center',
                       alignItems: 'center',
                       cursor: 'pointer',
-                      backgroundColor: color,
+                      backgroundColor: 'red',
                       clipPath: 'polygon(100% 50%,83.81% 59.06%,93.3% 75%,74.75% 74.75%,75% 93.3%,59.06% 83.81%,50% 100%,40.94% 83.81%,25% 93.3%,25.25% 74.75%,6.7% 75%,16.19% 59.06%,0% 50%,16.19% 40.94%,6.7% 25%,25.25% 25.25%,25% 6.7%,40.94% 16.19%,50% 0%,59.06% 16.19%,75% 6.7%,74.75% 25.25%,93.3% 25%,83.81% 40.94%,100% 50%,83.81% 59.06%,calc(83.81% - 6.76px) calc(59.06% - 1.81px),calc(100% - 10px) calc(50% - 0px),calc(83.81% - 6.76px) calc(40.94% - -1.81px),calc(93.3% - 8.66px) calc(25% - -5px),calc(74.75% - 4.95px) calc(25.25% - -4.95px),calc(75% - 5px) calc(6.7% - -8.66px),calc(59.06% - 1.81px) calc(16.19% - -6.76px),calc(50% - 0px) calc(0% - -10px),calc(40.94% - -1.81px) calc(16.19% - -6.76px),calc(25% - -5px) calc(6.7% - -8.66px),calc(25.25% - -4.95px) calc(25.25% - -4.95px),calc(6.7% - -8.66px) calc(25% - -5px),calc(16.19% - -6.76px) calc(40.94% - -1.81px),calc(0% - -10px) calc(50% - 0px),calc(16.19% - -6.76px) calc(59.06% - 1.81px),calc(6.7% - -8.66px) calc(75% - 5px),calc(25.25% - -4.95px) calc(74.75% - 4.95px),calc(25% - -5px) calc(93.3% - 8.66px),calc(40.94% - -1.81px) calc(83.81% - 6.76px),calc(50% - 0px) calc(100% - 10px),calc(59.06% - 1.81px) calc(83.81% - 6.76px),calc(75% - 5px) calc(93.3% - 8.66px),calc(74.75% - 4.95px) calc(74.75% - 4.95px),calc(93.3% - 8.66px) calc(75% - 5px),calc(83.81% - 6.76px) calc(59.06% - 1.81px),calc(100% - 10px) calc(50% - 0px))',
                       top: '70px',
                       left: '65px'
@@ -623,7 +620,7 @@ const Navbar = ({ window }: Props) => {
                   >
                   </Box>
                   {/* striped circle */}
-                  {open ?
+                  {open && !trigger ?
                     <Box
                       component={motion.div}
                       sx={{
@@ -674,7 +671,7 @@ const Navbar = ({ window }: Props) => {
                   >
                   </Box>
                   {/* stars long shadow */}
-                  {open ?
+                  {open && !trigger ?
                     <Box
                       component={motion.div}
                       sx={{
@@ -700,10 +697,10 @@ const Navbar = ({ window }: Props) => {
                         <svg
                           width='200px'
                           height='700px'
-                          fill={color}
+                          fill={'red'}
                           xmlns='http://www.w3.org/2000/svg'
                         >
-                          <rect x='0' y='80' width='100%' height='100%' fill={color} />
+                          <rect x='0' y='80' width='100%' height='100%' fill={'red'} />
                           <path d='M100 0.587l30.52 66.76L200 81.25l-50 48.5L161.92 200 100 165.83 38.08 200 50 129.75 0 81.25l69.44-13.29z' />
                           <path d='M100 0.587l30.52 66.76L200 81.25l-50 48.5L161.92 200 100 165.83 38.08 200 50 129.75 0 81.25l69.44-13.29z' transform='scale(0.7) translate(42.5, 47)' fill='white' />
                         </svg>
@@ -721,10 +718,10 @@ const Navbar = ({ window }: Props) => {
                           <svg
                             width='200px'
                             height='1000px'
-                            fill={color}
+                            fill={'red'}
                             xmlns='http://www.w3.org/2000/svg'
                           >
-                            <rect x='0' y='80' width='100%' height='100%' fill={color} />
+                            <rect x='0' y='80' width='100%' height='100%' fill={'red'} />
                             <path d='M100 0.587l30.52 66.76L200 81.25l-50 48.5L161.92 200 100 165.83 38.08 200 50 129.75 0 81.25l69.44-13.29z' />
                             <path d='M100 0.587l30.52 66.76L200 81.25l-50 48.5L161.92 200 100 165.83 38.08 200 50 129.75 0 81.25l69.44-13.29z' transform='scale(0.7) translate(42.5, 47)' fill='white' />
                           </svg>
@@ -755,18 +752,18 @@ const Navbar = ({ window }: Props) => {
                       }}
                       variant='contained'
                       sx={{
-                        color: color,
+                        color: 'red',
                         border: '5px solid',
-                        borderColor: color,
+                        borderColor: 'red',
                         borderRadius: '10px',
                         backgroundColor: 'white',
                         '&:hover': {
                           backgroundColor: 'white',
-                          borderColor: color,
+                          borderColor: 'red',
                         },
                         '&:active': {
                           backgroundColor: 'white.main',
-                          borderColor: color,
+                          borderColor: 'red',
                         },
                       }}
                     >
@@ -777,7 +774,7 @@ const Navbar = ({ window }: Props) => {
               </Grid>
             </ZigzagContainer>
             {/* star long shadow */}
-            {open ?
+            {open && !trigger ?
               <>
                 <Box
                   component={motion.div}
@@ -804,10 +801,10 @@ const Navbar = ({ window }: Props) => {
                     <svg
                       width='200px'
                       height='1000px'
-                      fill={color}
+                      fill={'red'}
                       xmlns='http://www.w3.org/2000/svg'
                     >
-                      <rect x='0' y='80' width='100%' height='100%' fill={color} />
+                      <rect x='0' y='80' width='100%' height='100%' fill={'red'} />
                       <path d='M100 0.587l30.52 66.76L200 81.25l-50 48.5L161.92 200 100 165.83 38.08 200 50 129.75 0 81.25l69.44-13.29z' />
                       <path d='M100 0.587l30.52 66.76L200 81.25l-50 48.5L161.92 200 100 165.83 38.08 200 50 129.75 0 81.25l69.44-13.29z' transform='scale(0.7) translate(42.5, 47)' fill='white' />
                     </svg>
@@ -825,7 +822,7 @@ const Navbar = ({ window }: Props) => {
                     alignItems: 'center',
                     cursor: 'pointer',
                     backgroundColor: 'transparent',
-                    border: `20px solid ${color}`,
+                    border: `20px solid ${'red'}`,
                     filter: 'drop-shadow(-2px 3px 5px rgba(0,0,0,0.5))',
                     top: '-40px',
                     left: '90px'
@@ -883,7 +880,7 @@ const Navbar = ({ window }: Props) => {
                     alignItems: 'center',
                     cursor: 'pointer',
                     backgroundColor: 'transparent',
-                    border: `20px solid ${color}`,
+                    border: `20px solid ${'red'}`,
                     filter: 'drop-shadow(-2px 3px 5px rgba(0,0,0,0.5))',
                     top: '35px',
                     left: '-60px'
