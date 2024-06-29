@@ -979,7 +979,7 @@ const Navbar = ({ window }: Props) => {
               background: 'linear-gradient(135deg, #008cff, blue)',
               borderRadius: '20px',
               filter: 'drop-shadow(-2px 3px 5px rgba(0,0,0,0.5))',
-              width: '400px',
+              width: '300px',
               height: '200px'
             }}>
             {/* striped circle */}
@@ -1065,7 +1065,7 @@ const Navbar = ({ window }: Props) => {
               }}
             >
             </Box>
-            <Box sx={{ backgroundColor: 'white', borderRadius: '10px', padding: '10px' }}>
+            <Box sx={{ backgroundColor: 'white', borderRadius: '10px', padding: '10px', height: '180px' }}>
               {children}
             </Box>
           </Box>
@@ -1078,7 +1078,7 @@ const Navbar = ({ window }: Props) => {
         <DialogTitle>
           <Stack direction='column' justifyContent='center' alignItems='center'>
             <Typography
-              variant='h4'
+              variant='h5'
               sx={{
                 fontFamily: 'Nunito, Arial, sans-serif',
                 fontWeight: 700,
