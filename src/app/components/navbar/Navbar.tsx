@@ -975,7 +975,7 @@ const Navbar = ({ window }: Props) => {
               background: 'linear-gradient(135deg, #008cff, blue)',
               borderRadius: '20px',
               filter: 'drop-shadow(-2px 3px 5px rgba(0,0,0,0.5))',
-              width: '300px',
+              width: '400px',
               height: '200px'
             }}>
             {/* striped circle */}
@@ -1074,17 +1074,22 @@ const Navbar = ({ window }: Props) => {
         <DialogTitle>
           <Stack direction='column' justifyContent='center' alignItems='center'>
             <Typography
-              variant='h5'
+              variant='h4'
               sx={{
                 fontFamily: 'Nunito, Arial, sans-serif',
                 fontWeight: 700,
                 color: 'white',
-                textShadow: '0px 2px 1px rgba(0,0,0,1), 0px -1px 1px rgba(0,0,0,1), 1px -0.5px 1px rgba(0,0,0,1), 1px 1.5px 1px rgba(0,0,0,1), -1px -0.5px 1px rgba(0,0,0,1), -1px 1.5px 1px rgba(0,0,0,1)'
+                textShadow: '0px 3px 1px rgba(0,0,0,1), 0px -1px 1px rgba(0,0,0,1), 2px -0px 1px rgba(0,0,0,1), -2px 0px 1px rgba(0,0,0,1), 2px 2px 1px rgba(0,0,0,1), -2px 2px 1px rgba(0,0,0,1)'
               }}
             >Hear the music?</Typography>
           </Stack>
         </DialogTitle>
-        <DialogActions>
+        <DialogActions
+          sx={{
+            display: 'flex',
+            justifyContent: 'center',
+            gap: '10px'
+          }}>
           <Box
             component={motion.div}
             whileHover={{ scale: 1.2 }}
