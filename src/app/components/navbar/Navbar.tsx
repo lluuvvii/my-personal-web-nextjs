@@ -33,6 +33,8 @@ const Navbar = ({ window }: Props) => {
   const [color, setColor] = useState(searchParams.get('navright') === 'false' || searchParams.get('navright') === null ? 'blue' : 'red')
   const [openMusic, setOpenMusic] = useState(true)
   const [startAutoplay, setStartAutoplay] = useState(false)
+  // upcoming update
+  // const [showZigZag, setShowZigZag] = useState(false)
 
   const handleChangeColor = () => {
     if (color === 'blue') {
@@ -54,6 +56,14 @@ const Navbar = ({ window }: Props) => {
   })
 
   const handleToggle = useMemo(() => () => setOpen((prevOpen) => !prevOpen), [])
+
+  // upcoming update
+  // const handleAnimateClick = () => {
+  //   setShowZigZag(true)
+  //   setTimeout(() => {
+  //     setShowZigZag(false)
+  //   }, 1000)
+  // }
 
   return (
     <>
@@ -348,7 +358,59 @@ const Navbar = ({ window }: Props) => {
                       damping: 20
                     }}
                   >
-                    <Button onClick={() => setStartAutoplay(!startAutoplay)} variant='contained'
+                    {/* upcoming update */}
+                    {/* {showZigZag && (
+                      <>
+                        <Box
+                          component={motion.div}
+                          sx={{
+                            position: 'absolute',
+                            '--a': '90deg', // control the angle
+                            '--s': '10px', // size of the zig-zag
+                            '--b': '3px',  // control the thickness
+                            background: 'red',
+                            height: 'calc(var(--b) + var(--s)/(2*tan(var(--a)/2)))',
+                            width: '40px',
+                            '--_g': 'var(--s) repeat-x conic-gradient(from calc(var(--a)/-2) at bottom, #0000, #000 1deg calc(var(--a) - 1deg), #0000 var(--a))',
+                            mask: '50% calc(-1*var(--b))/var(--_g) exclude, 50%/var(--_g)',
+                            WebkitMask: '50% calc(-1*var(--b))/var(--_g) exclude, 50%/var(--_g)', // Webkit fallback
+                            top: '15px',
+                            left: '-50px',
+                            display: 'flex',
+                            alignItems: 'center'
+                          }}
+                          initial={{ x: 20, opacity: 1 }}
+                          animate={{ x: -20, opacity: 0 }}
+                          transition={{ duration: 0.2, opacity: { delay: 0.5, duration: 0.8 } }}
+                        />
+                        <Box
+                          component={motion.div}
+                          sx={{
+                            position: 'absolute',
+                            '--a': '90deg', // control the angle
+                            '--s': '10px', // size of the zig-zag
+                            '--b': '3px',  // control the thickness
+                            background: 'yellow',
+                            height: 'calc(var(--b) + var(--s)/(2*tan(var(--a)/2)))',
+                            width: '40px',
+                            '--_g': 'var(--s) repeat-x conic-gradient(from calc(var(--a)/-2) at bottom, #0000, #000 1deg calc(var(--a) - 1deg), #0000 var(--a))',
+                            mask: '50% calc(-1*var(--b))/var(--_g) exclude, 50%/var(--_g)',
+                            WebkitMask: '50% calc(-1*var(--b))/var(--_g) exclude, 50%/var(--_g)', // Webkit fallback
+                            top: '50px',
+                            right: '-40px',
+                            display: 'flex',
+                            alignItems: 'center'
+                          }}
+                          initial={{ x: -10, y: -10, opacity: 1, rotate: '45deg' }}
+                          animate={{ x: 10, y: 10, opacity: 0 }}
+                          transition={{ duration: 0.2, opacity: { delay: 0.5, duration: 0.8 } }}
+                        />
+                      </>
+                    )} */}
+                    <Button onClick={() => {
+                      // handleAnimateClick() // upcoming update
+                      setStartAutoplay(!startAutoplay)
+                    }} variant='contained'
                       sx={{
                         color: !startAutoplay ? 'blue' : 'red',
                         border: '5px solid',
@@ -617,7 +679,6 @@ const Navbar = ({ window }: Props) => {
             <ZigzagContainer width='100%' height='100px' color={'red'} toColor={'#ff6054'} toGradient='50deg' bottom>
               <Grid container p={2} spacing={1}>
                 <Grid item>
-                  {/* striped circle */}
                   {open && !trigger ?
                     <>
                       {/* spikes */}
@@ -661,6 +722,7 @@ const Navbar = ({ window }: Props) => {
                         transition={{ repeat: Infinity, duration: 12, ease: 'linear' }}
                       >
                       </Box>
+                      {/* striped circle */}
                       <Box
                         component={motion.div}
                         sx={{
@@ -1101,7 +1163,7 @@ const Navbar = ({ window }: Props) => {
                 color: 'white',
                 textShadow: '0px 3px 1px rgba(0,0,0,1), 0px -1px 1px rgba(0,0,0,1), 2px -0px 1px rgba(0,0,0,1), -2px 0px 1px rgba(0,0,0,1), 2px 2px 1px rgba(0,0,0,1), -2px 2px 1px rgba(0,0,0,1)'
               }}
-            >Hear the music?</Typography>
+            >Listen to music?</Typography>
           </Stack>
         </DialogTitle>
         <DialogActions
