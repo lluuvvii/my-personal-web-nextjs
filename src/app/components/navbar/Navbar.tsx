@@ -1044,8 +1044,24 @@ const Navbar = ({ window }: Props) => {
                 alignItems: 'center',
                 backgroundColor: 'transparent',
                 border: '7px solid blue',
-                bottom: '-20px',
-                right: '-20px'
+                bottom: '-15px',
+                right: '-15px'
+              }}
+            >
+            </Box>
+            <Box
+              sx={{
+                position: 'absolute',
+                width: '40px',
+                height: '40px',
+                borderRadius: '50%',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                backgroundColor: 'transparent',
+                border: '7px solid #008cff',
+                top: '10px',
+                left: '-20px'
               }}
             >
             </Box>
@@ -1065,7 +1081,7 @@ const Navbar = ({ window }: Props) => {
               }}
             >
             </Box>
-            <Box sx={{ backgroundColor: 'white', borderRadius: '10px', padding: '10px', height: '180px' }}>
+            <Box sx={{ backgroundColor: 'white', borderRadius: '10px', padding: '10px', height: '160px' }}>
               {children}
             </Box>
           </Box>
