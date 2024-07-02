@@ -152,7 +152,6 @@ const Navbar = ({ window }: Props) => {
             <ZigzagContainer width='100%' height='100px' color={'blue'} toColor={'#008cff'} toGradient='50deg' bottom>
               <Grid container p={2} spacing={1}>
                 <Grid item>
-                  {/* striped circle */}
                   {!open && !trigger ?
                     <>
                       {/* spikes */}
@@ -168,34 +167,69 @@ const Navbar = ({ window }: Props) => {
                           cursor: 'pointer',
                           backgroundColor: 'yellow',
                           clipPath: 'polygon(100% 50%,83.81% 59.06%,93.3% 75%,74.75% 74.75%,75% 93.3%,59.06% 83.81%,50% 100%,40.94% 83.81%,25% 93.3%,25.25% 74.75%,6.7% 75%,16.19% 59.06%,0% 50%,16.19% 40.94%,6.7% 25%,25.25% 25.25%,25% 6.7%,40.94% 16.19%,50% 0%,59.06% 16.19%,75% 6.7%,74.75% 25.25%,93.3% 25%,83.81% 40.94%)',
-                          top: '45px',
-                          left: '60px'
+                          top: '-20px',
+                          left: '130px'
                         }}
                         drag
                         animate={{ rotate: 360 }}
                         transition={{ repeat: Infinity, duration: 5, ease: 'linear' }}
                       >
                       </Box>
+                      {/* circle */}
                       <Box
                         component={motion.div}
                         sx={{
                           position: 'absolute',
-                          width: '50px',
-                          height: '50px',
+                          width: '70px',
+                          height: '70px',
+                          borderRadius: '50%',
                           display: 'flex',
                           justifyContent: 'center',
                           alignItems: 'center',
                           cursor: 'pointer',
-                          backgroundColor: 'blue',
-                          clipPath: 'polygon(100% 50%,83.81% 59.06%,93.3% 75%,74.75% 74.75%,75% 93.3%,59.06% 83.81%,50% 100%,40.94% 83.81%,25% 93.3%,25.25% 74.75%,6.7% 75%,16.19% 59.06%,0% 50%,16.19% 40.94%,6.7% 25%,25.25% 25.25%,25% 6.7%,40.94% 16.19%,50% 0%,59.06% 16.19%,75% 6.7%,74.75% 25.25%,93.3% 25%,83.81% 40.94%,100% 50%,83.81% 59.06%,calc(83.81% - 6.76px) calc(59.06% - 1.81px),calc(100% - 10px) calc(50% - 0px),calc(83.81% - 6.76px) calc(40.94% - -1.81px),calc(93.3% - 8.66px) calc(25% - -5px),calc(74.75% - 4.95px) calc(25.25% - -4.95px),calc(75% - 5px) calc(6.7% - -8.66px),calc(59.06% - 1.81px) calc(16.19% - -6.76px),calc(50% - 0px) calc(0% - -10px),calc(40.94% - -1.81px) calc(16.19% - -6.76px),calc(25% - -5px) calc(6.7% - -8.66px),calc(25.25% - -4.95px) calc(25.25% - -4.95px),calc(6.7% - -8.66px) calc(25% - -5px),calc(16.19% - -6.76px) calc(40.94% - -1.81px),calc(0% - -10px) calc(50% - 0px),calc(16.19% - -6.76px) calc(59.06% - 1.81px),calc(6.7% - -8.66px) calc(75% - 5px),calc(25.25% - -4.95px) calc(74.75% - 4.95px),calc(25% - -5px) calc(93.3% - 8.66px),calc(40.94% - -1.81px) calc(83.81% - 6.76px),calc(50% - 0px) calc(100% - 10px),calc(59.06% - 1.81px) calc(83.81% - 6.76px),calc(75% - 5px) calc(93.3% - 8.66px),calc(74.75% - 4.95px) calc(74.75% - 4.95px),calc(93.3% - 8.66px) calc(75% - 5px),calc(83.81% - 6.76px) calc(59.06% - 1.81px),calc(100% - 10px) calc(50% - 0px))',
-                          top: '70px',
+                          backgroundColor: 'transparent',
+                          border: '10px solid white',
+                          top: '-20px',
+                          left: '10px'
+                        }}
+                        drag
+                        initial={{ scale: !trigger ? 0 : 1 }}
+                        animate={{ scale: !trigger ? 1 : 0 }}
+                        transition={{
+                          type: 'spring',
+                          stiffness: 500,
+                          damping: 20,
+                          delay: 0.52
+                        }}
+                      >
+                      </Box>
+                      <Box
+                        component={motion.div}
+                        sx={{
+                          position: 'absolute',
+                          width: '30px',
+                          height: '30px',
+                          borderRadius: '50%',
+                          display: 'flex',
+                          justifyContent: 'center',
+                          alignItems: 'center',
+                          cursor: 'pointer',
+                          backgroundColor: 'black',
+                          top: '20px',
                           left: '65px'
                         }}
                         drag
-                        animate={{ rotate: -360 }}
-                        transition={{ repeat: Infinity, duration: 12, ease: 'linear' }}
+                        initial={{ scale: !trigger ? 0 : 1 }}
+                        animate={{ scale: !trigger ? 1 : 0 }}
+                        transition={{
+                          type: 'spring',
+                          stiffness: 500,
+                          damping: 20,
+                          delay: 0.54
+                        }}
                       >
                       </Box>
+                      {/* striped circle */}
                       <Box
                         component={motion.div}
                         sx={{
@@ -221,27 +255,6 @@ const Navbar = ({ window }: Props) => {
                           damping: 20,
                           delay: 0.5
                         }}
-                      >
-                      </Box>
-                      {/* spikes */}
-                      <Box
-                        component={motion.div}
-                        sx={{
-                          position: 'absolute',
-                          width: '50px',
-                          height: '50px',
-                          display: 'flex',
-                          justifyContent: 'center',
-                          alignItems: 'center',
-                          cursor: 'pointer',
-                          backgroundColor: 'yellow',
-                          clipPath: 'polygon(100% 50%,83.81% 59.06%,93.3% 75%,74.75% 74.75%,75% 93.3%,59.06% 83.81%,50% 100%,40.94% 83.81%,25% 93.3%,25.25% 74.75%,6.7% 75%,16.19% 59.06%,0% 50%,16.19% 40.94%,6.7% 25%,25.25% 25.25%,25% 6.7%,40.94% 16.19%,50% 0%,59.06% 16.19%,75% 6.7%,74.75% 25.25%,93.3% 25%,83.81% 40.94%,100% 50%,83.81% 59.06%,calc(83.81% - 6.76px) calc(59.06% - 1.81px),calc(100% - 10px) calc(50% - 0px),calc(83.81% - 6.76px) calc(40.94% - -1.81px),calc(93.3% - 8.66px) calc(25% - -5px),calc(74.75% - 4.95px) calc(25.25% - -4.95px),calc(75% - 5px) calc(6.7% - -8.66px),calc(59.06% - 1.81px) calc(16.19% - -6.76px),calc(50% - 0px) calc(0% - -10px),calc(40.94% - -1.81px) calc(16.19% - -6.76px),calc(25% - -5px) calc(6.7% - -8.66px),calc(25.25% - -4.95px) calc(25.25% - -4.95px),calc(6.7% - -8.66px) calc(25% - -5px),calc(16.19% - -6.76px) calc(40.94% - -1.81px),calc(0% - -10px) calc(50% - 0px),calc(16.19% - -6.76px) calc(59.06% - 1.81px),calc(6.7% - -8.66px) calc(75% - 5px),calc(25.25% - -4.95px) calc(74.75% - 4.95px),calc(25% - -5px) calc(93.3% - 8.66px),calc(40.94% - -1.81px) calc(83.81% - 6.76px),calc(50% - 0px) calc(100% - 10px),calc(59.06% - 1.81px) calc(83.81% - 6.76px),calc(75% - 5px) calc(93.3% - 8.66px),calc(74.75% - 4.95px) calc(74.75% - 4.95px),calc(93.3% - 8.66px) calc(75% - 5px),calc(83.81% - 6.76px) calc(59.06% - 1.81px),calc(100% - 10px) calc(50% - 0px))',
-                          top: '0px',
-                          left: '50px'
-                        }}
-                        drag
-                        animate={{ rotate: 360 }}
-                        transition={{ repeat: Infinity, duration: 10, ease: 'linear' }}
                       >
                       </Box>
                     </>
@@ -694,32 +707,66 @@ const Navbar = ({ window }: Props) => {
                           cursor: 'pointer',
                           backgroundColor: 'yellow',
                           clipPath: 'polygon(100% 50%,83.81% 59.06%,93.3% 75%,74.75% 74.75%,75% 93.3%,59.06% 83.81%,50% 100%,40.94% 83.81%,25% 93.3%,25.25% 74.75%,6.7% 75%,16.19% 59.06%,0% 50%,16.19% 40.94%,6.7% 25%,25.25% 25.25%,25% 6.7%,40.94% 16.19%,50% 0%,59.06% 16.19%,75% 6.7%,74.75% 25.25%,93.3% 25%,83.81% 40.94%)',
-                          top: '45px',
-                          left: '60px'
+                          top: '-20px',
+                          left: '130px'
                         }}
                         drag
                         animate={{ rotate: 360 }}
                         transition={{ repeat: Infinity, duration: 5, ease: 'linear' }}
                       >
                       </Box>
+                      {/* circle */}
                       <Box
                         component={motion.div}
                         sx={{
                           position: 'absolute',
-                          width: '50px',
-                          height: '50px',
+                          width: '70px',
+                          height: '70px',
+                          borderRadius: '50%',
                           display: 'flex',
                           justifyContent: 'center',
                           alignItems: 'center',
                           cursor: 'pointer',
-                          backgroundColor: 'red',
-                          clipPath: 'polygon(100% 50%,83.81% 59.06%,93.3% 75%,74.75% 74.75%,75% 93.3%,59.06% 83.81%,50% 100%,40.94% 83.81%,25% 93.3%,25.25% 74.75%,6.7% 75%,16.19% 59.06%,0% 50%,16.19% 40.94%,6.7% 25%,25.25% 25.25%,25% 6.7%,40.94% 16.19%,50% 0%,59.06% 16.19%,75% 6.7%,74.75% 25.25%,93.3% 25%,83.81% 40.94%,100% 50%,83.81% 59.06%,calc(83.81% - 6.76px) calc(59.06% - 1.81px),calc(100% - 10px) calc(50% - 0px),calc(83.81% - 6.76px) calc(40.94% - -1.81px),calc(93.3% - 8.66px) calc(25% - -5px),calc(74.75% - 4.95px) calc(25.25% - -4.95px),calc(75% - 5px) calc(6.7% - -8.66px),calc(59.06% - 1.81px) calc(16.19% - -6.76px),calc(50% - 0px) calc(0% - -10px),calc(40.94% - -1.81px) calc(16.19% - -6.76px),calc(25% - -5px) calc(6.7% - -8.66px),calc(25.25% - -4.95px) calc(25.25% - -4.95px),calc(6.7% - -8.66px) calc(25% - -5px),calc(16.19% - -6.76px) calc(40.94% - -1.81px),calc(0% - -10px) calc(50% - 0px),calc(16.19% - -6.76px) calc(59.06% - 1.81px),calc(6.7% - -8.66px) calc(75% - 5px),calc(25.25% - -4.95px) calc(74.75% - 4.95px),calc(25% - -5px) calc(93.3% - 8.66px),calc(40.94% - -1.81px) calc(83.81% - 6.76px),calc(50% - 0px) calc(100% - 10px),calc(59.06% - 1.81px) calc(83.81% - 6.76px),calc(75% - 5px) calc(93.3% - 8.66px),calc(74.75% - 4.95px) calc(74.75% - 4.95px),calc(93.3% - 8.66px) calc(75% - 5px),calc(83.81% - 6.76px) calc(59.06% - 1.81px),calc(100% - 10px) calc(50% - 0px))',
-                          top: '70px',
+                          backgroundColor: 'transparent',
+                          border: '10px solid white',
+                          top: '-20px',
+                          left: '10px'
+                        }}
+                        drag
+                        initial={{ scale: !trigger ? 0 : 1 }}
+                        animate={{ scale: !trigger ? 1 : 0 }}
+                        transition={{
+                          type: 'spring',
+                          stiffness: 500,
+                          damping: 20,
+                          delay: 0.52
+                        }}
+                      >
+                      </Box>
+                      <Box
+                        component={motion.div}
+                        sx={{
+                          position: 'absolute',
+                          width: '30px',
+                          height: '30px',
+                          borderRadius: '50%',
+                          display: 'flex',
+                          justifyContent: 'center',
+                          alignItems: 'center',
+                          cursor: 'pointer',
+                          backgroundColor: 'black',
+                          top: '20px',
                           left: '65px'
                         }}
                         drag
-                        animate={{ rotate: -360 }}
-                        transition={{ repeat: Infinity, duration: 12, ease: 'linear' }}
+                        initial={{ scale: !trigger ? 0 : 1 }}
+                        animate={{ scale: !trigger ? 1 : 0 }}
+                        transition={{
+                          type: 'spring',
+                          stiffness: 500,
+                          damping: 20,
+                          delay: 0.54
+                        }}
                       >
                       </Box>
                       {/* striped circle */}
@@ -748,27 +795,6 @@ const Navbar = ({ window }: Props) => {
                           damping: 20,
                           delay: 0.5
                         }}
-                      >
-                      </Box>
-                      {/* spikes */}
-                      <Box
-                        component={motion.div}
-                        sx={{
-                          position: 'absolute',
-                          width: '50px',
-                          height: '50px',
-                          display: 'flex',
-                          justifyContent: 'center',
-                          alignItems: 'center',
-                          cursor: 'pointer',
-                          backgroundColor: 'yellow',
-                          clipPath: 'polygon(100% 50%,83.81% 59.06%,93.3% 75%,74.75% 74.75%,75% 93.3%,59.06% 83.81%,50% 100%,40.94% 83.81%,25% 93.3%,25.25% 74.75%,6.7% 75%,16.19% 59.06%,0% 50%,16.19% 40.94%,6.7% 25%,25.25% 25.25%,25% 6.7%,40.94% 16.19%,50% 0%,59.06% 16.19%,75% 6.7%,74.75% 25.25%,93.3% 25%,83.81% 40.94%,100% 50%,83.81% 59.06%,calc(83.81% - 6.76px) calc(59.06% - 1.81px),calc(100% - 10px) calc(50% - 0px),calc(83.81% - 6.76px) calc(40.94% - -1.81px),calc(93.3% - 8.66px) calc(25% - -5px),calc(74.75% - 4.95px) calc(25.25% - -4.95px),calc(75% - 5px) calc(6.7% - -8.66px),calc(59.06% - 1.81px) calc(16.19% - -6.76px),calc(50% - 0px) calc(0% - -10px),calc(40.94% - -1.81px) calc(16.19% - -6.76px),calc(25% - -5px) calc(6.7% - -8.66px),calc(25.25% - -4.95px) calc(25.25% - -4.95px),calc(6.7% - -8.66px) calc(25% - -5px),calc(16.19% - -6.76px) calc(40.94% - -1.81px),calc(0% - -10px) calc(50% - 0px),calc(16.19% - -6.76px) calc(59.06% - 1.81px),calc(6.7% - -8.66px) calc(75% - 5px),calc(25.25% - -4.95px) calc(74.75% - 4.95px),calc(25% - -5px) calc(93.3% - 8.66px),calc(40.94% - -1.81px) calc(83.81% - 6.76px),calc(50% - 0px) calc(100% - 10px),calc(59.06% - 1.81px) calc(83.81% - 6.76px),calc(75% - 5px) calc(93.3% - 8.66px),calc(74.75% - 4.95px) calc(74.75% - 4.95px),calc(93.3% - 8.66px) calc(75% - 5px),calc(83.81% - 6.76px) calc(59.06% - 1.81px),calc(100% - 10px) calc(50% - 0px))',
-                          top: '0px',
-                          left: '50px'
-                        }}
-                        drag
-                        animate={{ rotate: 360 }}
-                        transition={{ repeat: Infinity, duration: 10, ease: 'linear' }}
                       >
                       </Box>
                     </>
@@ -1038,11 +1064,11 @@ const Navbar = ({ window }: Props) => {
             sx={{
               position: 'absolute',
               padding: '10px',
-              background: 'linear-gradient(135deg, #008cff, blue)',
+              background: 'linear-gradient(135deg, #008cff, #007cff, blue)',
               borderRadius: '20px',
               filter: 'drop-shadow(-2px 3px 5px rgba(0,0,0,0.5))',
               width: '300px',
-              height: '200px'
+              height: '180px'
             }}>
             {/* striped circle */}
             <Box
@@ -1143,7 +1169,7 @@ const Navbar = ({ window }: Props) => {
               }}
             >
             </Box>
-            <Box sx={{ backgroundColor: 'white', borderRadius: '10px', padding: '10px', height: '160px' }}>
+            <Box sx={{ backgroundColor: 'white', borderRadius: '10px', padding: '10px', height: '160px', position: 'absolute', width: '280px' }}>
               {children}
             </Box>
           </Box>
@@ -1154,7 +1180,7 @@ const Navbar = ({ window }: Props) => {
         keepMounted
       >
         <DialogTitle>
-          <Stack direction='column' justifyContent='center' alignItems='center'>
+          <Stack direction='column' alignItems='center'>
             <Typography
               variant='h5'
               sx={{
