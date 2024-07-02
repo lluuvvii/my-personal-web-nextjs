@@ -173,7 +173,7 @@ const Navbar = ({ window }: Props) => {
                         backgroundColor: 'yellow',
                         clipPath: 'polygon(100% 50%,83.81% 59.06%,93.3% 75%,74.75% 74.75%,75% 93.3%,59.06% 83.81%,50% 100%,40.94% 83.81%,25% 93.3%,25.25% 74.75%,6.7% 75%,16.19% 59.06%,0% 50%,16.19% 40.94%,6.7% 25%,25.25% 25.25%,25% 6.7%,40.94% 16.19%,50% 0%,59.06% 16.19%,75% 6.7%,74.75% 25.25%,93.3% 25%,83.81% 40.94%)',
                         top: '-20px',
-                        left: '130px'
+                        left: '135px'
                       }}
                       drag
                       animate={{ rotate: 360 }}
@@ -219,9 +219,9 @@ const Navbar = ({ window }: Props) => {
                         justifyContent: 'center',
                         alignItems: 'center',
                         cursor: 'pointer',
-                        backgroundColor: 'black',
+                        backgroundColor: 'yellow',
                         top: '10px',
-                        left: '-10px'
+                        left: '-20px'
                       }}
                       drag
                       initial={{ scale: !trigger ? 0 : 1 }}
@@ -259,6 +259,33 @@ const Navbar = ({ window }: Props) => {
                         stiffness: 500,
                         damping: 20,
                         delay: 0.5
+                      }}
+                    >
+                    </Box>
+                    <Box
+                      component={motion.div}
+                      sx={{
+                        position: 'absolute',
+                        width: '30px',
+                        height: '30px',
+                        borderRadius: '50%',
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        cursor: 'pointer',
+                        background: 'repeating-linear-gradient(135deg, yellow, yellow 4px, transparent 4px, transparent 8px)',
+                        filter: 'drop-shadow(-2px 3px 5px rgba(0,0,0,0.5))',
+                        top: '50px',
+                        left: '60px',
+                      }}
+                      drag
+                      initial={{ scale: !trigger ? 0 : 1 }}
+                      animate={{ scale: !trigger ? 1 : 0 }}
+                      transition={{
+                        type: 'spring',
+                        stiffness: 500,
+                        damping: 20,
+                        delay: 0.51
                       }}
                     >
                     </Box>
@@ -713,7 +740,7 @@ const Navbar = ({ window }: Props) => {
                         backgroundColor: 'yellow',
                         clipPath: 'polygon(100% 50%,83.81% 59.06%,93.3% 75%,74.75% 74.75%,75% 93.3%,59.06% 83.81%,50% 100%,40.94% 83.81%,25% 93.3%,25.25% 74.75%,6.7% 75%,16.19% 59.06%,0% 50%,16.19% 40.94%,6.7% 25%,25.25% 25.25%,25% 6.7%,40.94% 16.19%,50% 0%,59.06% 16.19%,75% 6.7%,74.75% 25.25%,93.3% 25%,83.81% 40.94%)',
                         top: '-20px',
-                        left: '130px'
+                        left: '135px'
                       }}
                       drag
                       animate={{ rotate: 360 }}
@@ -761,7 +788,7 @@ const Navbar = ({ window }: Props) => {
                         cursor: 'pointer',
                         backgroundColor: 'black',
                         top: '10px',
-                        left: '-10px'
+                        left: '-20px'
                       }}
                       drag
                       initial={{ scale: !trigger ? 0 : 1 }}
@@ -799,6 +826,33 @@ const Navbar = ({ window }: Props) => {
                         stiffness: 500,
                         damping: 20,
                         delay: 0.5
+                      }}
+                    >
+                    </Box>
+                    <Box
+                      component={motion.div}
+                      sx={{
+                        position: 'absolute',
+                        width: '30px',
+                        height: '30px',
+                        borderRadius: '50%',
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        cursor: 'pointer',
+                        background: 'repeating-linear-gradient(135deg, black, black 4px, transparent 4px, transparent 8px)',
+                        filter: 'drop-shadow(-2px 3px 5px rgba(0,0,0,0.5))',
+                        top: '50px',
+                        left: '60px',
+                      }}
+                      drag
+                      initial={{ scale: !trigger ? 0 : 1 }}
+                      animate={{ scale: !trigger ? 1 : 0 }}
+                      transition={{
+                        type: 'spring',
+                        stiffness: 500,
+                        damping: 20,
+                        delay: 0.51
                       }}
                     >
                     </Box>
