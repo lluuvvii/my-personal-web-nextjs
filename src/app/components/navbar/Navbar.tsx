@@ -94,17 +94,17 @@ const Navbar = ({ window }: Props) => {
                   component={motion.div}
                   sx={{
                     position: 'absolute',
-                    width: '95px',
-                    height: '95px',
+                    width: '40px',
+                    height: '40px',
                     borderRadius: '50%',
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
                     cursor: 'pointer',
-                    background: 'repeating-linear-gradient(135deg, red, red 8px, transparent 8px, transparent 15px)',
+                    background: 'repeating-linear-gradient(135deg, red, red 6px, transparent 6px, transparent 11px)',
                     filter: 'drop-shadow(-2px 3px 5px rgba(0,0,0,0.5))',
-                    top: '30px',
-                    right: '-20px',
+                    top: '70px',
+                    right: '-10px',
                   }}
                   drag
                   initial={{ scale: !trigger ? 0 : 1 }}
@@ -609,17 +609,17 @@ const Navbar = ({ window }: Props) => {
                   component={motion.div}
                   sx={{
                     position: 'absolute',
-                    width: '95px',
-                    height: '95px',
+                    width: '40px',
+                    height: '40px',
                     borderRadius: '50%',
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
                     cursor: 'pointer',
-                    background: 'repeating-linear-gradient(135deg, blue, blue 8px, transparent 8px, transparent 15px)',
+                    background: 'repeating-linear-gradient(135deg, blue, blue 6px, transparent 6px, transparent 11px)',
                     filter: 'drop-shadow(-2px 3px 5px rgba(0,0,0,0.5))',
-                    top: '30px',
-                    right: '-20px',
+                    top: '70px',
+                    right: '-10px',
                   }}
                   drag
                   initial={{ scale: !trigger ? 0 : 1 }}
