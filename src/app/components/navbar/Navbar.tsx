@@ -1179,7 +1179,9 @@ const Navbar = ({ window }: Props) => {
                 color: 'white',
                 textShadow: '0px 3px 1px rgba(0,0,0,1), 0px -1px 1px rgba(0,0,0,1), 2px -0px 1px rgba(0,0,0,1), -2px 0px 1px rgba(0,0,0,1), 2px 2px 1px rgba(0,0,0,1), -2px 2px 1px rgba(0,0,0,1)'
               }}
-            >Listen to music?</Typography>
+            >
+              Listen to music?
+            </Typography>
           </Stack>
         </DialogTitle>
         <DialogActions
