@@ -40,22 +40,22 @@ const NextButton = () => {
               fontWeight: 700,
               color: 'yellow',
               textShadow: `
-              0px 1px 2px rgba(0,0,0,1), 
-              0px 1px 2px rgba(0,0,0,1), 
-              0px 1px 2px rgba(0,0,0,1), 
-              0px 1px 2px rgba(0,0,0,1), 
-              0px 1px 2px rgba(0,0,0,1), 
-              0px 1px 2px rgba(0,0,0,1), 
-              0px 1px 2px rgba(0,0,0,1), 
-              0px 1px 2px rgba(0,0,0,1), 
-              0px 1px 2px rgba(0,0,0,1), 
-              0px 1px 2px rgba(0,0,0,1), 
-              0px 1px 2px rgba(0,0,0,1), 
-              0px 1px 2px rgba(0,0,0,1), 
-              0px 1px 2px rgba(0,0,0,1), 
-              0px 1px 2px rgba(0,0,0,1), 
-              0px 1px 2px rgba(0,0,0,1), 
-              0px 1px 2px rgba(0,0,0,1)`
+              0px 1.5px 2px rgba(0,0,0,1), 
+              0px 1.5px 2px rgba(0,0,0,1), 
+              0px 1.5px 2px rgba(0,0,0,1), 
+              0px 1.5px 2px rgba(0,0,0,1), 
+              0px 1.5px 2px rgba(0,0,0,1), 
+              0px 1.5px 2px rgba(0,0,0,1), 
+              0px 1.5px 2px rgba(0,0,0,1), 
+              0px 1.5px 2px rgba(0,0,0,1), 
+              0px 1.5px 2px rgba(0,0,0,1), 
+              0px 1.5px 2px rgba(0,0,0,1), 
+              0px 1.5px 2px rgba(0,0,0,1), 
+              0px 1.5px 2px rgba(0,0,0,1), 
+              0px 1.5px 2px rgba(0,0,0,1), 
+              0px 1.5px 2px rgba(0,0,0,1), 
+              0px 1.5px 2px rgba(0,0,0,1), 
+              0px 1.5px 2px rgba(0,0,0,1)`
             }}
           >
             Next

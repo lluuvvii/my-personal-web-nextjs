@@ -1186,22 +1186,22 @@ const Navbar = ({ window }: Props) => {
                 fontWeight: 700,
                 color: 'white',
                 textShadow: `
-              0px 1px 2px rgba(0,0,0,1), 
-              0px 1px 2px rgba(0,0,0,1), 
-              0px 1px 2px rgba(0,0,0,1), 
-              0px 1px 2px rgba(0,0,0,1), 
-              0px 1px 2px rgba(0,0,0,1), 
-              0px 1px 2px rgba(0,0,0,1), 
-              0px 1px 2px rgba(0,0,0,1), 
-              0px 1px 2px rgba(0,0,0,1), 
-              0px 1px 2px rgba(0,0,0,1), 
-              0px 1px 2px rgba(0,0,0,1), 
-              0px 1px 2px rgba(0,0,0,1), 
-              0px 1px 2px rgba(0,0,0,1), 
-              0px 1px 2px rgba(0,0,0,1), 
-              0px 1px 2px rgba(0,0,0,1), 
-              0px 1px 2px rgba(0,0,0,1), 
-              0px 1px 2px rgba(0,0,0,1)`
+              0px 1.5px 3px rgba(0,0,0,1), 
+              0px 1.5px 3px rgba(0,0,0,1), 
+              0px 1.5px 3px rgba(0,0,0,1), 
+              0px 1.5px 3px rgba(0,0,0,1), 
+              0px 1.5px 3px rgba(0,0,0,1), 
+              0px 1.5px 3px rgba(0,0,0,1), 
+              0px 1.5px 3px rgba(0,0,0,1), 
+              0px 1.5px 3px rgba(0,0,0,1), 
+              0px 1.5px 3px rgba(0,0,0,1), 
+              0px 1.5px 3px rgba(0,0,0,1), 
+              0px 1.5px 3px rgba(0,0,0,1), 
+              0px 1.5px 3px rgba(0,0,0,1), 
+              0px 1.5px 3px rgba(0,0,0,1), 
+              0px 1.5px 3px rgba(0,0,0,1), 
+              0px 1.5px 3px rgba(0,0,0,1), 
+              0px 1.5px 3px rgba(0,0,0,1)`
               }}
             >
               Listen to music?
