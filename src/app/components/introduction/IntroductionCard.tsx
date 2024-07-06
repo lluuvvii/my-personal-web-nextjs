@@ -77,7 +77,6 @@ const IntroductionCard = () => {
               sx={{
                 fontFamily: 'Nunito, Arial, sans-serif',
                 fontWeight: 700,
-                color: 'black'
               }}
             >
               I&apos;m a fullstack web developer passionate about getting to the software engineer level, I&apos;m currently pursuing a degree in computer engineering and dedicating my time to gaining knowledge that I will apply in the future.
