@@ -26,8 +26,12 @@ const NextButton = () => {
             borderRadius: '10px',
             backgroundColor: 'transparent',
             '&:active': {
-              backgroundColor: 'white',
+              color: 'transparent'
             },
+            '&:hover': {
+              backgroundColor: 'transparent',
+              color: 'transparent'
+            }
           }}>
           <Typography
             variant='h6'
