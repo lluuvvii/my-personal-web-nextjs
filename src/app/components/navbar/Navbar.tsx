@@ -337,7 +337,7 @@ const Navbar = ({ window }: Props) => {
                 <Grid item>
                   <Box
                     component={motion.div}
-                    whileHover={{ scale: 1.2 }}
+                    whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 1 }}
                     initial={{ scale: !trigger ? 0 : 1 }}
                     animate={{ scale: !trigger ? 1 : 0 }}
@@ -376,7 +376,7 @@ const Navbar = ({ window }: Props) => {
                 <Grid item>
                   <Box
                     component={motion.div}
-                    whileHover={{ scale: 1.2 }}
+                    whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 1 }}
                     initial={{ scale: 0 }}
                     animate={{ scale: 1 }}
@@ -852,7 +852,7 @@ const Navbar = ({ window }: Props) => {
                 <Grid item>
                   <Box
                     component={motion.div}
-                    whileHover={{ scale: 1.2 }}
+                    whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 1 }}
                     initial={{ scale: !trigger ? 0 : 1 }}
                     animate={{ scale: !trigger ? 1 : 0 }}
@@ -1054,7 +1054,7 @@ const Navbar = ({ window }: Props) => {
             sx={{
               position: 'absolute',
               padding: '10px',
-              background: 'linear-gradient(135deg, #008cff, #007cff, blue)',
+              background: 'linear-gradient(100deg, #008cff, #007cff, blue)',
               borderRadius: '20px',
               filter: 'drop-shadow(-2px 3px 5px rgba(0,0,0,0.5))',
               width: '300px',
@@ -1177,7 +1177,7 @@ const Navbar = ({ window }: Props) => {
                 fontFamily: 'Nunito, Arial, sans-serif',
                 fontWeight: 700,
                 color: 'white',
-                textShadow: '0px 3px 1px rgba(0,0,0,1), 0px -1px 1px rgba(0,0,0,1), 2px -0px 1px rgba(0,0,0,1), -2px 0px 1px rgba(0,0,0,1), 2px 2px 1px rgba(0,0,0,1), -2px 2px 1px rgba(0,0,0,1)'
+                textShadow: '0px 2.5px 1px rgba(0,0,0,1), 0px -1px 1px rgba(0,0,0,1), 2px -0px 1px rgba(0,0,0,1), -2px 0px 1px rgba(0,0,0,1), 2px 2px 1px rgba(0,0,0,1), -2px 2px 1px rgba(0,0,0,1)'
               }}
             >
               Listen to music?
@@ -1192,7 +1192,7 @@ const Navbar = ({ window }: Props) => {
           }}>
           <Box
             component={motion.div}
-            whileHover={{ scale: 1.2 }}
+            whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 1 }}
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
@@ -1228,7 +1228,7 @@ const Navbar = ({ window }: Props) => {
           </Box>
           <Box
             component={motion.div}
-            whileHover={{ scale: 1.2 }}
+            whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 1 }}
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
