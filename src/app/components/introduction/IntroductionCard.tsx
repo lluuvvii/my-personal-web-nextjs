@@ -48,7 +48,7 @@ const IntroductionCard = () => {
                 color: 'black',
               }}
             >
-              I'm a fullstack web developer passionate about getting to the software engineer level, I'm currently pursuing a degree in computer engineering and dedicating my time to gaining knowledge that I will apply in the future.
+              I&apos;m a fullstack web developer passionate about getting to the software engineer level, I&apos;m currently pursuing a degree in computer engineering and dedicating my time to gaining knowledge that I will apply in the future.
             </Typography>
           </Grid>
           <Grid item xs={12}>
