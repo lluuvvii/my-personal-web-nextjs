@@ -21,7 +21,23 @@ const IntroductionCard = () => {
                 fontFamily: 'Nunito, Arial, sans-serif',
                 fontWeight: 700,
                 color: 'white',
-                textShadow: '0px 2.5px 1px rgba(0,0,0,1), 0px -1px 1px rgba(0,0,0,1), 2px -0px 1px rgba(0,0,0,1), -2px 0px 1px rgba(0,0,0,1), 2px 2px 1px rgba(0,0,0,1), -2px 2px 1px rgba(0,0,0,1)'
+                textShadow: `
+              0px 1px 2px rgba(0,0,0,1), 
+              0px 1px 2px rgba(0,0,0,1), 
+              0px 1px 2px rgba(0,0,0,1), 
+              0px 1px 2px rgba(0,0,0,1), 
+              0px 1px 2px rgba(0,0,0,1), 
+              0px 1px 2px rgba(0,0,0,1), 
+              0px 1px 2px rgba(0,0,0,1), 
+              0px 1px 2px rgba(0,0,0,1), 
+              0px 1px 2px rgba(0,0,0,1), 
+              0px 1px 2px rgba(0,0,0,1), 
+              0px 1px 2px rgba(0,0,0,1), 
+              0px 1px 2px rgba(0,0,0,1), 
+              0px 1px 2px rgba(0,0,0,1), 
+              0px 1px 2px rgba(0,0,0,1), 
+              0px 1px 2px rgba(0,0,0,1), 
+              0px 1px 2px rgba(0,0,0,1)`
               }}
             >
               Hi, My name is
@@ -35,7 +51,23 @@ const IntroductionCard = () => {
                 fontFamily: 'Nunito, Arial, sans-serif',
                 fontWeight: 700,
                 color: 'yellow',
-                textShadow: '0px 2.5px 1px rgba(0,0,200,1), 0px -1px 1px rgba(0,0,200,1), 2px -0px 1px rgba(0,0,200,1), -2px 0px 1px rgba(0,0,200,1), 2px 2px 1px rgba(0,0,200,1), -2px 2px 1px rgba(0,0,200,1)'
+                textShadow: `
+              0px 1px 2px rgba(0,0,200,1), 
+              0px 1px 2px rgba(0,0,200,1), 
+              0px 1px 2px rgba(0,0,200,1), 
+              0px 1px 2px rgba(0,0,200,1), 
+              0px 1px 2px rgba(0,0,200,1), 
+              0px 1px 2px rgba(0,0,200,1), 
+              0px 1px 2px rgba(0,0,200,1), 
+              0px 1px 2px rgba(0,0,200,1), 
+              0px 1px 2px rgba(0,0,200,1), 
+              0px 1px 2px rgba(0,0,200,1), 
+              0px 1px 2px rgba(0,0,200,1), 
+              0px 1px 2px rgba(0,0,200,1), 
+              0px 1px 2px rgba(0,0,200,1), 
+              0px 1px 2px rgba(0,0,200,1), 
+              0px 1px 2px rgba(0,0,200,1), 
+              0px 1px 2px rgba(0,0,200,1)`
               }}
             >
               I LOVE SHOLLAKHUDDIN KURNIAWAN
@@ -45,7 +77,7 @@ const IntroductionCard = () => {
               sx={{
                 fontFamily: 'Nunito, Arial, sans-serif',
                 fontWeight: 700,
-                color: 'black',
+                color: 'black'
               }}
             >
               I&apos;m a fullstack web developer passionate about getting to the software engineer level, I&apos;m currently pursuing a degree in computer engineering and dedicating my time to gaining knowledge that I will apply in the future.

@@ -1185,7 +1185,23 @@ const Navbar = ({ window }: Props) => {
                 fontFamily: 'Nunito, Arial, sans-serif',
                 fontWeight: 700,
                 color: 'white',
-                textShadow: '0px 2.5px 1px rgba(0,0,0,1), 0px -1px 1px rgba(0,0,0,1), 2px -0px 1px rgba(0,0,0,1), -2px 0px 1px rgba(0,0,0,1), 2px 2px 1px rgba(0,0,0,1), -2px 2px 1px rgba(0,0,0,1)'
+                textShadow: `
+              0px 1px 2px rgba(0,0,0,1), 
+              0px 1px 2px rgba(0,0,0,1), 
+              0px 1px 2px rgba(0,0,0,1), 
+              0px 1px 2px rgba(0,0,0,1), 
+              0px 1px 2px rgba(0,0,0,1), 
+              0px 1px 2px rgba(0,0,0,1), 
+              0px 1px 2px rgba(0,0,0,1), 
+              0px 1px 2px rgba(0,0,0,1), 
+              0px 1px 2px rgba(0,0,0,1), 
+              0px 1px 2px rgba(0,0,0,1), 
+              0px 1px 2px rgba(0,0,0,1), 
+              0px 1px 2px rgba(0,0,0,1), 
+              0px 1px 2px rgba(0,0,0,1), 
+              0px 1px 2px rgba(0,0,0,1), 
+              0px 1px 2px rgba(0,0,0,1), 
+              0px 1px 2px rgba(0,0,0,1)`
               }}
             >
               Listen to music?
@@ -1266,7 +1282,7 @@ const Navbar = ({ window }: Props) => {
             </Button>
           </Box>
         </DialogActions>
-      </Dialog>
+      </Dialog >
       <AudioPlayer autoPlay={startAutoplay} />
     </>
   )
