@@ -5,9 +5,8 @@ import { IconCaretLeftFilled, IconCaretRightFilled } from '@tabler/icons-react'
 import { motion } from 'framer-motion'
 import { useState, useRef } from 'react'
 
-const NextButton = () => {
+const IntroCardContents = () => {
   const [dialogVal, setDialogVal] = useState(0)
-  const [dialogDelay, setDialogDelay] = useState(0)
   const containerRef = useRef<HTMLElement>(null)
 
   return (
@@ -123,8 +122,8 @@ const NextButton = () => {
       <Stack direction='row' justifyContent='space-between'>
         <Box
           component={motion.div}
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 1 }}
+          whileHover={{ scale: dialogVal > 0 ? 1.1 : 0 }}
+          whileTap={{ scale: dialogVal > 0 ? 1 : 0 }}
           initial={{ scale: 0 }}
           animate={{ scale: dialogVal > 0 ? 1 : 0 }}
           transition={{
@@ -183,9 +182,9 @@ const NextButton = () => {
         </Box>
         <Box
           component={motion.div}
-          whileHover={{ scale: 1.1 }}
+          whileHover={{ scale: dialogVal < 2 ? 1.1 : 0 }}
           initial={{ scale: 0 }}
-          whileTap={{ scale: 1 }}
+          whileTap={{ scale: dialogVal < 2 ? 1 : 0 }}
           animate={{ scale: dialogVal < 2 ? 1 : 0 }}
           transition={{
             type: 'spring',
@@ -246,4 +245,4 @@ const NextButton = () => {
   )
 }
 
-export default NextButton
+export default IntroCardContents

@@ -123,7 +123,7 @@ const ZigzagContainer: React.FC<ZigzagContainerProps> = ({
   )
 
   return (
-    <Box sx={{ filter: 'drop-shadow(-2px 3px 5px rgba(0,0,0,0.8))' }}>
+    <Box sx={{ filter: 'drop-shadow(-2px 2px 2px rgba(0,0,0,0.5))' }}>
       <div ref={containerRef} className='zigzag-container' style={{ ...containerStyle, clipPath: clipPathValue }}>
         {children}
       </div>

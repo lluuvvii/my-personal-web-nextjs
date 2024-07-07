@@ -75,7 +75,7 @@ const Navbar = ({ window }: Props) => {
                     cursor: 'pointer',
                     backgroundColor: 'transparent',
                     border: '15px solid black',
-                    filter: 'drop-shadow(-2px 3px 5px rgba(0,0,0,0.5))',
+                    filter: 'drop-shadow(-2px 2px 2px rgba(0,0,0,0.5))',
                     top: '60px',
                     left: '20px'
                   }}
@@ -102,7 +102,7 @@ const Navbar = ({ window }: Props) => {
                     alignItems: 'center',
                     cursor: 'pointer',
                     background: 'repeating-linear-gradient(135deg, red, red 6px, transparent 6px, transparent 11px)',
-                    filter: 'drop-shadow(-2px 3px 5px rgba(0,0,0,0.5))',
+                    filter: 'drop-shadow(-2px 2px 2px rgba(0,0,0,0.5))',
                     top: '70px',
                     right: '-10px',
                   }}
@@ -230,7 +230,7 @@ const Navbar = ({ window }: Props) => {
                       alignItems: 'center',
                       cursor: 'pointer',
                       background: 'repeating-linear-gradient(135deg, yellow, yellow 8px, transparent 8px, transparent 15px)',
-                      filter: 'drop-shadow(-2px 3px 5px rgba(0,0,0,0.5))',
+                      filter: 'drop-shadow(-2px 2px 2px rgba(0,0,0,0.5))',
                       top: '-20px',
                       left: '-30px',
                     }}
@@ -257,7 +257,7 @@ const Navbar = ({ window }: Props) => {
                       alignItems: 'center',
                       cursor: 'pointer',
                       background: 'repeating-linear-gradient(135deg, yellow, yellow 4px, transparent 4px, transparent 8px)',
-                      filter: 'drop-shadow(-2px 3px 5px rgba(0,0,0,0.5))',
+                      filter: 'drop-shadow(-2px 2px 2px rgba(0,0,0,0.5))',
                       top: '50px',
                       left: '60px',
                     }}
@@ -464,7 +464,7 @@ const Navbar = ({ window }: Props) => {
                     cursor: 'pointer',
                     backgroundColor: 'transparent',
                     border: '20px solid white',
-                    filter: 'drop-shadow(-2px 3px 5px rgba(0,0,0,0.5))',
+                    filter: 'drop-shadow(-2px 2px 2px rgba(0,0,0,0.5))',
                     top: '-40px',
                     left: '90px'
                   }}
@@ -522,7 +522,7 @@ const Navbar = ({ window }: Props) => {
                     cursor: 'pointer',
                     backgroundColor: 'transparent',
                     border: `20px solid ${'blue'}`,
-                    filter: 'drop-shadow(-2px 3px 5px rgba(0,0,0,0.5))',
+                    filter: 'drop-shadow(-2px 2px 2px rgba(0,0,0,0.5))',
                     top: '35px',
                     left: '-60px'
                   }}
@@ -590,7 +590,7 @@ const Navbar = ({ window }: Props) => {
                     cursor: 'pointer',
                     backgroundColor: 'transparent',
                     border: '15px solid black',
-                    filter: 'drop-shadow(-2px 3px 5px rgba(0,0,0,0.5))',
+                    filter: 'drop-shadow(-2px 2px 2px rgba(0,0,0,0.5))',
                     top: '60px',
                     left: '20px'
                   }}
@@ -617,7 +617,7 @@ const Navbar = ({ window }: Props) => {
                     alignItems: 'center',
                     cursor: 'pointer',
                     background: 'repeating-linear-gradient(135deg, blue, blue 6px, transparent 6px, transparent 11px)',
-                    filter: 'drop-shadow(-2px 3px 5px rgba(0,0,0,0.5))',
+                    filter: 'drop-shadow(-2px 2px 2px rgba(0,0,0,0.5))',
                     top: '70px',
                     right: '-10px',
                   }}
@@ -745,7 +745,7 @@ const Navbar = ({ window }: Props) => {
                       alignItems: 'center',
                       cursor: 'pointer',
                       background: 'repeating-linear-gradient(135deg, yellow, yellow 8px, transparent 8px, transparent 15px)',
-                      filter: 'drop-shadow(-2px 3px 5px rgba(0,0,0,0.5))',
+                      filter: 'drop-shadow(-2px 2px 2px rgba(0,0,0,0.5))',
                       top: '-20px',
                       left: '-30px',
                     }}
@@ -772,7 +772,7 @@ const Navbar = ({ window }: Props) => {
                       alignItems: 'center',
                       cursor: 'pointer',
                       background: 'repeating-linear-gradient(135deg, black, black 4px, transparent 4px, transparent 8px)',
-                      filter: 'drop-shadow(-2px 3px 5px rgba(0,0,0,0.5))',
+                      filter: 'drop-shadow(-2px 2px 2px rgba(0,0,0,0.5))',
                       top: '50px',
                       left: '60px',
                     }}
@@ -940,7 +940,7 @@ const Navbar = ({ window }: Props) => {
                     cursor: 'pointer',
                     backgroundColor: 'transparent',
                     border: `20px solid ${'red'}`,
-                    filter: 'drop-shadow(-2px 3px 5px rgba(0,0,0,0.5))',
+                    filter: 'drop-shadow(-2px 2px 2px rgba(0,0,0,0.5))',
                     top: '-40px',
                     left: '90px'
                   }}
@@ -998,7 +998,7 @@ const Navbar = ({ window }: Props) => {
                     cursor: 'pointer',
                     backgroundColor: 'transparent',
                     border: `20px solid ${'red'}`,
-                    filter: 'drop-shadow(-2px 3px 5px rgba(0,0,0,0.5))',
+                    filter: 'drop-shadow(-2px 2px 2px rgba(0,0,0,0.5))',
                     top: '35px',
                     left: '-60px'
                   }}
@@ -1056,7 +1056,7 @@ const Navbar = ({ window }: Props) => {
               padding: '10px',
               background: 'linear-gradient(100deg, #008cff, #007cff, blue)',
               borderRadius: '20px',
-              filter: 'drop-shadow(-2px 3px 5px rgba(0,0,0,0.5))',
+              filter: 'drop-shadow(-2px 2px 2px rgba(0,0,0,0.5))',
               width: '300px',
               height: '180px'
             }}>
