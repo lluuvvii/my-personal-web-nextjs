@@ -12,7 +12,7 @@ const Home = () => {
           </Grid>
           <Grid item>
             <Typography
-              variant='h5'
+              variant='h6'
               ml={1}
               sx={{
                 textAlign: 'center',

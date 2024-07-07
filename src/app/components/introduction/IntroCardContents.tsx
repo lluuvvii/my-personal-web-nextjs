@@ -11,12 +11,111 @@ const IntroCardContents = () => {
 
   return (
     <Box>
+      {/* striped circle */}
+      <Box
+        component={motion.div}
+        sx={{
+          position: 'absolute',
+          width: '40px',
+          height: '40px',
+          borderRadius: '50%',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          background: 'repeating-linear-gradient(45deg, yellow, yellow, 5px, transparent 5px, transparent 9px)',
+          top: '-15px',
+          left: '20px',
+        }}
+      >
+      </Box>
+      <Box
+        component={motion.div}
+        sx={{
+          position: 'absolute',
+          width: '40px',
+          height: '40px',
+          borderRadius: '50%',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          background: 'repeating-linear-gradient(45deg, #ffc800, #ffc800,  5px, transparent 5px, transparent 9px)',
+          bottom: '15px',
+          right: '-20px',
+        }}
+      >
+      </Box>
+      {/* spike */}
+      <Box
+        sx={{
+          position: 'absolute',
+          width: '60px',
+          height: '60px',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          cursor: 'pointer',
+          backgroundColor: 'yellow',
+          clipPath: 'polygon(100% 50%,83.81% 59.06%,93.3% 75%,74.75% 74.75%,75% 93.3%,59.06% 83.81%,50% 100%,40.94% 83.81%,25% 93.3%,25.25% 74.75%,6.7% 75%,16.19% 59.06%,0% 50%,16.19% 40.94%,6.7% 25%,25.25% 25.25%,25% 6.7%,40.94% 16.19%,50% 0%,59.06% 16.19%,75% 6.7%,74.75% 25.25%,93.3% 25%,83.81% 40.94%)',
+          top: '-20px',
+          left: '-20px'
+        }}
+      >
+      </Box>
+      {/* circle */}
+      <Box
+        sx={{
+          position: 'absolute',
+          width: '60px',
+          height: '60px',
+          borderRadius: '50%',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          backgroundColor: 'transparent',
+          border: '7px solid #ffc800',
+          bottom: '-15px',
+          right: '-15px'
+        }}
+      >
+      </Box>
+      <Box
+        sx={{
+          position: 'absolute',
+          width: '40px',
+          height: '40px',
+          borderRadius: '50%',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          backgroundColor: 'transparent',
+          border: '7px solid yellow',
+          top: '10px',
+          left: '-20px'
+        }}
+      >
+      </Box>
+      <Box
+        component={motion.div}
+        sx={{
+          position: 'absolute',
+          width: '40px',
+          height: '40px',
+          borderRadius: '50%',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          backgroundColor: '#ffc800',
+          bottom: '-15px',
+          right: '20px',
+        }}
+      >
+      </Box>
       {dialogVal === 0 ?
-        <Box ref={containerRef} sx={{ height: '200px', overflow: 'hidden' }}>
+        <Box ref={containerRef} sx={{ height: '200px', overflow: 'hidden', pl: 1 }}>
           <Slide direction='right' in={dialogVal === 0} container={containerRef.current}>
             <Box>
               <Typography
-                variant='h5'
+                variant='h6'
                 sx={{
                   textAlign: 'center',
                   fontFamily: 'Nunito, Arial, sans-serif',
@@ -43,7 +142,7 @@ const IntroCardContents = () => {
                 Hi, My name is
               </Typography>
               <Typography
-                variant='h5'
+                variant='h6'
                 mb={2}
                 sx={{
                   textAlign: 'center',
@@ -73,6 +172,7 @@ const IntroCardContents = () => {
               <Typography
                 variant='body1'
                 sx={{
+                  textAlign: 'center',
                   fontFamily: 'Nunito, Arial, sans-serif',
                   fontWeight: 700,
                 }}>
@@ -81,6 +181,7 @@ const IntroCardContents = () => {
               <Typography
                 variant='body1'
                 sx={{
+                  textAlign: 'center',
                   fontFamily: 'Nunito, Arial, sans-serif',
                   fontWeight: 700,
                 }}>
@@ -91,7 +192,7 @@ const IntroCardContents = () => {
         </Box>
         : null}
       {dialogVal === 1 ?
-        <Box ref={containerRef} sx={{ height: '200px', overflow: 'hidden' }}>
+        <Box ref={containerRef} sx={{ height: '200px', overflow: 'hidden', pl: 1 }}>
           <Slide direction='right' in={dialogVal === 1} container={containerRef.current}>
             <Box>
               <Typography
@@ -107,7 +208,7 @@ const IntroCardContents = () => {
         </Box>
         : null}
       {dialogVal === 2 ?
-        <Box ref={containerRef} sx={{ height: '200px', overflow: 'hidden' }}>
+        <Box ref={containerRef} sx={{ height: '200px', overflow: 'hidden', pl: 1 }}>
           <Slide direction='right' in={dialogVal === 2} container={containerRef.current}>
             <Box>
               <Typography
@@ -124,7 +225,7 @@ const IntroCardContents = () => {
         </Box>
         : null}
       {dialogVal === 3 ?
-        <Box ref={containerRef} sx={{ height: '200px', overflow: 'hidden' }}>
+        <Box ref={containerRef} sx={{ height: '200px', overflow: 'hidden', pl: 1 }}>
           <Slide direction='right' in={dialogVal === 3} container={containerRef.current}>
             <Box>
               <Typography

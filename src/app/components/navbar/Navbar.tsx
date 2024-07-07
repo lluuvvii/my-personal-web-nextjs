@@ -1159,15 +1159,16 @@ const Navbar = ({ window }: Props) => {
               }}
             >
             </Box>
-            <Box sx={{
-              backgroundColor: 'white',
-              borderRadius: '10px',
-              padding: '10px',
-              height: '160px',
-              position: 'absolute',
-              width: '280px',
-              boxShadow: 'inset 0px 0px 5px rgba(0, 0, 0, 0.5)'
-            }}>
+            <Box
+              sx={{
+                backgroundColor: 'white',
+                borderRadius: '10px',
+                padding: '10px',
+                height: '160px',
+                position: 'absolute',
+                width: '280px',
+                boxShadow: 'inset 0px 0px 5px rgba(0, 0, 0, 0.5)'
+              }}>
               {children}
             </Box>
           </Box>
@@ -1282,7 +1283,7 @@ const Navbar = ({ window }: Props) => {
             </Button>
           </Box>
         </DialogActions>
-      </Dialog >
+      </Dialog>
       <AudioPlayer autoPlay={startAutoplay} />
     </>
   )
