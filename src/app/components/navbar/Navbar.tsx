@@ -1062,7 +1062,6 @@ const Navbar = ({ window }: Props) => {
             }}>
             {/* striped circle */}
             <Box
-              component={motion.div}
               sx={{
                 position: 'absolute',
                 width: '40px',
@@ -1078,7 +1077,6 @@ const Navbar = ({ window }: Props) => {
             >
             </Box>
             <Box
-              component={motion.div}
               sx={{
                 position: 'absolute',
                 width: '40px',
@@ -1144,7 +1142,6 @@ const Navbar = ({ window }: Props) => {
             >
             </Box>
             <Box
-              component={motion.div}
               sx={{
                 position: 'absolute',
                 width: '40px',
