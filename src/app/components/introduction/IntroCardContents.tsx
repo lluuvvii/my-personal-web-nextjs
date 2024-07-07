@@ -12,7 +12,7 @@ const IntroCardContents = () => {
   return (
     <Box>
       {dialogVal === 0 ?
-        <Box ref={containerRef} sx={{ height: '100px', overflow: 'scroll' }}>
+        <Box ref={containerRef} sx={{ height: '200px', overflow: 'hidden' }}>
           <Slide direction='right' in={dialogVal === 0} container={containerRef.current}>
             <Box>
               <Typography
@@ -39,13 +39,11 @@ const IntroCardContents = () => {
               0px 1.5px 3px rgba(0,0,0,1), 
               0px 1.5px 3px rgba(0,0,0,1), 
               0px 1.5px 3px rgba(0,0,0,1)`
-                }}
-              >
+                }}>
                 Hi, My name is
               </Typography>
               <Typography
                 variant='h5'
-                ml={1}
                 mb={2}
                 sx={{
                   textAlign: 'center',
@@ -69,10 +67,33 @@ const IntroCardContents = () => {
               0px 1.5px 3px rgba(0,0,200,1), 
               0px 1.5px 3px rgba(0,0,200,1), 
               0px 1.5px 3px rgba(0,0,200,1)`
-                }}
-              >
+                }}>
                 I LOVE SHOLLAKHUDDIN KURNIAWAN
               </Typography>
+              <Typography
+                variant='body1'
+                sx={{
+                  fontFamily: 'Nunito, Arial, sans-serif',
+                  fontWeight: 700,
+                }}>
+                You can call me luvi, why?
+              </Typography>
+              <Typography
+                variant='body1'
+                sx={{
+                  fontFamily: 'Nunito, Arial, sans-serif',
+                  fontWeight: 700,
+                }}>
+                love -&gt; loovee -&gt; luvi
+              </Typography>
+            </Box>
+          </Slide>
+        </Box>
+        : null}
+      {dialogVal === 1 ?
+        <Box ref={containerRef} sx={{ height: '200px', overflow: 'hidden' }}>
+          <Slide direction='right' in={dialogVal === 1} container={containerRef.current}>
+            <Box>
               <Typography
                 variant='body1'
                 sx={{
@@ -85,9 +106,9 @@ const IntroCardContents = () => {
           </Slide>
         </Box>
         : null}
-      {dialogVal === 1 ?
-        <Box ref={containerRef} sx={{ height: '100px', overflow: 'scroll' }}>
-          <Slide direction='right' in={dialogVal === 1} container={containerRef.current}>
+      {dialogVal === 2 ?
+        <Box ref={containerRef} sx={{ height: '200px', overflow: 'hidden' }}>
+          <Slide direction='right' in={dialogVal === 2} container={containerRef.current}>
             <Box>
               <Typography
                 variant='body1'
@@ -102,9 +123,9 @@ const IntroCardContents = () => {
           </Slide>
         </Box>
         : null}
-      {dialogVal === 2 ?
-        <Box ref={containerRef} sx={{ height: '100px', overflow: 'scroll' }}>
-          <Slide direction='right' in={dialogVal === 2} container={containerRef.current}>
+      {dialogVal === 3 ?
+        <Box ref={containerRef} sx={{ height: '200px', overflow: 'hidden' }}>
+          <Slide direction='right' in={dialogVal === 3} container={containerRef.current}>
             <Box>
               <Typography
                 variant='body1'
@@ -182,10 +203,10 @@ const IntroCardContents = () => {
         </Box>
         <Box
           component={motion.div}
-          whileHover={{ scale: dialogVal < 2 ? 1.1 : 0 }}
+          whileHover={{ scale: dialogVal < 3 ? 1.1 : 0 }}
           initial={{ scale: 0 }}
-          whileTap={{ scale: dialogVal < 2 ? 1 : 0 }}
-          animate={{ scale: dialogVal < 2 ? 1 : 0 }}
+          whileTap={{ scale: dialogVal < 3 ? 1 : 0 }}
+          animate={{ scale: dialogVal < 3 ? 1 : 0 }}
           transition={{
             type: 'spring',
             stiffness: 500,
@@ -193,7 +214,7 @@ const IntroCardContents = () => {
           }}>
           <Button
             onClick={() => {
-              if (dialogVal < 2) {
+              if (dialogVal < 3) {
                 setDialogVal(dialogVal + 1)
               }
             }}
