@@ -290,7 +290,7 @@ const IntroductionCard = () => {
           justifyContent: 'center',
           alignItems: 'center',
           backgroundColor: 'red',
-          bottom: '-10px',
+          bottom: '-20px',
           right: '-20px',
         }}
       >
