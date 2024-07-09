@@ -4,7 +4,7 @@ import ZigzagContainer from '../materials/ZigzagContainer'
 
 const IntroBanner = () => {
   return (
-    <Box sx={{ position: 'absolute', width: '100%', transform: 'rotate(-2deg)', mt: 10 }}>
+    <Box sx={{ transform: 'rotate(-2deg)', mt: 20, width: '100%', position: 'fixed' }}>
       <ZigzagContainer width='100%' height='300px' color='yellow' toColor='#ffc800' toGradient='to right' top bottom />
       {/* bottom left side particles */}
       {/* striped circle */}

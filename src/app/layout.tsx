@@ -46,9 +46,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           <Navbar />
           <ThemeProvider theme={theme}>
             <CssBaseline />
-            <Box sx={{ mt: 15 }}>
-              {children}
-            </Box>
+            {children}
           </ThemeProvider>
         </Suspense>
       </body>

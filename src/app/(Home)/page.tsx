@@ -5,26 +5,25 @@ import IntroBanner from '../components/introduction/IntroBanner'
 
 const Home = () => {
   return (
-    <Container>
-      <Box sx={{ my: 4 }}>
-        <Grid container justifyContent='center'>
-          <IntroBanner />
-        </Grid>
-        <Grid container spacing={3} justifyContent='center' mt={14}>
-          <Grid item xs={12} sm={10} md={8} lg={6} xl={4}>
-            <IntroductionCard />
-          </Grid>
-          <Grid item>
-            <Box sx={{ position: 'relative' }}>
-              <Typography
-                variant='h6'
-                ml={1}
-                sx={{
-                  textAlign: 'center',
-                  fontFamily: 'Nunito, Arial, sans-serif',
-                  fontWeight: 700,
-                  color: 'yellow',
-                  textShadow: `
+    <>
+      <IntroBanner />
+      <Container sx={{ mt: 15 }}>
+        <Box>
+          <Grid container spacing={3} justifyContent='center'>
+            <Grid item xs={12} sm={10} md={8} lg={6} xl={4}>
+              <IntroductionCard />
+            </Grid>
+            <Grid item>
+              <Box sx={{ position: 'relative' }}>
+                <Typography
+                  variant='h6'
+                  ml={1}
+                  sx={{
+                    textAlign: 'center',
+                    fontFamily: 'Nunito, Arial, sans-serif',
+                    fontWeight: 700,
+                    color: 'yellow',
+                    textShadow: `
               0px 1.5px 3px rgba(0,0,0,1), 
               0px 1.5px 3px rgba(0,0,0,1), 
               0px 1.5px 3px rgba(0,0,0,1), 
@@ -41,17 +40,18 @@ const Home = () => {
               0px 1.5px 3px rgba(0,0,0,1), 
               0px 1.5px 3px rgba(0,0,0,1), 
               0px 1.5px 3px rgba(0,0,0,1)`
-                }}>
-                Ask Me?
-              </Typography>
-            </Box>
+                  }}>
+                  Ask Me?
+                </Typography>
+              </Box>
+            </Grid>
+            <Grid item xs={12}>
+              <GithubStats />
+            </Grid>
           </Grid>
-          <Grid item xs={12}>
-            <GithubStats />
-          </Grid>
-        </Grid>
-      </Box>
-    </Container>
+        </Box>
+      </Container>
+    </>
   )
 }
 
