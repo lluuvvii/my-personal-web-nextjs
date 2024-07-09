@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <>
       <IntroBanner />
-      <Container sx={{ mt: 15 }}>
+      <Container sx={{ mt: 30 }}>
         <Box>
           <Grid container spacing={3} justifyContent='center'>
             <Grid item xs={12} sm={10} md={8} lg={6} xl={4}>

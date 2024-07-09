@@ -4,7 +4,7 @@ import ZigzagContainer from '../materials/ZigzagContainer'
 
 const IntroBanner = () => {
   return (
-    <Box sx={{ transform: 'rotate(-2deg)', mt: 20, width: '100%', position: 'fixed' }}>
+    <Box sx={{ transform: 'rotate(-2deg)', width: '100%', position: 'fixed', mt: -5 }}>
       <ZigzagContainer width='100%' height='300px' color='yellow' toColor='#ffc800' toGradient='to right' top bottom />
       {/* bottom left side particles */}
       {/* striped circle */}
@@ -171,8 +171,8 @@ const IntroBanner = () => {
           justifyContent: 'center',
           alignItems: 'center',
           backgroundColor: 'black',
-          top: '50px',
-          right: '-20px',
+          top: '70px',
+          right: '-30px',
         }}
       >
       </Box>
@@ -234,7 +234,7 @@ const IntroBanner = () => {
           alignItems: 'center',
           background: 'repeating-linear-gradient(45deg, red, red, 5px, transparent 5px, transparent 9px)',
           filter: 'drop-shadow(-2px 2px 2px rgba(0,0,0,0.5))',
-          top: '-40px',
+          top: '110px',
           right: '-30px',
         }}>
       </Box>
