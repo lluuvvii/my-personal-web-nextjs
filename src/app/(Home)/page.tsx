@@ -1,12 +1,16 @@
 import { Box, Container, Grid, Typography } from '@mui/material'
 import GithubStats from '../components/stats/GithubStats'
 import IntroductionCard from '../components/introduction/IntroductionCard'
+import IntroBanner from '../components/introduction/IntroBanner'
 
 const Home = () => {
   return (
-    <Container sx={{ mt: 30 }}>
-      <Box>
+    <Container sx={{ overflow: 'hidden' }}>
+      <Box sx={{ mt: 30 }}>
         <Grid container spacing={3} justifyContent='center'>
+          <Grid item xs={12}>
+            <IntroBanner />
+          </Grid>
           <Grid item xs={12} sm={10} md={8} lg={6} xl={4}>
             <IntroductionCard />
           </Grid>
