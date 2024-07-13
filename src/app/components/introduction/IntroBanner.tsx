@@ -278,7 +278,7 @@ const IntroBanner = () => {
             Introduction
           </Typography>
         </Box>
-        : <Box sx={{ mt: 20 }}></Box>}
+        : <Box sx={{ mt: 20 }} />}
     </>
   )
 }
