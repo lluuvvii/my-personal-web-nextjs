@@ -6,7 +6,7 @@ import IntroBanner from '../components/introduction/IntroBanner'
 const Home = () => {
   return (
     <Container sx={{ overflow: 'hidden' }}>
-      <Box>
+      <Box mt={20}>
         <Grid container spacing={3} justifyContent='center'>
           <Grid item xs={12}>
             <IntroBanner />

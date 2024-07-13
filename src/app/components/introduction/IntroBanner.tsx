@@ -11,7 +11,7 @@ const IntroBanner = () => {
   return (
     <>
       {matches ?
-        <Box sx={{ transform: 'rotate(-2deg) scale(1.03)', width: '100%', position: 'relative', top: 250, left: '-10px' }}>
+        <Box sx={{ transform: 'rotate(-2deg) scale(1.03)', width: '100%', position: 'relative', left: '-10px', height: 0 }}>
           <Box sx={{ transform: 'scale(1.05)' }}>
             <ZigzagContainer width='100%' height='300px' color='yellow' toColor='#ffc800' toGradient='to right' top bottom right left />
           </Box>
@@ -28,7 +28,7 @@ const IntroBanner = () => {
               alignItems: 'center',
               background: 'repeating-linear-gradient(45deg, black, black, 6px, transparent 6px, transparent 11px)',
               filter: 'drop-shadow(-2px 2px 2px rgba(0,0,0,0.5))',
-              bottom: '100px',
+              top: '150px',
               left: '-20px',
             }}>
           </Box>
@@ -43,7 +43,7 @@ const IntroBanner = () => {
               justifyContent: 'center',
               alignItems: 'center',
               backgroundColor: 'black',
-              bottom: '-10px',
+              top: '180px',
               left: '-50px',
             }}
           >
@@ -58,7 +58,7 @@ const IntroBanner = () => {
               justifyContent: 'center',
               alignItems: 'center',
               backgroundColor: 'red',
-              bottom: '70px',
+              top: '170px',
               left: '-30px',
             }}
           >
@@ -87,7 +87,7 @@ const IntroBanner = () => {
               alignItems: 'center',
               backgroundColor: 'transparent',
               border: '20px solid red',
-              bottom: '-10px',
+              top: '200px',
               left: '-50px',
             }}
           >
@@ -117,7 +117,7 @@ const IntroBanner = () => {
               alignItems: 'center',
               background: 'repeating-linear-gradient(45deg, yellow, yellow, 8px, transparent 8px, transparent 15px)',
               filter: 'drop-shadow(-2px 2px 2px rgba(0,0,0,0.5))',
-              bottom: '-15px',
+              top: '240px',
               left: '0px',
             }}>
           </Box>
@@ -252,7 +252,7 @@ const IntroBanner = () => {
             sx={{
               position: 'absolute',
               top: '-20px',
-              left: '30px',
+              right: '30px',
               textAlign: 'center',
               fontFamily: 'Nunito, Arial, sans-serif',
               fontWeight: 600,

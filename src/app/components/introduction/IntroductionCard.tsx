@@ -327,6 +327,7 @@ const IntroductionCard = () => {
           borderRadius: '20px',
           filter: 'drop-shadow(-2px 2px 2px rgba(0,0,0,0.5))',
         }}>
+          {/* introcard contents */}
         <Box sx={{ position: 'relative', borderRadius: '10px', backgroundColor: 'white', padding: '10px', boxShadow: 'inset 0px 0px 5px rgba(0, 0, 0, 0.5)' }}>
           <IntroCardContents />
         </Box>
