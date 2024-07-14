@@ -1,6 +1,9 @@
+'use client'
+
 import React from 'react'
 import { Box } from '@mui/material'
 import IntroCardContents from './IntroCardContents'
+import { motion } from 'framer-motion'
 
 const IntroductionCard = () => {
   return (
@@ -380,6 +383,7 @@ const IntroductionCard = () => {
         </Box>
         {/* circle around */}
         <Box
+          component={motion.div}
           sx={{
             position: 'absolute',
             width: '30px',
@@ -392,6 +396,8 @@ const IntroductionCard = () => {
             top: '-10px',
             left: '-10px',
           }}
+          animate={{ rotate: 360 }}
+          transition={{ repeat: Infinity, duration: 15, ease: 'linear' }}
         >
           {[...Array(10)].map((_, index) => {
             const angle = (index / 10) * (2 * Math.PI)
