@@ -11,7 +11,7 @@ const IntroBanner = () => {
   return (
     <>
       {matches ?
-        <Box sx={{ transform: 'rotate(-2deg) scale(1.03)', width: '100%', position: 'relative', left: '-10px', height: 0 }}>
+        <Box sx={{ transform: 'rotate(-2deg) scale(1.03)', width: '100%', position: 'relative', left: '-17px', height: 0 }}>
           <Box sx={{ transform: 'scale(1.05)' }}>
             <ZigzagContainer width='100%' height='300px' color='yellow' toColor='#ffc800' toGradient='to right' top bottom right left />
           </Box>
@@ -278,7 +278,7 @@ const IntroBanner = () => {
             Introduction
           </Typography>
         </Box>
-        : <Box sx={{ mt: 20 }} />}
+        : null}
     </>
   )
 }

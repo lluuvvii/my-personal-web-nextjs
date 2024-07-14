@@ -327,7 +327,7 @@ const IntroductionCard = () => {
           borderRadius: '20px',
           filter: 'drop-shadow(-2px 2px 2px rgba(0,0,0,0.5))',
         }}>
-          {/* introcard contents */}
+        {/* introcard contents */}
         <Box sx={{ position: 'relative', borderRadius: '10px', backgroundColor: 'white', padding: '10px', boxShadow: 'inset 0px 0px 5px rgba(0, 0, 0, 0.5)' }}>
           <IntroCardContents />
         </Box>
@@ -378,6 +378,44 @@ const IntroductionCard = () => {
           }}
         >
         </Box>
+        {/* circle around */}
+        <Box
+          sx={{
+            position: 'absolute',
+            width: '30px',
+            height: '30px',
+            borderRadius: '50%',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            backgroundColor: 'transparent',
+            top: '-10px',
+            left: '-10px',
+          }}
+        >
+          {[...Array(10)].map((_, index) => {
+            const angle = (index / 10) * (2 * Math.PI)
+            const distance = 70 // Distance from the center circle
+            const x = Math.cos(angle) * distance
+            const y = Math.sin(angle) * distance
+
+            return (
+              <Box
+                key={index}
+                sx={{
+                  position: 'absolute',
+                  width: '10px',
+                  height: '10px',
+                  borderRadius: '50%',
+                  backgroundColor: 'yellow',
+                  top: `calc(50% + ${y}px)`,
+                  left: `calc(50% + ${x}px)`,
+                  transform: 'translate(-50%, -50%)',
+                }}
+              />
+            )
+          })}
+        </Box>
         {/* circle */}
         <Box
           sx={{
@@ -389,7 +427,7 @@ const IntroductionCard = () => {
             justifyContent: 'center',
             alignItems: 'center',
             backgroundColor: 'transparent',
-            border: '7px solid #ffc800',
+            border: '7px double #ffc800',
             bottom: '-15px',
             right: '-15px'
           }}
