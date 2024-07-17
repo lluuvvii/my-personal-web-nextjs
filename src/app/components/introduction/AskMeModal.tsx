@@ -1,10 +1,11 @@
 'use client'
 
 import { Box, Button, Typography } from '@mui/material'
-import React from 'react'
+import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 
 const AskMeModal = () => {
+  const [askActive, setAskActive] = useState(false)
   return (
     <Box sx={{ position: 'relative' }}>
       {/* circle */}
@@ -101,6 +102,7 @@ const AskMeModal = () => {
         }}
       >
       </Box>
+      {/* ask me button */}
       <Box
         component={motion.div}
         whileHover={{ scale: 1.1 }}
@@ -113,7 +115,9 @@ const AskMeModal = () => {
           damping: 20
         }}>
         <Button
-          onClick={() => { }}
+          onClick={() => {
+            setAskActive(!askActive)
+          }}
           size='small'
           sx={{
             color: 'grey',
@@ -157,6 +161,38 @@ const AskMeModal = () => {
             Ask Me?
           </Typography>
         </Button>
+      </Box>
+      {/* star long shadow */}
+      <Box
+        component={motion.div}
+        sx={{
+          position: 'absolute',
+          '& svg': {
+            filter: 'drop-shadow(-2px 3px 10px rgba(0,0,0,0.5))',
+          },
+          top: '0px',
+          left: '-100px'
+        }}
+        initial={{ x: askActive ? 500 : 0, y: askActive ? 500 : 0 }}
+        animate={{ x: askActive ? 0 : 500, y: askActive ? 0 : 500 }}
+        transition={{
+          type: 'spring',
+          stiffness: 500,
+          damping: 50,
+        }}
+      >
+        <div style={{ transform: 'scale(0.1) rotate(315deg)', width: '1px', height: '1px' }}>
+          <svg
+            width='200px'
+            height='7000px'
+            fill={'red'}
+            xmlns='http://www.w3.org/2000/svg'
+          >
+            <rect x='0' y='80' width='100%' height='100%' fill={'red'} />
+            <path d='M100 0.587l30.52 66.76L200 81.25l-50 48.5L161.92 200 100 165.83 38.08 200 50 129.75 0 81.25l69.44-13.29z' />
+            <path d='M100 0.587l30.52 66.76L200 81.25l-50 48.5L161.92 200 100 165.83 38.08 200 50 129.75 0 81.25l69.44-13.29z' transform='scale(0.7) translate(42.5, 47)' fill='white' />
+          </svg>
+        </div>
       </Box>
     </Box>
   )
