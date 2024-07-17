@@ -197,9 +197,7 @@ const AskMeModal = () => {
         initial={{ x: 500, y: 500 }}
         animate={{ x: askActive ? 0 : 500, y: askActive ? 0 : 500 }}
         transition={{
-          type: 'spring',
-          stiffness: 500,
-          damping: 50,
+          type: 'keyframes',
         }}
       >
         {/* star long shadow */}
@@ -213,7 +211,7 @@ const AskMeModal = () => {
           <div style={{ transform: 'scale(0.1) rotate(315deg)', width: '1px', height: '1px' }}>
             <svg
               width='200px'
-              height='7000px'
+              height='500px'
               fill={'red'}
               xmlns='http://www.w3.org/2000/svg'
             >
@@ -235,7 +233,7 @@ const AskMeModal = () => {
           <div style={{ transform: 'scale(0.2) rotate(315deg)', width: '1px', height: '1px' }}>
             <svg
               width='200px'
-              height='5000px'
+              height='400px'
               fill={'black'}
               xmlns='http://www.w3.org/2000/svg'
             >
@@ -257,7 +255,7 @@ const AskMeModal = () => {
           <div style={{ transform: 'scale(0.15) rotate(315deg)', width: '1px', height: '1px' }}>
             <svg
               width='200px'
-              height='5000px'
+              height='400px'
               fill={'#ffc800'}
               xmlns='http://www.w3.org/2000/svg'
             >
@@ -271,7 +269,7 @@ const AskMeModal = () => {
           sx={{ position: 'absolute', width: '200px', mt: '10px' }}>
           <Accordion>
             <AccordionSummary
-              expandIcon={<IconCaretDownFilled />}
+              expandIcon={<IconCaretDownFilled color='blue' />}
             >
               Ask Me About :
             </AccordionSummary>
