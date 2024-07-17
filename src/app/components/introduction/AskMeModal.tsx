@@ -1,11 +1,22 @@
 'use client'
 
-import { Box, Button, Typography } from '@mui/material'
+import { Accordion, AccordionDetails, AccordionSummary, Box, Button, Typography } from '@mui/material'
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
+import { usePathname, useRouter, useSearchParams } from 'next/navigation'
+import { IconCaretDownFilled } from '@tabler/icons-react'
 
 const AskMeModal = () => {
+  const router = useRouter()
+  const searchParams = useSearchParams()
+  const pathname = usePathname()
   const [askActive, setAskActive] = useState(false)
+  const [askAbout, setAskAbout] = useState(searchParams.get('ask') !== null ? searchParams.get('ask') : '')
+
+  const handleAskAbout = () => {
+    router.push(`${pathname}?ask=${askAbout}`, { scroll: false })
+  }
+
   return (
     <Box sx={{ position: 'relative' }}>
       {/* circle */}
@@ -164,15 +175,12 @@ const AskMeModal = () => {
       </Box>
       {/* star long shadow */}
       <Box
-        component={motion.div}
         sx={{
-          position: 'absolute',
-          '& svg': {
-            filter: 'drop-shadow(-2px 3px 10px rgba(0,0,0,0.5))',
-          },
+          position: 'asbolute',
           top: '0px',
           left: '-100px'
         }}
+        component={motion.div}
         initial={{ x: askActive ? 500 : 0, y: askActive ? 500 : 0 }}
         animate={{ x: askActive ? 0 : 500, y: askActive ? 0 : 500 }}
         transition={{
@@ -181,18 +189,42 @@ const AskMeModal = () => {
           damping: 50,
         }}
       >
-        <div style={{ transform: 'scale(0.1) rotate(315deg)', width: '1px', height: '1px' }}>
-          <svg
-            width='200px'
-            height='7000px'
-            fill={'red'}
-            xmlns='http://www.w3.org/2000/svg'
-          >
-            <rect x='0' y='80' width='100%' height='100%' fill={'red'} />
-            <path d='M100 0.587l30.52 66.76L200 81.25l-50 48.5L161.92 200 100 165.83 38.08 200 50 129.75 0 81.25l69.44-13.29z' />
-            <path d='M100 0.587l30.52 66.76L200 81.25l-50 48.5L161.92 200 100 165.83 38.08 200 50 129.75 0 81.25l69.44-13.29z' transform='scale(0.7) translate(42.5, 47)' fill='white' />
-          </svg>
-        </div>
+        {/* star long shadow */}
+        <Box
+          sx={{
+            position: 'absolute',
+            '& svg': {
+              filter: 'drop-shadow(-2px 3px 10px rgba(0,0,0,0.5))',
+            }
+          }}>
+          <div style={{ transform: 'scale(0.1) rotate(315deg)', width: '1px', height: '1px' }}>
+            <svg
+              width='200px'
+              height='7000px'
+              fill={'red'}
+              xmlns='http://www.w3.org/2000/svg'
+            >
+              <rect x='0' y='80' width='100%' height='100%' fill={'red'} />
+              <path d='M100 0.587l30.52 66.76L200 81.25l-50 48.5L161.92 200 100 165.83 38.08 200 50 129.75 0 81.25l69.44-13.29z' />
+              <path d='M100 0.587l30.52 66.76L200 81.25l-50 48.5L161.92 200 100 165.83 38.08 200 50 129.75 0 81.25l69.44-13.29z' transform='scale(0.7) translate(42.5, 47)' fill='white' />
+            </svg>
+          </div>
+        </Box>
+        <Box
+          sx={{ position: 'absolute', width: '200px', mt: '10px' }}>
+          <Accordion>
+            <AccordionSummary
+              expandIcon={<IconCaretDownFilled />}
+              aria-controls="panel1-content"
+              id="panel1-header"
+            >
+              Ask Me About :
+            </AccordionSummary>
+            <AccordionDetails>
+              yayaya
+            </AccordionDetails>
+          </Accordion>
+        </Box>
       </Box>
     </Box>
   )
