@@ -18,7 +18,17 @@ const AskMeModal = () => {
   }
 
   return (
-    <Box sx={{ position: 'relative' }}>
+    <Box
+      sx={{ position: 'relative' }}
+      component={motion.div}
+      initial={{ scale: 0 }}
+      animate={{ scale: 1 }}
+      whileHover={{ scale: 1.1 }}
+      transition={{
+        type: 'spring',
+        stiffness: 400,
+        damping: 20
+      }}>
       {/* circle */}
       <Box
         sx={{
@@ -215,8 +225,6 @@ const AskMeModal = () => {
           <Accordion>
             <AccordionSummary
               expandIcon={<IconCaretDownFilled />}
-              aria-controls="panel1-content"
-              id="panel1-header"
             >
               Ask Me About :
             </AccordionSummary>
