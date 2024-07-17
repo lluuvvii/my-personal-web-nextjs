@@ -24,6 +24,7 @@ const AskMeModal = () => {
       initial={{ scale: 0 }}
       animate={{ scale: 1 }}
       whileHover={{ scale: 1.1 }}
+      whileTap={{ scale: 0.9 }}
       transition={{
         type: 'spring',
         stiffness: 400,
