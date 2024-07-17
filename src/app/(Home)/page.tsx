@@ -12,7 +12,7 @@ const Home = () => {
           <Grid item xs={12}>
             <IntroBanner />
           </Grid>
-          <Grid item xs={12} sm={10} md={8} lg={6} xl={4}>
+          <Grid item xs={12} md={8} lg={6} xl={4}>
             <IntroductionCard />
           </Grid>
           <Grid item>
