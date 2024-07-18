@@ -103,7 +103,7 @@ const AskMeModal = () => {
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
-            background: 'repeating-linear-gradient(45deg, yellow, yellow, 4px, transparent 4px, transparent 7px)',
+            background: 'repeating-linear-gradient(45deg, white, white, 4px, transparent 4px, transparent 7px)',
             filter: 'drop-shadow(-2px 2px 2px rgba(0,0,0,0.5))',
             top: '5px',
             left: '-10px',

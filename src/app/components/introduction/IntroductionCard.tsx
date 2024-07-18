@@ -98,7 +98,7 @@ const IntroductionCard = () => {
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
-          backgroundColor: 'yellow',
+          backgroundColor: 'white',
           top: '40px',
           left: '-20px',
         }}
@@ -143,7 +143,7 @@ const IntroductionCard = () => {
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
-          backgroundColor: 'yellow',
+          backgroundColor: 'white',
           top: '-10px',
           left: '50px',
         }}
@@ -207,7 +207,7 @@ const IntroductionCard = () => {
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
-          background: 'repeating-linear-gradient(45deg, yellow, yellow, 6px, transparent 6px, transparent 11px)',
+          background: 'repeating-linear-gradient(45deg, white, white, 6px, transparent 6px, transparent 11px)',
           filter: 'drop-shadow(-2px 2px 2px rgba(0,0,0,0.5))',
           bottom: '25px',
           right: '-30px',
@@ -253,7 +253,7 @@ const IntroductionCard = () => {
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
-          backgroundColor: 'yellow',
+          backgroundColor: 'white',
           bottom: '40px',
           right: '-10px',
         }}
@@ -335,7 +335,7 @@ const IntroductionCard = () => {
         sx={{
           padding: '10px',
           height: '280px',
-          background: 'linear-gradient(100deg, yellow, #ffc800)',
+          background: 'linear-gradient(100deg, red, #d10000)',
           borderRadius: '20px',
           filter: 'drop-shadow(-2px 2px 2px rgba(0,0,0,0.5))',
         }}
@@ -354,7 +354,7 @@ const IntroductionCard = () => {
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
-            background: 'repeating-linear-gradient(45deg, yellow, yellow, 5px, transparent 5px, transparent 9px)',
+            background: 'repeating-linear-gradient(45deg, red, red, 5px, transparent 5px, transparent 9px)',
             top: '-15px',
             left: '20px',
           }}
@@ -369,7 +369,7 @@ const IntroductionCard = () => {
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
-            background: 'repeating-linear-gradient(45deg, #ffc800, #ffc800,  5px, transparent 5px, transparent 9px)',
+            background: 'repeating-linear-gradient(45deg, #d10000, #d10000,  5px, transparent 5px, transparent 9px)',
             bottom: '15px',
             right: '-20px',
           }}
@@ -384,7 +384,7 @@ const IntroductionCard = () => {
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
-            backgroundColor: 'yellow',
+            backgroundColor: 'red',
             clipPath: 'polygon(100% 50%,83.81% 59.06%,93.3% 75%,74.75% 74.75%,75% 93.3%,59.06% 83.81%,50% 100%,40.94% 83.81%,25% 93.3%,25.25% 74.75%,6.7% 75%,16.19% 59.06%,0% 50%,16.19% 40.94%,6.7% 25%,25.25% 25.25%,25% 6.7%,40.94% 16.19%,50% 0%,59.06% 16.19%,75% 6.7%,74.75% 25.25%,93.3% 25%,83.81% 40.94%)',
             top: '-20px',
             left: '-20px'
@@ -392,7 +392,7 @@ const IntroductionCard = () => {
         >
         </Box>
         {/* circle around */}
-        <Box
+        {/* <Box
           component={motion.div}
           sx={{
             position: 'absolute',
@@ -423,7 +423,7 @@ const IntroductionCard = () => {
                   width: '10px',
                   height: '10px',
                   borderRadius: '50%',
-                  backgroundColor: 'yellow',
+                  backgroundColor: 'red',
                   top: `calc(50% + ${y}px)`,
                   left: `calc(50% + ${x}px)`,
                   transform: 'translate(-50%, -50%)',
@@ -431,7 +431,7 @@ const IntroductionCard = () => {
               />
             )
           })}
-        </Box>
+        </Box> */}
         {/* circle */}
         <Box
           sx={{
@@ -443,7 +443,7 @@ const IntroductionCard = () => {
             justifyContent: 'center',
             alignItems: 'center',
             backgroundColor: 'transparent',
-            border: '7px double #ffc800',
+            border: '7px double #d10000',
             bottom: '-15px',
             right: '-15px'
           }}
@@ -459,7 +459,7 @@ const IntroductionCard = () => {
             justifyContent: 'center',
             alignItems: 'center',
             backgroundColor: 'transparent',
-            border: '7px solid yellow',
+            border: '7px solid red',
             top: '10px',
             left: '-20px'
           }}
@@ -474,7 +474,7 @@ const IntroductionCard = () => {
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
-            backgroundColor: '#ffc800',
+            backgroundColor: '#d10000',
             bottom: '-15px',
             right: '20px',
           }}

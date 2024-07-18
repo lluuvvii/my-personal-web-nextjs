@@ -13,7 +13,7 @@ const IntroBanner = () => {
       {matches ?
         <Box sx={{ transform: 'rotate(-2deg) scale(1.03)', width: '100%', position: 'relative', left: '-17px', height: 0 }}>
           <Box sx={{ transform: 'scale(1.05)' }}>
-            <ZigzagContainer width='100%' height='300px' color='yellow' toColor='#ffc800' toGradient='to right' top bottom right left />
+            <ZigzagContainer width='100%' height='300px' color='red' toColor='#d10000' toGradient='to right' top bottom right left />
           </Box>
           {/* bottom left side particles */}
           {/* striped circle */}
@@ -57,7 +57,7 @@ const IntroBanner = () => {
               display: 'flex',
               justifyContent: 'center',
               alignItems: 'center',
-              backgroundColor: 'red',
+              backgroundColor: 'white',
               top: '170px',
               left: '-30px',
             }}
@@ -71,7 +71,7 @@ const IntroBanner = () => {
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
-                backgroundColor: 'yellow',
+                backgroundColor: 'red',
               }}
             >
             </Box>
@@ -86,7 +86,7 @@ const IntroBanner = () => {
               justifyContent: 'center',
               alignItems: 'center',
               backgroundColor: 'transparent',
-              border: '20px solid red',
+              border: '20px solid white',
               top: '200px',
               left: '-50px',
             }}
@@ -101,7 +101,7 @@ const IntroBanner = () => {
                 justifyContent: 'center',
                 alignItems: 'center',
                 backgroundColor: 'transparent',
-                border: '10px solid white',
+                border: '10px solid red',
               }}
             ></Box>
           </Box>
@@ -115,7 +115,7 @@ const IntroBanner = () => {
               display: 'flex',
               justifyContent: 'center',
               alignItems: 'center',
-              background: 'repeating-linear-gradient(45deg, yellow, yellow, 8px, transparent 8px, transparent 15px)',
+              background: 'repeating-linear-gradient(45deg, black, black, 8px, transparent 8px, transparent 15px)',
               filter: 'drop-shadow(-2px 2px 2px rgba(0,0,0,0.5))',
               top: '240px',
               left: '0px',
@@ -209,7 +209,7 @@ const IntroBanner = () => {
               display: 'flex',
               justifyContent: 'center',
               alignItems: 'center',
-              backgroundColor: 'yellow',
+              backgroundColor: 'white',
               border: '10px solid red',
               top: '-10px',
               right: '-50px',
@@ -226,7 +226,7 @@ const IntroBanner = () => {
               display: 'flex',
               justifyContent: 'center',
               alignItems: 'center',
-              background: 'repeating-linear-gradient(45deg, yellow, yellow, 8px, transparent 8px, transparent 15px)',
+              background: 'repeating-linear-gradient(45deg, white, white, 8px, transparent 8px, transparent 15px)',
               filter: 'drop-shadow(-2px 2px 2px rgba(0,0,0,0.5))',
               top: '40px',
               right: '-40px',
