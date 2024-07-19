@@ -256,29 +256,45 @@ const AskMeModal = () => {
             <svg
               width='200px'
               height='400px'
-              fill={'#ffc800'}
+              fill={'black'}
               xmlns='http://www.w3.org/2000/svg'
             >
-              <rect x='0' y='80' width='100%' height='100%' fill={'#ffc800'} />
+              <rect x='0' y='80' width='100%' height='100%' fill={'black'} />
               <path d='M100 0.587l30.52 66.76L200 81.25l-50 48.5L161.92 200 100 165.83 38.08 200 50 129.75 0 81.25l69.44-13.29z' />
               <path d='M100 0.587l30.52 66.76L200 81.25l-50 48.5L161.92 200 100 165.83 38.08 200 50 129.75 0 81.25l69.44-13.29z' transform='scale(0.7) translate(42.5, 47)' fill='white' />
             </svg>
           </div>
         </Box>
         <Box
-          sx={{ position: 'absolute', width: '200px', mt: '10px' }}>
+          sx={{
+            position: 'absolute',
+            width: '200px',
+            mt: '10px',
+            p: '5px',
+            backgroundColor: 'red',
+            borderRadius: '10px',
+            filter: 'drop-shadow(-2px 2px 5px rgba(0,0,0,0.3))',
+          }}>
           <Accordion>
             <AccordionSummary
-              expandIcon={<IconCaretDownFilled color='blue' />}
+              expandIcon={<IconCaretDownFilled color='red' />}
             >
               Ask Me About :
             </AccordionSummary>
             <AccordionDetails>
-              yayaya
+              <svg style={{
+                fontSize: '20px',
+                fontWeight: 'bold',
+                filter: 'drop-shadow(-1px 1px 2px rgba(0,0,0,0.5))',
+              }}>
+                <text x="50" y="70" fill="none" stroke="yellow" stroke-width="10" stroke-linejoin="round">Next</text>
+                <text x="50" y="70" fill="none" stroke="black" stroke-width="5">Next</text>
+                <text x="50" y="70" fill="yellow  ">Next</text>
+              </svg>
             </AccordionDetails>
           </Accordion>
         </Box>
-      </Box>
+      </Box >
     </>
   )
 }
