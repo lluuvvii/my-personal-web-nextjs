@@ -89,7 +89,7 @@ const AskMeModal = () => {
             backgroundColor: 'transparent',
             border: '3px solid red',
             top: '15px',
-            left: '75px',
+            left: '70px',
           }}
         >
         </Box>
