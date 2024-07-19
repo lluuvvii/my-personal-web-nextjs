@@ -12,7 +12,7 @@ const IntroCardContents = () => {
   return (
     <Box>
       {dialogVal === 0 ?
-        <Box ref={containerRef} sx={{ height: '260px', overflow: 'scroll', pl: 1 }}>
+        <Box ref={containerRef} sx={{ height: '260px', overflow: 'auto', pl: 1 }}>
           <Slide direction='right' in={dialogVal === 0} container={containerRef.current}>
             <Box>
               <Typography
@@ -93,7 +93,7 @@ const IntroCardContents = () => {
         </Box>
         : null}
       {dialogVal === 1 ?
-        <Box ref={containerRef} sx={{ height: '260px', overflow: 'scroll', pl: 1 }}>
+        <Box ref={containerRef} sx={{ height: '260px', overflow: 'auto', pl: 1 }}>
           <Slide direction='right' in={dialogVal === 1} container={containerRef.current}>
             <Box>
               <Typography
@@ -109,7 +109,7 @@ const IntroCardContents = () => {
         </Box>
         : null}
       {dialogVal === 2 ?
-        <Box ref={containerRef} sx={{ height: '260px', overflow: 'scroll', pl: 1 }}>
+        <Box ref={containerRef} sx={{ height: '260px', overflow: 'auto', pl: 1 }}>
           <Slide direction='right' in={dialogVal === 2} container={containerRef.current}>
             <Box>
               <Typography
@@ -126,7 +126,7 @@ const IntroCardContents = () => {
         </Box>
         : null}
       {dialogVal === 3 ?
-        <Box ref={containerRef} sx={{ height: '260px', overflow: 'scroll', pl: 1 }}>
+        <Box ref={containerRef} sx={{ height: '260px', overflow: 'auto', pl: 1 }}>
           <Slide direction='right' in={dialogVal === 3} container={containerRef.current}>
             <Box>
               <Typography
