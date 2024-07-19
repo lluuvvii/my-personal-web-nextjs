@@ -173,7 +173,7 @@ const IntroCardContents = () => {
                 color: 'transparent'
               }
             }}>
-            <IconCaretLeftFilled color='blue' />
+            <IconCaretLeftFilled color='red' />
             <Typography
               variant='h6'
               sx={{
@@ -260,7 +260,7 @@ const IntroCardContents = () => {
             >
               Next
             </Typography>
-            <IconCaretRightFilled color='blue' />
+            <IconCaretRightFilled color='red' />
           </Button>
         </Box>
       </Stack>

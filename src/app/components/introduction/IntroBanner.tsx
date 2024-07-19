@@ -6,7 +6,7 @@ import ZigzagContainer from '../materials/ZigzagContainer'
 
 const IntroBanner = () => {
   const theme = useTheme()
-  const matches = useMediaQuery(theme.breakpoints.up('sm'))
+  const matches = useMediaQuery(theme.breakpoints.up('md'))
 
   return (
     <>

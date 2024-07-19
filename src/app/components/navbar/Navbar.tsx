@@ -760,33 +760,6 @@ const Navbar = ({ window }: Props) => {
                     }}
                   >
                   </Box>
-                  <Box
-                    component={motion.div}
-                    sx={{
-                      position: 'absolute',
-                      width: '30px',
-                      height: '30px',
-                      borderRadius: '50%',
-                      display: 'flex',
-                      justifyContent: 'center',
-                      alignItems: 'center',
-                      cursor: 'pointer',
-                      background: 'repeating-linear-gradient(135deg, black, black 4px, transparent 4px, transparent 8px)',
-                      filter: 'drop-shadow(-2px 2px 2px rgba(0,0,0,0.5))',
-                      top: '50px',
-                      left: '60px',
-                    }}
-                    drag
-                    initial={{ scale: !trigger ? 0 : 1 }}
-                    animate={{ scale: !trigger ? 1 : 0 }}
-                    transition={{
-                      type: 'spring',
-                      stiffness: 500,
-                      damping: 20,
-                      delay: 0.51
-                    }}
-                  >
-                  </Box>
                 </>
                 : null}
               {/* stars long shadow */}
