@@ -668,7 +668,7 @@ const Navbar = ({ window }: Props) => {
                       justifyContent: 'center',
                       alignItems: 'center',
                       cursor: 'pointer',
-                      backgroundColor: 'yellow',
+                      backgroundColor: 'black',
                       clipPath: 'polygon(100% 50%,83.81% 59.06%,93.3% 75%,74.75% 74.75%,75% 93.3%,59.06% 83.81%,50% 100%,40.94% 83.81%,25% 93.3%,25.25% 74.75%,6.7% 75%,16.19% 59.06%,0% 50%,16.19% 40.94%,6.7% 25%,25.25% 25.25%,25% 6.7%,40.94% 16.19%,50% 0%,59.06% 16.19%,75% 6.7%,74.75% 25.25%,93.3% 25%,83.81% 40.94%)',
                       top: '-20px',
                       left: '135px'
@@ -744,7 +744,7 @@ const Navbar = ({ window }: Props) => {
                       justifyContent: 'center',
                       alignItems: 'center',
                       cursor: 'pointer',
-                      background: 'repeating-linear-gradient(135deg, yellow, yellow 8px, transparent 8px, transparent 15px)',
+                      background: 'repeating-linear-gradient(135deg, white, white 8px, transparent 8px, transparent 15px)',
                       filter: 'drop-shadow(-2px 2px 2px rgba(0,0,0,0.5))',
                       top: '-20px',
                       left: '-30px',
@@ -918,10 +918,10 @@ const Navbar = ({ window }: Props) => {
                     <svg
                       width='200px'
                       height='1000px'
-                      fill={'red'}
+                      fill={'black'}
                       xmlns='http://www.w3.org/2000/svg'
                     >
-                      <rect x='0' y='80' width='100%' height='100%' fill={'red'} />
+                      <rect x='0' y='80' width='100%' height='100%' fill={'black'} />
                       <path d='M100 0.587l30.52 66.76L200 81.25l-50 48.5L161.92 200 100 165.83 38.08 200 50 129.75 0 81.25l69.44-13.29z' />
                       <path d='M100 0.587l30.52 66.76L200 81.25l-50 48.5L161.92 200 100 165.83 38.08 200 50 129.75 0 81.25l69.44-13.29z' transform='scale(0.7) translate(42.5, 47)' fill='white' />
                     </svg>

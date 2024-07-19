@@ -212,7 +212,7 @@ const IntroBanner = () => {
               backgroundColor: 'white',
               border: '10px solid red',
               top: '-10px',
-              right: '-50px',
+              right: '-70px',
             }}
           >
           </Box>
