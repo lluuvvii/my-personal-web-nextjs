@@ -202,7 +202,7 @@ const AskMeModal = () => {
         {/* star long shadow */}
         <Box
           sx={{
-            position: 'relative',
+            position: 'absolute',
             '& svg': {
               filter: 'drop-shadow(-2px 3px 10px rgba(0,0,0,0.5))',
             }
@@ -222,7 +222,7 @@ const AskMeModal = () => {
         </Box>
         <Box
           sx={{
-            position: 'relative',
+            position: 'absolute',
             '& svg': {
               filter: 'drop-shadow(-2px 3px 10px rgba(0,0,0,0.5))',
             },
@@ -244,7 +244,7 @@ const AskMeModal = () => {
         </Box>
         <Box
           sx={{
-            position: 'relative',
+            position: 'absolute',
             '& svg': {
               filter: 'drop-shadow(-2px 3px 10px rgba(0,0,0,0.5))',
             },
@@ -274,10 +274,10 @@ const AskMeModal = () => {
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
-            background: 'repeating-linear-gradient(45deg, white, white, 4px, transparent 4px, transparent 7px)',
+            background: 'repeating-linear-gradient(45deg, black, black, 4px, transparent 4px, transparent 7px)',
             filter: 'drop-shadow(-2px 2px 2px rgba(0,0,0,0.5))',
-            top: '0px',
-            left: '0px',
+            top: '50px',
+            left: '170px',
           }}>
         </Box>
         <Box
