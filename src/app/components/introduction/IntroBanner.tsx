@@ -2,6 +2,7 @@
 
 import { Box, Typography, useMediaQuery, useTheme } from '@mui/material'
 import React from 'react'
+import { motion } from 'framer-motion'
 import ZigzagContainer from '../materials/ZigzagContainer'
 
 const IntroBanner = () => {
@@ -18,7 +19,10 @@ const IntroBanner = () => {
           {/* bottom left side particles */}
           {/* striped circle */}
           <Box
+            component={motion.div}
+            drag
             sx={{
+              cursor: 'pointer',
               transform: 'scale(1.2)',
               position: 'absolute',
               width: '50px',
@@ -35,7 +39,10 @@ const IntroBanner = () => {
           </Box>
           {/* circle */}
           <Box
+            component={motion.div}
+            drag
             sx={{
+              cursor: 'pointer',
               transform: 'scale(1.2)',
               position: 'absolute',
               width: '100px',
@@ -51,7 +58,10 @@ const IntroBanner = () => {
           >
           </Box>
           <Box
+            component={motion.div}
+            drag
             sx={{
+              cursor: 'pointer',
               transform: 'scale(1.2)',
               position: 'absolute',
               width: '60px',
@@ -80,7 +90,10 @@ const IntroBanner = () => {
             </Box>
           </Box>
           <Box
+            component={motion.div}
+            drag
             sx={{
+              cursor: 'pointer',
               transform: 'scale(1.2)',
               position: 'absolute',
               width: '100px',
@@ -111,7 +124,10 @@ const IntroBanner = () => {
           </Box>
           {/* striped circle */}
           <Box
+            component={motion.div}
+            drag
             sx={{
+              cursor: 'pointer',
               transform: 'scale(1.2)',
               position: 'absolute',
               width: '80px',
@@ -129,7 +145,10 @@ const IntroBanner = () => {
           {/* top right side particles */}
           {/* star long shadow */}
           <Box
+            component={motion.div}
+            drag
             sx={{
+              cursor: 'pointer',
               transform: 'scale(1.2)',
               position: 'absolute',
               '& svg': {
@@ -153,7 +172,10 @@ const IntroBanner = () => {
             </div>
           </Box>
           <Box
+            component={motion.div}
+            drag
             sx={{
+              cursor: 'pointer',
               transform: 'scale(1.2)',
               position: 'absolute',
               '& svg': {
@@ -177,7 +199,10 @@ const IntroBanner = () => {
             </div>
           </Box>
           <Box
+            component={motion.div}
+            drag
             sx={{
+              cursor: 'pointer',
               transform: 'scale(1.2)',
               position: 'absolute',
               '& svg': {
@@ -202,7 +227,10 @@ const IntroBanner = () => {
           </Box>
           {/* circle */}
           <Box
+            component={motion.div}
+            drag
             sx={{
+              cursor: 'pointer',
               transform: 'scale(1.2)',
               position: 'absolute',
               width: '70px',
@@ -218,7 +246,10 @@ const IntroBanner = () => {
           >
           </Box>
           <Box
+            component={motion.div}
+            drag
             sx={{
+              cursor: 'pointer',
               position: 'absolute',
               width: '40px',
               height: '40px',
@@ -233,7 +264,10 @@ const IntroBanner = () => {
           >
           </Box>
           <Box
+            component={motion.div}
+            drag
             sx={{
+              cursor: 'pointer',
               transform: 'scale(1.2)',
               position: 'absolute',
               width: '100px',
@@ -251,7 +285,10 @@ const IntroBanner = () => {
           </Box>
           {/* striped circle */}
           <Box
+            component={motion.div}
+            drag
             sx={{
+              cursor: 'pointer',
               transform: 'scale(1.2)',
               position: 'absolute',
               width: '80px',
@@ -267,7 +304,10 @@ const IntroBanner = () => {
             }}>
           </Box>
           <Box
+            component={motion.div}
+            drag
             sx={{
+              cursor: 'pointer',
               transform: 'scale(1.2)',
               position: 'absolute',
               width: '40px',
