@@ -1027,11 +1027,9 @@ const Navbar = ({ window }: Props) => {
             sx={{
               position: 'absolute',
               padding: '10px',
-              background: 'linear-gradient(100deg, #008cff, #007cff, blue)',
+              background: 'linear-gradient(100deg, red, #d10000)',
               borderRadius: '20px',
               filter: 'drop-shadow(-2px 2px 2px rgba(0,0,0,0.5))',
-              width: '300px',
-              height: '180px'
             }}>
             {/* striped circle */}
             <Box
@@ -1043,7 +1041,7 @@ const Navbar = ({ window }: Props) => {
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
-                background: 'repeating-linear-gradient(45deg, #008cff, #008cff 5px, transparent 5px, transparent 9px)',
+                background: 'repeating-linear-gradient(45deg, red, red 5px, transparent 5px, transparent 9px)',
                 top: '-15px',
                 left: '20px',
               }}
@@ -1058,7 +1056,7 @@ const Navbar = ({ window }: Props) => {
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
-                background: 'repeating-linear-gradient(45deg, blue, blue 5px, transparent 5px, transparent 9px)',
+                background: 'repeating-linear-gradient(45deg, #d10000, #d10000 5px, transparent 5px, transparent 9px)',
                 bottom: '15px',
                 right: '-20px',
               }}
@@ -1074,7 +1072,7 @@ const Navbar = ({ window }: Props) => {
                 justifyContent: 'center',
                 alignItems: 'center',
                 cursor: 'pointer',
-                backgroundColor: '#008cff',
+                backgroundColor: 'red',
                 clipPath: 'polygon(100% 50%,83.81% 59.06%,93.3% 75%,74.75% 74.75%,75% 93.3%,59.06% 83.81%,50% 100%,40.94% 83.81%,25% 93.3%,25.25% 74.75%,6.7% 75%,16.19% 59.06%,0% 50%,16.19% 40.94%,6.7% 25%,25.25% 25.25%,25% 6.7%,40.94% 16.19%,50% 0%,59.06% 16.19%,75% 6.7%,74.75% 25.25%,93.3% 25%,83.81% 40.94%)',
                 top: '-20px',
                 left: '-20px'
@@ -1092,7 +1090,7 @@ const Navbar = ({ window }: Props) => {
                 justifyContent: 'center',
                 alignItems: 'center',
                 backgroundColor: 'transparent',
-                border: '7px solid blue',
+                border: '7px solid #d10000',
                 bottom: '-15px',
                 right: '-15px'
               }}
@@ -1108,7 +1106,7 @@ const Navbar = ({ window }: Props) => {
                 justifyContent: 'center',
                 alignItems: 'center',
                 backgroundColor: 'transparent',
-                border: '7px solid #008cff',
+                border: '7px solid red',
                 top: '10px',
                 left: '-20px'
               }}
@@ -1123,7 +1121,7 @@ const Navbar = ({ window }: Props) => {
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
-                backgroundColor: 'blue',
+                backgroundColor: '#d10000',
                 bottom: '-15px',
                 right: '20px',
               }}
@@ -1131,12 +1129,12 @@ const Navbar = ({ window }: Props) => {
             </Box>
             <Box
               sx={{
+                position: 'relative',
                 backgroundColor: 'white',
                 borderRadius: '10px',
                 padding: '10px',
-                height: '160px',
-                position: 'absolute',
-                width: '280px',
+                height: '180px',
+                width: '350px',
                 boxShadow: 'inset 0px 0px 5px rgba(0, 0, 0, 0.5)'
               }}>
               {children}
@@ -1151,28 +1149,28 @@ const Navbar = ({ window }: Props) => {
         <DialogTitle>
           <Stack direction='column' alignItems='center'>
             <Typography
-              variant='h5'
+              variant='h4'
               sx={{
                 fontFamily: 'Nunito, Arial, sans-serif',
                 fontWeight: 700,
                 color: 'white',
                 textShadow: `
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1)`
+              0px 1.5px 4px rgba(0,0,0,1), 
+              0px 1.5px 4px rgba(0,0,0,1), 
+              0px 1.5px 4px rgba(0,0,0,1), 
+              0px 1.5px 4px rgba(0,0,0,1), 
+              0px 1.5px 4px rgba(0,0,0,1), 
+              0px 1.5px 4px rgba(0,0,0,1), 
+              0px 1.5px 4px rgba(0,0,0,1), 
+              0px 1.5px 4px rgba(0,0,0,1), 
+              0px 1.5px 4px rgba(0,0,0,1), 
+              0px 1.5px 4px rgba(0,0,0,1), 
+              0px 1.5px 4px rgba(0,0,0,1), 
+              0px 1.5px 4px rgba(0,0,0,1), 
+              0px 1.5px 4px rgba(0,0,0,1), 
+              0px 1.5px 4px rgba(0,0,0,1), 
+              0px 1.5px 4px rgba(0,0,0,1), 
+              0px 1.5px 4px rgba(0,0,0,1)`
               }}
             >
               Listen to music?

@@ -88,7 +88,7 @@ const AskMeModal = () => {
             alignItems: 'center',
             backgroundColor: 'transparent',
             border: '3px solid red',
-            top: '15px',
+            top: '20px',
             left: '70px',
           }}
         >
@@ -156,29 +156,29 @@ const AskMeModal = () => {
               }
             }}>
             <Typography
-              variant='h6'
+              variant='h5'
               sx={{
                 textAlign: 'center',
                 fontFamily: 'Nunito, Arial, sans-serif',
                 fontWeight: 700,
                 color: 'yellow',
                 textShadow: `
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1)`
+              0px 1.5px 4px rgba(0,0,0,1), 
+              0px 1.5px 4px rgba(0,0,0,1), 
+              0px 1.5px 4px rgba(0,0,0,1), 
+              0px 1.5px 4px rgba(0,0,0,1), 
+              0px 1.5px 4px rgba(0,0,0,1), 
+              0px 1.5px 4px rgba(0,0,0,1), 
+              0px 1.5px 4px rgba(0,0,0,1), 
+              0px 1.5px 4px rgba(0,0,0,1), 
+              0px 1.5px 4px rgba(0,0,0,1), 
+              0px 1.5px 4px rgba(0,0,0,1), 
+              0px 1.5px 4px rgba(0,0,0,1), 
+              0px 1.5px 4px rgba(0,0,0,1), 
+              0px 1.5px 4px rgba(0,0,0,1), 
+              0px 1.5px 4px rgba(0,0,0,1), 
+              0px 1.5px 4px rgba(0,0,0,1), 
+              0px 1.5px 4px rgba(0,0,0,1)`
               }}>
               Ask Me?
             </Typography>

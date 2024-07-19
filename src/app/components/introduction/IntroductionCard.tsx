@@ -334,7 +334,6 @@ const IntroductionCard = () => {
       <Box
         sx={{
           padding: '10px',
-          height: '280px',
           background: 'linear-gradient(100deg, red, #d10000)',
           borderRadius: '20px',
           filter: 'drop-shadow(-2px 2px 2px rgba(0,0,0,0.5))',

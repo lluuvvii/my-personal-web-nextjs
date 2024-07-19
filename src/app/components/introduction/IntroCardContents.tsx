@@ -12,38 +12,38 @@ const IntroCardContents = () => {
   return (
     <Box>
       {dialogVal === 0 ?
-        <Box ref={containerRef} sx={{ height: '200px', overflow: 'hidden', pl: 1 }}>
+        <Box ref={containerRef} sx={{ height: '260px', overflow: 'hidden', pl: 1 }}>
           <Slide direction='right' in={dialogVal === 0} container={containerRef.current}>
             <Box>
               <Typography
-                variant='h6'
+                variant='h4'
                 sx={{
                   textAlign: 'center',
                   fontFamily: 'Nunito, Arial, sans-serif',
                   fontWeight: 700,
                   color: 'white',
                   textShadow: `
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1)`
+              0px 1.5px 4px rgba(0,0,0,1), 
+              0px 1.5px 4px rgba(0,0,0,1), 
+              0px 1.5px 4px rgba(0,0,0,1), 
+              0px 1.5px 4px rgba(0,0,0,1), 
+              0px 1.5px 4px rgba(0,0,0,1), 
+              0px 1.5px 4px rgba(0,0,0,1), 
+              0px 1.5px 4px rgba(0,0,0,1), 
+              0px 1.5px 4px rgba(0,0,0,1), 
+              0px 1.5px 4px rgba(0,0,0,1), 
+              0px 1.5px 4px rgba(0,0,0,1), 
+              0px 1.5px 4px rgba(0,0,0,1), 
+              0px 1.5px 4px rgba(0,0,0,1), 
+              0px 1.5px 4px rgba(0,0,0,1), 
+              0px 1.5px 4px rgba(0,0,0,1), 
+              0px 1.5px 4px rgba(0,0,0,1), 
+              0px 1.5px 4px rgba(0,0,0,1)`
                 }}>
                 Hi, My name is
               </Typography>
               <Typography
-                variant='h6'
+                variant='h4'
                 mb={2}
                 sx={{
                   textAlign: 'center',
@@ -51,27 +51,27 @@ const IntroCardContents = () => {
                   fontWeight: 700,
                   color: 'yellow',
                   textShadow: `
-              0px 1.5px 3px rgba(0,0,200,1), 
-              0px 1.5px 3px rgba(0,0,200,1), 
-              0px 1.5px 3px rgba(0,0,200,1), 
-              0px 1.5px 3px rgba(0,0,200,1), 
-              0px 1.5px 3px rgba(0,0,200,1), 
-              0px 1.5px 3px rgba(0,0,200,1), 
-              0px 1.5px 3px rgba(0,0,200,1), 
-              0px 1.5px 3px rgba(0,0,200,1), 
-              0px 1.5px 3px rgba(0,0,200,1), 
-              0px 1.5px 3px rgba(0,0,200,1), 
-              0px 1.5px 3px rgba(0,0,200,1), 
-              0px 1.5px 3px rgba(0,0,200,1), 
-              0px 1.5px 3px rgba(0,0,200,1), 
-              0px 1.5px 3px rgba(0,0,200,1), 
-              0px 1.5px 3px rgba(0,0,200,1), 
-              0px 1.5px 3px rgba(0,0,200,1)`
+              0px 1.5px 4px rgba(100,0,0,1), 
+              0px 1.5px 4px rgba(100,0,0,1), 
+              0px 1.5px 4px rgba(100,0,0,1), 
+              0px 1.5px 4px rgba(100,0,0,1), 
+              0px 1.5px 4px rgba(100,0,0,1), 
+              0px 1.5px 4px rgba(100,0,0,1), 
+              0px 1.5px 4px rgba(100,0,0,1), 
+              0px 1.5px 4px rgba(100,0,0,1), 
+              0px 1.5px 4px rgba(100,0,0,1), 
+              0px 1.5px 4px rgba(100,0,0,1), 
+              0px 1.5px 4px rgba(100,0,0,1), 
+              0px 1.5px 4px rgba(100,0,0,1), 
+              0px 1.5px 4px rgba(100,0,0,1), 
+              0px 1.5px 4px rgba(100,0,0,1), 
+              0px 1.5px 4px rgba(100,0,0,1), 
+              0px 1.5px 4px rgba(100,0,0,1)`
                 }}>
                 I LOVE SHOLLAKHUDDIN KURNIAWAN
               </Typography>
               <Typography
-                variant='body1'
+                variant='h6'
                 sx={{
                   textAlign: 'center',
                   fontFamily: 'Nunito, Arial, sans-serif',
@@ -80,7 +80,7 @@ const IntroCardContents = () => {
                 You can call me luvi, why?
               </Typography>
               <Typography
-                variant='body1'
+                variant='h6'
                 sx={{
                   textAlign: 'center',
                   fontFamily: 'Nunito, Arial, sans-serif',
@@ -93,11 +93,11 @@ const IntroCardContents = () => {
         </Box>
         : null}
       {dialogVal === 1 ?
-        <Box ref={containerRef} sx={{ height: '200px', overflow: 'hidden', pl: 1 }}>
+        <Box ref={containerRef} sx={{ height: '260px', overflow: 'hidden', pl: 1 }}>
           <Slide direction='right' in={dialogVal === 1} container={containerRef.current}>
             <Box>
               <Typography
-                variant='body1'
+                variant='h6'
                 sx={{
                   fontFamily: 'Nunito, Arial, sans-serif',
                   fontWeight: 700,
@@ -109,11 +109,11 @@ const IntroCardContents = () => {
         </Box>
         : null}
       {dialogVal === 2 ?
-        <Box ref={containerRef} sx={{ height: '200px', overflow: 'hidden', pl: 1 }}>
+        <Box ref={containerRef} sx={{ height: '260px', overflow: 'hidden', pl: 1 }}>
           <Slide direction='right' in={dialogVal === 2} container={containerRef.current}>
             <Box>
               <Typography
-                variant='body1'
+                variant='h6'
                 sx={{
                   fontFamily: 'Nunito, Arial, sans-serif',
                   fontWeight: 700,
@@ -126,11 +126,11 @@ const IntroCardContents = () => {
         </Box>
         : null}
       {dialogVal === 3 ?
-        <Box ref={containerRef} sx={{ height: '200px', overflow: 'hidden', pl: 1 }}>
+        <Box ref={containerRef} sx={{ height: '260px', overflow: 'hidden', pl: 1 }}>
           <Slide direction='right' in={dialogVal === 3} container={containerRef.current}>
             <Box>
               <Typography
-                variant='body1'
+                variant='h6'
                 sx={{
                   fontFamily: 'Nunito, Arial, sans-serif',
                   fontWeight: 700,
@@ -175,28 +175,28 @@ const IntroCardContents = () => {
             }}>
             <IconCaretLeftFilled color='red' />
             <Typography
-              variant='h6'
+              variant='h5'
               sx={{
                 fontFamily: 'Nunito, Arial, sans-serif',
                 fontWeight: 700,
                 color: 'yellow',
                 textShadow: `
-              0px 1.5px 2px rgba(0,0,0,1), 
-              0px 1.5px 2px rgba(0,0,0,1), 
-              0px 1.5px 2px rgba(0,0,0,1), 
-              0px 1.5px 2px rgba(0,0,0,1), 
-              0px 1.5px 2px rgba(0,0,0,1), 
-              0px 1.5px 2px rgba(0,0,0,1), 
-              0px 1.5px 2px rgba(0,0,0,1), 
-              0px 1.5px 2px rgba(0,0,0,1), 
-              0px 1.5px 2px rgba(0,0,0,1), 
-              0px 1.5px 2px rgba(0,0,0,1), 
-              0px 1.5px 2px rgba(0,0,0,1), 
-              0px 1.5px 2px rgba(0,0,0,1), 
-              0px 1.5px 2px rgba(0,0,0,1), 
-              0px 1.5px 2px rgba(0,0,0,1), 
-              0px 1.5px 2px rgba(0,0,0,1), 
-              0px 1.5px 2px rgba(0,0,0,1)`
+              0px 1.5px 3px rgba(0,0,0,1), 
+              0px 1.5px 3px rgba(0,0,0,1), 
+              0px 1.5px 3px rgba(0,0,0,1), 
+              0px 1.5px 3px rgba(0,0,0,1), 
+              0px 1.5px 3px rgba(0,0,0,1), 
+              0px 1.5px 3px rgba(0,0,0,1), 
+              0px 1.5px 3px rgba(0,0,0,1), 
+              0px 1.5px 3px rgba(0,0,0,1), 
+              0px 1.5px 3px rgba(0,0,0,1), 
+              0px 1.5px 3px rgba(0,0,0,1), 
+              0px 1.5px 3px rgba(0,0,0,1), 
+              0px 1.5px 3px rgba(0,0,0,1), 
+              0px 1.5px 3px rgba(0,0,0,1), 
+              0px 1.5px 3px rgba(0,0,0,1), 
+              0px 1.5px 3px rgba(0,0,0,1), 
+              0px 1.5px 3px rgba(0,0,0,1)`
               }}
             >
               PREV
@@ -234,28 +234,28 @@ const IntroCardContents = () => {
               }
             }}>
             <Typography
-              variant='h6'
+              variant='h5'
               sx={{
                 fontFamily: 'Nunito, Arial, sans-serif',
                 fontWeight: 700,
                 color: 'yellow',
                 textShadow: `
-              0px 1.5px 2px rgba(0,0,0,1), 
-              0px 1.5px 2px rgba(0,0,0,1), 
-              0px 1.5px 2px rgba(0,0,0,1), 
-              0px 1.5px 2px rgba(0,0,0,1), 
-              0px 1.5px 2px rgba(0,0,0,1), 
-              0px 1.5px 2px rgba(0,0,0,1), 
-              0px 1.5px 2px rgba(0,0,0,1), 
-              0px 1.5px 2px rgba(0,0,0,1), 
-              0px 1.5px 2px rgba(0,0,0,1), 
-              0px 1.5px 2px rgba(0,0,0,1), 
-              0px 1.5px 2px rgba(0,0,0,1), 
-              0px 1.5px 2px rgba(0,0,0,1), 
-              0px 1.5px 2px rgba(0,0,0,1), 
-              0px 1.5px 2px rgba(0,0,0,1), 
-              0px 1.5px 2px rgba(0,0,0,1), 
-              0px 1.5px 2px rgba(0,0,0,1)`
+              0px 1.5px 3px rgba(0,0,0,1), 
+              0px 1.5px 3px rgba(0,0,0,1), 
+              0px 1.5px 3px rgba(0,0,0,1), 
+              0px 1.5px 3px rgba(0,0,0,1), 
+              0px 1.5px 3px rgba(0,0,0,1), 
+              0px 1.5px 3px rgba(0,0,0,1), 
+              0px 1.5px 3px rgba(0,0,0,1), 
+              0px 1.5px 3px rgba(0,0,0,1), 
+              0px 1.5px 3px rgba(0,0,0,1), 
+              0px 1.5px 3px rgba(0,0,0,1), 
+              0px 1.5px 3px rgba(0,0,0,1), 
+              0px 1.5px 3px rgba(0,0,0,1), 
+              0px 1.5px 3px rgba(0,0,0,1), 
+              0px 1.5px 3px rgba(0,0,0,1), 
+              0px 1.5px 3px rgba(0,0,0,1), 
+              0px 1.5px 3px rgba(0,0,0,1)`
               }}
             >
               Next

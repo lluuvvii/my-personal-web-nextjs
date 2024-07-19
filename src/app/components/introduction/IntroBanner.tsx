@@ -271,32 +271,39 @@ const IntroBanner = () => {
             }}>
           </Box>
           <Typography
-            variant='h4'
+            variant='h3'
             sx={{
               position: 'absolute',
-              top: '-20px',
+              top: '-30px',
               right: '30px',
               textAlign: 'center',
               fontFamily: 'Nunito, Arial, sans-serif',
               fontWeight: 600,
               color: 'white',
               textShadow: `
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1)`
+              0px 1.5px 5px rgba(0,0,0,1), 
+              0px 1.5px 5px rgba(0,0,0,1), 
+              0px 1.5px 5px rgba(0,0,0,1), 
+              0px 1.5px 5px rgba(0,0,0,1), 
+              0px 1.5px 5px rgba(0,0,0,1), 
+              0px 1.5px 5px rgba(0,0,0,1), 
+              0px 1.5px 5px rgba(0,0,0,1), 
+              0px 1.5px 5px rgba(0,0,0,1), 
+              0px 1.5px 5px rgba(0,0,0,1), 
+              0px 1.5px 5px rgba(0,0,0,1), 
+              0px 1.5px 5px rgba(0,0,0,1), 
+              0px 1.5px 5px rgba(0,0,0,1), 
+              0px 1.5px 5px rgba(0,0,0,1), 
+              0px 1.5px 5px rgba(0,0,0,1), 
+              0px 1.5px 5px rgba(0,0,0,1), 
+              0px 1.5px 5px rgba(0,0,0,1), 
+              0px 1.5px 5px rgba(0,0,0,1), 
+              0px 1.5px 5px rgba(0,0,0,1), 
+              0px 1.5px 5px rgba(0,0,0,1), 
+              0px 1.5px 5px rgba(0,0,0,1), 
+              0px 1.5px 5px rgba(0,0,0,1), 
+              0px 1.5px 5px rgba(0,0,0,1), 
+              0px 1.5px 5px rgba(0,0,0,1)`
             }}>
             Introduction
           </Typography>
