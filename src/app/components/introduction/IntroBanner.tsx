@@ -19,6 +19,7 @@ const IntroBanner = () => {
           {/* striped circle */}
           <Box
             sx={{
+              transform: 'scale(1.2)',
               position: 'absolute',
               width: '50px',
               height: '50px',
@@ -35,21 +36,23 @@ const IntroBanner = () => {
           {/* circle */}
           <Box
             sx={{
+              transform: 'scale(1.2)',
               position: 'absolute',
-              width: '120px',
-              height: '120px',
+              width: '100px',
+              height: '100px',
               borderRadius: '50%',
               display: 'flex',
               justifyContent: 'center',
               alignItems: 'center',
               backgroundColor: 'black',
               top: '180px',
-              left: '-50px',
+              left: '-30px',
             }}
           >
           </Box>
           <Box
             sx={{
+              transform: 'scale(1.2)',
               position: 'absolute',
               width: '60px',
               height: '60px',
@@ -78,6 +81,7 @@ const IntroBanner = () => {
           </Box>
           <Box
             sx={{
+              transform: 'scale(1.2)',
               position: 'absolute',
               width: '100px',
               height: '100px',
@@ -108,6 +112,7 @@ const IntroBanner = () => {
           {/* striped circle */}
           <Box
             sx={{
+              transform: 'scale(1.2)',
               position: 'absolute',
               width: '80px',
               height: '80px',
@@ -125,6 +130,7 @@ const IntroBanner = () => {
           {/* star long shadow */}
           <Box
             sx={{
+              transform: 'scale(1.2)',
               position: 'absolute',
               '& svg': {
                 filter: 'drop-shadow(-2px 3px 10px rgba(0,0,0,0.5))',
@@ -148,6 +154,7 @@ const IntroBanner = () => {
           </Box>
           <Box
             sx={{
+              transform: 'scale(1.2)',
               position: 'absolute',
               '& svg': {
                 filter: 'drop-shadow(-2px 3px 10px rgba(0,0,0,0.5))',
@@ -171,6 +178,7 @@ const IntroBanner = () => {
           </Box>
           <Box
             sx={{
+              transform: 'scale(1.2)',
               position: 'absolute',
               '& svg': {
                 filter: 'drop-shadow(-2px 3px 10px rgba(0,0,0,0.5))',
@@ -195,6 +203,7 @@ const IntroBanner = () => {
           {/* circle */}
           <Box
             sx={{
+              transform: 'scale(1.2)',
               position: 'absolute',
               width: '70px',
               height: '70px',
@@ -225,6 +234,7 @@ const IntroBanner = () => {
           </Box>
           <Box
             sx={{
+              transform: 'scale(1.2)',
               position: 'absolute',
               width: '100px',
               height: '100px',
@@ -235,13 +245,14 @@ const IntroBanner = () => {
               backgroundColor: 'white',
               border: '10px solid red',
               top: '-10px',
-              right: '-70px',
+              right: '-80px',
             }}
           >
           </Box>
           {/* striped circle */}
           <Box
             sx={{
+              transform: 'scale(1.2)',
               position: 'absolute',
               width: '80px',
               height: '80px',
@@ -257,6 +268,7 @@ const IntroBanner = () => {
           </Box>
           <Box
             sx={{
+              transform: 'scale(1.2)',
               position: 'absolute',
               width: '40px',
               height: '40px',
