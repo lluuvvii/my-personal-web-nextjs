@@ -49,7 +49,7 @@ const IntroCardContents = () => {
                   textAlign: 'center',
                   fontFamily: 'Nunito, Arial, sans-serif',
                   fontWeight: 700,
-                  color: 'yellow',
+                  color: 'white',
                   textShadow: `
               0px 1.5px 4px rgba(100,0,0,1), 
               0px 1.5px 4px rgba(100,0,0,1), 

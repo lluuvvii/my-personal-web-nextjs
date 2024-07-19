@@ -25,7 +25,6 @@ const AskMeModal = () => {
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}
         whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
         transition={{
           type: 'spring',
           stiffness: 400,
@@ -188,16 +187,16 @@ const AskMeModal = () => {
       {/* ask about modal */}
       <Box
         sx={{
-          position: 'asbolute',
-          top: '0px',
-          left: '-100px',
-          mt: '10px'
+          position: 'absolute',
+          mt: '20px',
         }}
         component={motion.div}
-        initial={{ x: 500, y: 500 }}
-        animate={{ x: askActive ? 0 : 500, y: askActive ? 0 : 500 }}
+        initial={{ scale: 0 }}
+        animate={{ scale: askActive ? 1 : 0 }}
         transition={{
-          type: 'keyframes',
+          type: 'spring',
+          stiffness: 500,
+          damping: 30
         }}
       >
         {/* star long shadow */}
@@ -265,6 +264,22 @@ const AskMeModal = () => {
             </svg>
           </div>
         </Box>
+        {/* striped circle */}
+        <Box
+          sx={{
+            position: 'absolute',
+            width: '40px',
+            height: '40px',
+            borderRadius: '50%',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            background: 'repeating-linear-gradient(45deg, white, white, 4px, transparent 4px, transparent 7px)',
+            filter: 'drop-shadow(-2px 2px 2px rgba(0,0,0,0.5))',
+            top: '0px',
+            left: '0px',
+          }}>
+        </Box>
         <Box
           sx={{
             position: 'absolute',
@@ -279,22 +294,40 @@ const AskMeModal = () => {
             <AccordionSummary
               expandIcon={<IconCaretDownFilled color='red' />}
             >
-              Ask Me About :
+              <Typography
+                variant='h6'
+                sx={{
+                  textAlign: 'center',
+                  fontFamily: 'Nunito, Arial, sans-serif',
+                  fontWeight: 700,
+                  color: 'white',
+                  textShadow: `
+              0px 1.5px 3px rgba(0,0,0,1), 
+              0px 1.5px 3px rgba(0,0,0,1), 
+              0px 1.5px 3px rgba(0,0,0,1), 
+              0px 1.5px 3px rgba(0,0,0,1), 
+              0px 1.5px 3px rgba(0,0,0,1), 
+              0px 1.5px 3px rgba(0,0,0,1), 
+              0px 1.5px 3px rgba(0,0,0,1), 
+              0px 1.5px 3px rgba(0,0,0,1), 
+              0px 1.5px 3px rgba(0,0,0,1), 
+              0px 1.5px 3px rgba(0,0,0,1), 
+              0px 1.5px 3px rgba(0,0,0,1), 
+              0px 1.5px 3px rgba(0,0,0,1), 
+              0px 1.5px 3px rgba(0,0,0,1), 
+              0px 1.5px 3px rgba(0,0,0,1), 
+              0px 1.5px 3px rgba(0,0,0,1), 
+              0px 1.5px 3px rgba(0,0,0,1)`
+                }}>
+                Ask About :
+              </Typography>
             </AccordionSummary>
             <AccordionDetails>
-              <svg style={{
-                fontSize: '20px',
-                fontWeight: 'bold',
-                filter: 'drop-shadow(-1px 1px 2px rgba(0,0,0,0.5))',
-              }}>
-                <text x="50" y="70" fill="none" stroke="yellow" stroke-width="10" stroke-linejoin="round">Next</text>
-                <text x="50" y="70" fill="none" stroke="black" stroke-width="5">Next</text>
-                <text x="50" y="70" fill="yellow  ">Next</text>
-              </svg>
+              yayaya
             </AccordionDetails>
           </Accordion>
         </Box>
-      </Box >
+      </Box>
     </>
   )
 }
