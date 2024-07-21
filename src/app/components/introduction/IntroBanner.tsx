@@ -14,7 +14,7 @@ const IntroBanner = () => {
       {matches ?
         <Box sx={{ transform: 'rotate(-2deg) scale(1.03)', width: '100%', position: 'relative', left: '-17px', height: 0 }}>
           <Box sx={{ transform: 'scale(1.05)' }}>
-            <ZigzagContainer width='100%' height='300px' color='red' toColor='rgba(209, 0, 0, 0.5)' toGradient='45deg' top bottom right left />
+            <ZigzagContainer width='100%' height='300px' color='red' toColor='#d10000' toGradient='45deg' top bottom right left />
           </Box>
           {/* bottom left side particles */}
           {/* striped circle */}
