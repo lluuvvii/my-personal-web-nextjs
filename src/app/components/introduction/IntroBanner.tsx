@@ -14,7 +14,7 @@ const IntroBanner = () => {
       {matches ?
         <Box sx={{ transform: 'rotate(-2deg) scale(1.03)', width: '100%', position: 'relative', left: '-17px', height: 0 }}>
           <Box sx={{ transform: 'scale(1.05)' }}>
-            <ZigzagContainer width='100%' height='300px' color='red' toColor='#d10000' toGradient='to right' top bottom right left />
+            <ZigzagContainer width='100%' height='300px' color='red' toColor='rgba(209, 0, 0, 0.5)' toGradient='45deg' top bottom right left />
           </Box>
           {/* bottom left side particles */}
           {/* striped circle */}
@@ -70,7 +70,8 @@ const IntroBanner = () => {
               display: 'flex',
               justifyContent: 'center',
               alignItems: 'center',
-              backgroundColor: 'white',
+              background: 'linear-gradient(135deg, white 50%, grey 50%)',
+              // backgroundColor: 'white',
               top: '170px',
               left: '-30px',
             }}
@@ -84,10 +85,23 @@ const IntroBanner = () => {
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
-                backgroundColor: 'red',
+                background: 'linear-gradient(135deg, red 50%, darkred 50%)',
               }}
             >
             </Box>
+            {/* <Box
+              sx={{
+                position: 'absolute',
+                width: '40px',
+                height: '40px',
+                borderRadius: '50%',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                backgroundColor: 'red',
+              }}
+            >
+            </Box> */}
           </Box>
           <Box
             component={motion.div}
@@ -103,7 +117,7 @@ const IntroBanner = () => {
               justifyContent: 'center',
               alignItems: 'center',
               backgroundColor: 'transparent',
-              border: '20px solid white',
+              border: '20px outset white',
               top: '200px',
               left: '-50px',
             }}
@@ -118,10 +132,22 @@ const IntroBanner = () => {
                 justifyContent: 'center',
                 alignItems: 'center',
                 backgroundColor: 'transparent',
-                border: '10px solid red',
+                border: '10px ridge red',
               }}
             ></Box>
           </Box>
+          {/* random circle */}
+          {/* Circle with Dotted Pattern */}
+          <Box
+            sx={{
+              width: '100px',
+              height: '100px',
+              borderRadius: '50%',
+              background: 'radial-gradient(circle, red 5px, transparent 5px)',
+              backgroundSize: '20px 20px',
+              filter: 'drop-shadow(-2px 2px 2px rgba(0,0,0,0.5))',
+            }}
+          />
           {/* striped circle */}
           <Box
             component={motion.div}

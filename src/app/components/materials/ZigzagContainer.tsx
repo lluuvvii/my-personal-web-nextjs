@@ -67,7 +67,9 @@ const ZigzagContainer: React.FC<ZigzagContainerProps> = ({
     width: `${computedWidth}px`,
     height: `${computedHeight}px`,
     backgroundColor: color,
-    background: toColor ? `linear-gradient(${toGradient}, ${color}, ${toColor})` : ''
+    // background: toColor ? `linear-gradient(${toGradient}, ${color}, ${toColor})` : ''
+    background: `repeating-linear-gradient(${toGradient}, ${color}, ${color}, 25%, ${toColor} 25%, ${toColor} 50%)`,
+    // background: `repeating-conic-gradient(${color} 0deg 20deg, ${toColor} 20deg 40deg)`,
   }
 
   const zigzagSize = 20 // Base size for one zigzag unit

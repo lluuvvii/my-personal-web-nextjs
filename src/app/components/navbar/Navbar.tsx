@@ -654,7 +654,7 @@ const Navbar = ({ window }: Props) => {
                 </Box>
               </>
               : null}
-            <ZigzagContainer width='100%' height='100px' color={'red'} toColor={'#d10000'} toGradient='50deg' bottom>
+            <ZigzagContainer width='100%' height='100px' color={'red'} toColor={'rgba(209, 0, 0, 0.5)'} toGradient='45deg' bottom>
               {open && !trigger ?
                 <>
                   {/* spikes */}
