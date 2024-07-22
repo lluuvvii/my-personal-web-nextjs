@@ -19,7 +19,7 @@ const IntroductionCard = () => {
       }}>
       {/* top left particles */}
       {/* star long shadow */}
-      <Box
+      {/* <Box
         sx={{
           position: 'absolute',
           '& svg': {
@@ -41,9 +41,9 @@ const IntroductionCard = () => {
             <path d='M100 0.587l30.52 66.76L200 81.25l-50 48.5L161.92 200 100 165.83 38.08 200 50 129.75 0 81.25l69.44-13.29z' transform='scale(0.7) translate(42.5, 47)' fill='white' />
           </svg>
         </div>
-      </Box>
+      </Box> */}
       {/* striped circle */}
-      <Box
+      {/* <Box
         sx={{
           position: 'absolute',
           width: '60px',
@@ -57,9 +57,9 @@ const IntroductionCard = () => {
           top: '-25px',
           left: '40px',
         }}>
-      </Box>
+      </Box> */}
       {/* circle */}
-      <Box
+      {/* <Box
         sx={{
           position: 'absolute',
           width: '50px',
@@ -148,9 +148,9 @@ const IntroductionCard = () => {
           left: '50px',
         }}
       >
-      </Box>
+      </Box> */}
       {/* striped circle */}
-      <Box
+      {/* <Box
         sx={{
           position: 'absolute',
           width: '60px',
@@ -164,10 +164,10 @@ const IntroductionCard = () => {
           top: '15px',
           left: '-30px',
         }}>
-      </Box>
+      </Box> */}
       {/* bottom right */}
       {/* circle */}
-      <Box
+      {/* <Box
         sx={{
           position: 'absolute',
           width: '70px',
@@ -196,9 +196,9 @@ const IntroductionCard = () => {
           right: '-15px',
         }}
       >
-      </Box>
+      </Box> */}
       {/* striped circle */}
-      <Box
+      {/* <Box
         sx={{
           position: 'absolute',
           width: '60px',
@@ -212,9 +212,9 @@ const IntroductionCard = () => {
           bottom: '25px',
           right: '-30px',
         }}>
-      </Box>
+      </Box> */}
       {/* circle */}
-      <Box
+      {/* <Box
         sx={{
           position: 'absolute',
           width: '60px',
@@ -258,9 +258,9 @@ const IntroductionCard = () => {
           right: '-10px',
         }}
       >
-      </Box>
+      </Box> */}
       {/* striped circle */}
-      <Box
+      {/* <Box
         sx={{
           position: 'absolute',
           width: '60px',
@@ -274,9 +274,9 @@ const IntroductionCard = () => {
           bottom: '-25px',
           right: '30px',
         }}>
-      </Box>
+      </Box> */}
       {/* spike */}
-      <Box
+      {/* <Box
         sx={{
           position: 'absolute',
           width: '40px',
@@ -290,9 +290,9 @@ const IntroductionCard = () => {
           right: '-35px'
         }}
       >
-      </Box>
+      </Box> */}
       {/* circle */}
-      <Box
+      {/* <Box
         sx={{
           position: 'absolute',
           width: '50px',
@@ -306,9 +306,9 @@ const IntroductionCard = () => {
           right: '-20px',
         }}
       >
-      </Box>
+      </Box> */}
       {/* star long shadow */}
-      <Box
+      {/* <Box
         sx={{
           position: 'absolute',
           '& svg': {
@@ -330,21 +330,32 @@ const IntroductionCard = () => {
             <path d='M100 0.587l30.52 66.76L200 81.25l-50 48.5L161.92 200 100 165.83 38.08 200 50 129.75 0 81.25l69.44-13.29z' transform='scale(0.7) translate(42.5, 47)' fill='white' />
           </svg>
         </div>
-      </Box>
+      </Box> */}
       <Box
         sx={{
-          padding: '10px',
-          background: 'linear-gradient(100deg, red, #d10000)',
+          py: '10px',
+          pr: '10px',
+          pl: '80px',
+          backgroundColor: 'black',
           borderRadius: '20px',
-          filter: 'drop-shadow(-2px 2px 2px rgba(0,0,0,0.5))',
+          clipPath: 'polygon(2% 3%, 7% 4%, 5% 7%, 7% 12%, 8% 6%, 10% 10%, 11% 2%, 100% 0, 100% 90%, 100% 100%, 13% 100%, 14% 97%, 12% 100%, 10% 96%, 10% 65%, 10% 21%, 8% 14%, 7% 20%, 4% 10%, 3% 15%)'
         }}
       >
         {/* introcard contents */}
-        <Box sx={{ position: 'relative', borderRadius: '10px', backgroundColor: 'white', padding: '10px', boxShadow: 'inset 0px 0px 5px rgba(0, 0, 0, 0.5)' }}>
+        <Box sx={{
+          position: 'relative',
+          borderRadius: '10px',
+          backgroundColor: 'white',
+          // pl: '40px',
+          // pr: '10px',
+          // pt: '60px',
+          // boxShadow: 'inset 0px 0px 5px rgba(0, 0, 0, 0.5)',
+          // clipPath: 'polygon(1% 1%, 9% 12%, 5% 4%, 12% 9%, 27% 10%, 87% 3%, 99% 2%, 98% 49%, 98% 89%, 100% 97%, 97% 94%, 100% 100%, 75% 97%, 29% 96%, 2% 98%, 2% 16%, 1% 5%, 6% 16%)'
+        }}>
           <IntroCardContents />
         </Box>
         {/* striped circle */}
-        <Box
+        {/* <Box
           sx={{
             position: 'absolute',
             width: '40px',
@@ -373,9 +384,9 @@ const IntroductionCard = () => {
             right: '-20px',
           }}
         >
-        </Box>
+        </Box> */}
         {/* spike */}
-        <Box
+        {/* <Box
           sx={{
             position: 'absolute',
             width: '60px',
@@ -389,7 +400,7 @@ const IntroductionCard = () => {
             left: '-20px'
           }}
         >
-        </Box>
+        </Box> */}
         {/* circle around */}
         {/* <Box
           component={motion.div}
@@ -432,7 +443,7 @@ const IntroductionCard = () => {
           })}
         </Box> */}
         {/* circle */}
-        <Box
+        {/* <Box
           sx={{
             position: 'absolute',
             width: '60px',
@@ -478,7 +489,7 @@ const IntroductionCard = () => {
             right: '20px',
           }}
         >
-        </Box>
+        </Box> */}
       </Box>
     </Box>
   )

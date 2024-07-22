@@ -1,7 +1,7 @@
 'use client'
 
 import { Box, Typography, useMediaQuery, useTheme } from '@mui/material'
-import React from 'react'
+import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import ZigzagContainer from '../materials/ZigzagContainer'
 
@@ -9,13 +9,19 @@ const IntroBanner = () => {
   const theme = useTheme()
   const matches = useMediaQuery(theme.breakpoints.up('md'))
 
+  const [flipped, setFlipped] = useState(false);
+
+  const handleFlip = () => {
+    setFlipped(!flipped);
+  };
+
   return (
     <>
       {matches ?
         <Box sx={{ transform: 'rotate(-2deg) scale(1.03)', width: '100%', position: 'relative', left: '-17px', height: 0 }}>
-          <Box sx={{ transform: 'scale(1.05)' }}>
+          {/* <Box sx={{ transform: 'scale(1.05)' }}>
             <ZigzagContainer width='100%' height='300px' color='red' toColor='#d10000' toGradient='45deg' top bottom right left />
-          </Box>
+          </Box> */}
           {/* bottom left side particles */}
           {/* striped circle */}
           {/* <Box
@@ -173,6 +179,52 @@ const IntroBanner = () => {
               left: '-35px'
             }}
           />
+          <Box
+            onClick={handleFlip}
+            sx={{
+              perspective: '1000px',
+              width: '200px',
+              height: '300px',
+              '& .inner': {
+                position: 'relative',
+                width: '100%',
+                height: '100%',
+                transition: 'transform 0.5s',
+                transformStyle: 'preserve-3d',
+                transform: flipped ? 'rotateY(210deg)' : 'rotateY(30deg)',
+              },
+              '& .front, & .back': {
+                position: 'absolute',
+                width: '100%',
+                height: '100%',
+                backfaceVisibility: 'hidden',
+                borderRadius: '10px',
+                boxShadow: '0 4px 8px rgba(0,0,0,0.2)',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                fontSize: '24px',
+              },
+              '& .front': {
+                backgroundColor: '#bbb',
+                color: 'black',
+              },
+              '& .back': {
+                backgroundColor: '#2980b9',
+                color: 'white',
+                transform: 'rotateY(180deg)',
+              },
+            }}
+          >
+            <Box className="inner">
+              <Box className="front">
+                Front
+              </Box>
+              <Box className="back">
+                Back
+              </Box>
+            </Box>
+          </Box>
           {/* striped circle */}
           {/* <Box
             component={motion.div}
