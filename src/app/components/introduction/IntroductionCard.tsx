@@ -333,11 +333,14 @@ const IntroductionCard = () => {
       </Box> */}
       <Box
         sx={{
+          // padding: '10px',
           py: '10px',
           pr: '10px',
           pl: '80px',
-          backgroundColor: 'black',
-          borderRadius: '20px',
+          // background: 'linear-gradient(100deg, red, #d10000)',
+          backgroundColor: 'red',
+          borderRadius: '20px', 
+          // filter: 'drop-shadow(-2px 2px 2px rgba(0,0,0,0.5))',
           clipPath: 'polygon(2% 3%, 7% 4%, 5% 7%, 7% 12%, 8% 6%, 10% 10%, 11% 2%, 100% 0, 100% 90%, 100% 100%, 13% 100%, 14% 97%, 12% 100%, 10% 96%, 10% 65%, 10% 21%, 8% 14%, 7% 20%, 4% 10%, 3% 15%)'
         }}
       >
