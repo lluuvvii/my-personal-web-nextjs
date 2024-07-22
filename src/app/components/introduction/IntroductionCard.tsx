@@ -1,11 +1,16 @@
 'use client'
 
-import React from 'react'
+import React, { useState } from 'react'
 import { Box } from '@mui/material'
 import IntroCardContents from './IntroCardContents'
 import { motion } from 'framer-motion'
 
 const IntroductionCard = () => {
+  const [flipped, setFlipped] = useState(false);
+
+  const handleFlip = () => {
+    setFlipped(!flipped);
+  };
   return (
     <Box
       position='relative'
@@ -333,32 +338,120 @@ const IntroductionCard = () => {
       </Box> */}
       <Box
         sx={{
-          // padding: '10px',
-          py: '10px',
-          pr: '10px',
-          pl: '80px',
-          // background: 'linear-gradient(100deg, red, #d10000)',
-          backgroundColor: 'red',
-          borderRadius: '20px', 
-          // filter: 'drop-shadow(-2px 2px 2px rgba(0,0,0,0.5))',
-          clipPath: 'polygon(2% 3%, 7% 4%, 5% 7%, 7% 12%, 8% 6%, 10% 10%, 11% 2%, 100% 0, 100% 90%, 100% 100%, 13% 100%, 14% 97%, 12% 100%, 10% 96%, 10% 65%, 10% 21%, 8% 14%, 7% 20%, 4% 10%, 3% 15%)'
+          perspective: '1000px',
+          position: 'relative',
+          '& .inner': {
+            transition: 'transform 0.5s',
+            transformStyle: 'preserve-3d',
+            transform: flipped ? 'rotateY(190deg)' : 'rotateY(10deg)',
+          },
+          '& .front, & .back': {
+            backfaceVisibility: 'hidden',
+          },
+          '& .front': {
+            position: 'absolute',
+            transform: 'rotateY(10deg)'
+          },
+          '& .back': {
+            transform: 'rotateY(190deg)',
+          },
         }}
       >
-        {/* introcard contents */}
-        <Box sx={{
-          position: 'relative',
-          borderRadius: '10px',
-          backgroundColor: 'white',
-          // pl: '40px',
-          // pr: '10px',
-          // pt: '60px',
-          // boxShadow: 'inset 0px 0px 5px rgba(0, 0, 0, 0.5)',
-          // clipPath: 'polygon(1% 1%, 9% 12%, 5% 4%, 12% 9%, 27% 10%, 87% 3%, 99% 2%, 98% 49%, 98% 89%, 100% 97%, 97% 94%, 100% 100%, 75% 97%, 29% 96%, 2% 98%, 2% 16%, 1% 5%, 6% 16%)'
-        }}>
-          <IntroCardContents />
+        <Box className="inner">
+          <Box className='front'>
+            <Box
+              sx={{
+                padding: '10px',
+                // rotate: '-3deg',
+                // py: '10px',
+                // pr: '10px',
+                // pl: '80px',
+                background: 'linear-gradient(100deg, red, #d10000)',
+                borderRadius: '20px',
+                // filter: 'drop-shadow(-2px 2px 2px rgba(0,0,0,0.5))',
+                // clipPath: 'polygon(0 0, 1% 4%, 1% 7%, 1% 10%, 3% 24%, 3% 29%, 2% 55%, 2% 63%, 3% 87%, 0 94%, 0 100%, 3% 99%, 9% 99%, 16% 98%, 33% 98%, 46% 100%, 50% 98%, 61% 98%, 80% 98%, 95% 99%, 99% 100%, 100% 97%, 98% 95%, 99% 90%, 99% 85%, 99% 78%, 99% 58%, 99% 42%, 99% 13%, 98% 9%, 99% 6%, 99% 4%, 90% 0, 90% 2%, 25% 2%, 16% 0, 21% 2%)'
+              }}
+            >
+              {/* introcard contents */}
+              <Box
+                // onClick={handleFlip}
+                sx={{
+                  position: 'relative',
+                  borderRadius: '10px',
+                  backgroundColor: 'white',
+                  padding: '10px',
+                  // rotate: '3deg' 
+                  // pl: '40px',
+                  // pr: '10px',
+                  // pt: '60px',
+                  // boxShadow: 'inset 0px 0px 5px rgba(0, 0, 0, 0.5)',
+                  // clipPath: 'polygon(0 0, 1% 4%, 1% 7%, 1% 10%, 3% 24%, 3% 29%, 2% 55%, 2% 63%, 3% 87%, 0 94%, 0 100%, 3% 99%, 9% 99%, 16% 98%, 33% 98%, 46% 100%, 50% 98%, 61% 98%, 80% 98%, 95% 99%, 99% 100%, 100% 97%, 98% 95%, 99% 90%, 99% 85%, 99% 78%, 99% 58%, 99% 42%, 99% 13%, 98% 9%, 99% 6%, 99% 4%, 90% 0, 90% 2%, 25% 2%, 16% 0, 21% 2%)'
+                }}>
+                <IntroCardContents />
+              </Box>
+            </Box>
+          </Box>
+          <Box className="back">
+            <Box
+              sx={{
+                padding: '10px',
+                // py: '10px',
+                // pr: '10px',
+                // pl: '80px',
+                background: 'linear-gradient(100deg, red, #d10000)',
+                borderRadius: '20px',
+                // filter: 'drop-shadow(-2px 2px 2px rgba(0,0,0,0.5))',
+                // clipPath: 'polygon(2% 3%, 7% 4%, 5% 7%, 7% 12%, 8% 6%, 10% 10%, 11% 2%, 100% 0, 100% 90%, 100% 100%, 13% 100%, 14% 97%, 12% 100%, 10% 96%, 10% 65%, 10% 21%, 8% 14%, 7% 20%, 4% 10%, 3% 15%)'
+              }}
+            >
+              {/* introcard contents */}
+              <Box
+                onClick={handleFlip}
+                sx={{
+                  position: 'relative',
+                  borderRadius: '10px',
+                  backgroundColor: 'white',
+                  padding: '10px',
+                  height: '320px',
+                }}>
+                yayaya
+              </Box>
+            </Box>
+          </Box>
         </Box>
-        {/* striped circle */}
-        {/* <Box
+      </Box>
+      {/* <Box
+        sx={{
+          padding: '10px',
+          // rotate: '-3deg',
+          // py: '10px',
+          // pr: '10px',
+          // pl: '80px',
+          background: 'linear-gradient(100deg, red, #d10000)',
+          borderRadius: '20px',
+          // filter: 'drop-shadow(-2px 2px 2px rgba(0,0,0,0.5))',
+          // clipPath: 'polygon(0 0, 1% 4%, 1% 7%, 1% 10%, 3% 24%, 3% 29%, 2% 55%, 2% 63%, 3% 87%, 0 94%, 0 100%, 3% 99%, 9% 99%, 16% 98%, 33% 98%, 46% 100%, 50% 98%, 61% 98%, 80% 98%, 95% 99%, 99% 100%, 100% 97%, 98% 95%, 99% 90%, 99% 85%, 99% 78%, 99% 58%, 99% 42%, 99% 13%, 98% 9%, 99% 6%, 99% 4%, 90% 0, 90% 2%, 25% 2%, 16% 0, 21% 2%)'
+        }}
+      > */}
+      {/* introcard contents */}
+      {/* <Box
+          // onClick={handleFlip}
+          sx={{
+            position: 'relative',
+            borderRadius: '10px',
+            backgroundColor: 'white',
+            padding: '10px',
+            // rotate: '3deg'
+            // pl: '40px',
+            // pr: '10px',
+            // pt: '60px',
+            // boxShadow: 'inset 0px 0px 5px rgba(0, 0, 0, 0.5)',
+            // clipPath: 'polygon(0 0, 1% 4%, 1% 7%, 1% 10%, 3% 24%, 3% 29%, 2% 55%, 2% 63%, 3% 87%, 0 94%, 0 100%, 3% 99%, 9% 99%, 16% 98%, 33% 98%, 46% 100%, 50% 98%, 61% 98%, 80% 98%, 95% 99%, 99% 100%, 100% 97%, 98% 95%, 99% 90%, 99% 85%, 99% 78%, 99% 58%, 99% 42%, 99% 13%, 98% 9%, 99% 6%, 99% 4%, 90% 0, 90% 2%, 25% 2%, 16% 0, 21% 2%)'
+          }}>
+          <IntroCardContents />
+        </Box> */}
+      {/* striped circle */}
+      {/* <Box
           sx={{
             position: 'absolute',
             width: '40px',
@@ -388,8 +481,8 @@ const IntroductionCard = () => {
           }}
         >
         </Box> */}
-        {/* spike */}
-        {/* <Box
+      {/* spike */}
+      {/* <Box
           sx={{
             position: 'absolute',
             width: '60px',
@@ -404,8 +497,8 @@ const IntroductionCard = () => {
           }}
         >
         </Box> */}
-        {/* circle around */}
-        {/* <Box
+      {/* circle around */}
+      {/* <Box
           component={motion.div}
           sx={{
             position: 'absolute',
@@ -445,8 +538,8 @@ const IntroductionCard = () => {
             )
           })}
         </Box> */}
-        {/* circle */}
-        {/* <Box
+      {/* circle */}
+      {/* <Box
           sx={{
             position: 'absolute',
             width: '60px',
@@ -493,7 +586,7 @@ const IntroductionCard = () => {
           }}
         >
         </Box> */}
-      </Box>
+      {/* </Box> */}
     </Box>
   )
 }
