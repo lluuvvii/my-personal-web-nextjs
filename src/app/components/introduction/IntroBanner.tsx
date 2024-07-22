@@ -183,6 +183,8 @@ const IntroBanner = () => {
             onClick={handleFlip}
             sx={{
               perspective: '1000px',
+              position: 'absolute',
+              top: '400px',
               width: '200px',
               height: '300px',
               '& .inner': {
