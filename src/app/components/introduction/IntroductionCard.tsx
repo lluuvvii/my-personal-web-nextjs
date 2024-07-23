@@ -365,6 +365,18 @@ const IntroductionCard = () => {
           <Box className='front'>
             <Box
               sx={{
+                position: 'absolute',
+                backgroundColor: 'black',
+                width: '100%',
+                height: '100%',
+                borderRadius: '20px',
+                // top: '-10px',
+                left: '-40px',
+                rotate: '5deg'
+              }} />
+            <Box
+              sx={{
+                position: 'relative',
                 padding: '10px',
                 // rotate: '-3deg',
                 // py: '10px',
@@ -378,7 +390,7 @@ const IntroductionCard = () => {
             >
               {/* introcard contents */}
               <Box
-                // onClick={handleFlip}
+                onClick={handleFlip}
                 sx={{
                   position: 'relative',
                   borderRadius: '10px',
@@ -398,6 +410,18 @@ const IntroductionCard = () => {
           <Box className="back">
             <Box
               sx={{
+                position: 'absolute',
+                backgroundColor: 'black',
+                width: '100%',
+                height: '100%',
+                borderRadius: '20px',
+                // top: '-10px',
+                left: '-40px',
+                rotate: '5deg'
+              }} />
+            <Box
+              sx={{
+                position: 'relative',
                 padding: '10px',
                 // py: '10px',
                 // pr: '10px',
