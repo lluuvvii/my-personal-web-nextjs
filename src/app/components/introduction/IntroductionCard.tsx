@@ -339,7 +339,7 @@ const IntroductionCard = () => {
       <Box
         sx={{
           perspective: '1000px',
-          position: 'relative',
+          // position: 'relative',
           '& .inner': {
             transition: 'transform 0.5s',
             transformStyle: 'preserve-3d',
@@ -350,9 +350,13 @@ const IntroductionCard = () => {
           },
           '& .front': {
             position: 'absolute',
+            width: '100%',
+            height: '100%',
             transform: 'rotateY(10deg)'
           },
           '& .back': {
+            width: '100%',
+            height: '100%',
             transform: 'rotateY(190deg)',
           },
         }}
@@ -374,7 +378,7 @@ const IntroductionCard = () => {
             >
               {/* introcard contents */}
               <Box
-                // onClick={handleFlip}
+                onClick={handleFlip}
                 sx={{
                   position: 'relative',
                   borderRadius: '10px',
