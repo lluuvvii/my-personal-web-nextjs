@@ -22,24 +22,18 @@ const IntroCardContents = () => {
                   textAlign: 'center',
                   fontFamily: 'Nunito, Arial, sans-serif',
                   fontWeight: 700,
-                  color: 'red',
-                  //     textShadow: `
-                  // 0px 1.5px 4px rgba(0,0,0,1), 
-                  // 0px 1.5px 4px rgba(0,0,0,1), 
-                  // 0px 1.5px 4px rgba(0,0,0,1), 
-                  // 0px 1.5px 4px rgba(0,0,0,1), 
-                  // 0px 1.5px 4px rgba(0,0,0,1), 
-                  // 0px 1.5px 4px rgba(0,0,0,1), 
-                  // 0px 1.5px 4px rgba(0,0,0,1), 
-                  // 0px 1.5px 4px rgba(0,0,0,1), 
-                  // 0px 1.5px 4px rgba(0,0,0,1), 
-                  // 0px 1.5px 4px rgba(0,0,0,1), 
-                  // 0px 1.5px 4px rgba(0,0,0,1), 
-                  // 0px 1.5px 4px rgba(0,0,0,1), 
-                  // 0px 1.5px 4px rgba(0,0,0,1), 
-                  // 0px 1.5px 4px rgba(0,0,0,1), 
-                  // 0px 1.5px 4px rgba(0,0,0,1), 
-                  // 0px 1.5px 4px rgba(0,0,0,1)`
+                  color: 'white',
+                  textShadow: `
+                  0px 0px 1px rgba(0,0,0,1),
+                  0px 0px 1px rgba(0,0,0,1),
+                  0px 0px 1px rgba(0,0,0,1),
+                  0px 0px 1px rgba(0,0,0,1),
+                  -1px 1px 0.5px rgba(0,0,0,1), 
+                  -2px 2px 0.5px rgba(0,0,0,1), 
+                  -3px 3px 0.5px rgba(0,0,0,1), 
+                  -4px 4px 0.5px rgba(0,0,0,1), 
+                  -5px 5px 0.5px rgba(0,0,0,1), 
+                  -6px 6px 0.5px rgba(0,0,0,1)`
                 }}>
                 Hi, My name is
               </Typography>
@@ -51,24 +45,18 @@ const IntroCardContents = () => {
                   textAlign: 'center',
                   fontFamily: 'Nunito, Arial, sans-serif',
                   fontWeight: 700,
-                  color: 'red',
-              //     textShadow: `
-              // -2px 2px 0px rgba(255,255,255,1), 
-              // -2px 2px 0px rgba(255,255,255,1), 
-              // -2px 2px 0px rgba(255,255,255,1), 
-              // -2px 2px 0px rgba(255,255,255,1), 
-              // -2px 2px 0px rgba(255,255,255,1), 
-              // -2px 2px 0px rgba(255,255,255,1), 
-              // -2px 2px 0px rgba(255,255,255,1), 
-              // -2px 2px 0px rgba(255,255,255,1), 
-              // -2px 2px 0px rgba(255,255,255,1), 
-              // -2px 2px 0px rgba(255,255,255,1), 
-              // -2px 2px 0px rgba(255,255,255,1), 
-              // -2px 2px 0px rgba(255,255,255,1), 
-              // -2px 2px 0px rgba(255,255,255,1), 
-              // -2px 2px 0px rgba(255,255,255,1), 
-              // -2px 2px 0px rgba(255,255,255,1), 
-              // -2px 2px 0px rgba(255,255,255,1)`
+                  color: 'white',
+                  textShadow: `
+                  0px 0px 1px rgba(200,0,0,1),
+                  0px 0px 1px rgba(200,0,0,1),
+                  0px 0px 1px rgba(200,0,0,1),
+                  0px 0px 1px rgba(200,0,0,1),
+                  -1px 1px 0.5px rgba(200,0,0,1), 
+                  -2px 2px 0.5px rgba(200,0,0,1), 
+                  -3px 3px 0.5px rgba(200,0,0,1), 
+                  -4px 4px 0.5px rgba(200,0,0,1), 
+                  -5px 5px 0.5px rgba(200,0,0,1), 
+                  -6px 6px 0.5px rgba(200,0,0,1)`
                 }}>
                 I Love Shollakhuddin Kurniawan
               </Typography>
