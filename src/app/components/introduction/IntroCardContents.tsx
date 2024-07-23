@@ -18,27 +18,28 @@ const IntroCardContents = () => {
               <Typography
                 variant='h4'
                 sx={{
+                  position: 'relative',
                   textAlign: 'center',
                   fontFamily: 'Nunito, Arial, sans-serif',
                   fontWeight: 700,
-                  color: 'white',
-                  textShadow: `
-              0px 1.5px 4px rgba(0,0,0,1), 
-              0px 1.5px 4px rgba(0,0,0,1), 
-              0px 1.5px 4px rgba(0,0,0,1), 
-              0px 1.5px 4px rgba(0,0,0,1), 
-              0px 1.5px 4px rgba(0,0,0,1), 
-              0px 1.5px 4px rgba(0,0,0,1), 
-              0px 1.5px 4px rgba(0,0,0,1), 
-              0px 1.5px 4px rgba(0,0,0,1), 
-              0px 1.5px 4px rgba(0,0,0,1), 
-              0px 1.5px 4px rgba(0,0,0,1), 
-              0px 1.5px 4px rgba(0,0,0,1), 
-              0px 1.5px 4px rgba(0,0,0,1), 
-              0px 1.5px 4px rgba(0,0,0,1), 
-              0px 1.5px 4px rgba(0,0,0,1), 
-              0px 1.5px 4px rgba(0,0,0,1), 
-              0px 1.5px 4px rgba(0,0,0,1)`
+                  color: 'red',
+                  //     textShadow: `
+                  // 0px 1.5px 4px rgba(0,0,0,1), 
+                  // 0px 1.5px 4px rgba(0,0,0,1), 
+                  // 0px 1.5px 4px rgba(0,0,0,1), 
+                  // 0px 1.5px 4px rgba(0,0,0,1), 
+                  // 0px 1.5px 4px rgba(0,0,0,1), 
+                  // 0px 1.5px 4px rgba(0,0,0,1), 
+                  // 0px 1.5px 4px rgba(0,0,0,1), 
+                  // 0px 1.5px 4px rgba(0,0,0,1), 
+                  // 0px 1.5px 4px rgba(0,0,0,1), 
+                  // 0px 1.5px 4px rgba(0,0,0,1), 
+                  // 0px 1.5px 4px rgba(0,0,0,1), 
+                  // 0px 1.5px 4px rgba(0,0,0,1), 
+                  // 0px 1.5px 4px rgba(0,0,0,1), 
+                  // 0px 1.5px 4px rgba(0,0,0,1), 
+                  // 0px 1.5px 4px rgba(0,0,0,1), 
+                  // 0px 1.5px 4px rgba(0,0,0,1)`
                 }}>
                 Hi, My name is
               </Typography>
@@ -46,33 +47,35 @@ const IntroCardContents = () => {
                 variant='h4'
                 mb={2}
                 sx={{
+                  position: 'relative',
                   textAlign: 'center',
                   fontFamily: 'Nunito, Arial, sans-serif',
                   fontWeight: 700,
-                  color: 'white',
-                  textShadow: `
-              0px 1.5px 4px rgba(100,0,0,1), 
-              0px 1.5px 4px rgba(100,0,0,1), 
-              0px 1.5px 4px rgba(100,0,0,1), 
-              0px 1.5px 4px rgba(100,0,0,1), 
-              0px 1.5px 4px rgba(100,0,0,1), 
-              0px 1.5px 4px rgba(100,0,0,1), 
-              0px 1.5px 4px rgba(100,0,0,1), 
-              0px 1.5px 4px rgba(100,0,0,1), 
-              0px 1.5px 4px rgba(100,0,0,1), 
-              0px 1.5px 4px rgba(100,0,0,1), 
-              0px 1.5px 4px rgba(100,0,0,1), 
-              0px 1.5px 4px rgba(100,0,0,1), 
-              0px 1.5px 4px rgba(100,0,0,1), 
-              0px 1.5px 4px rgba(100,0,0,1), 
-              0px 1.5px 4px rgba(100,0,0,1), 
-              0px 1.5px 4px rgba(100,0,0,1)`
+                  color: 'red',
+              //     textShadow: `
+              // -2px 2px 0px rgba(255,255,255,1), 
+              // -2px 2px 0px rgba(255,255,255,1), 
+              // -2px 2px 0px rgba(255,255,255,1), 
+              // -2px 2px 0px rgba(255,255,255,1), 
+              // -2px 2px 0px rgba(255,255,255,1), 
+              // -2px 2px 0px rgba(255,255,255,1), 
+              // -2px 2px 0px rgba(255,255,255,1), 
+              // -2px 2px 0px rgba(255,255,255,1), 
+              // -2px 2px 0px rgba(255,255,255,1), 
+              // -2px 2px 0px rgba(255,255,255,1), 
+              // -2px 2px 0px rgba(255,255,255,1), 
+              // -2px 2px 0px rgba(255,255,255,1), 
+              // -2px 2px 0px rgba(255,255,255,1), 
+              // -2px 2px 0px rgba(255,255,255,1), 
+              // -2px 2px 0px rgba(255,255,255,1), 
+              // -2px 2px 0px rgba(255,255,255,1)`
                 }}>
-                I LOVE SHOLLAKHUDDIN KURNIAWAN
+                I Love Shollakhuddin Kurniawan
               </Typography>
               <Typography
                 variant='h6'
                 sx={{
+                  position: 'relative',
                   textAlign: 'center',
                   fontFamily: 'Nunito, Arial, sans-serif',
                   fontWeight: 700,
@@ -82,6 +85,7 @@ const IntroCardContents = () => {
               <Typography
                 variant='h6'
                 sx={{
+                  position: 'relative',
                   textAlign: 'center',
                   fontFamily: 'Nunito, Arial, sans-serif',
                   fontWeight: 700,
