@@ -385,7 +385,7 @@ const IntroductionCard = () => {
             >
               {/* introcard contents */}
               <Box
-                onClick={handleFlip}
+                // onClick={handleFlip}
                 sx={{
                   position: 'relative',
                   backgroundColor: 'white',
@@ -422,7 +422,7 @@ const IntroductionCard = () => {
             >
               {/* introcard contents */}
               <Box
-                onClick={handleFlip}
+                // onClick={handleFlip}
                 sx={{
                   position: 'relative',
                   backgroundColor: 'white',
