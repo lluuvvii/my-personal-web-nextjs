@@ -339,7 +339,6 @@ const IntroductionCard = () => {
       <Box
         sx={{
           perspective: '1000px',
-          // position: 'relative',
           '& .inner': {
             transition: 'transform 0.5s',
             transformStyle: 'preserve-3d',
@@ -388,8 +387,7 @@ const IntroductionCard = () => {
                   backgroundColor: 'white',
                   padding: '10px',
                   rotate: '3deg',
-                  clipPath: 'polygon(0 0, 0 90%, 5% 85%, 5% 87%, 0 92%, 0 94%, 9% 85%, 9% 87%, 0 96%, 0 98%, 5% 93%, 5% 95%, 0 100%, 2% 100%, 6% 96%, 6% 98%, 4% 100%, 65% 100%, 75% 100%, 100% 100%, 100% 9%, 95% 14%, 95% 12%, 100% 7%, 100% 5%, 96% 9%, 96% 7%, 100% 3%, 100% 1%, 92% 8%, 92% 6%, 99% 0, 91% 0, 81% 0, 71% 0, 66% 0)'
-                  // boxShadow: 'inset 0px 0px 5px rgba(0, 0, 0, 0.5)',
+                  clipPath: 'polygon(0 0, 0 90%, 5% 85%, 5% 87%, 0 92%, 0 94%, 2% 92%, 2% 94%, 0 96%, 0 98%, 5% 93%, 5% 95%, 0 100%, 2% 100%, 6% 96%, 6% 98%, 4% 100%, 65% 100%, 75% 100%, 100% 100%, 100% 9%, 95% 14%, 95% 12%, 100% 7%, 100% 5%, 96% 9%, 96% 7%, 100% 3%, 100% 1%, 92% 8%, 92% 6%, 99% 0, 91% 0, 81% 0, 71% 0, 66% 0)'
                 }}>
                 <IntroCardContents />
               </Box>
@@ -402,22 +400,15 @@ const IntroductionCard = () => {
                 backgroundColor: 'black',
                 width: '100%',
                 height: '100%',
-                borderRadius: '20px',
-                // top: '-10px',
                 left: '-40px',
-                rotate: '5deg'
+                rotate: '5deg',
+                clipPath: 'polygon(0 0, 0 90%, 5% 85%, 5% 87%, 0 92%, 0 94%, 9% 85%, 9% 87%, 0 96%, 0 98%, 5% 93%, 5% 95%, 0 100%, 2% 100%, 6% 96%, 6% 98%, 4% 100%, 65% 100%, 75% 100%, 100% 100%, 100% 9%, 95% 14%, 95% 12%, 100% 7%, 100% 5%, 96% 9%, 96% 7%, 100% 3%, 100% 1%, 92% 8%, 92% 6%, 99% 0, 91% 0, 81% 0, 71% 0, 66% 0)'
               }} />
             <Box
               sx={{
                 position: 'relative',
                 padding: '10px',
-                // py: '10px',
-                // pr: '10px',
-                // pl: '80px',
                 background: 'linear-gradient(100deg, red, #d10000)',
-                borderRadius: '20px',
-                // filter: 'drop-shadow(-2px 2px 2px rgba(0,0,0,0.5))',
-                // clipPath: 'polygon(2% 3%, 7% 4%, 5% 7%, 7% 12%, 8% 6%, 10% 10%, 11% 2%, 100% 0, 100% 90%, 100% 100%, 13% 100%, 14% 97%, 12% 100%, 10% 96%, 10% 65%, 10% 21%, 8% 14%, 7% 20%, 4% 10%, 3% 15%)'
               }}
             >
               {/* introcard contents */}
@@ -425,10 +416,11 @@ const IntroductionCard = () => {
                 onClick={handleFlip}
                 sx={{
                   position: 'relative',
-                  borderRadius: '10px',
                   backgroundColor: 'white',
+                  rotate: '3deg',
                   padding: '10px',
                   height: '320px',
+                  clipPath: 'polygon(0 0, 0 90%, 5% 85%, 5% 87%, 0 92%, 0 94%, 2% 92%, 2% 94%, 0 96%, 0 98%, 5% 93%, 5% 95%, 0 100%, 2% 100%, 6% 96%, 6% 98%, 4% 100%, 65% 100%, 75% 100%, 100% 100%, 100% 9%, 95% 14%, 95% 12%, 100% 7%, 100% 5%, 96% 9%, 96% 7%, 100% 3%, 100% 1%, 92% 8%, 92% 6%, 99% 0, 91% 0, 81% 0, 71% 0, 66% 0)'
                 }}>
                 yayaya
               </Box>
