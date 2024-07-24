@@ -12,28 +12,33 @@ const IntroCardContents = () => {
   return (
     <Box>
       {dialogVal === 0 ?
-        <Box ref={containerRef} sx={{ height: '260px', overflow: 'auto', px: 1 }}>
+        <Box ref={containerRef} sx={{ height: '260px', overflow: 'auto', pl: 1 }}>
           <Slide direction='right' in={dialogVal === 0} container={containerRef.current}>
             <Box>
               <Typography
                 variant='h4'
                 sx={{
-                  position: 'relative',
                   textAlign: 'center',
                   fontFamily: 'Nunito, Arial, sans-serif',
                   fontWeight: 700,
                   color: 'white',
                   textShadow: `
-                  0px 0px 1px rgba(0,0,0,1),
-                  0px 0px 1px rgba(0,0,0,1),
-                  0px 0px 1px rgba(0,0,0,1),
-                  0px 0px 1px rgba(0,0,0,1),
-                  -1px 1px 0.5px rgba(0,0,0,1), 
-                  -2px 2px 0.5px rgba(0,0,0,1), 
-                  -3px 3px 0.5px rgba(0,0,0,1), 
-                  -4px 4px 0.5px rgba(0,0,0,1), 
-                  -5px 5px 0.5px rgba(0,0,0,1), 
-                  -6px 6px 0.5px rgba(0,0,0,1)`
+              0px 1.5px 4px rgba(0,0,0,1), 
+              0px 1.5px 4px rgba(0,0,0,1), 
+              0px 1.5px 4px rgba(0,0,0,1), 
+              0px 1.5px 4px rgba(0,0,0,1), 
+              0px 1.5px 4px rgba(0,0,0,1), 
+              0px 1.5px 4px rgba(0,0,0,1), 
+              0px 1.5px 4px rgba(0,0,0,1), 
+              0px 1.5px 4px rgba(0,0,0,1), 
+              0px 1.5px 4px rgba(0,0,0,1), 
+              0px 1.5px 4px rgba(0,0,0,1), 
+              0px 1.5px 4px rgba(0,0,0,1), 
+              0px 1.5px 4px rgba(0,0,0,1), 
+              0px 1.5px 4px rgba(0,0,0,1), 
+              0px 1.5px 4px rgba(0,0,0,1), 
+              0px 1.5px 4px rgba(0,0,0,1), 
+              0px 1.5px 4px rgba(0,0,0,1)`
                 }}>
                 Hi, My name is
               </Typography>
@@ -41,29 +46,33 @@ const IntroCardContents = () => {
                 variant='h4'
                 mb={2}
                 sx={{
-                  position: 'relative',
                   textAlign: 'center',
                   fontFamily: 'Nunito, Arial, sans-serif',
                   fontWeight: 700,
                   color: 'white',
                   textShadow: `
-                  0px 0px 1px rgba(200,0,0,1),
-                  0px 0px 1px rgba(200,0,0,1),
-                  0px 0px 1px rgba(200,0,0,1),
-                  0px 0px 1px rgba(200,0,0,1),
-                  -1px 1px 0.5px rgba(200,0,0,1), 
-                  -2px 2px 0.5px rgba(200,0,0,1), 
-                  -3px 3px 0.5px rgba(200,0,0,1), 
-                  -4px 4px 0.5px rgba(200,0,0,1), 
-                  -5px 5px 0.5px rgba(200,0,0,1), 
-                  -6px 6px 0.5px rgba(200,0,0,1)`
+              0px 1.5px 4px rgba(100,0,0,1), 
+              0px 1.5px 4px rgba(100,0,0,1), 
+              0px 1.5px 4px rgba(100,0,0,1), 
+              0px 1.5px 4px rgba(100,0,0,1), 
+              0px 1.5px 4px rgba(100,0,0,1), 
+              0px 1.5px 4px rgba(100,0,0,1), 
+              0px 1.5px 4px rgba(100,0,0,1), 
+              0px 1.5px 4px rgba(100,0,0,1), 
+              0px 1.5px 4px rgba(100,0,0,1), 
+              0px 1.5px 4px rgba(100,0,0,1), 
+              0px 1.5px 4px rgba(100,0,0,1), 
+              0px 1.5px 4px rgba(100,0,0,1), 
+              0px 1.5px 4px rgba(100,0,0,1), 
+              0px 1.5px 4px rgba(100,0,0,1), 
+              0px 1.5px 4px rgba(100,0,0,1), 
+              0px 1.5px 4px rgba(100,0,0,1)`
                 }}>
-                I Love Shollakhuddin Kurniawan
+                I LOVE SHOLLAKHUDDIN KURNIAWAN
               </Typography>
               <Typography
                 variant='h6'
                 sx={{
-                  position: 'relative',
                   textAlign: 'center',
                   fontFamily: 'Nunito, Arial, sans-serif',
                   fontWeight: 700,
@@ -73,7 +82,6 @@ const IntroCardContents = () => {
               <Typography
                 variant='h6'
                 sx={{
-                  position: 'relative',
                   textAlign: 'center',
                   fontFamily: 'Nunito, Arial, sans-serif',
                   fontWeight: 700,
@@ -85,7 +93,7 @@ const IntroCardContents = () => {
         </Box>
         : null}
       {dialogVal === 1 ?
-        <Box ref={containerRef} sx={{ height: '260px', overflow: 'auto', px: 1 }}>
+        <Box ref={containerRef} sx={{ height: '260px', overflow: 'auto', pl: 1 }}>
           <Slide direction='right' in={dialogVal === 1} container={containerRef.current}>
             <Box>
               <Typography
@@ -101,7 +109,7 @@ const IntroCardContents = () => {
         </Box>
         : null}
       {dialogVal === 2 ?
-        <Box ref={containerRef} sx={{ height: '260px', overflow: 'auto', px: 1 }}>
+        <Box ref={containerRef} sx={{ height: '260px', overflow: 'auto', pl: 1 }}>
           <Slide direction='right' in={dialogVal === 2} container={containerRef.current}>
             <Box>
               <Typography
@@ -118,7 +126,7 @@ const IntroCardContents = () => {
         </Box>
         : null}
       {dialogVal === 3 ?
-        <Box ref={containerRef} sx={{ height: '260px', overflow: 'auto', px: 1 }}>
+        <Box ref={containerRef} sx={{ height: '260px', overflow: 'auto', pl: 1 }}>
           <Slide direction='right' in={dialogVal === 3} container={containerRef.current}>
             <Box>
               <Typography

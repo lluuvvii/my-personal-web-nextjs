@@ -1,7 +1,7 @@
 'use client'
 
 import { Box, Typography, useMediaQuery, useTheme } from '@mui/material'
-import React, { useState } from 'react'
+import React from 'react'
 import { motion } from 'framer-motion'
 import ZigzagContainer from '../materials/ZigzagContainer'
 
@@ -9,22 +9,16 @@ const IntroBanner = () => {
   const theme = useTheme()
   const matches = useMediaQuery(theme.breakpoints.up('md'))
 
-  const [flipped, setFlipped] = useState(false);
-
-  const handleFlip = () => {
-    setFlipped(!flipped);
-  };
-
   return (
     <>
       {matches ?
         <Box sx={{ transform: 'rotate(-2deg) scale(1.03)', width: '100%', position: 'relative', left: '-17px', height: 0 }}>
-          {/* <Box sx={{ transform: 'scale(1.05)' }}>
-            <ZigzagContainer width='100%' height='300px' color='red' toColor='#d10000' toGradient='45deg' top bottom right left />
-          </Box> */}
+          <Box sx={{ transform: 'scale(1.05)' }}>
+            <ZigzagContainer width='100%' height='300px' color='red' toColor='#d10000' toGradient='to right' top bottom right left />
+          </Box>
           {/* bottom left side particles */}
           {/* striped circle */}
-          {/* <Box
+          <Box
             component={motion.div}
             drag
             sx={{
@@ -42,9 +36,9 @@ const IntroBanner = () => {
               top: '150px',
               left: '-20px',
             }}>
-          </Box> */}
+          </Box>
           {/* circle */}
-          {/* <Box
+          <Box
             component={motion.div}
             drag
             sx={{
@@ -76,8 +70,7 @@ const IntroBanner = () => {
               display: 'flex',
               justifyContent: 'center',
               alignItems: 'center',
-              background: 'linear-gradient(135deg, white 50%, grey 50%)',
-              // backgroundColor: 'white',
+              backgroundColor: 'white',
               top: '170px',
               left: '-30px',
             }}
@@ -91,25 +84,12 @@ const IntroBanner = () => {
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
-                background: 'linear-gradient(135deg, red 50%, darkred 50%)',
-              }}
-            >
-            </Box>
-            <Box
-              sx={{
-                position: 'absolute',
-                width: '40px',
-                height: '40px',
-                borderRadius: '50%',
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
                 backgroundColor: 'red',
               }}
             >
             </Box>
-          </Box> */}
-          {/* <Box
+          </Box>
+          <Box
             component={motion.div}
             drag
             sx={{
@@ -123,7 +103,7 @@ const IntroBanner = () => {
               justifyContent: 'center',
               alignItems: 'center',
               backgroundColor: 'transparent',
-              border: '20px outset white',
+              border: '20px solid white',
               top: '200px',
               left: '-50px',
             }}
@@ -138,97 +118,12 @@ const IntroBanner = () => {
                 justifyContent: 'center',
                 alignItems: 'center',
                 backgroundColor: 'transparent',
-                border: '10px ridge red',
+                border: '10px solid red',
               }}
             ></Box>
-          </Box> */}
-          {/* clip path particles */}
-          <Box
-            sx={{
-              position: 'absolute',
-              width: '300px',
-              height: '300px',
-              backgroundColor: 'black',
-              filter: 'drop-shadow(-2px 2px 2px rgba(0,0,0,0.5))',
-              clipPath: 'polygon(0% 16%, 10% 12%, 9% 14%, 6% 17%, 26% 13%, 33% 12%, 34% 14%, 32% 17%, 13% 24%, 22% 22%, 34% 19%, 38% 19%, 38% 20%, 42% 19%, 50% 15%, 56% 14%, 56% 15%, 55% 17%, 53% 18%, 57% 18%, 56% 20%, 52% 22%, 28% 30%, 37% 30%, 50% 28%, 50% 30%, 34% 40%, 47% 37%, 58% 35%, 74% 28%, 76% 30%, 69% 34%, 81% 29%, 79% 33%, 73% 36%, 39% 50%, 25% 60%, 43% 56%, 37% 62%, 21% 74%, 22% 85%, 8% 92%, 15% 90%, 0% 97%)',
-              top: '50px',
-              left: '-15px'
-            }}
-          />
-          <Box
-            sx={{
-              position: 'absolute',
-              width: '290px',
-              height: '290px',
-              backgroundColor: 'white',
-              filter: 'drop-shadow(-2px 2px 2px rgba(0,0,0,0.5))',
-              clipPath: 'polygon(0% 16%, 10% 12%, 9% 14%, 6% 17%, 26% 13%, 33% 12%, 34% 14%, 32% 17%, 13% 24%, 22% 22%, 34% 19%, 38% 19%, 38% 20%, 42% 19%, 50% 15%, 56% 14%, 56% 15%, 55% 17%, 53% 18%, 57% 18%, 56% 20%, 52% 22%, 28% 30%, 37% 30%, 50% 28%, 50% 30%, 34% 40%, 47% 37%, 58% 35%, 74% 28%, 76% 30%, 69% 34%, 81% 29%, 79% 33%, 73% 36%, 39% 50%, 25% 60%, 43% 56%, 37% 62%, 21% 74%, 22% 85%, 8% 92%, 15% 90%, 0% 97%)',
-              top: '70px',
-              left: '-40px'
-            }}
-          />
-          <Box
-            sx={{
-              position: 'absolute',
-              width: '200px',
-              height: '200px',
-              backgroundColor: 'red',
-              filter: 'drop-shadow(-2px 2px 2px rgba(0,0,0,0.5))',
-              clipPath: 'polygon(0 12%, 13% 6%, 15% 7%, 10% 10%, 7% 14%, 26% 8%, 33% 6%, 27% 11%, 20% 16%, 42% 6%, 40% 11%, 40% 14%, 33% 19%, 38% 18%, 50% 14%, 56% 14%, 56% 15%, 21% 33%, 52% 24%, 47% 27%, 79% 23%, 83% 25%, 74% 29%, 85% 26%, 90% 28%, 77% 39%, 75% 43%, 74% 45%, 49% 56%, 52% 58%, 49% 61%, 15% 71%, 33% 69%, 29% 72%, 37% 70%, 40% 71%, 43% 73%, 13% 86%, 25% 93%, 26% 96%, 12% 92%, 14% 96%, 13% 99%, 0 93%)',
-              top: '100px',
-              left: '-35px'
-            }}
-          />
-          <Box
-            onClick={handleFlip}
-            sx={{
-              perspective: '1000px',
-              position: 'absolute',
-              top: '400px',
-              width: '200px',
-              height: '300px',
-              '& .inner': {
-                position: 'relative',
-                width: '100%',
-                height: '100%',
-                transition: 'transform 0.5s',
-                transformStyle: 'preserve-3d',
-                transform: flipped ? 'rotateY(210deg)' : 'rotateY(30deg)',
-              },
-              '& .front, & .back': {
-                position: 'absolute',
-                width: '100%',
-                height: '100%',
-                backfaceVisibility: 'hidden',
-                borderRadius: '10px',
-                boxShadow: '0 4px 8px rgba(0,0,0,0.2)',
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                fontSize: '24px',
-              },
-              '& .front': {
-                backgroundColor: '#bbb',
-                color: 'black',
-              },
-              '& .back': {
-                backgroundColor: '#2980b9',
-                color: 'white',
-                transform: 'rotateY(180deg)',
-              },
-            }}
-          >
-            <Box className="inner">
-              <Box className="front">
-                Front
-              </Box>
-              <Box className="back">
-                Back
-              </Box>
-            </Box>
           </Box>
           {/* striped circle */}
-          {/* <Box
+          <Box
             component={motion.div}
             drag
             sx={{
@@ -246,7 +141,7 @@ const IntroBanner = () => {
               top: '240px',
               left: '0px',
             }}>
-          </Box> */}
+          </Box>
           {/* top right side particles */}
           {/* star long shadow */}
           <Box

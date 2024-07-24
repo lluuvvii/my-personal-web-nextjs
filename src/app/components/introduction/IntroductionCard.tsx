@@ -1,16 +1,11 @@
 'use client'
 
-import React, { useState } from 'react'
+import React from 'react'
 import { Box } from '@mui/material'
 import IntroCardContents from './IntroCardContents'
 import { motion } from 'framer-motion'
 
 const IntroductionCard = () => {
-  const [flipped, setFlipped] = useState(false);
-
-  const handleFlip = () => {
-    setFlipped(!flipped);
-  };
   return (
     <Box
       position='relative'
@@ -24,7 +19,7 @@ const IntroductionCard = () => {
       }}>
       {/* top left particles */}
       {/* star long shadow */}
-      {/* <Box
+      <Box
         sx={{
           position: 'absolute',
           '& svg': {
@@ -46,9 +41,9 @@ const IntroductionCard = () => {
             <path d='M100 0.587l30.52 66.76L200 81.25l-50 48.5L161.92 200 100 165.83 38.08 200 50 129.75 0 81.25l69.44-13.29z' transform='scale(0.7) translate(42.5, 47)' fill='white' />
           </svg>
         </div>
-      </Box> */}
+      </Box>
       {/* striped circle */}
-      {/* <Box
+      <Box
         sx={{
           position: 'absolute',
           width: '60px',
@@ -62,9 +57,9 @@ const IntroductionCard = () => {
           top: '-25px',
           left: '40px',
         }}>
-      </Box> */}
+      </Box>
       {/* circle */}
-      {/* <Box
+      <Box
         sx={{
           position: 'absolute',
           width: '50px',
@@ -153,9 +148,9 @@ const IntroductionCard = () => {
           left: '50px',
         }}
       >
-      </Box> */}
+      </Box>
       {/* striped circle */}
-      {/* <Box
+      <Box
         sx={{
           position: 'absolute',
           width: '60px',
@@ -169,10 +164,10 @@ const IntroductionCard = () => {
           top: '15px',
           left: '-30px',
         }}>
-      </Box> */}
+      </Box>
       {/* bottom right */}
       {/* circle */}
-      {/* <Box
+      <Box
         sx={{
           position: 'absolute',
           width: '70px',
@@ -201,9 +196,9 @@ const IntroductionCard = () => {
           right: '-15px',
         }}
       >
-      </Box> */}
+      </Box>
       {/* striped circle */}
-      {/* <Box
+      <Box
         sx={{
           position: 'absolute',
           width: '60px',
@@ -217,9 +212,9 @@ const IntroductionCard = () => {
           bottom: '25px',
           right: '-30px',
         }}>
-      </Box> */}
+      </Box>
       {/* circle */}
-      {/* <Box
+      <Box
         sx={{
           position: 'absolute',
           width: '60px',
@@ -263,9 +258,9 @@ const IntroductionCard = () => {
           right: '-10px',
         }}
       >
-      </Box> */}
+      </Box>
       {/* striped circle */}
-      {/* <Box
+      <Box
         sx={{
           position: 'absolute',
           width: '60px',
@@ -279,9 +274,9 @@ const IntroductionCard = () => {
           bottom: '-25px',
           right: '30px',
         }}>
-      </Box> */}
+      </Box>
       {/* spike */}
-      {/* <Box
+      <Box
         sx={{
           position: 'absolute',
           width: '40px',
@@ -295,9 +290,9 @@ const IntroductionCard = () => {
           right: '-35px'
         }}
       >
-      </Box> */}
+      </Box>
       {/* circle */}
-      {/* <Box
+      <Box
         sx={{
           position: 'absolute',
           width: '50px',
@@ -311,9 +306,9 @@ const IntroductionCard = () => {
           right: '-20px',
         }}
       >
-      </Box> */}
+      </Box>
       {/* star long shadow */}
-      {/* <Box
+      <Box
         sx={{
           position: 'absolute',
           '& svg': {
@@ -335,141 +330,21 @@ const IntroductionCard = () => {
             <path d='M100 0.587l30.52 66.76L200 81.25l-50 48.5L161.92 200 100 165.83 38.08 200 50 129.75 0 81.25l69.44-13.29z' transform='scale(0.7) translate(42.5, 47)' fill='white' />
           </svg>
         </div>
-      </Box> */}
+      </Box>
       <Box
         sx={{
-          perspective: '1000px',
-          '& .inner': {
-            transition: 'transform 0.5s',
-            transformStyle: 'preserve-3d',
-            transform: flipped ? 'rotateY(190deg)' : 'rotateY(10deg)',
-          },
-          '& .front, & .back': {
-            backfaceVisibility: 'hidden',
-          },
-          '& .front': {
-            position: 'absolute',
-            width: '100%',
-            height: '100%',
-            transform: 'rotateY(10deg)'
-          },
-          '& .back': {
-            width: '100%',
-            height: '100%',
-            transform: 'rotateY(190deg)',
-          },
-        }}
-      >
-        <Box className="inner">
-          <Box className='front'>
-            {/* <Box sx={{ filter: 'drop-shadow(-2px 2px 2px rgba(0,0,0,0.5))', position: 'absolute', width: '100%', height: '100%' }}> */}
-              <Box
-                sx={{
-                  position: 'absolute',
-                  backgroundColor: 'black',
-                  width: '100%',
-                  height: '100%',
-                  top: '20px',
-                  left: '-20px',
-                  clipPath: 'polygon(0 0, 0 90%, 5% 85%, 5% 87%, 0 92%, 0 94%, 9% 85%, 9% 87%, 0 96%, 0 98%, 5% 93%, 5% 95%, 0 100%, 2% 100%, 6% 96%, 6% 98%, 4% 100%, 65% 100%, 75% 100%, 100% 100%, 100% 9%, 95% 14%, 95% 12%, 100% 7%, 100% 5%, 96% 9%, 96% 7%, 100% 3%, 100% 1%, 92% 8%, 92% 6%, 99% 0, 91% 0, 81% 0, 71% 0, 66% 0)'
-                }} />
-            {/* </Box> */}
-            <Box
-              sx={{
-                position: 'relative',
-                width: '100%',
-                height: '100%',
-                overflow: 'hidden',
-                background: 'linear-gradient(100deg, red, #d10000)',
-              }}
-            >
-              {/* introcard contents */}
-              <Box
-                // onClick={handleFlip}
-                sx={{
-                  position: 'relative',
-                  backgroundColor: 'white',
-                  width: '100%',
-                  height: '100%',
-                  top: '20px',
-                  left: '-20px',
-                  px: '20px',
-                  clipPath: 'polygon(0 0, 0 90%, 5% 85%, 5% 87%, 0 92%, 0 94%, 2% 92%, 2% 94%, 0 96%, 0 98%, 5% 93%, 5% 95%, 0 100%, 2% 100%, 6% 96%, 6% 98%, 4% 100%, 65% 100%, 75% 100%, 100% 100%, 100% 9%, 95% 14%, 95% 12%, 100% 7%, 100% 5%, 96% 9%, 96% 7%, 100% 3%, 100% 1%, 92% 8%, 92% 6%, 99% 0, 91% 0, 81% 0, 71% 0, 66% 0)'
-                }}>
-                <IntroCardContents />
-              </Box>
-            </Box>
-          </Box>
-          <Box className="back">
-            <Box
-              sx={{
-                position: 'absolute',
-                backgroundColor: 'black',
-                width: '100%',
-                height: '100%',
-                top: '20px',
-                left: '-20px',
-                clipPath: 'polygon(0 0, 0 90%, 5% 85%, 5% 87%, 0 92%, 0 94%, 9% 85%, 9% 87%, 0 96%, 0 98%, 5% 93%, 5% 95%, 0 100%, 2% 100%, 6% 96%, 6% 98%, 4% 100%, 65% 100%, 75% 100%, 100% 100%, 100% 9%, 95% 14%, 95% 12%, 100% 7%, 100% 5%, 96% 9%, 96% 7%, 100% 3%, 100% 1%, 92% 8%, 92% 6%, 99% 0, 91% 0, 81% 0, 71% 0, 66% 0)'
-              }} />
-            <Box
-              sx={{
-                position: 'relative',
-                width: '100%',
-                height: '100%',
-                overflow: 'hidden',
-                background: 'linear-gradient(100deg, red, #d10000)',
-              }}
-            >
-              {/* introcard contents */}
-              <Box
-                // onClick={handleFlip}
-                sx={{
-                  position: 'relative',
-                  backgroundColor: 'white',
-                  top: '20px',
-                  left: '-20px',
-                  px: '20px',
-                  height: '320px',
-                  clipPath: 'polygon(0 0, 0 90%, 5% 85%, 5% 87%, 0 92%, 0 94%, 2% 92%, 2% 94%, 0 96%, 0 98%, 5% 93%, 5% 95%, 0 100%, 2% 100%, 6% 96%, 6% 98%, 4% 100%, 65% 100%, 75% 100%, 100% 100%, 100% 9%, 95% 14%, 95% 12%, 100% 7%, 100% 5%, 96% 9%, 96% 7%, 100% 3%, 100% 1%, 92% 8%, 92% 6%, 99% 0, 91% 0, 81% 0, 71% 0, 66% 0)'
-                }}>
-                yayaya
-              </Box>
-            </Box>
-          </Box>
-        </Box>
-      </Box>
-      {/* <Box
-        sx={{
           padding: '10px',
-          // rotate: '-3deg',
-          // py: '10px',
-          // pr: '10px',
-          // pl: '80px',
           background: 'linear-gradient(100deg, red, #d10000)',
           borderRadius: '20px',
-          // filter: 'drop-shadow(-2px 2px 2px rgba(0,0,0,0.5))',
-          // clipPath: 'polygon(0 0, 1% 4%, 1% 7%, 1% 10%, 3% 24%, 3% 29%, 2% 55%, 2% 63%, 3% 87%, 0 94%, 0 100%, 3% 99%, 9% 99%, 16% 98%, 33% 98%, 46% 100%, 50% 98%, 61% 98%, 80% 98%, 95% 99%, 99% 100%, 100% 97%, 98% 95%, 99% 90%, 99% 85%, 99% 78%, 99% 58%, 99% 42%, 99% 13%, 98% 9%, 99% 6%, 99% 4%, 90% 0, 90% 2%, 25% 2%, 16% 0, 21% 2%)'
+          filter: 'drop-shadow(-2px 2px 2px rgba(0,0,0,0.5))',
         }}
-      > */}
-      {/* introcard contents */}
-      {/* <Box
-          // onClick={handleFlip}
-          sx={{
-            position: 'relative',
-            borderRadius: '10px',
-            backgroundColor: 'white',
-            padding: '10px',
-            // rotate: '3deg'
-            // pl: '40px',
-            // pr: '10px',
-            // pt: '60px',
-            // boxShadow: 'inset 0px 0px 5px rgba(0, 0, 0, 0.5)',
-            // clipPath: 'polygon(0 0, 1% 4%, 1% 7%, 1% 10%, 3% 24%, 3% 29%, 2% 55%, 2% 63%, 3% 87%, 0 94%, 0 100%, 3% 99%, 9% 99%, 16% 98%, 33% 98%, 46% 100%, 50% 98%, 61% 98%, 80% 98%, 95% 99%, 99% 100%, 100% 97%, 98% 95%, 99% 90%, 99% 85%, 99% 78%, 99% 58%, 99% 42%, 99% 13%, 98% 9%, 99% 6%, 99% 4%, 90% 0, 90% 2%, 25% 2%, 16% 0, 21% 2%)'
-          }}>
+      >
+        {/* introcard contents */}
+        <Box sx={{ position: 'relative', borderRadius: '10px', backgroundColor: 'white', padding: '10px', boxShadow: 'inset 0px 0px 5px rgba(0, 0, 0, 0.5)' }}>
           <IntroCardContents />
-        </Box> */}
-      {/* striped circle */}
-      {/* <Box
+        </Box>
+        {/* striped circle */}
+        <Box
           sx={{
             position: 'absolute',
             width: '40px',
@@ -498,9 +373,9 @@ const IntroductionCard = () => {
             right: '-20px',
           }}
         >
-        </Box> */}
-      {/* spike */}
-      {/* <Box
+        </Box>
+        {/* spike */}
+        <Box
           sx={{
             position: 'absolute',
             width: '60px',
@@ -514,9 +389,9 @@ const IntroductionCard = () => {
             left: '-20px'
           }}
         >
-        </Box> */}
-      {/* circle around */}
-      {/* <Box
+        </Box>
+        {/* circle around */}
+        {/* <Box
           component={motion.div}
           sx={{
             position: 'absolute',
@@ -556,8 +431,8 @@ const IntroductionCard = () => {
             )
           })}
         </Box> */}
-      {/* circle */}
-      {/* <Box
+        {/* circle */}
+        <Box
           sx={{
             position: 'absolute',
             width: '60px',
@@ -603,8 +478,8 @@ const IntroductionCard = () => {
             right: '20px',
           }}
         >
-        </Box> */}
-      {/* </Box> */}
+        </Box>
+      </Box>
     </Box>
   )
 }
