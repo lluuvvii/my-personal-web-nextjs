@@ -1,6 +1,6 @@
 'use client'
 
-import { Accordion, AccordionDetails, AccordionSummary, Box, Button, Stack, Typography } from '@mui/material'
+import { Accordion, AccordionDetails, AccordionSummary, Box, Button, Typography } from '@mui/material'
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import { usePathname, useRouter, useSearchParams } from 'next/navigation'
@@ -300,7 +300,7 @@ const AskMeModal = () => {
                   textAlign: 'center',
                   fontFamily: 'Nunito, Arial, sans-serif',
                   fontWeight: 700,
-                  color: 'yellow',
+                  color: 'white',
                   textShadow: `
               0px 1.5px 3px rgba(0,0,0,1), 
               0px 1.5px 3px rgba(0,0,0,1), 
@@ -323,120 +323,7 @@ const AskMeModal = () => {
               </Typography>
             </AccordionSummary>
             <AccordionDetails>
-              <Stack direction='column' alignItems='center'>
-                <Box
-                  component={motion.div}
-                  whileHover={{ scale: 1.1 }}
-                  initial={{ scale: 0 }}
-                  whileTap={{ scale: 1 }}
-                  animate={{ scale: 1 }}
-                  transition={{
-                    type: 'spring',
-                    stiffness: 500,
-                    damping: 20
-                  }}>
-                  <Button
-                    onClick={() => { }}
-                    size='small'
-                    sx={{
-                      color: 'grey',
-                      borderRadius: '10px',
-                      backgroundColor: 'transparent',
-                      textTransform: 'none',
-                      '&:active': {
-                        color: 'transparent'
-                      },
-                      '&:hover': {
-                        backgroundColor: 'transparent',
-                        color: 'transparent'
-                      }
-                    }}>
-                    <Typography
-                      variant='h6'
-                      sx={{
-                        textAlign: 'center',
-                        fontFamily: 'Nunito, Arial, sans-serif',
-                        fontWeight: 700,
-                        color: 'yellow',
-                        textShadow: `
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1)`
-                      }}>
-                      Projects
-                    </Typography>
-                  </Button>
-                </Box>
-                <Box
-                  component={motion.div}
-                  whileHover={{ scale: 1.1 }}
-                  initial={{ scale: 0 }}
-                  whileTap={{ scale: 1 }}
-                  animate={{ scale: 1 }}
-                  transition={{
-                    type: 'spring',
-                    stiffness: 500,
-                    damping: 20
-                  }}>
-                  <Button
-                    onClick={() => { }}
-                    size='small'
-                    sx={{
-                      color: 'grey',
-                      borderRadius: '10px',
-                      backgroundColor: 'transparent',
-                      textTransform: 'none',
-                      '&:active': {
-                        color: 'transparent'
-                      },
-                      '&:hover': {
-                        backgroundColor: 'transparent',
-                        color: 'transparent'
-                      }
-                    }}>
-                    <Typography
-                      variant='h6'
-                      sx={{
-                        textAlign: 'center',
-                        fontFamily: 'Nunito, Arial, sans-serif',
-                        fontWeight: 700,
-                        color: 'yellow',
-                        textShadow: `
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1)`
-                      }}>
-                      Hobbies
-                    </Typography>
-                  </Button>
-                </Box>
-              </Stack>
+              yayaya
             </AccordionDetails>
           </Accordion>
         </Box>
