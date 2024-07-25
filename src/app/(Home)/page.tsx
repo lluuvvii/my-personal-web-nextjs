@@ -9,8 +9,20 @@ const Home = () => {
     <Container sx={{ overflow: 'hidden' }}>
       <Box mt={20}>
         <Grid container spacing={3} justifyContent='center'>
-          <Grid item xs={12}>
+          {/* <Grid item xs={12}>
             <IntroBanner />
+          </Grid> */}
+          <Grid item xs={12} md={8} lg={6} xl={4}>
+            <IntroductionCard />
+          </Grid>
+          <Grid item xs={12} md={8} lg={6} xl={4}>
+            <IntroductionCard />
+          </Grid>
+          <Grid item xs={12} md={8} lg={6} xl={4}>
+            <IntroductionCard />
+          </Grid>
+          <Grid item xs={12} md={8} lg={6} xl={4}>
+            <IntroductionCard />
           </Grid>
           <Grid item xs={12} md={8} lg={6} xl={4}>
             <IntroductionCard />
