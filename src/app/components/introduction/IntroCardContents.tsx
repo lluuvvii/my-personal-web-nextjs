@@ -21,24 +21,7 @@ const IntroCardContents = () => {
                   textAlign: 'center',
                   fontFamily: 'Nunito, Arial, sans-serif',
                   fontWeight: 700,
-                  color: 'white',
-                  textShadow: `
-              0px 1.5px 4px rgba(0,0,0,1), 
-              0px 1.5px 4px rgba(0,0,0,1), 
-              0px 1.5px 4px rgba(0,0,0,1), 
-              0px 1.5px 4px rgba(0,0,0,1), 
-              0px 1.5px 4px rgba(0,0,0,1), 
-              0px 1.5px 4px rgba(0,0,0,1), 
-              0px 1.5px 4px rgba(0,0,0,1), 
-              0px 1.5px 4px rgba(0,0,0,1), 
-              0px 1.5px 4px rgba(0,0,0,1), 
-              0px 1.5px 4px rgba(0,0,0,1), 
-              0px 1.5px 4px rgba(0,0,0,1), 
-              0px 1.5px 4px rgba(0,0,0,1), 
-              0px 1.5px 4px rgba(0,0,0,1), 
-              0px 1.5px 4px rgba(0,0,0,1), 
-              0px 1.5px 4px rgba(0,0,0,1), 
-              0px 1.5px 4px rgba(0,0,0,1)`
+                  color: 'black',
                 }}>
                 Hi, My name is
               </Typography>
@@ -49,26 +32,9 @@ const IntroCardContents = () => {
                   textAlign: 'center',
                   fontFamily: 'Nunito, Arial, sans-serif',
                   fontWeight: 700,
-                  color: 'white',
-                  textShadow: `
-              0px 1.5px 4px rgba(100,0,0,1), 
-              0px 1.5px 4px rgba(100,0,0,1), 
-              0px 1.5px 4px rgba(100,0,0,1), 
-              0px 1.5px 4px rgba(100,0,0,1), 
-              0px 1.5px 4px rgba(100,0,0,1), 
-              0px 1.5px 4px rgba(100,0,0,1), 
-              0px 1.5px 4px rgba(100,0,0,1), 
-              0px 1.5px 4px rgba(100,0,0,1), 
-              0px 1.5px 4px rgba(100,0,0,1), 
-              0px 1.5px 4px rgba(100,0,0,1), 
-              0px 1.5px 4px rgba(100,0,0,1), 
-              0px 1.5px 4px rgba(100,0,0,1), 
-              0px 1.5px 4px rgba(100,0,0,1), 
-              0px 1.5px 4px rgba(100,0,0,1), 
-              0px 1.5px 4px rgba(100,0,0,1), 
-              0px 1.5px 4px rgba(100,0,0,1)`
+                  color: 'red',
                 }}>
-                I LOVE SHOLLAKHUDDIN KURNIAWAN
+                I Love Shollakhuddin Kurniawan
               </Typography>
               <Typography
                 variant='h6'
