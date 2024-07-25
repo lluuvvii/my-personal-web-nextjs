@@ -32,7 +32,7 @@ const IntroductionCard = () => {
         transition={{
           type: 'spring',
           stiffness: 500,
-          damping: 30
+          damping: 20
         }}
         sx={{
           position: 'absolute',
@@ -64,7 +64,7 @@ const IntroductionCard = () => {
         transition={{
           type: 'spring',
           stiffness: 500,
-          damping: 30
+          damping: 20
         }}
         sx={{
           position: 'absolute',
@@ -88,7 +88,7 @@ const IntroductionCard = () => {
         transition={{
           type: 'spring',
           stiffness: 500,
-          damping: 30
+          damping: 20
         }}
         sx={{
           position: 'absolute',
@@ -111,7 +111,7 @@ const IntroductionCard = () => {
         transition={{
           type: 'spring',
           stiffness: 500,
-          damping: 30
+          damping: 20
         }}
         sx={{
           position: 'absolute',
@@ -134,7 +134,7 @@ const IntroductionCard = () => {
         transition={{
           type: 'spring',
           stiffness: 500,
-          damping: 30
+          damping: 20
         }}
         sx={{
           position: 'absolute',
@@ -157,7 +157,7 @@ const IntroductionCard = () => {
         transition={{
           type: 'spring',
           stiffness: 500,
-          damping: 30
+          damping: 20
         }}
         sx={{
           position: 'absolute',
@@ -180,7 +180,7 @@ const IntroductionCard = () => {
         transition={{
           type: 'spring',
           stiffness: 500,
-          damping: 30
+          damping: 20
         }}
         sx={{
           position: 'absolute',
@@ -203,7 +203,7 @@ const IntroductionCard = () => {
         transition={{
           type: 'spring',
           stiffness: 500,
-          damping: 30
+          damping: 20
         }}
         sx={{
           position: 'absolute',
@@ -227,7 +227,7 @@ const IntroductionCard = () => {
         transition={{
           type: 'spring',
           stiffness: 500,
-          damping: 30
+          damping: 20
         }}
         sx={{
           position: 'absolute',
@@ -252,7 +252,7 @@ const IntroductionCard = () => {
         transition={{
           type: 'spring',
           stiffness: 500,
-          damping: 30
+          damping: 20
         }}
         sx={{
           position: 'absolute',
@@ -275,7 +275,7 @@ const IntroductionCard = () => {
         transition={{
           type: 'spring',
           stiffness: 500,
-          damping: 30
+          damping: 20
         }}
         sx={{
           position: 'absolute',
@@ -299,7 +299,7 @@ const IntroductionCard = () => {
         transition={{
           type: 'spring',
           stiffness: 500,
-          damping: 30
+          damping: 20
         }}
         sx={{
           position: 'absolute',
@@ -323,7 +323,7 @@ const IntroductionCard = () => {
         transition={{
           type: 'spring',
           stiffness: 500,
-          damping: 30
+          damping: 20
         }}
         sx={{
           position: 'absolute',
@@ -346,7 +346,7 @@ const IntroductionCard = () => {
         transition={{
           type: 'spring',
           stiffness: 500,
-          damping: 30
+          damping: 20
         }}
         sx={{
           position: 'absolute',
@@ -369,7 +369,7 @@ const IntroductionCard = () => {
         transition={{
           type: 'spring',
           stiffness: 500,
-          damping: 30
+          damping: 20
         }}
         sx={{
           position: 'absolute',
@@ -393,7 +393,7 @@ const IntroductionCard = () => {
         transition={{
           type: 'spring',
           stiffness: 500,
-          damping: 30
+          damping: 20
         }}
         sx={{
           position: 'absolute',
@@ -417,7 +417,7 @@ const IntroductionCard = () => {
         transition={{
           type: 'spring',
           stiffness: 500,
-          damping: 30
+          damping: 20
         }}
         sx={{
           position: 'absolute',
@@ -441,7 +441,7 @@ const IntroductionCard = () => {
         transition={{
           type: 'spring',
           stiffness: 500,
-          damping: 30
+          damping: 20
         }}
         sx={{
           position: 'absolute',
@@ -465,7 +465,7 @@ const IntroductionCard = () => {
         transition={{
           type: 'spring',
           stiffness: 500,
-          damping: 30
+          damping: 20
         }}
         sx={{
           position: 'absolute',
@@ -510,7 +510,7 @@ const IntroductionCard = () => {
           transition={{
             type: 'spring',
             stiffness: 500,
-            damping: 30
+            damping: 20
           }}
           sx={{
             position: 'absolute',
@@ -533,7 +533,7 @@ const IntroductionCard = () => {
           transition={{
             type: 'spring',
             stiffness: 500,
-            damping: 30
+            damping: 20
           }}
           sx={{
             position: 'absolute',
@@ -557,7 +557,7 @@ const IntroductionCard = () => {
           transition={{
             type: 'spring',
             stiffness: 500,
-            damping: 30
+            damping: 20
           }}
           sx={{
             position: 'absolute',
@@ -622,7 +622,7 @@ const IntroductionCard = () => {
           transition={{
             type: 'spring',
             stiffness: 500,
-            damping: 30
+            damping: 20
           }}
           sx={{
             position: 'absolute',
@@ -646,7 +646,7 @@ const IntroductionCard = () => {
           transition={{
             type: 'spring',
             stiffness: 500,
-            damping: 30
+            damping: 20
           }}
           sx={{
             position: 'absolute',
@@ -670,7 +670,7 @@ const IntroductionCard = () => {
           transition={{
             type: 'spring',
             stiffness: 500,
-            damping: 30
+            damping: 20
           }}
           sx={{
             position: 'absolute',
