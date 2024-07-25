@@ -8,23 +8,23 @@ const Home = () => {
   return (
     <Container sx={{ overflow: 'hidden' }}>
       <Box mt={20}>
-        <Grid container spacing={3} justifyContent='center'>
+        <Grid container spacing={2} justifyContent='center' alignItems='center'>
           {/* <Grid item xs={12}>
             <IntroBanner />
           </Grid> */}
-          <Grid item xs={12} sm={6} md={4} lg={4} xl={4}>
+          <Grid item>
             <IntroductionCard />
           </Grid>
-          <Grid item xs={12} sm={6} md={4} lg={4} xl={4}>
+          <Grid item>
             <IntroductionCard />
           </Grid>
-          <Grid item xs={12} sm={6} md={4} lg={4} xl={4}>
+          <Grid item>
             <IntroductionCard />
           </Grid>
-          <Grid item xs={12} sm={6} md={4} lg={4} xl={4}>
+          <Grid item>
             <IntroductionCard />
           </Grid>
-          <Grid item xs={12} sm={6} md={4} lg={4} xl={4}>
+          <Grid item>
             <IntroductionCard />
           </Grid>
           <Grid item>
