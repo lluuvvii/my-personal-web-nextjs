@@ -96,7 +96,7 @@ const Navbar = ({ window }: Props) => {
                     position: 'absolute',
                     width: '40px',
                     height: '40px',
-                    borderRadius: '50%',
+                    borderRadius: '25%',
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
@@ -224,7 +224,7 @@ const Navbar = ({ window }: Props) => {
                       position: 'absolute',
                       width: '95px',
                       height: '95px',
-                      borderRadius: '50%',
+                      borderRadius: '25%',
                       display: 'flex',
                       justifyContent: 'center',
                       alignItems: 'center',
@@ -251,7 +251,7 @@ const Navbar = ({ window }: Props) => {
                       position: 'absolute',
                       width: '30px',
                       height: '30px',
-                      borderRadius: '50%',
+                      borderRadius: '25%',
                       display: 'flex',
                       justifyContent: 'center',
                       alignItems: 'center',
@@ -611,7 +611,7 @@ const Navbar = ({ window }: Props) => {
                     position: 'absolute',
                     width: '40px',
                     height: '40px',
-                    borderRadius: '50%',
+                    borderRadius: '25%',
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
@@ -739,7 +739,7 @@ const Navbar = ({ window }: Props) => {
                       position: 'absolute',
                       width: '95px',
                       height: '95px',
-                      borderRadius: '50%',
+                      borderRadius: '25%',
                       display: 'flex',
                       justifyContent: 'center',
                       alignItems: 'center',
@@ -983,8 +983,7 @@ const Navbar = ({ window }: Props) => {
                     stiffness: 500,
                     damping: 20,
                     delay: 0.4
-                  }}
-                >
+                  }}>
                   <Box
                     component={motion.div}
                     sx={{
@@ -1037,7 +1036,7 @@ const Navbar = ({ window }: Props) => {
                 position: 'absolute',
                 width: '40px',
                 height: '40px',
-                borderRadius: '50%',
+                borderRadius: '25%',
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
@@ -1052,7 +1051,7 @@ const Navbar = ({ window }: Props) => {
                 position: 'absolute',
                 width: '40px',
                 height: '40px',
-                borderRadius: '50%',
+                borderRadius: '25%',
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
