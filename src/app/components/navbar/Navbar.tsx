@@ -68,7 +68,7 @@ const Navbar = ({ window }: Props) => {
                     position: 'absolute',
                     width: '60px',
                     height: '60px',
-                    borderRadius: '50%',
+                    borderRadius: '25%',
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
@@ -128,7 +128,7 @@ const Navbar = ({ window }: Props) => {
                     alignItems: 'center',
                     cursor: 'pointer',
                     backgroundColor: 'black',
-                    clipPath: 'polygon(100% 50%,83.81% 59.06%,93.3% 75%,74.75% 74.75%,75% 93.3%,59.06% 83.81%,50% 100%,40.94% 83.81%,25% 93.3%,25.25% 74.75%,6.7% 75%,16.19% 59.06%,0% 50%,16.19% 40.94%,6.7% 25%,25.25% 25.25%,25% 6.7%,40.94% 16.19%,50% 0%,59.06% 16.19%,75% 6.7%,74.75% 25.25%,93.3% 25%,83.81% 40.94%)',
+                    clipPath: 'polygon(100% 50%,78.53% 59.27%,90.45% 79.39%,67.63% 74.27%,65.45% 97.55%,50% 80%,34.55% 97.55%,32.37% 74.27%,9.55% 79.39%,21.47% 59.27%,0% 50%,21.47% 40.73%,9.55% 20.61%,32.37% 25.73%,34.55% 2.45%,50% 20%,65.45% 2.45%,67.63% 25.73%,90.45% 20.61%,78.53% 40.73%,100% 50%,78.53% 59.27%,67.12% 55.56%,80% 50%,67.12% 44.44%,74.27% 32.37%,60.58% 35.44%,59.27% 21.47%,50% 32%,40.73% 21.47%,39.42% 35.44%,25.73% 32.37%,32.88% 44.44%,20% 50%,32.88% 55.56%,25.73% 67.63%,39.42% 64.56%,40.73% 78.53%,50% 68%,59.27% 78.53%,60.58% 64.56%,74.27% 67.63%,67.12% 55.56%,80% 50%)',
                     top: '75px',
                     left: '65px'
                   }}
@@ -154,7 +154,7 @@ const Navbar = ({ window }: Props) => {
                       alignItems: 'center',
                       cursor: 'pointer',
                       backgroundColor: 'yellow',
-                      clipPath: 'polygon(100% 50%,83.81% 59.06%,93.3% 75%,74.75% 74.75%,75% 93.3%,59.06% 83.81%,50% 100%,40.94% 83.81%,25% 93.3%,25.25% 74.75%,6.7% 75%,16.19% 59.06%,0% 50%,16.19% 40.94%,6.7% 25%,25.25% 25.25%,25% 6.7%,40.94% 16.19%,50% 0%,59.06% 16.19%,75% 6.7%,74.75% 25.25%,93.3% 25%,83.81% 40.94%)',
+                      clipPath: 'polygon(100% 50%,78.53% 59.27%,90.45% 79.39%,67.63% 74.27%,65.45% 97.55%,50% 80%,34.55% 97.55%,32.37% 74.27%,9.55% 79.39%,21.47% 59.27%,0% 50%,21.47% 40.73%,9.55% 20.61%,32.37% 25.73%,34.55% 2.45%,50% 20%,65.45% 2.45%,67.63% 25.73%,90.45% 20.61%,78.53% 40.73%,100% 50%,78.53% 59.27%,67.12% 55.56%,80% 50%,67.12% 44.44%,74.27% 32.37%,60.58% 35.44%,59.27% 21.47%,50% 32%,40.73% 21.47%,39.42% 35.44%,25.73% 32.37%,32.88% 44.44%,20% 50%,32.88% 55.56%,25.73% 67.63%,39.42% 64.56%,40.73% 78.53%,50% 68%,59.27% 78.53%,60.58% 64.56%,74.27% 67.63%,67.12% 55.56%,80% 50%)',
                       top: '-20px',
                       left: '135px'
                     }}
@@ -170,7 +170,7 @@ const Navbar = ({ window }: Props) => {
                       position: 'absolute',
                       width: '70px',
                       height: '70px',
-                      borderRadius: '50%',
+                      borderRadius: '25%',
                       display: 'flex',
                       justifyContent: 'center',
                       alignItems: 'center',
@@ -197,7 +197,7 @@ const Navbar = ({ window }: Props) => {
                       position: 'absolute',
                       width: '80px',
                       height: '80px',
-                      borderRadius: '50%',
+                      borderRadius: '25%',
                       display: 'flex',
                       justifyContent: 'center',
                       alignItems: 'center',
@@ -457,7 +457,7 @@ const Navbar = ({ window }: Props) => {
                     position: 'absolute',
                     width: '60px',
                     height: '60px',
-                    borderRadius: '50%',
+                    borderRadius: '25%',
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
@@ -487,7 +487,7 @@ const Navbar = ({ window }: Props) => {
                       display: 'flex',
                       justifyContent: 'center',
                       alignItems: 'center',
-                      borderRadius: '50%',
+                      borderRadius: '25%',
                       backgroundColor: 'transparent',
                       border: `5px solid ${'blue'}`
                     }}
@@ -502,7 +502,7 @@ const Navbar = ({ window }: Props) => {
                       display: 'flex',
                       justifyContent: 'center',
                       alignItems: 'center',
-                      borderRadius: '50%',
+                      borderRadius: '25%',
                       backgroundColor: 'transparent',
                       border: `5px solid ${'blue'}`
                     }}
@@ -515,7 +515,7 @@ const Navbar = ({ window }: Props) => {
                     position: 'absolute',
                     width: '95px',
                     height: '95px',
-                    borderRadius: '50%',
+                    borderRadius: '25%',
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
@@ -545,7 +545,7 @@ const Navbar = ({ window }: Props) => {
                       display: 'flex',
                       justifyContent: 'center',
                       alignItems: 'center',
-                      borderRadius: '50%',
+                      borderRadius: '25%',
                       backgroundColor: 'transparent',
                       border: '5px solid yellow'
                     }}
@@ -560,7 +560,7 @@ const Navbar = ({ window }: Props) => {
                       display: 'flex',
                       justifyContent: 'center',
                       alignItems: 'center',
-                      borderRadius: '50%',
+                      borderRadius: '25%',
                       backgroundColor: 'transparent',
                       border: '5px solid yellow'
                     }}
@@ -583,7 +583,7 @@ const Navbar = ({ window }: Props) => {
                     position: 'absolute',
                     width: '60px',
                     height: '60px',
-                    borderRadius: '50%',
+                    borderRadius: '25%',
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
@@ -643,7 +643,7 @@ const Navbar = ({ window }: Props) => {
                     alignItems: 'center',
                     cursor: 'pointer',
                     backgroundColor: 'black',
-                    clipPath: 'polygon(100% 50%,83.81% 59.06%,93.3% 75%,74.75% 74.75%,75% 93.3%,59.06% 83.81%,50% 100%,40.94% 83.81%,25% 93.3%,25.25% 74.75%,6.7% 75%,16.19% 59.06%,0% 50%,16.19% 40.94%,6.7% 25%,25.25% 25.25%,25% 6.7%,40.94% 16.19%,50% 0%,59.06% 16.19%,75% 6.7%,74.75% 25.25%,93.3% 25%,83.81% 40.94%)',
+                    clipPath: 'polygon(100% 50%,78.53% 59.27%,90.45% 79.39%,67.63% 74.27%,65.45% 97.55%,50% 80%,34.55% 97.55%,32.37% 74.27%,9.55% 79.39%,21.47% 59.27%,0% 50%,21.47% 40.73%,9.55% 20.61%,32.37% 25.73%,34.55% 2.45%,50% 20%,65.45% 2.45%,67.63% 25.73%,90.45% 20.61%,78.53% 40.73%,100% 50%,78.53% 59.27%,67.12% 55.56%,80% 50%,67.12% 44.44%,74.27% 32.37%,60.58% 35.44%,59.27% 21.47%,50% 32%,40.73% 21.47%,39.42% 35.44%,25.73% 32.37%,32.88% 44.44%,20% 50%,32.88% 55.56%,25.73% 67.63%,39.42% 64.56%,40.73% 78.53%,50% 68%,59.27% 78.53%,60.58% 64.56%,74.27% 67.63%,67.12% 55.56%,80% 50%)',
                     top: '65px',
                     left: '60px'
                   }}
@@ -669,7 +669,7 @@ const Navbar = ({ window }: Props) => {
                       alignItems: 'center',
                       cursor: 'pointer',
                       backgroundColor: 'black',
-                      clipPath: 'polygon(100% 50%,83.81% 59.06%,93.3% 75%,74.75% 74.75%,75% 93.3%,59.06% 83.81%,50% 100%,40.94% 83.81%,25% 93.3%,25.25% 74.75%,6.7% 75%,16.19% 59.06%,0% 50%,16.19% 40.94%,6.7% 25%,25.25% 25.25%,25% 6.7%,40.94% 16.19%,50% 0%,59.06% 16.19%,75% 6.7%,74.75% 25.25%,93.3% 25%,83.81% 40.94%)',
+                      clipPath: 'polygon(100% 50%,78.53% 59.27%,90.45% 79.39%,67.63% 74.27%,65.45% 97.55%,50% 80%,34.55% 97.55%,32.37% 74.27%,9.55% 79.39%,21.47% 59.27%,0% 50%,21.47% 40.73%,9.55% 20.61%,32.37% 25.73%,34.55% 2.45%,50% 20%,65.45% 2.45%,67.63% 25.73%,90.45% 20.61%,78.53% 40.73%,100% 50%,78.53% 59.27%,67.12% 55.56%,80% 50%,67.12% 44.44%,74.27% 32.37%,60.58% 35.44%,59.27% 21.47%,50% 32%,40.73% 21.47%,39.42% 35.44%,25.73% 32.37%,32.88% 44.44%,20% 50%,32.88% 55.56%,25.73% 67.63%,39.42% 64.56%,40.73% 78.53%,50% 68%,59.27% 78.53%,60.58% 64.56%,74.27% 67.63%,67.12% 55.56%,80% 50%)',
                       top: '-20px',
                       left: '135px'
                     }}
@@ -685,7 +685,7 @@ const Navbar = ({ window }: Props) => {
                       position: 'absolute',
                       width: '70px',
                       height: '70px',
-                      borderRadius: '50%',
+                      borderRadius: '25%',
                       display: 'flex',
                       justifyContent: 'center',
                       alignItems: 'center',
@@ -712,7 +712,7 @@ const Navbar = ({ window }: Props) => {
                       position: 'absolute',
                       width: '80px',
                       height: '80px',
-                      borderRadius: '50%',
+                      borderRadius: '25%',
                       display: 'flex',
                       justifyContent: 'center',
                       alignItems: 'center',
@@ -906,7 +906,7 @@ const Navbar = ({ window }: Props) => {
                     position: 'absolute',
                     width: '60px',
                     height: '60px',
-                    borderRadius: '50%',
+                    borderRadius: '20%',
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
@@ -936,7 +936,7 @@ const Navbar = ({ window }: Props) => {
                       display: 'flex',
                       justifyContent: 'center',
                       alignItems: 'center',
-                      borderRadius: '50%',
+                      borderRadius: '20%',
                       backgroundColor: 'transparent',
                       border: '5px solid white'
                     }}
@@ -951,7 +951,7 @@ const Navbar = ({ window }: Props) => {
                       display: 'flex',
                       justifyContent: 'center',
                       alignItems: 'center',
-                      borderRadius: '50%',
+                      borderRadius: '25%',
                       backgroundColor: 'transparent',
                       border: '5px solid white'
                     }}
@@ -964,7 +964,7 @@ const Navbar = ({ window }: Props) => {
                     position: 'absolute',
                     width: '95px',
                     height: '95px',
-                    borderRadius: '50%',
+                    borderRadius: '25%',
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
@@ -993,7 +993,7 @@ const Navbar = ({ window }: Props) => {
                       display: 'flex',
                       justifyContent: 'center',
                       alignItems: 'center',
-                      borderRadius: '50%',
+                      borderRadius: '25%',
                       backgroundColor: 'transparent',
                       border: '5px solid white'
                     }}
@@ -1008,7 +1008,7 @@ const Navbar = ({ window }: Props) => {
                       display: 'flex',
                       justifyContent: 'center',
                       alignItems: 'center',
-                      borderRadius: '50%',
+                      borderRadius: '20%',
                       backgroundColor: 'transparent',
                       border: '5px solid white'
                     }}
@@ -1072,7 +1072,7 @@ const Navbar = ({ window }: Props) => {
                 alignItems: 'center',
                 cursor: 'pointer',
                 backgroundColor: 'red',
-                clipPath: 'polygon(100% 50%,83.81% 59.06%,93.3% 75%,74.75% 74.75%,75% 93.3%,59.06% 83.81%,50% 100%,40.94% 83.81%,25% 93.3%,25.25% 74.75%,6.7% 75%,16.19% 59.06%,0% 50%,16.19% 40.94%,6.7% 25%,25.25% 25.25%,25% 6.7%,40.94% 16.19%,50% 0%,59.06% 16.19%,75% 6.7%,74.75% 25.25%,93.3% 25%,83.81% 40.94%)',
+                clipPath: 'polygon(100% 50%,78.53% 59.27%,90.45% 79.39%,67.63% 74.27%,65.45% 97.55%,50% 80%,34.55% 97.55%,32.37% 74.27%,9.55% 79.39%,21.47% 59.27%,0% 50%,21.47% 40.73%,9.55% 20.61%,32.37% 25.73%,34.55% 2.45%,50% 20%,65.45% 2.45%,67.63% 25.73%,90.45% 20.61%,78.53% 40.73%,100% 50%,78.53% 59.27%,67.12% 55.56%,80% 50%,67.12% 44.44%,74.27% 32.37%,60.58% 35.44%,59.27% 21.47%,50% 32%,40.73% 21.47%,39.42% 35.44%,25.73% 32.37%,32.88% 44.44%,20% 50%,32.88% 55.56%,25.73% 67.63%,39.42% 64.56%,40.73% 78.53%,50% 68%,59.27% 78.53%,60.58% 64.56%,74.27% 67.63%,67.12% 55.56%,80% 50%)',
                 top: '-20px',
                 left: '-20px'
               }}
@@ -1084,7 +1084,7 @@ const Navbar = ({ window }: Props) => {
                 position: 'absolute',
                 width: '60px',
                 height: '60px',
-                borderRadius: '50%',
+                borderRadius: '25%',
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
@@ -1100,7 +1100,7 @@ const Navbar = ({ window }: Props) => {
                 position: 'absolute',
                 width: '40px',
                 height: '40px',
-                borderRadius: '50%',
+                borderRadius: '25%',
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
@@ -1116,7 +1116,7 @@ const Navbar = ({ window }: Props) => {
                 position: 'absolute',
                 width: '40px',
                 height: '40px',
-                borderRadius: '50%',
+                borderRadius: '25%',
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
