@@ -3,17 +3,16 @@
 import { Button, Stack, Typography, Box, Slide } from '@mui/material'
 import { IconCaretLeftFilled, IconCaretRightFilled } from '@tabler/icons-react'
 import { motion } from 'framer-motion'
-import { useState, useRef } from 'react'
+import { useState } from 'react'
 
 const IntroCardContents = () => {
   const [dialogVal, setDialogVal] = useState(0)
-  const containerRef = useRef<HTMLElement>(null)
 
   return (
     <Box>
       {dialogVal === 0 ?
-        <Box ref={containerRef} sx={{ height: '260px', overflow: 'auto', px: 1, boxShadow: 'inset 0px 0px 5px rgba(0, 0, 0, 0.5)', borderRadius: '5px' }}>
-          <Slide direction='right' in={dialogVal === 0} container={containerRef.current}>
+        <Box sx={{ height: '260px', overflow: 'auto', px: 1, boxShadow: 'inset 0px 0px 5px rgba(0, 0, 0, 0.5)', borderRadius: '5px' }}>
+          <Slide direction='right' in={dialogVal === 0}>
             <Box>
               <Typography
                 variant='h4'
@@ -59,8 +58,8 @@ const IntroCardContents = () => {
         </Box>
         : null}
       {dialogVal === 1 ?
-        <Box ref={containerRef} sx={{ height: '260px', overflow: 'auto', px: 1, boxShadow: 'inset 0px 0px 5px rgba(0, 0, 0, 0.5)', borderRadius: '5px' }}>
-          <Slide direction='right' in={dialogVal === 1} container={containerRef.current}>
+        <Box sx={{ height: '260px', overflow: 'auto', px: 1, boxShadow: 'inset 0px 0px 5px rgba(0, 0, 0, 0.5)', borderRadius: '5px' }}>
+          <Slide direction='right' in={dialogVal === 1}>
             <Box>
               <Typography
                 variant='h6'
@@ -75,8 +74,8 @@ const IntroCardContents = () => {
         </Box>
         : null}
       {dialogVal === 2 ?
-        <Box ref={containerRef} sx={{ height: '260px', overflow: 'auto', px: 1, boxShadow: 'inset 0px 0px 5px rgba(0, 0, 0, 0.5)', borderRadius: '5px' }}>
-          <Slide direction='right' in={dialogVal === 2} container={containerRef.current}>
+        <Box sx={{ height: '260px', overflow: 'auto', px: 1, boxShadow: 'inset 0px 0px 5px rgba(0, 0, 0, 0.5)', borderRadius: '5px' }}>
+          <Slide direction='right' in={dialogVal === 2}>
             <Box>
               <Typography
                 variant='h6'
@@ -92,8 +91,8 @@ const IntroCardContents = () => {
         </Box>
         : null}
       {dialogVal === 3 ?
-        <Box ref={containerRef} sx={{ height: '260px', overflow: 'auto', px: 1, boxShadow: 'inset 0px 0px 5px rgba(0, 0, 0, 0.5)', borderRadius: '5px' }}>
-          <Slide direction='right' in={dialogVal === 3} container={containerRef.current}>
+        <Box sx={{ height: '260px', overflow: 'auto', px: 1, boxShadow: 'inset 0px 0px 5px rgba(0, 0, 0, 0.5)', borderRadius: '5px' }}>
+          <Slide direction='right' in={dialogVal === 3}>
             <Box>
               <Typography
                 variant='h6'
