@@ -11,11 +11,39 @@ const IntroCardContents = () => {
   return (
     <Box>
       {dialogVal === 0 ?
-        <Box sx={{ height: '260px', overflow: 'auto', px: 1, boxShadow: 'inset 0px 0px 5px rgba(0, 0, 0, 0.5)', borderRadius: '5px' }}>
+        <Box
+          sx={{
+            height: '260px',
+            overflow: 'hidden',
+            px: 1,
+            boxShadow: 'inset 0px 0px 5px rgba(0, 0, 0, 0.5)',
+            borderRadius: '5px',
+            position: 'relative',
+            backgroundColor: 'rgba(250, 250, 250, 1)',
+            overFlow: 'hidden',
+            '&::before': {
+              content: '""',
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              right: 0,
+              bottom: 0,
+              background: 'linear-gradient(120deg, transparent, rgba(255,255,255,0.6), transparent)',
+              opacity: 0,
+              transition: 'opacity 0.3s',
+              transform: 'translateX(-100%)',
+            },
+            '&:hover::before': {
+              opacity: 1,
+              transform: 'translateX(100%)',
+              transition: 'transform 0.8s, opacity 0.3s',
+            }
+          }}>
           <Slide direction='right' in={dialogVal === 0}>
             <Box>
               <Typography
                 variant='h5'
+                mt={1}
                 sx={{
                   textAlign: 'center',
                   fontFamily: 'Nunito, Arial, sans-serif',
@@ -26,14 +54,13 @@ const IntroCardContents = () => {
               </Typography>
               <Typography
                 variant='h5'
-                mb={1}
                 sx={{
                   textAlign: 'center',
                   fontFamily: 'Nunito, Arial, sans-serif',
                   fontWeight: 700,
                   color: 'red',
                 }}>
-                I&apos;m I Love Shollakhuddin Kurniawan
+                My name is I Love Shollakhuddin Kurniawan
               </Typography>
               <Typography
                 variant='h6'
@@ -42,23 +69,41 @@ const IntroCardContents = () => {
                   fontFamily: 'Nunito, Arial, sans-serif',
                   fontWeight: 700,
                 }}>
-                You can call me luvi, why?
-              </Typography>
-              <Typography
-                variant='h6'
-                sx={{
-                  textAlign: 'center',
-                  fontFamily: 'Nunito, Arial, sans-serif',
-                  fontWeight: 700,
-                }}>
-                love -&gt; loovee -&gt; luvi
+                You can call me Luvi
               </Typography>
             </Box>
           </Slide>
         </Box>
         : null}
       {dialogVal === 1 ?
-        <Box sx={{ height: '260px', overflow: 'auto', px: 1, boxShadow: 'inset 0px 0px 5px rgba(0, 0, 0, 0.5)', borderRadius: '5px' }}>
+        <Box
+          sx={{
+            height: '260px',
+            overflow: 'hidden',
+            px: 1,
+            boxShadow: 'inset 0px 0px 5px rgba(0, 0, 0, 0.5)',
+            borderRadius: '5px',
+            position: 'relative',
+            backgroundColor: 'rgba(250, 250, 250, 1)',
+            overFlow: 'hidden',
+            '&::before': {
+              content: '""',
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              right: 0,
+              bottom: 0,
+              background: 'linear-gradient(120deg, transparent, rgba(255,255,255,0.6), transparent)',
+              opacity: 0,
+              transition: 'opacity 0.3s',
+              transform: 'translateX(-100%)',
+            },
+            '&:hover::before': {
+              opacity: 1,
+              transform: 'translateX(100%)',
+              transition: 'transform 0.5s, opacity 0.3s',
+            }
+          }}>
           <Slide direction='right' in={dialogVal === 1}>
             <Box>
               <Typography
@@ -74,7 +119,34 @@ const IntroCardContents = () => {
         </Box>
         : null}
       {dialogVal === 2 ?
-        <Box sx={{ height: '260px', overflow: 'auto', px: 1, boxShadow: 'inset 0px 0px 5px rgba(0, 0, 0, 0.5)', borderRadius: '5px' }}>
+        <Box
+          sx={{
+            height: '260px',
+            overflow: 'hidden',
+            px: 1,
+            boxShadow: 'inset 0px 0px 5px rgba(0, 0, 0, 0.5)',
+            borderRadius: '5px',
+            position: 'relative',
+            backgroundColor: 'rgba(250, 250, 250, 1)',
+            overFlow: 'hidden',
+            '&::before': {
+              content: '""',
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              right: 0,
+              bottom: 0,
+              background: 'linear-gradient(120deg, transparent, rgba(255,255,255,0.6), transparent)',
+              opacity: 0,
+              transition: 'opacity 0.3s',
+              transform: 'translateX(-100%)',
+            },
+            '&:hover::before': {
+              opacity: 1,
+              transform: 'translateX(100%)',
+              transition: 'transform 0.5s, opacity 0.3s',
+            }
+          }}>
           <Slide direction='right' in={dialogVal === 2}>
             <Box>
               <Typography
@@ -91,7 +163,34 @@ const IntroCardContents = () => {
         </Box>
         : null}
       {dialogVal === 3 ?
-        <Box sx={{ height: '260px', overflow: 'auto', px: 1, boxShadow: 'inset 0px 0px 5px rgba(0, 0, 0, 0.5)', borderRadius: '5px' }}>
+        <Box
+          sx={{
+            height: '260px',
+            overflow: 'hidden',
+            px: 1,
+            boxShadow: 'inset 0px 0px 5px rgba(0, 0, 0, 0.5)',
+            borderRadius: '5px',
+            position: 'relative',
+            backgroundColor: 'rgba(250, 250, 250, 1)',
+            overFlow: 'hidden',
+            '&::before': {
+              content: '""',
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              right: 0,
+              bottom: 0,
+              background: 'linear-gradient(120deg, transparent, rgba(255,255,255,0.6), transparent)',
+              opacity: 0,
+              transition: 'opacity 0.3s',
+              transform: 'translateX(-100%)',
+            },
+            '&:hover::before': {
+              opacity: 1,
+              transform: 'translateX(100%)',
+              transition: 'transform 0.5s, opacity 0.3s',
+            }
+          }}>
           <Slide direction='right' in={dialogVal === 3}>
             <Box>
               <Typography
