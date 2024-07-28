@@ -15,25 +15,25 @@ const IntroCardContents = () => {
           <Slide direction='right' in={dialogVal === 0}>
             <Box>
               <Typography
-                variant='h4'
+                variant='h5'
                 sx={{
                   textAlign: 'center',
                   fontFamily: 'Nunito, Arial, sans-serif',
                   fontWeight: 700,
                   color: 'black',
                 }}>
-                Hi, My name is
+                Welcome Visitors !!
               </Typography>
               <Typography
-                variant='h4'
-                mb={2}
+                variant='h5'
+                mb={1}
                 sx={{
                   textAlign: 'center',
                   fontFamily: 'Nunito, Arial, sans-serif',
                   fontWeight: 700,
                   color: 'red',
                 }}>
-                I Love Shollakhuddin Kurniawan
+                I&apos;m I Love Shollakhuddin Kurniawan
               </Typography>
               <Typography
                 variant='h6'
@@ -67,7 +67,7 @@ const IntroCardContents = () => {
                   fontFamily: 'Nunito, Arial, sans-serif',
                   fontWeight: 700,
                 }}>
-                I&apos;m a fullstack web developer passionate about getting to the software engineer level, I&apos;m from indonesia and currently pursuing a degree in computer engineering and dedicating my time to gaining knowledge that I will apply in the future.
+                I&apos;m a full stack web developer from Indonesia who is studying informatics and wants to continue to innovate in the field of software development.
               </Typography>
             </Box>
           </Slide>
