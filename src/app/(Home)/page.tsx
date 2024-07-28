@@ -9,11 +9,8 @@ const Home = () => {
     <Container sx={{ overflow: 'hidden' }}>
       <Box mt={20}>
         <Grid container spacing={2} justifyContent='center' alignItems='center'>
-          {/* <Grid item xs={12}>
+          <Grid item xs={12}>
             <IntroBanner />
-          </Grid> */}
-          <Grid item>
-            <IntroductionCard />
           </Grid>
           <Grid item>
             <IntroductionCard />
@@ -28,8 +25,11 @@ const Home = () => {
             <IntroductionCard />
           </Grid>
           <Grid item>
+            <IntroductionCard />
+          </Grid>
+          {/* <Grid item>
             <AskMeModal />
-          </Grid>
+          </Grid> */}
           <Grid item xs={12}>
             <GithubStats />
           </Grid>
