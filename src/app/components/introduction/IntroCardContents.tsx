@@ -359,30 +359,30 @@ const IntroCardContents = () => {
               }
             }}>
             <Typography
-            width='100px'
+              width='100px'
               variant='h5'
               sx={{
                 textAlign: 'center',
                 fontFamily: 'Nunito, Arial, sans-serif',
                 fontWeight: 700,
-                color: 'yellow',
-                textShadow: `
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1)`
+                color: 'red',
+              //   textShadow: `
+              // 0px 1.5px 3px rgba(0,0,0,1), 
+              // 0px 1.5px 3px rgba(0,0,0,1), 
+              // 0px 1.5px 3px rgba(0,0,0,1), 
+              // 0px 1.5px 3px rgba(0,0,0,1), 
+              // 0px 1.5px 3px rgba(0,0,0,1), 
+              // 0px 1.5px 3px rgba(0,0,0,1), 
+              // 0px 1.5px 3px rgba(0,0,0,1), 
+              // 0px 1.5px 3px rgba(0,0,0,1), 
+              // 0px 1.5px 3px rgba(0,0,0,1), 
+              // 0px 1.5px 3px rgba(0,0,0,1), 
+              // 0px 1.5px 3px rgba(0,0,0,1), 
+              // 0px 1.5px 3px rgba(0,0,0,1), 
+              // 0px 1.5px 3px rgba(0,0,0,1), 
+              // 0px 1.5px 3px rgba(0,0,0,1), 
+              // 0px 1.5px 3px rgba(0,0,0,1), 
+              // 0px 1.5px 3px rgba(0,0,0,1)`
               }}>
               Ask Me?
             </Typography>
