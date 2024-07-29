@@ -1,6 +1,6 @@
 'use client'
 
-import { Button, Stack, Typography, Box, Slide, Divider } from '@mui/material'
+import { Button, Stack, Typography, Box, Slide, Divider, Slider } from '@mui/material'
 import { IconCaretLeftFilled, IconCaretRightFilled } from '@tabler/icons-react'
 import { motion } from 'framer-motion'
 import { useState } from 'react'
@@ -390,6 +390,7 @@ const IntroCardContents = () => {
         </Box>
         <Box sx={{ width: '100%', height: '2px', backgroundColor: 'red' }} />
       </Stack>
+      {/* <Slider size='small' defaultValue={0} valueLabelDisplay='auto' orientation='vertical'></Slider> */}
     </Box>
   )
 }
