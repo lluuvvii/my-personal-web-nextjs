@@ -7,6 +7,11 @@ import { useState } from 'react'
 
 const IntroCardContents = () => {
   const [dialogVal, setDialogVal] = useState(0)
+  function preventHorizontalKeyboardNavigation(event: React.KeyboardEvent) {
+    if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
+      event.preventDefault()
+    }
+  }
 
   return (
     <Box>
@@ -366,23 +371,23 @@ const IntroCardContents = () => {
                 fontFamily: 'Nunito, Arial, sans-serif',
                 fontWeight: 700,
                 color: 'red',
-              //   textShadow: `
-              // 0px 1.5px 3px rgba(0,0,0,1), 
-              // 0px 1.5px 3px rgba(0,0,0,1), 
-              // 0px 1.5px 3px rgba(0,0,0,1), 
-              // 0px 1.5px 3px rgba(0,0,0,1), 
-              // 0px 1.5px 3px rgba(0,0,0,1), 
-              // 0px 1.5px 3px rgba(0,0,0,1), 
-              // 0px 1.5px 3px rgba(0,0,0,1), 
-              // 0px 1.5px 3px rgba(0,0,0,1), 
-              // 0px 1.5px 3px rgba(0,0,0,1), 
-              // 0px 1.5px 3px rgba(0,0,0,1), 
-              // 0px 1.5px 3px rgba(0,0,0,1), 
-              // 0px 1.5px 3px rgba(0,0,0,1), 
-              // 0px 1.5px 3px rgba(0,0,0,1), 
-              // 0px 1.5px 3px rgba(0,0,0,1), 
-              // 0px 1.5px 3px rgba(0,0,0,1), 
-              // 0px 1.5px 3px rgba(0,0,0,1)`
+                //   textShadow: `
+                // 0px 1.5px 3px rgba(0,0,0,1), 
+                // 0px 1.5px 3px rgba(0,0,0,1), 
+                // 0px 1.5px 3px rgba(0,0,0,1), 
+                // 0px 1.5px 3px rgba(0,0,0,1), 
+                // 0px 1.5px 3px rgba(0,0,0,1), 
+                // 0px 1.5px 3px rgba(0,0,0,1), 
+                // 0px 1.5px 3px rgba(0,0,0,1), 
+                // 0px 1.5px 3px rgba(0,0,0,1), 
+                // 0px 1.5px 3px rgba(0,0,0,1), 
+                // 0px 1.5px 3px rgba(0,0,0,1), 
+                // 0px 1.5px 3px rgba(0,0,0,1), 
+                // 0px 1.5px 3px rgba(0,0,0,1), 
+                // 0px 1.5px 3px rgba(0,0,0,1), 
+                // 0px 1.5px 3px rgba(0,0,0,1), 
+                // 0px 1.5px 3px rgba(0,0,0,1), 
+                // 0px 1.5px 3px rgba(0,0,0,1)`
               }}>
               Ask Me?
             </Typography>
@@ -390,7 +395,21 @@ const IntroCardContents = () => {
         </Box>
         <Box sx={{ width: '100%', height: '2px', backgroundColor: 'red' }} />
       </Stack>
-      {/* <Slider size='small' defaultValue={0} valueLabelDisplay='auto' orientation='vertical'></Slider> */}
+      <Box sx={{ height: '100px' }}>
+        <Slider
+          sx={{
+            '& input[type="range"]': {
+              WebkitAppearance: 'slider-vertical',
+            },
+            color: 'red'
+          }}
+          orientation="vertical"
+          defaultValue={30}
+          aria-label="Temperature"
+          valueLabelDisplay="auto"
+          onKeyDown={preventHorizontalKeyboardNavigation}
+        />
+      </Box>
     </Box>
   )
 }
