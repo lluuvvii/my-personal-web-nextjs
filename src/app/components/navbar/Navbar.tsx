@@ -596,7 +596,7 @@ const Navbar = ({ window }: Props) => {
                   }}
                   drag
                   initial={{ scale: !trigger ? 0 : 1 }}
-                  animate={{ scale: !trigger ? 1 : 0 }}
+                  animate={{ scale: !trigger ? 1 : 0, rotate: 15 }}
                   transition={{
                     type: 'spring',
                     stiffness: 500,
@@ -623,7 +623,7 @@ const Navbar = ({ window }: Props) => {
                   }}
                   drag
                   initial={{ scale: !trigger ? 0 : 1 }}
-                  animate={{ scale: !trigger ? 1 : 0 }}
+                  animate={{ scale: !trigger ? 1 : 0, rotate: 15 }}
                   transition={{
                     type: 'spring',
                     stiffness: 500,
@@ -697,7 +697,7 @@ const Navbar = ({ window }: Props) => {
                     }}
                     drag
                     initial={{ scale: !trigger ? 0 : 1 }}
-                    animate={{ scale: !trigger ? 1 : 0 }}
+                    animate={{ scale: !trigger ? 1 : 0, rotate: 15 }}
                     transition={{
                       type: 'spring',
                       stiffness: 500,
@@ -723,7 +723,7 @@ const Navbar = ({ window }: Props) => {
                     }}
                     drag
                     initial={{ scale: !trigger ? 0 : 1 }}
-                    animate={{ scale: !trigger ? 1 : 0 }}
+                    animate={{ scale: !trigger ? 1 : 0, rotate: 15 }}
                     transition={{
                       type: 'spring',
                       stiffness: 500,
@@ -751,7 +751,7 @@ const Navbar = ({ window }: Props) => {
                     }}
                     drag
                     initial={{ scale: !trigger ? 0 : 1 }}
-                    animate={{ scale: !trigger ? 1 : 0 }}
+                    animate={{ scale: !trigger ? 1 : 0, rotate: 15 }}
                     transition={{
                       type: 'spring',
                       stiffness: 500,
@@ -919,7 +919,7 @@ const Navbar = ({ window }: Props) => {
                   }}
                   drag
                   initial={{ scale: !trigger ? 0 : 1 }}
-                  animate={{ scale: !trigger ? 1 : 0 }}
+                  animate={{ scale: !trigger ? 1 : 0, rotate: 15 }}
                   transition={{
                     type: 'spring',
                     stiffness: 500,
@@ -977,7 +977,7 @@ const Navbar = ({ window }: Props) => {
                   }}
                   drag
                   initial={{ scale: !trigger ? 0 : 1 }}
-                  animate={{ scale: !trigger ? 1 : 0 }}
+                  animate={{ scale: !trigger ? 1 : 0, rotate: 15 }}
                   transition={{
                     type: 'spring',
                     stiffness: 500,
