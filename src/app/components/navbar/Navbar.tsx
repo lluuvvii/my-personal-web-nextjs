@@ -1043,6 +1043,7 @@ const Navbar = ({ window }: Props) => {
                 background: 'repeating-linear-gradient(45deg, red, red 5px, transparent 5px, transparent 9px)',
                 top: '-15px',
                 left: '20px',
+                transform: 'rotate(15deg)'
               }}
             >
             </Box>
@@ -1058,6 +1059,7 @@ const Navbar = ({ window }: Props) => {
                 background: 'repeating-linear-gradient(45deg, #d10000, #d10000 5px, transparent 5px, transparent 9px)',
                 bottom: '15px',
                 right: '-20px',
+                transform: 'rotate(15deg)'
               }}
             >
             </Box>
@@ -1091,7 +1093,8 @@ const Navbar = ({ window }: Props) => {
                 backgroundColor: 'transparent',
                 border: '7px solid #d10000',
                 bottom: '-15px',
-                right: '-15px'
+                right: '-15px',
+                transform: 'rotate(15deg)'
               }}
             >
             </Box>
@@ -1107,7 +1110,8 @@ const Navbar = ({ window }: Props) => {
                 backgroundColor: 'transparent',
                 border: '7px solid red',
                 top: '10px',
-                left: '-20px'
+                left: '-20px',
+                transform: 'rotate(15deg)'
               }}
             >
             </Box>
@@ -1123,6 +1127,7 @@ const Navbar = ({ window }: Props) => {
                 backgroundColor: '#d10000',
                 bottom: '-15px',
                 right: '20px',
+                transform: 'rotate(15deg)'
               }}
             >
             </Box>
