@@ -595,8 +595,8 @@ const Navbar = ({ window }: Props) => {
                     left: '20px'
                   }}
                   drag
-                  initial={{ scale: !trigger ? 0 : 1 }}
-                  animate={{ scale: !trigger ? 1 : 0, rotate: 15 }}
+                  initial={{ scale: !trigger ? 0 : 1, rotate: 15 }}
+                  animate={{ scale: !trigger ? 1 : 0 }}
                   transition={{
                     type: 'spring',
                     stiffness: 500,
@@ -622,8 +622,8 @@ const Navbar = ({ window }: Props) => {
                     right: '-10px',
                   }}
                   drag
-                  initial={{ scale: !trigger ? 0 : 1 }}
-                  animate={{ scale: !trigger ? 1 : 0, rotate: 15 }}
+                  initial={{ scale: !trigger ? 0 : 1, rotate: 15 }}
+                  animate={{ scale: !trigger ? 1 : 0 }}
                   transition={{
                     type: 'spring',
                     stiffness: 500,
@@ -696,8 +696,8 @@ const Navbar = ({ window }: Props) => {
                       left: '30px'
                     }}
                     drag
-                    initial={{ scale: !trigger ? 0 : 1 }}
-                    animate={{ scale: !trigger ? 1 : 0, rotate: 15 }}
+                    initial={{ scale: !trigger ? 0 : 1, rotate: 15 }}
+                    animate={{ scale: !trigger ? 1 : 0 }}
                     transition={{
                       type: 'spring',
                       stiffness: 500,
@@ -722,8 +722,8 @@ const Navbar = ({ window }: Props) => {
                       left: '-20px'
                     }}
                     drag
-                    initial={{ scale: !trigger ? 0 : 1 }}
-                    animate={{ scale: !trigger ? 1 : 0, rotate: 15 }}
+                    initial={{ scale: !trigger ? 0 : 1, rotate: 15 }}
+                    animate={{ scale: !trigger ? 1 : 0 }}
                     transition={{
                       type: 'spring',
                       stiffness: 500,
@@ -750,8 +750,8 @@ const Navbar = ({ window }: Props) => {
                       left: '-30px',
                     }}
                     drag
-                    initial={{ scale: !trigger ? 0 : 1 }}
-                    animate={{ scale: !trigger ? 1 : 0, rotate: 15 }}
+                    initial={{ scale: !trigger ? 0 : 1, rotate: 15 }}
+                    animate={{ scale: !trigger ? 1 : 0 }}
                     transition={{
                       type: 'spring',
                       stiffness: 500,
@@ -918,8 +918,8 @@ const Navbar = ({ window }: Props) => {
                     left: '90px'
                   }}
                   drag
-                  initial={{ scale: !trigger ? 0 : 1 }}
-                  animate={{ scale: !trigger ? 1 : 0, rotate: 15 }}
+                  initial={{ scale: !trigger ? 0 : 1, rotate: 15 }}
+                  animate={{ scale: !trigger ? 1 : 0 }}
                   transition={{
                     type: 'spring',
                     stiffness: 500,
@@ -976,8 +976,8 @@ const Navbar = ({ window }: Props) => {
                     left: '-60px'
                   }}
                   drag
-                  initial={{ scale: !trigger ? 0 : 1 }}
-                  animate={{ scale: !trigger ? 1 : 0, rotate: 15 }}
+                  initial={{ scale: !trigger ? 0 : 1, rotate: 15 }}
+                  animate={{ scale: !trigger ? 1 : 0 }}
                   transition={{
                     type: 'spring',
                     stiffness: 500,
