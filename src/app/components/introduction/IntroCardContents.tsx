@@ -1,16 +1,23 @@
 'use client'
 
-import { Button, Stack, Typography, Box, Slide, Divider, Slider } from '@mui/material'
-import { IconCaretLeftFilled, IconCaretRightFilled } from '@tabler/icons-react'
+import { Button, Stack, Typography, Box, Slide, Slider } from '@mui/material'
+import { IconArrowNarrowUp, IconCaretLeftFilled, IconCaretRightFilled } from '@tabler/icons-react'
 import { motion } from 'framer-motion'
 import { useState } from 'react'
 
 const IntroCardContents = () => {
   const [dialogVal, setDialogVal] = useState(0)
-  function preventHorizontalKeyboardNavigation(event: React.KeyboardEvent) {
-    if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
-      event.preventDefault()
-    }
+
+  const defaultValue = 0
+  const [value, setValue] = useState(defaultValue)
+  const threshold = 100 // Batas nilai untuk mempertahankan atau mengembalikan nilai slider
+
+  const handleChange = (event: any, newValue: any) => {
+    setValue(newValue)
+  }
+
+  const handleDragEnd = (event: any) => {
+    setValue(defaultValue)
   }
 
   return (
@@ -395,21 +402,32 @@ const IntroCardContents = () => {
         </Box>
         <Box sx={{ width: '100%', height: '2px', backgroundColor: 'red' }} />
       </Stack>
-      <Box sx={{ height: '100px' }}>
+      <Box height='100px'>
         <Slider
-          sx={{
-            '& input[type="range"]': {
-              WebkitAppearance: 'slider-vertical',
-            },
-            color: 'red'
-          }}
           orientation="vertical"
-          defaultValue={30}
-          aria-label="Temperature"
+          value={value}
           valueLabelDisplay="auto"
-          onKeyDown={preventHorizontalKeyboardNavigation}
+          onChange={handleChange}
+          onMouseUp={handleDragEnd}
+          onTouchEnd={handleDragEnd}
+          sx={{
+            '& .MuiSlider-track': {
+              color: 'red',
+            },
+            '& .MuiSlider-rail': {
+              color: 'transparent',
+            },
+            '& .MuiSlider-thumb': {
+              color: 'red',
+            },
+          }}
         />
       </Box>
+      {/* <CircularInput value={value} onChange={setValue}>
+          <CircularTrack />
+          <CircularProgress />
+          <CircularThumb />
+        </CircularInput> */}
     </Box>
   )
 }
