@@ -25,6 +25,9 @@ const IntroCardContents = () => {
       {dialogVal === 0 ?
         <Box
           sx={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
             height: '260px',
             overflow: 'hidden',
             px: 1,
@@ -55,7 +58,6 @@ const IntroCardContents = () => {
             <Box>
               <Typography
                 variant='h5'
-                mt={1}
                 sx={{
                   textAlign: 'center',
                   fontFamily: 'Nunito, Arial, sans-serif',
@@ -66,6 +68,7 @@ const IntroCardContents = () => {
               </Typography>
               <Typography
                 variant='h5'
+                mt={1}
                 sx={{
                   textAlign: 'center',
                   fontFamily: 'Nunito, Arial, sans-serif',
@@ -76,6 +79,7 @@ const IntroCardContents = () => {
               </Typography>
               <Typography
                 variant='h6'
+                mt={1}
                 sx={{
                   textAlign: 'center',
                   fontFamily: 'Nunito, Arial, sans-serif',
