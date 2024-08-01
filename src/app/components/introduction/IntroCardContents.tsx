@@ -1,24 +1,12 @@
 'use client'
 
 import { Button, Stack, Typography, Box, Slide, Slider } from '@mui/material'
-import { IconArrowNarrowUp, IconCaretLeftFilled, IconCaretRightFilled } from '@tabler/icons-react'
+import { IconCaretLeftFilled, IconCaretRightFilled } from '@tabler/icons-react'
 import { motion } from 'framer-motion'
 import { useState } from 'react'
 
 const IntroCardContents = () => {
   const [dialogVal, setDialogVal] = useState(0)
-
-  const defaultValue = 0
-  const [value, setValue] = useState(defaultValue)
-  const threshold = 100 // Batas nilai untuk mempertahankan atau mengembalikan nilai slider
-
-  const handleChange = (event: any, newValue: any) => {
-    setValue(newValue)
-  }
-
-  const handleDragEnd = (event: any) => {
-    setValue(defaultValue)
-  }
 
   return (
     <Box>
@@ -345,7 +333,7 @@ const IntroCardContents = () => {
         </Box>
       </Stack>
       {/* ask me button */}
-      <Stack direction='row' alignItems='center'>
+      {/* <Stack direction='row' alignItems='center'>
         <Box sx={{ width: '100%', height: '2px', backgroundColor: 'red' }} />
         <Box
           component={motion.div}
@@ -405,33 +393,7 @@ const IntroCardContents = () => {
           </Button>
         </Box>
         <Box sx={{ width: '100%', height: '2px', backgroundColor: 'red' }} />
-      </Stack>
-      <Box height='100px'>
-        <Slider
-          orientation="vertical"
-          value={value}
-          valueLabelDisplay="auto"
-          onChange={handleChange}
-          onMouseUp={handleDragEnd}
-          onTouchEnd={handleDragEnd}
-          sx={{
-            '& .MuiSlider-track': {
-              color: 'red',
-            },
-            '& .MuiSlider-rail': {
-              color: 'transparent',
-            },
-            '& .MuiSlider-thumb': {
-              color: 'red',
-            },
-          }}
-        />
-      </Box>
-      {/* <CircularInput value={value} onChange={setValue}>
-          <CircularTrack />
-          <CircularProgress />
-          <CircularThumb />
-        </CircularInput> */}
+      </Stack> */}
     </Box>
   )
 }
