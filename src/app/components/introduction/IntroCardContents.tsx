@@ -499,7 +499,8 @@ const IntroCardContents = () => {
         sx={{
           top: '10px',
           left: '10px',
-          // filter: 'drop-shadow(-2px 2px 2px rgba(0,0,0,0.5))',
+          borderRadius: '10px',
+          boxShadow: '0px 0px 4px rgba(0,0,0,0.5)'
         }}>
         <Box
           component={motion.div}
@@ -517,7 +518,6 @@ const IntroCardContents = () => {
             height: '280px',
             p: '10px',
             background: 'linear-gradient(100deg, red, red)',
-            // filter: 'drop-shadow(-2px 2px 2px rgba(0,0,0,0.5))',
             borderRadius: '10px',
             overflow: 'hidden',
           }}>

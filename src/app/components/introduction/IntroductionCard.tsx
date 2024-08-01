@@ -37,7 +37,7 @@ const IntroductionCard = () => {
         sx={{
           position: 'absolute',
           '& svg': {
-            filter: 'drop-shadow(-2px 3px 10px rgba(0,0,0,0.5))',
+            // filter: 'drop-shadow(-2px 3px 10px rgba(0,0,0,0.5))',
           },
           top: '-15px',
           left: '100px'
@@ -75,7 +75,7 @@ const IntroductionCard = () => {
           justifyContent: 'center',
           alignItems: 'center',
           background: 'repeating-linear-gradient(45deg, black, black, 6px, transparent 6px, transparent 11px)',
-          filter: 'drop-shadow(-2px 2px 2px rgba(0,0,0,0.5))',
+          // filter: 'drop-shadow(-2px 2px 2px rgba(0,0,0,0.5))',
           top: '-25px',
           left: '40px',
         }}>
@@ -238,7 +238,7 @@ const IntroductionCard = () => {
           justifyContent: 'center',
           alignItems: 'center',
           background: 'repeating-linear-gradient(45deg, red, red, 6px, transparent 6px, transparent 11px)',
-          filter: 'drop-shadow(-2px 2px 2px rgba(0,0,0,0.5))',
+          // filter: 'drop-shadow(-2px 2px 2px rgba(0,0,0,0.5))',
           top: '15px',
           left: '-30px',
         }}>
@@ -310,7 +310,7 @@ const IntroductionCard = () => {
           justifyContent: 'center',
           alignItems: 'center',
           background: 'repeating-linear-gradient(45deg, white, white, 6px, transparent 6px, transparent 11px)',
-          filter: 'drop-shadow(-2px 2px 2px rgba(0,0,0,0.5))',
+          // filter: 'drop-shadow(-2px 2px 2px rgba(0,0,0,0.5))',
           bottom: '25px',
           right: '-30px',
         }}>
@@ -404,7 +404,7 @@ const IntroductionCard = () => {
           justifyContent: 'center',
           alignItems: 'center',
           background: 'repeating-linear-gradient(45deg, red, red, 6px, transparent 6px, transparent 11px)',
-          filter: 'drop-shadow(-2px 2px 2px rgba(0,0,0,0.5))',
+          // filter: 'drop-shadow(-2px 2px 2px rgba(0,0,0,0.5))',
           bottom: '-25px',
           right: '30px',
         }}>
@@ -470,7 +470,7 @@ const IntroductionCard = () => {
         sx={{
           position: 'absolute',
           '& svg': {
-            filter: 'drop-shadow(-2px 3px 10px rgba(0,0,0,0.5))',
+            // filter: 'drop-shadow(-2px 3px 10px rgba(0,0,0,0.5))',
           },
           bottom: '-25px',
           right: '0px'
@@ -496,7 +496,7 @@ const IntroductionCard = () => {
           padding: '10px',
           background: 'linear-gradient(100deg, red, #d10000)',
           borderRadius: '20px',
-          // filter: 'drop-shadow(-2px 2px 2px rgba(0,0,0,0.5))',
+          boxShadow: '0px 0px 4px rgba(0,0,0,0.5)'
         }}
       >
         {/* introcard contents */}
@@ -506,7 +506,6 @@ const IntroductionCard = () => {
             position: 'relative',
             borderRadius: '10px', backgroundColor: 'white',
             padding: '10px',
-            // boxShadow: 'inset 0px 0px 5px rgba(0, 0, 0, 0.5)'
           }}>
           <IntroCardContents />
         </Box>
