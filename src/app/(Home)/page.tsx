@@ -11,8 +11,26 @@ const Home = () => {
           <Grid item>
             <Stack direction='column' spacing={2}>
               <IntroductionCard />
-              <AskMeCard />
+              {/* <AskMeCard /> */}
             </Stack>
+          </Grid>
+          <Grid item>
+            <IntroductionCard />
+          </Grid>
+          <Grid item>
+            <IntroductionCard />
+          </Grid>
+          <Grid item>
+            <IntroductionCard />
+          </Grid>
+          <Grid item>
+            <IntroductionCard />
+          </Grid>
+          <Grid item>
+            <IntroductionCard />
+          </Grid>
+          <Grid item>
+            <IntroductionCard />
           </Grid>
           <Grid item>
             <IntroductionCard />
