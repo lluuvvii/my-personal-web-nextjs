@@ -502,12 +502,13 @@ const AskMeCard = () => {
           sx={{
             width: '280px',
             position: 'relative',
-            borderRadius: '10px', backgroundColor: 'white',
+            borderRadius: '10px',
+            backgroundColor: 'white',
             padding: '10px',
             boxShadow: 'inset 0px 0px 5px rgba(0, 0, 0, 0.5)'
           }}>
           <Stack direction='row' alignItems='center'>
-            <Box sx={{ width: '100%', height: '2px', backgroundColor: 'red' }} />
+            <Box sx={{ width: '100%', height: '3px', backgroundColor: 'red' }} />
             <Box
               component={motion.div}
               whileHover={{ scale: 1.1 }}
@@ -542,30 +543,30 @@ const AskMeCard = () => {
                     textAlign: 'center',
                     fontFamily: 'Nunito, Arial, sans-serif',
                     fontWeight: 700,
-                    color: 'red',
-                    //   textShadow: `
-                    // 0px 1.5px 3px rgba(0,0,0,1), 
-                    // 0px 1.5px 3px rgba(0,0,0,1), 
-                    // 0px 1.5px 3px rgba(0,0,0,1), 
-                    // 0px 1.5px 3px rgba(0,0,0,1), 
-                    // 0px 1.5px 3px rgba(0,0,0,1), 
-                    // 0px 1.5px 3px rgba(0,0,0,1), 
-                    // 0px 1.5px 3px rgba(0,0,0,1), 
-                    // 0px 1.5px 3px rgba(0,0,0,1), 
-                    // 0px 1.5px 3px rgba(0,0,0,1), 
-                    // 0px 1.5px 3px rgba(0,0,0,1), 
-                    // 0px 1.5px 3px rgba(0,0,0,1), 
-                    // 0px 1.5px 3px rgba(0,0,0,1), 
-                    // 0px 1.5px 3px rgba(0,0,0,1), 
-                    // 0px 1.5px 3px rgba(0,0,0,1), 
-                    // 0px 1.5px 3px rgba(0,0,0,1), 
-                    // 0px 1.5px 3px rgba(0,0,0,1)`
+                    color: 'white',
+                      textShadow: `
+                    0px 1.5px 3px rgba(200,0,0,1), 
+                    0px 1.5px 3px rgba(200,0,0,1), 
+                    0px 1.5px 3px rgba(200,0,0,1), 
+                    0px 1.5px 3px rgba(200,0,0,1), 
+                    0px 1.5px 3px rgba(200,0,0,1), 
+                    0px 1.5px 3px rgba(200,0,0,1), 
+                    0px 1.5px 3px rgba(200,0,0,1), 
+                    0px 1.5px 3px rgba(200,0,0,1), 
+                    0px 1.5px 3px rgba(200,0,0,1), 
+                    0px 1.5px 3px rgba(200,0,0,1), 
+                    0px 1.5px 3px rgba(200,0,0,1), 
+                    0px 1.5px 3px rgba(200,0,0,1), 
+                    0px 1.5px 3px rgba(200,0,0,1), 
+                    0px 1.5px 3px rgba(200,0,0,1), 
+                    0px 1.5px 3px rgba(200,0,0,1), 
+                    0px 1.5px 3px rgba(200,0,0,1)`
                   }}>
                   Ask Me?
                 </Typography>
               </Button>
             </Box>
-            <Box sx={{ width: '100%', height: '2px', backgroundColor: 'red' }} />
+            <Box sx={{ width: '100%', height: '3px', backgroundColor: 'red' }} />
           </Stack>
         </Box>
         {/* striped circle */}

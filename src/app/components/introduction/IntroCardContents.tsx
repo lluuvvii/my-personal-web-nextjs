@@ -210,8 +210,9 @@ const IntroCardContents = () => {
           </Slide>
         </Box>
         : null}
-      <Stack direction='row' justifyContent='space-between'>
+      <Stack direction='row' justifyContent='space-between' alignItems='center'>
         <Box
+          mr={1}
           component={motion.div}
           whileHover={{ scale: dialogVal > 0 ? 1.1 : 0 }}
           whileTap={{ scale: dialogVal > 0 ? 1 : 0 }}
@@ -271,7 +272,9 @@ const IntroCardContents = () => {
             </Typography>
           </Button>
         </Box>
+        <Box sx={{ width: '100%', height: '3px', backgroundColor: 'red' }} />
         <Box
+          ml={1}
           component={motion.div}
           whileHover={{ scale: dialogVal < 3 ? 1.1 : 0 }}
           initial={{ scale: 0 }}
@@ -332,68 +335,6 @@ const IntroCardContents = () => {
           </Button>
         </Box>
       </Stack>
-      {/* ask me button */}
-      {/* <Stack direction='row' alignItems='center'>
-        <Box sx={{ width: '100%', height: '2px', backgroundColor: 'red' }} />
-        <Box
-          component={motion.div}
-          whileHover={{ scale: 1.1 }}
-          initial={{ scale: 0 }}
-          whileTap={{ scale: 1 }}
-          animate={{ scale: 1 }}
-          transition={{
-            type: 'spring',
-            stiffness: 500,
-            damping: 20
-          }}>
-          <Button
-            onClick={() => { }}
-            size='small'
-            sx={{
-              color: 'grey',
-              borderRadius: '10px',
-              backgroundColor: 'transparent',
-              textTransform: 'none',
-              '&:active': {
-                color: 'transparent'
-              },
-              '&:hover': {
-                backgroundColor: 'transparent',
-                color: 'transparent'
-              }
-            }}>
-            <Typography
-              width='100px'
-              variant='h5'
-              sx={{
-                textAlign: 'center',
-                fontFamily: 'Nunito, Arial, sans-serif',
-                fontWeight: 700,
-                color: 'red',
-                //   textShadow: `
-                // 0px 1.5px 3px rgba(0,0,0,1), 
-                // 0px 1.5px 3px rgba(0,0,0,1), 
-                // 0px 1.5px 3px rgba(0,0,0,1), 
-                // 0px 1.5px 3px rgba(0,0,0,1), 
-                // 0px 1.5px 3px rgba(0,0,0,1), 
-                // 0px 1.5px 3px rgba(0,0,0,1), 
-                // 0px 1.5px 3px rgba(0,0,0,1), 
-                // 0px 1.5px 3px rgba(0,0,0,1), 
-                // 0px 1.5px 3px rgba(0,0,0,1), 
-                // 0px 1.5px 3px rgba(0,0,0,1), 
-                // 0px 1.5px 3px rgba(0,0,0,1), 
-                // 0px 1.5px 3px rgba(0,0,0,1), 
-                // 0px 1.5px 3px rgba(0,0,0,1), 
-                // 0px 1.5px 3px rgba(0,0,0,1), 
-                // 0px 1.5px 3px rgba(0,0,0,1), 
-                // 0px 1.5px 3px rgba(0,0,0,1)`
-              }}>
-              Ask Me?
-            </Typography>
-          </Button>
-        </Box>
-        <Box sx={{ width: '100%', height: '2px', backgroundColor: 'red' }} />
-      </Stack> */}
     </Box>
   )
 }
