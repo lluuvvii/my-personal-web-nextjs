@@ -15,6 +15,12 @@ const Home = () => {
           <Grid item>
             <IntroductionCard />
           </Grid>
+          <Grid item>
+            <IntroductionCard />
+          </Grid>
+          <Grid item>
+            <IntroductionCard />
+          </Grid>
           {/* <Grid item>
             <AskMeModal />
           </Grid> */}
