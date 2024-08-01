@@ -33,14 +33,19 @@ const IntroCardContents = () => {
               bottom: 0,
               background: 'linear-gradient(120deg, transparent, rgba(255,255,255,0.6), transparent)',
               opacity: 0,
-              transition: 'opacity 0.3s',
-              transform: 'translateX(-100%)',
+              animation: 'moveGradient 0.5s forwards',
+              animationDelay: '0.5s',
             },
-            '&:hover::before': {
-              opacity: 1,
-              transform: 'translateX(100%)',
-              transition: 'transform 0.8s, opacity 0.3s',
-            }
+            '@keyframes moveGradient': {
+              '0%': {
+                opacity: 1,
+                transform: 'translateX(-100%)',
+              },
+              '100%': {
+                opacity: 1,
+                transform: 'translateX(100%)',
+              },
+            },
           }}>
           <Slide direction='right' in={dialogVal === 0}>
             <Box>
@@ -82,6 +87,9 @@ const IntroCardContents = () => {
       {dialogVal === 1 ?
         <Box
           sx={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
             height: '260px',
             overflow: 'hidden',
             px: 1,
@@ -99,14 +107,19 @@ const IntroCardContents = () => {
               bottom: 0,
               background: 'linear-gradient(120deg, transparent, rgba(255,255,255,0.6), transparent)',
               opacity: 0,
-              transition: 'opacity 0.3s',
-              transform: 'translateX(-100%)',
+              animation: 'moveGradient 0.5s forwards',
+              animationDelay: '0.5s',
             },
-            '&:hover::before': {
-              opacity: 1,
-              transform: 'translateX(100%)',
-              transition: 'transform 0.5s, opacity 0.3s',
-            }
+            '@keyframes moveGradient': {
+              '0%': {
+                opacity: 1,
+                transform: 'translateX(-100%)',
+              },
+              '100%': {
+                opacity: 1,
+                transform: 'translateX(100%)',
+              },
+            },
           }}>
           <Slide direction='right' in={dialogVal === 1}>
             <Box>
@@ -125,6 +138,9 @@ const IntroCardContents = () => {
       {dialogVal === 2 ?
         <Box
           sx={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
             height: '260px',
             overflow: 'hidden',
             px: 1,
@@ -142,14 +158,19 @@ const IntroCardContents = () => {
               bottom: 0,
               background: 'linear-gradient(120deg, transparent, rgba(255,255,255,0.6), transparent)',
               opacity: 0,
-              transition: 'opacity 0.3s',
-              transform: 'translateX(-100%)',
+              animation: 'moveGradient 0.5s forwards',
+              animationDelay: '0.5s',
             },
-            '&:hover::before': {
-              opacity: 1,
-              transform: 'translateX(100%)',
-              transition: 'transform 0.5s, opacity 0.3s',
-            }
+            '@keyframes moveGradient': {
+              '0%': {
+                opacity: 1,
+                transform: 'translateX(-100%)',
+              },
+              '100%': {
+                opacity: 1,
+                transform: 'translateX(100%)',
+              },
+            },
           }}>
           <Slide direction='right' in={dialogVal === 2}>
             <Box>
@@ -169,6 +190,9 @@ const IntroCardContents = () => {
       {dialogVal === 3 ?
         <Box
           sx={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
             height: '260px',
             overflow: 'hidden',
             px: 1,
@@ -186,14 +210,19 @@ const IntroCardContents = () => {
               bottom: 0,
               background: 'linear-gradient(120deg, transparent, rgba(255,255,255,0.6), transparent)',
               opacity: 0,
-              transition: 'opacity 0.3s',
-              transform: 'translateX(-100%)',
+              animation: 'moveGradient 0.5s forwards',
+              animationDelay: '0.5s',
             },
-            '&:hover::before': {
-              opacity: 1,
-              transform: 'translateX(100%)',
-              transition: 'transform 0.5s, opacity 0.3s',
-            }
+            '@keyframes moveGradient': {
+              '0%': {
+                opacity: 1,
+                transform: 'translateX(-100%)',
+              },
+              '100%': {
+                opacity: 1,
+                transform: 'translateX(100%)',
+              },
+            },
           }}>
           <Slide direction='right' in={dialogVal === 3}>
             <Box>
