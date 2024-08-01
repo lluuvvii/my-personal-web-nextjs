@@ -7,16 +7,17 @@ import { motion } from 'framer-motion'
 
 const IntroductionCard = () => {
   const [onHover, setOnHover] = useState(false)
-  const [onClick, setOnClick] = useState(false)
+  const [onTouch, setOnTouch] = useState(false)
   return (
     <Box
       position='relative'
       component={motion.div}
       initial={{ scale: 0 }}
       animate={{ scale: 1 }}
-      onHoverStart={() => setOnHover(true)}
-      onHoverEnd={() => setOnHover(false)}
-      onClick={() => setOnClick(!onClick)}
+      onHoverStart={() => setOnHover(!onHover)}
+      onHoverEnd={() => setOnHover(!onHover)}
+      onTouchStart={() => setOnTouch(!onTouch)}
+      onTouchEnd={() => setOnTouch(!onTouch)}
       sx={{ cursor: 'pointer' }}
       transition={{
         type: 'spring',
@@ -28,7 +29,7 @@ const IntroductionCard = () => {
       <Box
         component={motion.div}
         initial={{ scale: 0 }}
-        animate={{ scale: onHover || onClick ? 1 : 0 }}
+        animate={{ scale: onHover || onTouch ? 1 : 0 }}
         transition={{
           type: 'spring',
           stiffness: 500,
@@ -60,7 +61,7 @@ const IntroductionCard = () => {
       <Box
         component={motion.div}
         initial={{ scale: 0, rotate: 15 }}
-        animate={{ scale: onHover || onClick ? 1 : 0 }}
+        animate={{ scale: onHover || onTouch ? 1 : 0 }}
         transition={{
           type: 'spring',
           stiffness: 500,
@@ -84,7 +85,7 @@ const IntroductionCard = () => {
       <Box
         component={motion.div}
         initial={{ scale: 0, rotate: 15 }}
-        animate={{ scale: onHover || onClick ? 1 : 0 }}
+        animate={{ scale: onHover || onTouch ? 1 : 0 }}
         transition={{
           type: 'spring',
           stiffness: 500,
@@ -107,7 +108,7 @@ const IntroductionCard = () => {
       <Box
         component={motion.div}
         initial={{ scale: 0, rotate: 15 }}
-        animate={{ scale: onHover || onClick ? 1 : 0 }}
+        animate={{ scale: onHover || onTouch ? 1 : 0 }}
         transition={{
           type: 'spring',
           stiffness: 500,
@@ -130,7 +131,7 @@ const IntroductionCard = () => {
       <Box
         component={motion.div}
         initial={{ scale: 0, rotate: 15 }}
-        animate={{ scale: onHover || onClick ? 1 : 0 }}
+        animate={{ scale: onHover || onTouch ? 1 : 0 }}
         transition={{
           type: 'spring',
           stiffness: 500,
@@ -153,7 +154,7 @@ const IntroductionCard = () => {
       <Box
         component={motion.div}
         initial={{ scale: 0, rotate: 15 }}
-        animate={{ scale: onHover || onClick ? 1 : 0 }}
+        animate={{ scale: onHover || onTouch ? 1 : 0 }}
         transition={{
           type: 'spring',
           stiffness: 500,
@@ -176,7 +177,7 @@ const IntroductionCard = () => {
       <Box
         component={motion.div}
         initial={{ scale: 0, rotate: 15 }}
-        animate={{ scale: onHover || onClick ? 1 : 0 }}
+        animate={{ scale: onHover || onTouch ? 1 : 0 }}
         transition={{
           type: 'spring',
           stiffness: 500,
@@ -199,7 +200,7 @@ const IntroductionCard = () => {
       <Box
         component={motion.div}
         initial={{ scale: 0, rotate: 15 }}
-        animate={{ scale: onHover || onClick ? 1 : 0 }}
+        animate={{ scale: onHover || onTouch ? 1 : 0 }}
         transition={{
           type: 'spring',
           stiffness: 500,
@@ -223,7 +224,7 @@ const IntroductionCard = () => {
       <Box
         component={motion.div}
         initial={{ scale: 0, rotate: 15 }}
-        animate={{ scale: onHover || onClick ? 1 : 0 }}
+        animate={{ scale: onHover || onTouch ? 1 : 0 }}
         transition={{
           type: 'spring',
           stiffness: 500,
@@ -248,7 +249,7 @@ const IntroductionCard = () => {
       <Box
         component={motion.div}
         initial={{ scale: 0, rotate: 15 }}
-        animate={{ scale: onHover || onClick ? 1 : 0 }}
+        animate={{ scale: onHover || onTouch ? 1 : 0 }}
         transition={{
           type: 'spring',
           stiffness: 500,
@@ -271,7 +272,7 @@ const IntroductionCard = () => {
       <Box
         component={motion.div}
         initial={{ scale: 0, rotate: 15 }}
-        animate={{ scale: onHover || onClick ? 1 : 0 }}
+        animate={{ scale: onHover || onTouch ? 1 : 0 }}
         transition={{
           type: 'spring',
           stiffness: 500,
@@ -295,7 +296,7 @@ const IntroductionCard = () => {
       <Box
         component={motion.div}
         initial={{ scale: 0, rotate: 15 }}
-        animate={{ scale: onHover || onClick ? 1 : 0 }}
+        animate={{ scale: onHover || onTouch ? 1 : 0 }}
         transition={{
           type: 'spring',
           stiffness: 500,
@@ -319,7 +320,7 @@ const IntroductionCard = () => {
       <Box
         component={motion.div}
         initial={{ scale: 0, rotate: 15 }}
-        animate={{ scale: onHover || onClick ? 1 : 0 }}
+        animate={{ scale: onHover || onTouch ? 1 : 0 }}
         transition={{
           type: 'spring',
           stiffness: 500,
@@ -342,7 +343,7 @@ const IntroductionCard = () => {
       <Box
         component={motion.div}
         initial={{ scale: 0, rotate: 15 }}
-        animate={{ scale: onHover || onClick ? 1 : 0 }}
+        animate={{ scale: onHover || onTouch ? 1 : 0 }}
         transition={{
           type: 'spring',
           stiffness: 500,
@@ -365,7 +366,7 @@ const IntroductionCard = () => {
       <Box
         component={motion.div}
         initial={{ scale: 0, rotate: 15 }}
-        animate={{ scale: onHover || onClick ? 1 : 0 }}
+        animate={{ scale: onHover || onTouch ? 1 : 0 }}
         transition={{
           type: 'spring',
           stiffness: 500,
@@ -389,7 +390,7 @@ const IntroductionCard = () => {
       <Box
         component={motion.div}
         initial={{ scale: 0, rotate: 15 }}
-        animate={{ scale: onHover || onClick ? 1 : 0 }}
+        animate={{ scale: onHover || onTouch ? 1 : 0 }}
         transition={{
           type: 'spring',
           stiffness: 500,
@@ -413,7 +414,7 @@ const IntroductionCard = () => {
       <Box
         component={motion.div}
         initial={{ scale: 0, rotate: 15 }}
-        animate={{ scale: onHover || onClick ? 1 : 0 }}
+        animate={{ scale: onHover || onTouch ? 1 : 0 }}
         transition={{
           type: 'spring',
           stiffness: 500,
@@ -437,7 +438,7 @@ const IntroductionCard = () => {
       <Box
         component={motion.div}
         initial={{ scale: 0, rotate: 15 }}
-        animate={{ scale: onHover || onClick ? 1 : 0 }}
+        animate={{ scale: onHover || onTouch ? 1 : 0 }}
         transition={{
           type: 'spring',
           stiffness: 500,
@@ -461,7 +462,7 @@ const IntroductionCard = () => {
       <Box
         component={motion.div}
         initial={{ scale: 0 }}
-        animate={{ scale: onHover || onClick ? 1 : 0 }}
+        animate={{ scale: onHover || onTouch ? 1 : 0 }}
         transition={{
           type: 'spring',
           stiffness: 500,
@@ -513,7 +514,7 @@ const IntroductionCard = () => {
         <Box
           component={motion.div}
           initial={{ scale: 0, rotate: 15 }}
-          animate={{ scale: onHover || onClick ? 1 : 0 }}
+          animate={{ scale: onHover || onTouch ? 1 : 0 }}
           transition={{
             type: 'spring',
             stiffness: 500,
@@ -536,7 +537,7 @@ const IntroductionCard = () => {
         <Box
           component={motion.div}
           initial={{ scale: 0, rotate: 15 }}
-          animate={{ scale: onHover || onClick ? 1 : 0 }}
+          animate={{ scale: onHover || onTouch ? 1 : 0 }}
           transition={{
             type: 'spring',
             stiffness: 500,
@@ -560,7 +561,7 @@ const IntroductionCard = () => {
         <Box
           component={motion.div}
           initial={{ scale: 0 }}
-          animate={{ scale: onHover || onClick ? 1 : 0 }}
+          animate={{ scale: onHover || onTouch ? 1 : 0 }}
           transition={{
             type: 'spring',
             stiffness: 500,
@@ -625,7 +626,7 @@ const IntroductionCard = () => {
         <Box
           component={motion.div}
           initial={{ scale: 0, rotate: 15 }}
-          animate={{ scale: onHover || onClick ? 1 : 0 }}
+          animate={{ scale: onHover || onTouch ? 1 : 0 }}
           transition={{
             type: 'spring',
             stiffness: 500,
@@ -649,7 +650,7 @@ const IntroductionCard = () => {
         <Box
           component={motion.div}
           initial={{ scale: 0, rotate: 15 }}
-          animate={{ scale: onHover || onClick ? 1 : 0 }}
+          animate={{ scale: onHover || onTouch ? 1 : 0 }}
           transition={{
             type: 'spring',
             stiffness: 500,
@@ -673,7 +674,7 @@ const IntroductionCard = () => {
         <Box
           component={motion.div}
           initial={{ scale: 0, rotate: 15 }}
-          animate={{ scale: onHover || onClick ? 1 : 0 }}
+          animate={{ scale: onHover || onTouch ? 1 : 0 }}
           transition={{
             type: 'spring',
             stiffness: 500,

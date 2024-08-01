@@ -345,67 +345,68 @@ const IntroCardContents = () => {
           // filter: 'drop-shadow(-2px 2px 2px rgba(0,0,0,0.5))',
         }}
       >
-        <Stack direction='row' alignItems='center' justifyContent='space-between'>
-          <Box position='absolute'
-            sx={{ top: -10, left: 155, transform: 'rotate(15deg)' }}>
-            <Typography variant='h2'
-              sx={{
-                textAlign: 'center',
-                fontFamily: 'Nunito, Arial, sans-serif',
-                fontWeight: 900,
-                color: 'black',
-              }}>
-              ?
-            </Typography>
-          </Box>
-          <Box position='absolute'
-            sx={{ top: -14, left: 163, transform: 'rotate(15deg)' }}>
-            <Typography variant='h2'
-              sx={{
-                textAlign: 'center',
-                fontFamily: 'Nunito, Arial, sans-serif',
-                fontWeight: 900,
-                color: 'white',
-              }}>
-              ?
-            </Typography>
-          </Box>
-          <IconCaretRightFilled color='white' />
-          <Box
-            component={motion.div}
-            whileHover={{ scale: 1.1 }}
-            initial={{ scale: 0 }}
-            whileTap={{ scale: 1 }}
-            animate={{ scale: 1 }}
-            transition={{
-              type: 'spring',
-              stiffness: 500,
-              damping: 20
+        <Box position='absolute'
+          sx={{ top: -10, left: 155, transform: 'rotate(15deg)' }}>
+          <Typography variant='h2'
+            sx={{
+              textAlign: 'center',
+              fontFamily: 'Nunito, Arial, sans-serif',
+              fontWeight: 900,
+              color: 'black',
             }}>
-            <Button
-              onClick={() => { }}
-              size='small'
-              sx={{
-                color: 'grey',
-                borderRadius: '10px',
+            ?
+          </Typography>
+        </Box>
+        <Box position='absolute'
+          sx={{ top: -14, left: 163, transform: 'rotate(15deg)' }}>
+          <Typography variant='h2'
+            sx={{
+              textAlign: 'center',
+              fontFamily: 'Nunito, Arial, sans-serif',
+              fontWeight: 900,
+              color: 'white',
+            }}>
+            ?
+          </Typography>
+        </Box>
+        <Box
+          component={motion.div}
+          whileHover={{ scale: 1.1 }}
+          initial={{ scale: 0 }}
+          whileTap={{ scale: 1 }}
+          animate={{ scale: 1 }}
+          transition={{
+            type: 'spring',
+            stiffness: 500,
+            damping: 20
+          }}>
+          <Button
+            onClick={() => { }}
+            size='small'
+            sx={{
+              width: '100%',
+              borderRadius: '10px',
+              backgroundColor: 'transparent',
+              textTransform: 'none',
+              '&:active': {
+                color: 'transparent'
+              },
+              '&:hover': {
                 backgroundColor: 'transparent',
-                textTransform: 'none',
-                '&:active': {
-                  color: 'transparent'
-                },
-                '&:hover': {
-                  backgroundColor: 'transparent',
-                  color: 'transparent'
-                }
-              }}>
-              <Typography
-                variant='h5'
-                sx={{
-                  textAlign: 'center',
-                  fontFamily: 'Nunito, Arial, sans-serif',
-                  fontWeight: 700,
-                  color: 'white',
-                  textShadow: `
+                color: 'transparent'
+              }
+            }}>
+            <Box width='100%'>
+              <Stack direction='row' alignItems='center' justifyContent='space-between'>
+                <IconCaretRightFilled color='white' />
+                <Typography
+                  variant='h5'
+                  sx={{
+                    textAlign: 'center',
+                    fontFamily: 'Nunito, Arial, sans-serif',
+                    fontWeight: 700,
+                    color: 'white',
+                    textShadow: `
                     0px 1.5px 3px rgba(200,0,0,1), 
                     0px 1.5px 3px rgba(200,0,0,1), 
                     0px 1.5px 3px rgba(200,0,0,1), 
@@ -422,13 +423,14 @@ const IntroCardContents = () => {
                     0px 1.5px 3px rgba(200,0,0,1), 
                     0px 1.5px 3px rgba(200,0,0,1), 
                     0px 1.5px 3px rgba(200,0,0,1)`
-                }}>
-                Ask Me?
-              </Typography>
-            </Button>
-          </Box>
-          <IconCaretLeftFilled color='white' />
-        </Stack>
+                  }}>
+                  Ask Me?
+                </Typography>
+                <IconCaretLeftFilled color='white' />
+              </Stack>
+            </Box>
+          </Button>
+        </Box>
       </Box>
     </Box>
   )
