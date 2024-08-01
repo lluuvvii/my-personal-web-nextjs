@@ -7,6 +7,7 @@ import { motion } from 'framer-motion'
 const AskMeCard = () => {
   const [onHover, setOnHover] = useState(false)
   const [onClick, setOnClick] = useState(false)
+  const [askActive, setAskActive] = useState(false)
   return (
     <Box
       position='relative'
@@ -508,7 +509,7 @@ const AskMeCard = () => {
             boxShadow: 'inset 0px 0px 5px rgba(0, 0, 0, 0.5)'
           }}>
           <Stack direction='row' alignItems='center'>
-            <Box sx={{ width: '100%', height: '3px', backgroundColor: 'red' }} />
+            <Box sx={{ width: '100%', height: '3px', backgroundColor: 'red', borderRadius: '3px' }} />
             <Box
               component={motion.div}
               whileHover={{ scale: 1.1 }}
@@ -521,7 +522,7 @@ const AskMeCard = () => {
                 damping: 20
               }}>
               <Button
-                onClick={() => { }}
+                onClick={() => setAskActive(!askActive)}
                 size='small'
                 sx={{
                   color: 'grey',
@@ -544,7 +545,7 @@ const AskMeCard = () => {
                     fontFamily: 'Nunito, Arial, sans-serif',
                     fontWeight: 700,
                     color: 'white',
-                      textShadow: `
+                    textShadow: `
                     0px 1.5px 3px rgba(200,0,0,1), 
                     0px 1.5px 3px rgba(200,0,0,1), 
                     0px 1.5px 3px rgba(200,0,0,1), 
@@ -566,7 +567,7 @@ const AskMeCard = () => {
                 </Typography>
               </Button>
             </Box>
-            <Box sx={{ width: '100%', height: '3px', backgroundColor: 'red' }} />
+            <Box sx={{ width: '100%', height: '3px', backgroundColor: 'red', borderRadius: '3px' }} />
           </Stack>
         </Box>
         {/* striped circle */}
