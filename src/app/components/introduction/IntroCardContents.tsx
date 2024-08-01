@@ -335,6 +335,113 @@ const IntroCardContents = () => {
           </Button>
         </Box>
       </Stack>
+      <Box
+        sx={{
+          width: '100%',
+          // height: '50px',
+          padding: '10px',
+          background: 'linear-gradient(100deg, red, red )',
+          borderRadius: '5px',
+          overflow: 'hidden'
+          // filter: 'drop-shadow(-2px 2px 2px rgba(0,0,0,0.5))',
+        }}
+      >
+        {/* <Box
+          sx={{
+            // width: '280px',
+            position: 'relative',
+            borderRadius: '10px',
+            backgroundColor: 'white',
+            padding: '10px',
+            // boxShadow: 'inset 0px 0px 5px rgba(0, 0, 0, 0.5)'
+          }}> */}
+        <Stack direction='row' alignItems='center' justifyContent='center'>
+          <Box position='relative'>
+            <Box position='absolute'
+              sx={{ top: -50, left: 70, transform: 'rotate(15deg)' }}>
+              <Typography variant='h1'
+                sx={{
+                  textAlign: 'center',
+                  fontFamily: 'Nunito, Arial, sans-serif',
+                  fontWeight: 1000,
+                  color: 'black',
+                }}>
+                ?
+              </Typography>
+            </Box>
+            <Box position='absolute'
+              sx={{ top: -55, left: 80, transform: 'rotate(15deg)' }}>
+              <Typography variant='h1'
+                sx={{
+                  textAlign: 'center',
+                  fontFamily: 'Nunito, Arial, sans-serif',
+                  fontWeight: 1000,
+                  color: 'white',
+                }}>
+                ?
+              </Typography>
+            </Box>
+          </Box>
+          <Box
+            component={motion.div}
+            whileHover={{ scale: 1.1 }}
+            initial={{ scale: 0 }}
+            whileTap={{ scale: 1 }}
+            animate={{ scale: 1 }}
+            transition={{
+              type: 'spring',
+              stiffness: 500,
+              damping: 20
+            }}>
+            <Button
+              onClick={() => { }}
+              size='small'
+              sx={{
+                color: 'grey',
+                borderRadius: '10px',
+                backgroundColor: 'transparent',
+                textTransform: 'none',
+                '&:active': {
+                  color: 'transparent'
+                },
+                '&:hover': {
+                  backgroundColor: 'transparent',
+                  color: 'transparent'
+                }
+              }}>
+              <Typography
+                width='100px'
+                variant='h5'
+                sx={{
+                  textAlign: 'center',
+                  fontFamily: 'Nunito, Arial, sans-serif',
+                  fontWeight: 700,
+                  color: 'white',
+                  textShadow: `
+                    0px 1.5px 3px rgba(200,0,0,1), 
+                    0px 1.5px 3px rgba(200,0,0,1), 
+                    0px 1.5px 3px rgba(200,0,0,1), 
+                    0px 1.5px 3px rgba(200,0,0,1), 
+                    0px 1.5px 3px rgba(200,0,0,1), 
+                    0px 1.5px 3px rgba(200,0,0,1), 
+                    0px 1.5px 3px rgba(200,0,0,1), 
+                    0px 1.5px 3px rgba(200,0,0,1), 
+                    0px 1.5px 3px rgba(200,0,0,1), 
+                    0px 1.5px 3px rgba(200,0,0,1), 
+                    0px 1.5px 3px rgba(200,0,0,1), 
+                    0px 1.5px 3px rgba(200,0,0,1), 
+                    0px 1.5px 3px rgba(200,0,0,1), 
+                    0px 1.5px 3px rgba(200,0,0,1), 
+                    0px 1.5px 3px rgba(200,0,0,1), 
+                    0px 1.5px 3px rgba(200,0,0,1)`
+                }}>
+                Ask Me?
+              </Typography>
+            </Button>
+          </Box>
+        </Stack>
+        {/* </Box> */}
+      </Box>
     </Box>
   )
 }
