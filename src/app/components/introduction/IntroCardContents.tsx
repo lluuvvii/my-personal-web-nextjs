@@ -338,9 +338,7 @@ const IntroCardContents = () => {
       <Box
         sx={{
           width: '100%',
-          // height: '50px',
-          padding: '10px',
-          background: 'linear-gradient(100deg, red, red )',
+          background: 'linear-gradient(100deg, red, #d10000)',
           borderRadius: '5px',
           overflow: 'hidden'
           // filter: 'drop-shadow(-2px 2px 2px rgba(0,0,0,0.5))',
@@ -349,24 +347,24 @@ const IntroCardContents = () => {
         <Stack direction='row' alignItems='center' justifyContent='center'>
           <Box position='relative'>
             <Box position='absolute'
-              sx={{ top: -50, left: 70, transform: 'rotate(15deg)' }}>
-              <Typography variant='h1'
+              sx={{ top: -30, left: 80, transform: 'rotate(15deg)' }}>
+              <Typography variant='h2'
                 sx={{
                   textAlign: 'center',
                   fontFamily: 'Nunito, Arial, sans-serif',
-                  fontWeight: 1000,
+                  fontWeight: 900,
                   color: 'black',
                 }}>
                 ?
               </Typography>
             </Box>
             <Box position='absolute'
-              sx={{ top: -55, left: 80, transform: 'rotate(15deg)' }}>
-              <Typography variant='h1'
+              sx={{ top: -35, left: 87, transform: 'rotate(15deg)' }}>
+              <Typography variant='h2'
                 sx={{
                   textAlign: 'center',
                   fontFamily: 'Nunito, Arial, sans-serif',
-                  fontWeight: 1000,
+                  fontWeight: 900,
                   color: 'white',
                 }}>
                 ?
@@ -401,7 +399,6 @@ const IntroCardContents = () => {
                 }
               }}>
               <Typography
-                width='100px'
                 variant='h5'
                 sx={{
                   textAlign: 'center',
