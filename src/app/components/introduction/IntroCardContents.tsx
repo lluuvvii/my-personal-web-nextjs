@@ -340,37 +340,37 @@ const IntroCardContents = () => {
           width: '100%',
           background: 'linear-gradient(100deg, red, #d10000)',
           borderRadius: '5px',
-          overflow: 'hidden'
+          overflow: 'hidden',
+          position: 'relative'
           // filter: 'drop-shadow(-2px 2px 2px rgba(0,0,0,0.5))',
         }}
       >
-        <Stack direction='row' alignItems='center' justifyContent='center'>
-          <Box position='relative'>
-            <Box position='absolute'
-              sx={{ top: -30, left: 80, transform: 'rotate(15deg)' }}>
-              <Typography variant='h2'
-                sx={{
-                  textAlign: 'center',
-                  fontFamily: 'Nunito, Arial, sans-serif',
-                  fontWeight: 900,
-                  color: 'black',
-                }}>
-                ?
-              </Typography>
-            </Box>
-            <Box position='absolute'
-              sx={{ top: -35, left: 87, transform: 'rotate(15deg)' }}>
-              <Typography variant='h2'
-                sx={{
-                  textAlign: 'center',
-                  fontFamily: 'Nunito, Arial, sans-serif',
-                  fontWeight: 900,
-                  color: 'white',
-                }}>
-                ?
-              </Typography>
-            </Box>
+        <Stack direction='row' alignItems='center' justifyContent='space-between'>
+          <Box position='absolute'
+            sx={{ top: -10, left: 155, transform: 'rotate(15deg)' }}>
+            <Typography variant='h2'
+              sx={{
+                textAlign: 'center',
+                fontFamily: 'Nunito, Arial, sans-serif',
+                fontWeight: 900,
+                color: 'black',
+              }}>
+              ?
+            </Typography>
           </Box>
+          <Box position='absolute'
+            sx={{ top: -14, left: 163, transform: 'rotate(15deg)' }}>
+            <Typography variant='h2'
+              sx={{
+                textAlign: 'center',
+                fontFamily: 'Nunito, Arial, sans-serif',
+                fontWeight: 900,
+                color: 'white',
+              }}>
+              ?
+            </Typography>
+          </Box>
+          <IconCaretRightFilled color='white' />
           <Box
             component={motion.div}
             whileHover={{ scale: 1.1 }}
@@ -427,6 +427,7 @@ const IntroCardContents = () => {
               </Typography>
             </Button>
           </Box>
+          <IconCaretLeftFilled color='white' />
         </Stack>
       </Box>
     </Box>
