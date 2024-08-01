@@ -18,7 +18,6 @@ const IntroductionCard = () => {
       onHoverEnd={() => setOnHover(!onHover)}
       onTouchStart={() => setOnTouch(!onTouch)}
       onTouchEnd={() => setOnTouch(!onTouch)}
-      sx={{ cursor: 'pointer' }}
       transition={{
         type: 'spring',
         stiffness: 500,
