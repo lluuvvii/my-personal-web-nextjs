@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState } from 'react'
-import { Box } from '@mui/material'
+import { Box, Typography } from '@mui/material'
 import IntroCardContents from './IntroCardContents'
 import { motion } from 'framer-motion'
 
@@ -693,6 +693,35 @@ const IntroductionCard = () => {
           }}
         >
         </Box>
+        {/* title text */}
+        <Typography
+          variant='h4'
+          sx={{
+            position: 'absolute',
+            top: '-20px',
+            left: '-10px',
+            textAlign: 'center',
+            fontFamily: 'Nunito, Arial, sans-serif',
+            fontWeight: 600,
+            color: 'white',
+            transform: 'rotate(-5deg)',
+            textShadow: `
+              0px 1.5px 3px rgba(0,0,0,1), 
+              0px 1.5px 3px rgba(0,0,0,1), 
+              0px 1.5px 3px rgba(0,0,0,1), 
+              0px 1.5px 3px rgba(0,0,0,1), 
+              0px 1.5px 3px rgba(0,0,0,1), 
+              0px 1.5px 3px rgba(0,0,0,1), 
+              0px 1.5px 3px rgba(0,0,0,1), 
+              0px 1.5px 3px rgba(0,0,0,1), 
+              0px 1.5px 3px rgba(0,0,0,1), 
+              0px 1.5px 3px rgba(0,0,0,1), 
+              0px 1.5px 3px rgba(0,0,0,1), 
+              0px 1.5px 3px rgba(0,0,0,1), 
+              0px 1.5px 3px rgba(0,0,0,1)`
+          }}>
+          Introduction
+        </Typography>
       </Box>
     </Box>
   )

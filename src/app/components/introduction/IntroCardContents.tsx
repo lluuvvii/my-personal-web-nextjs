@@ -346,15 +346,6 @@ const IntroCardContents = () => {
           // filter: 'drop-shadow(-2px 2px 2px rgba(0,0,0,0.5))',
         }}
       >
-        {/* <Box
-          sx={{
-            // width: '280px',
-            position: 'relative',
-            borderRadius: '10px',
-            backgroundColor: 'white',
-            padding: '10px',
-            // boxShadow: 'inset 0px 0px 5px rgba(0, 0, 0, 0.5)'
-          }}> */}
         <Stack direction='row' alignItems='center' justifyContent='center'>
           <Box position='relative'>
             <Box position='absolute'
@@ -440,7 +431,6 @@ const IntroCardContents = () => {
             </Button>
           </Box>
         </Stack>
-        {/* </Box> */}
       </Box>
     </Box>
   )
