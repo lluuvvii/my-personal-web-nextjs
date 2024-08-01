@@ -1,12 +1,13 @@
 'use client'
 
-import { Button, Stack, Typography, Box, Slide, Slider } from '@mui/material'
+import { Button, Stack, Typography, Box, Slide } from '@mui/material'
 import { IconCaretLeftFilled, IconCaretRightFilled } from '@tabler/icons-react'
 import { motion } from 'framer-motion'
 import { useState } from 'react'
 
 const IntroCardContents = () => {
   const [dialogVal, setDialogVal] = useState(0)
+  const [askActive, setAskActive] = useState(false)
 
   return (
     <Box>
@@ -410,7 +411,7 @@ const IntroCardContents = () => {
             damping: 20
           }}>
           <Button
-            onClick={() => { }}
+            onClick={() => setAskActive(!askActive)}
             size='small'
             sx={{
               width: '100%',
@@ -460,6 +461,25 @@ const IntroCardContents = () => {
             </Box>
           </Button>
         </Box>
+      </Box>
+      <Box
+        component={motion.div}
+        initial={{ scale: 0 }}
+        animate={{ scale: askActive ? 1 : 0 }}
+        transition={{
+          type: 'spring',
+          stiffness: 400,
+          damping: 20
+        }}
+        position='absolute'
+        sx={{
+          background: 'linear-gradient(100deg, blue, blue)',
+          borderRadius: '5px',
+          overflow: 'hidden',
+          top: '100px',
+          left: '0px'
+        }}>
+        <Typography variant='h2'>yayaya</Typography>
       </Box>
     </Box>
   )
