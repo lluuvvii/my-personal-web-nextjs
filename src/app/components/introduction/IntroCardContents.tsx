@@ -116,7 +116,7 @@ const IntroCardContents = () => {
                   fontFamily: 'Nunito, Arial, sans-serif',
                   fontWeight: 700,
                 }}>
-                I&apos;m a full stack web developer from Indonesia who is studying informatics and wants to continue to innovate in the field of software development.
+                I&apos;m a  full stack web developer from Indonesia who is currently studying in college and wants to continue innovating in the field of software development.
               </Typography>
             </Box>
           </Slide>
