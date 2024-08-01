@@ -41,7 +41,7 @@ const IntroCardContents = () => {
                 left: 0,
                 right: 0,
                 bottom: 0,
-                background: 'linear-gradient(120deg, transparent, rgba(255,255,255,0.6), transparent)',
+                background: 'linear-gradient(120deg, transparent, rgba(255,255,255,0.8), transparent)',
                 opacity: 0,
                 animation: 'moveGradient 0.5s forwards',
                 animationDelay: '0.5s',
@@ -115,7 +115,7 @@ const IntroCardContents = () => {
                 left: 0,
                 right: 0,
                 bottom: 0,
-                background: 'linear-gradient(120deg, transparent, rgba(255,255,255,0.6), transparent)',
+                background: 'linear-gradient(120deg, transparent, rgba(255,255,255,0.8), transparent)',
                 opacity: 0,
                 animation: 'moveGradient 0.5s forwards',
                 animationDelay: '0.5s',
@@ -166,7 +166,7 @@ const IntroCardContents = () => {
                 left: 0,
                 right: 0,
                 bottom: 0,
-                background: 'linear-gradient(120deg, transparent, rgba(255,255,255,0.6), transparent)',
+                background: 'linear-gradient(120deg, transparent, rgba(255,255,255,0.8), transparent)',
                 opacity: 0,
                 animation: 'moveGradient 0.5s forwards',
                 animationDelay: '0.5s',
@@ -218,7 +218,7 @@ const IntroCardContents = () => {
                 left: 0,
                 right: 0,
                 bottom: 0,
-                background: 'linear-gradient(120deg, transparent, rgba(255,255,255,0.6), transparent)',
+                background: 'linear-gradient(120deg, transparent, rgba(255,255,255,0.8), transparent)',
                 opacity: 0,
                 animation: 'moveGradient 0.5s forwards',
                 animationDelay: '0.5s',
@@ -499,7 +499,7 @@ const IntroCardContents = () => {
         sx={{
           top: '10px',
           left: '10px',
-          filter: 'drop-shadow(-2px 2px 2px rgba(0,0,0,0.5))',
+          // filter: 'drop-shadow(-2px 2px 2px rgba(0,0,0,0.5))',
         }}>
         <Box
           component={motion.div}
@@ -518,7 +518,7 @@ const IntroCardContents = () => {
             p: '10px',
             background: 'linear-gradient(100deg, red, red)',
             // filter: 'drop-shadow(-2px 2px 2px rgba(0,0,0,0.5))',
-            borderRadius: '20px',
+            borderRadius: '10px',
             overflow: 'hidden',
           }}>
           <Box
@@ -526,7 +526,7 @@ const IntroCardContents = () => {
               width: '100%',
               height: '100%',
               backgroundColor: 'white',
-              borderRadius: '10px',
+              borderRadius: '5px',
             }}>
             <Typography variant='h5'>yayaya</Typography>
           </Box>
