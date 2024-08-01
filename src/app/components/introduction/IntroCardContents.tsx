@@ -490,47 +490,46 @@ const IntroCardContents = () => {
         position='absolute'
         component={motion.div}
         initial={{ scale: 0 }}
-        animate={{ scale: askActive ? 3 : 0 }}
-        transition={{
-          type: 'spring',
-          stiffness: 500,
-          damping: 30
-        }}
-        sx={{
-          top: '270px',
-          left: '7px',
-        }}>
-        <IconCaretRightFilled color='red' />
-      </Box>
-      <Box
-        component={motion.div}
-        initial={{ scale: 0 }}
         animate={{ scale: askActive ? 1 : 0 }}
         transition={{
           type: 'spring',
           stiffness: 500,
           damping: 30
         }}
-        position='absolute'
         sx={{
-          width: '260px',
-          height: '280px',
-          p: '10px',
-          background: 'linear-gradient(100deg, red, #d10000)',
-          // filter: 'drop-shadow(-2px 2px 2px rgba(0,0,0,0.5))',
-          borderRadius: '20px',
-          overflow: 'hidden',
           top: '10px',
-          left: '10px'
+          left: '10px',
+          filter: 'drop-shadow(-2px 2px 2px rgba(0,0,0,0.5))',
         }}>
         <Box
+          component={motion.div}
+          initial={{ scale: 2 }}
+          position='absolute'
           sx={{
-            width: '100%',
-            height: '100%',
-            backgroundColor: 'white',
-            borderRadius: '10px',
+            top: '264px',
+            left: '-6px',
           }}>
-          <Typography variant='h5'>yayaya</Typography>
+          <IconCaretRightFilled color='red' />
+        </Box>
+        <Box
+          sx={{
+            width: '260px',
+            height: '280px',
+            p: '10px',
+            background: 'linear-gradient(100deg, red, red)',
+            // filter: 'drop-shadow(-2px 2px 2px rgba(0,0,0,0.5))',
+            borderRadius: '20px',
+            overflow: 'hidden',
+          }}>
+          <Box
+            sx={{
+              width: '100%',
+              height: '100%',
+              backgroundColor: 'white',
+              borderRadius: '10px',
+            }}>
+            <Typography variant='h5'>yayaya</Typography>
+          </Box>
         </Box>
       </Box>
     </Box>
