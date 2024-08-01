@@ -248,24 +248,24 @@ const IntroCardContents = () => {
               sx={{
                 fontFamily: 'Nunito, Arial, sans-serif',
                 fontWeight: 700,
-                color: 'yellow',
+                color: 'white',
                 textShadow: `
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1)`
+              0px 1.5px 3px rgba(200,0,0,1), 
+              0px 1.5px 3px rgba(200,0,0,1), 
+              0px 1.5px 3px rgba(200,0,0,1), 
+              0px 1.5px 3px rgba(200,0,0,1), 
+              0px 1.5px 3px rgba(200,0,0,1), 
+              0px 1.5px 3px rgba(200,0,0,1), 
+              0px 1.5px 3px rgba(200,0,0,1), 
+              0px 1.5px 3px rgba(200,0,0,1), 
+              0px 1.5px 3px rgba(200,0,0,1), 
+              0px 1.5px 3px rgba(200,0,0,1), 
+              0px 1.5px 3px rgba(200,0,0,1), 
+              0px 1.5px 3px rgba(200,0,0,1), 
+              0px 1.5px 3px rgba(200,0,0,1), 
+              0px 1.5px 3px rgba(200,0,0,1), 
+              0px 1.5px 3px rgba(200,0,0,1), 
+              0px 1.5px 3px rgba(200,0,0,1)`
               }}
             >
               PREV
@@ -309,24 +309,24 @@ const IntroCardContents = () => {
               sx={{
                 fontFamily: 'Nunito, Arial, sans-serif',
                 fontWeight: 700,
-                color: 'yellow',
+                color: 'white',
                 textShadow: `
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1)`
+              0px 1.5px 3px rgba(200,0,0,1), 
+              0px 1.5px 3px rgba(200,0,0,1), 
+              0px 1.5px 3px rgba(200,0,0,1), 
+              0px 1.5px 3px rgba(200,0,0,1), 
+              0px 1.5px 3px rgba(200,0,0,1), 
+              0px 1.5px 3px rgba(200,0,0,1), 
+              0px 1.5px 3px rgba(200,0,0,1), 
+              0px 1.5px 3px rgba(200,0,0,1), 
+              0px 1.5px 3px rgba(200,0,0,1), 
+              0px 1.5px 3px rgba(200,0,0,1), 
+              0px 1.5px 3px rgba(200,0,0,1), 
+              0px 1.5px 3px rgba(200,0,0,1), 
+              0px 1.5px 3px rgba(200,0,0,1), 
+              0px 1.5px 3px rgba(200,0,0,1), 
+              0px 1.5px 3px rgba(200,0,0,1), 
+              0px 1.5px 3px rgba(200,0,0,1)`
               }}
             >
               Next
