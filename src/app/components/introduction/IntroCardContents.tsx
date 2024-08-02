@@ -14,7 +14,7 @@ const IntroCardContents = () => {
       <Box
         component={motion.div}
         initial={{ scale: 0 }}
-        animate={{ scale: !askActive ? 1 : 0 }}
+        animate={{ opacity: !askActive ? 1 : 0, scale: 1 }}
         transition={{
           type: 'spring',
           stiffness: 500,
@@ -253,7 +253,7 @@ const IntroCardContents = () => {
       <Box
         component={motion.div}
         initial={{ scale: 0 }}
-        animate={{ scale: !askActive ? 1 : 0 }}
+        animate={{ opacity: !askActive ? 1 : 0, scale: 1 }}
         transition={{
           type: 'spring',
           stiffness: 500,
@@ -422,9 +422,9 @@ const IntroCardContents = () => {
         </Box>
         <Box
           component={motion.div}
-          whileHover={{ scale: 0.9 }}
+          whileHover={{ scale: 1.1 }}
           initial={{ scale: 0 }}
-          whileTap={{ scale: 0.8 }}
+          whileTap={{ scale: 1 }}
           animate={{ scale: 1 }}
           transition={{
             type: 'spring',
@@ -606,7 +606,7 @@ const IntroCardContents = () => {
                     fontWeight: 700,
                     color: 'red',
                   }}>
-                  My Hobbies
+                  This Website
                 </Typography>
                 <IconCaretLeftFilled color='red' />
               </Stack>
