@@ -1,7 +1,7 @@
 'use client'
 
 import { Button, Stack, Typography, Box, Slide } from '@mui/material'
-import { IconCaretLeftFilled, IconCaretRightFilled } from '@tabler/icons-react'
+import { IconCaretLeftFilled, IconCaretRightFilled, IconExclamationCircle } from '@tabler/icons-react'
 import { motion } from 'framer-motion'
 import { useState } from 'react'
 
@@ -422,9 +422,9 @@ const IntroCardContents = () => {
         </Box>
         <Box
           component={motion.div}
-          whileHover={{ scale: 1.1 }}
+          whileHover={{ scale: 0.9 }}
           initial={{ scale: 0 }}
-          whileTap={{ scale: 1 }}
+          whileTap={{ scale: 0.8 }}
           animate={{ scale: 1 }}
           transition={{
             type: 'spring',
@@ -458,22 +458,22 @@ const IntroCardContents = () => {
                     fontWeight: 700,
                     color: 'white',
                     textShadow: `
-                    0px 1.5px 3px rgba(200,0,0,1), 
-                    0px 1.5px 3px rgba(200,0,0,1), 
-                    0px 1.5px 3px rgba(200,0,0,1), 
-                    0px 1.5px 3px rgba(200,0,0,1), 
-                    0px 1.5px 3px rgba(200,0,0,1), 
-                    0px 1.5px 3px rgba(200,0,0,1), 
-                    0px 1.5px 3px rgba(200,0,0,1), 
-                    0px 1.5px 3px rgba(200,0,0,1), 
-                    0px 1.5px 3px rgba(200,0,0,1), 
-                    0px 1.5px 3px rgba(200,0,0,1), 
-                    0px 1.5px 3px rgba(200,0,0,1), 
-                    0px 1.5px 3px rgba(200,0,0,1), 
-                    0px 1.5px 3px rgba(200,0,0,1), 
-                    0px 1.5px 3px rgba(200,0,0,1), 
-                    0px 1.5px 3px rgba(200,0,0,1), 
-                    0px 1.5px 3px rgba(200,0,0,1)`
+                    0px 1.5px 3px rgba(150,0,0,1), 
+                    0px 1.5px 3px rgba(150,0,0,1), 
+                    0px 1.5px 3px rgba(150,0,0,1), 
+                    0px 1.5px 3px rgba(150,0,0,1), 
+                    0px 1.5px 3px rgba(150,0,0,1), 
+                    0px 1.5px 3px rgba(150,0,0,1), 
+                    0px 1.5px 3px rgba(150,0,0,1), 
+                    0px 1.5px 3px rgba(150,0,0,1), 
+                    0px 1.5px 3px rgba(150,0,0,1), 
+                    0px 1.5px 3px rgba(150,0,0,1), 
+                    0px 1.5px 3px rgba(150,0,0,1), 
+                    0px 1.5px 3px rgba(150,0,0,1), 
+                    0px 1.5px 3px rgba(150,0,0,1), 
+                    0px 1.5px 3px rgba(150,0,0,1), 
+                    0px 1.5px 3px rgba(150,0,0,1), 
+                    0px 1.5px 3px rgba(150,0,0,1)`
                   }}>
                   {askActive ?
                     <>Close</>
@@ -514,6 +514,7 @@ const IntroCardContents = () => {
         </Box>
         <Box
           sx={{
+            position: 'relative',
             width: '260px',
             height: '280px',
             p: '10px',
@@ -521,14 +522,95 @@ const IntroCardContents = () => {
             borderRadius: '10px',
             overflow: 'hidden',
           }}>
+          <Box position='absolute'
+            sx={{ top: -15, left: 157, transform: 'rotate(15deg)' }}>
+            <Typography variant='h2'
+              sx={{
+                textAlign: 'center',
+                fontFamily: 'Nunito, Arial, sans-serif',
+                fontWeight: 900,
+                color: 'black',
+              }}>
+              <IconExclamationCircle color='black' size='100px' />
+            </Typography>
+          </Box>
+          <Box position='absolute'
+            sx={{ top: -19, left: 165, transform: 'rotate(15deg)' }}>
+            <Typography variant='h2'
+              sx={{
+                textAlign: 'center',
+                fontFamily: 'Nunito, Arial, sans-serif',
+                fontWeight: 900,
+                color: 'white',
+              }}>
+              <IconExclamationCircle color='white' size='100px' />
+            </Typography>
+          </Box>
+          <Typography
+            position='relative'
+            variant='h5'
+            mb={1}
+            sx={{
+              textAlign: 'center',
+              fontFamily: 'Nunito, Arial, sans-serif',
+              fontWeight: 700,
+              color: 'white',
+              textShadow: `
+              0px 1.5px 2.5px rgba(0,0,0,1), 
+              0px 1.5px 2.5px rgba(0,0,0,1), 
+              0px 1.5px 2.5px rgba(0,0,0,1), 
+              0px 1.5px 2.5px rgba(0,0,0,1), 
+              0px 1.5px 2.5px rgba(0,0,0,1), 
+              0px 1.5px 2.5px rgba(0,0,0,1), 
+              0px 1.5px 2.5px rgba(0,0,0,1), 
+              0px 1.5px 2.5px rgba(0,0,0,1), 
+              0px 1.5px 2.5px rgba(0,0,0,1), 
+              0px 1.5px 2.5px rgba(0,0,0,1), 
+              0px 1.5px 2.5px rgba(0,0,0,1), 
+              0px 1.5px 2.5px rgba(0,0,0,1), 
+              0px 1.5px 2.5px rgba(0,0,0,1), 
+              0px 1.5px 2.5px rgba(0,0,0,1), 
+              0px 1.5px 2.5px rgba(0,0,0,1), 
+              0px 1.5px 2.5px rgba(0,0,0,1)`
+            }}>Ask Me About :</Typography>
           <Box
             sx={{
+              position: 'relative',
               width: '100%',
-              height: '100%',
+              height: '219px',
               backgroundColor: 'white',
               borderRadius: '5px',
             }}>
-            <Typography variant='h5'>yayaya</Typography>
+            <Button
+              onClick={() => { }}
+              size='small'
+              sx={{
+                width: '100%',
+                backgroundColor: 'transparent',
+                textTransform: 'none',
+                '&:active': {
+                  color: 'transparent'
+                },
+                '&:hover': {
+                  backgroundColor: 'transparent',
+                  color: 'transparent'
+                }
+              }}>
+              <Stack direction='row' alignItems='center' justifyContent='space-between'>
+                <IconCaretRightFilled color='red' />
+                <Typography
+                  variant='h5'
+                  sx={{
+                    textAlign: 'center',
+                    fontFamily: 'Nunito, Arial, sans-serif',
+                    fontWeight: 700,
+                    color: 'red',
+                  }}>
+                  My Hobbies
+                </Typography>
+                <IconCaretLeftFilled color='red' />
+              </Stack>
+            </Button>
           </Box>
         </Box>
       </Box>
