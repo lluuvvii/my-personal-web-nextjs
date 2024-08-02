@@ -390,7 +390,7 @@ const IntroCardContents = () => {
       <Box
         sx={{
           width: '100%',
-          background: 'linear-gradient(100deg, red, #d10000)',
+          background: 'linear-gradient(100deg, red, #f70000, #d10000)',
           borderRadius: '5px',
           overflow: 'hidden',
           position: 'relative'
