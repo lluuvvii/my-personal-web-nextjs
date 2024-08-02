@@ -527,29 +527,6 @@ const IntroductionCard = () => {
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
-            background: 'repeating-linear-gradient(45deg, red, red, 5px, transparent 5px, transparent 9px)',
-            top: '-15px',
-            left: '20px',
-          }}
-        >
-        </Box>
-        <Box
-          component={motion.div}
-          initial={{ scale: 0, rotate: 15 }}
-          animate={{ scale: onHover || onTouch ? 1 : 0 }}
-          transition={{
-            type: 'spring',
-            stiffness: 500,
-            damping: 20
-          }}
-          sx={{
-            position: 'absolute',
-            width: '40px',
-            height: '40px',
-            borderRadius: '25%',
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
             background: 'repeating-linear-gradient(45deg, #d10000, #d10000,  5px, transparent 5px, transparent 9px)',
             bottom: '15px',
             right: '-20px',
@@ -573,7 +550,7 @@ const IntroductionCard = () => {
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
-            backgroundColor: 'red',
+            backgroundColor: '#d10000',
             clipPath: 'polygon(100% 50%,78.53% 59.27%,90.45% 79.39%,67.63% 74.27%,65.45% 97.55%,50% 80%,34.55% 97.55%,32.37% 74.27%,9.55% 79.39%,21.47% 59.27%,0% 50%,21.47% 40.73%,9.55% 20.61%,32.37% 25.73%,34.55% 2.45%,50% 20%,65.45% 2.45%,67.63% 25.73%,90.45% 20.61%,78.53% 40.73%,100% 50%,78.53% 59.27%,67.12% 55.56%,80% 50%,67.12% 44.44%,74.27% 32.37%,60.58% 35.44%,59.27% 21.47%,50% 32%,40.73% 21.47%,39.42% 35.44%,25.73% 32.37%,32.88% 44.44%,20% 50%,32.88% 55.56%,25.73% 67.63%,39.42% 64.56%,40.73% 78.53%,50% 68%,59.27% 78.53%,60.58% 64.56%,74.27% 67.63%,67.12% 55.56%,80% 50%)',
             top: '-20px',
             left: '-20px'
@@ -643,30 +620,6 @@ const IntroductionCard = () => {
             border: '7px double #d10000',
             bottom: '-15px',
             right: '-15px'
-          }}
-        >
-        </Box>
-        <Box
-          component={motion.div}
-          initial={{ scale: 0, rotate: 15 }}
-          animate={{ scale: onHover || onTouch ? 1 : 0 }}
-          transition={{
-            type: 'spring',
-            stiffness: 500,
-            damping: 20
-          }}
-          sx={{
-            position: 'absolute',
-            width: '40px',
-            height: '40px',
-            borderRadius: '25%',
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            backgroundColor: 'transparent',
-            border: '8px solid red',
-            top: '10px',
-            left: '-20px'
           }}
         >
         </Box>
