@@ -519,7 +519,7 @@ const IntroCardContents = () => {
             width: '260px',
             height: '280px',
             p: '10px',
-            background: 'linear-gradient(100deg, red, red)',
+            background: 'linear-gradient(100deg, red, #d10000)',
             borderRadius: '10px',
             overflow: 'hidden',
           }}>
