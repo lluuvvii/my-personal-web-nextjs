@@ -8,6 +8,7 @@ import { useState } from 'react'
 const IntroCardContents = () => {
   const [dialogVal, setDialogVal] = useState(0)
   const [askActive, setAskActive] = useState(false)
+  const [markQuestions, setMarkQuestions] = useState({ thisWebsite: false, secondOption: false })
 
   return (
     <Box>
@@ -581,36 +582,168 @@ const IntroCardContents = () => {
               backgroundColor: 'white',
               borderRadius: '5px',
             }}>
-            <Button
-              onClick={() => { }}
-              size='small'
-              sx={{
-                width: '100%',
-                backgroundColor: 'transparent',
-                textTransform: 'none',
-                '&:active': {
-                  color: 'transparent'
-                },
-                '&:hover': {
-                  backgroundColor: 'transparent',
-                  color: 'transparent'
-                }
-              }}>
+            <Box>
               <Stack direction='row' alignItems='center' justifyContent='space-between'>
-                <IconCaretRightFilled color='red' />
-                <Typography
-                  variant='h5'
-                  sx={{
-                    textAlign: 'center',
-                    fontFamily: 'Nunito, Arial, sans-serif',
-                    fontWeight: 700,
-                    color: 'red',
+                <Box
+                  component={motion.div}
+                  initial={{ scale: 0 }}
+                  animate={{ scale: markQuestions.thisWebsite ? 1 : 0 }}
+                  transition={{
+                    type: 'spring',
+                    stiffness: 500,
+                    damping: 20
                   }}>
-                  This Website
-                </Typography>
-                <IconCaretLeftFilled color='red' />
+                  <IconCaretRightFilled color='red' />
+                </Box>
+                <Button
+                  component={motion.div}
+                  whileHover={{ scale: 1.1 }}
+                  initial={{ scale: 0 }}
+                  whileTap={{ scale: 1 }}
+                  onHoverStart={() => setMarkQuestions((prevState) => ({ ...prevState, thisWebsite: true }))}
+                  onHoverEnd={() => setMarkQuestions((prevState) => ({ ...prevState, thisWebsite: false }))}
+                  animate={{ scale: 1 }}
+                  transition={{
+                    type: 'spring',
+                    stiffness: 500,
+                    damping: 20
+                  }}
+                  onClick={() => { }}
+                  size='small'
+                  sx={{
+                    width: '100%',
+                    backgroundColor: 'transparent',
+                    textTransform: 'none',
+                    '&:active': {
+                      color: 'transparent'
+                    },
+                    '&:hover': {
+                      backgroundColor: 'transparent',
+                      color: 'transparent'
+                    }
+                  }}>
+                  <Typography
+                    variant='h6'
+                    sx={{
+                      textAlign: 'center',
+                      fontFamily: 'Nunito, Arial, sans-serif',
+                      fontWeight: 700,
+                      color: 'white',
+                      textShadow: `
+              0px 1.5px 2.5px rgba(200,0,0,1), 
+              0px 1.5px 2.5px rgba(200,0,0,1), 
+              0px 1.5px 2.5px rgba(200,0,0,1), 
+              0px 1.5px 2.5px rgba(200,0,0,1), 
+              0px 1.5px 2.5px rgba(200,0,0,1), 
+              0px 1.5px 2.5px rgba(200,0,0,1), 
+              0px 1.5px 2.5px rgba(200,0,0,1), 
+              0px 1.5px 2.5px rgba(200,0,0,1), 
+              0px 1.5px 2.5px rgba(200,0,0,1), 
+              0px 1.5px 2.5px rgba(200,0,0,1), 
+              0px 1.5px 2.5px rgba(200,0,0,1), 
+              0px 1.5px 2.5px rgba(200,0,0,1), 
+              0px 1.5px 2.5px rgba(200,0,0,1), 
+              0px 1.5px 2.5px rgba(200,0,0,1), 
+              0px 1.5px 2.5px rgba(200,0,0,1), 
+              0px 1.5px 2.5px rgba(200,0,0,1)`
+                    }}>
+                    This Website
+                  </Typography>
+                </Button>
+                <Box
+                  component={motion.div}
+                  initial={{ scale: 0 }}
+                  animate={{ scale: markQuestions.thisWebsite ? 1 : 0 }}
+                  transition={{
+                    type: 'spring',
+                    stiffness: 500,
+                    damping: 20
+                  }}>
+                  <IconCaretLeftFilled color='red' />
+                </Box>
               </Stack>
-            </Button>
+            </Box>
+            <Box>
+              <Stack direction='row' alignItems='center' justifyContent='space-between'>
+                <Box
+                  component={motion.div}
+                  initial={{ scale: 0 }}
+                  animate={{ scale: markQuestions.secondOption ? 1 : 0 }}
+                  transition={{
+                    type: 'spring',
+                    stiffness: 500,
+                    damping: 20
+                  }}>
+                  <IconCaretRightFilled color='red' />
+                </Box>
+                <Button
+                  component={motion.div}
+                  whileHover={{ scale: 1.1 }}
+                  initial={{ scale: 0 }}
+                  whileTap={{ scale: 1 }}
+                  onHoverStart={() => setMarkQuestions((prevState) => ({ ...prevState, secondOption: true }))}
+                  onHoverEnd={() => setMarkQuestions((prevState) => ({ ...prevState, secondOption: false }))}
+                  animate={{ scale: 1 }}
+                  transition={{
+                    type: 'spring',
+                    stiffness: 500,
+                    damping: 20
+                  }}
+                  onClick={() => { }}
+                  size='small'
+                  sx={{
+                    width: '100%',
+                    backgroundColor: 'transparent',
+                    textTransform: 'none',
+                    '&:active': {
+                      color: 'transparent'
+                    },
+                    '&:hover': {
+                      backgroundColor: 'transparent',
+                      color: 'transparent'
+                    }
+                  }}>
+                  <Typography
+                    variant='h6'
+                    sx={{
+                      textAlign: 'center',
+                      fontFamily: 'Nunito, Arial, sans-serif',
+                      fontWeight: 700,
+                      color: 'white',
+                      textShadow: `
+              0px 1.5px 2.5px rgba(200,0,0,1), 
+              0px 1.5px 2.5px rgba(200,0,0,1), 
+              0px 1.5px 2.5px rgba(200,0,0,1), 
+              0px 1.5px 2.5px rgba(200,0,0,1), 
+              0px 1.5px 2.5px rgba(200,0,0,1), 
+              0px 1.5px 2.5px rgba(200,0,0,1), 
+              0px 1.5px 2.5px rgba(200,0,0,1), 
+              0px 1.5px 2.5px rgba(200,0,0,1), 
+              0px 1.5px 2.5px rgba(200,0,0,1), 
+              0px 1.5px 2.5px rgba(200,0,0,1), 
+              0px 1.5px 2.5px rgba(200,0,0,1), 
+              0px 1.5px 2.5px rgba(200,0,0,1), 
+              0px 1.5px 2.5px rgba(200,0,0,1), 
+              0px 1.5px 2.5px rgba(200,0,0,1), 
+              0px 1.5px 2.5px rgba(200,0,0,1), 
+              0px 1.5px 2.5px rgba(200,0,0,1)`
+                    }}>
+                    yayayayaya
+                  </Typography>
+                </Button>
+                <Box
+                  component={motion.div}
+                  initial={{ scale: 0 }}
+                  animate={{ scale: markQuestions.secondOption ? 1 : 0 }}
+                  transition={{
+                    type: 'spring',
+                    stiffness: 500,
+                    damping: 20
+                  }}>
+                  <IconCaretLeftFilled color='red' />
+                </Box>
+              </Stack>
+            </Box>
           </Box>
         </Box>
       </Box>
