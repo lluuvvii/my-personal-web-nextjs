@@ -590,7 +590,6 @@ const Navbar = ({ window }: Props) => {
                     cursor: 'pointer',
                     backgroundColor: 'red',
                     border: '10px solid black',
-                    filter: 'drop-shadow(-2px 2px 2px rgba(0,0,0,0.5))',
                     top: '60px',
                     left: '20px'
                   }}
@@ -617,7 +616,6 @@ const Navbar = ({ window }: Props) => {
                     alignItems: 'center',
                     cursor: 'pointer',
                     background: 'repeating-linear-gradient(135deg, blue, blue 6px, transparent 6px, transparent 11px)',
-                    filter: 'drop-shadow(-2px 2px 2px rgba(0,0,0,0.5))',
                     top: '70px',
                     right: '-10px',
                   }}
@@ -745,7 +743,6 @@ const Navbar = ({ window }: Props) => {
                       alignItems: 'center',
                       cursor: 'pointer',
                       background: 'repeating-linear-gradient(135deg, white, white 8px, transparent 8px, transparent 15px)',
-                      filter: 'drop-shadow(-2px 2px 2px rgba(0,0,0,0.5))',
                       top: '-20px',
                       left: '-30px',
                     }}
@@ -769,7 +766,7 @@ const Navbar = ({ window }: Props) => {
                   sx={{
                     position: 'absolute',
                     '& svg': {
-                      filter: 'drop-shadow(-2px 3px 10px rgba(0,0,0,0.5))',
+                      // filter: 'drop-shadow(-2px 3px 10px rgba(0,0,0,0.5))',
                     },
                     cursor: 'pointer',
                     top: '80px',
@@ -789,10 +786,10 @@ const Navbar = ({ window }: Props) => {
                     <svg
                       width='200px'
                       height='700px'
-                      fill={'red'}
+                      fill={'black'}
                       xmlns='http://www.w3.org/2000/svg'
                     >
-                      <rect x='0' y='80' width='100%' height='100%' fill={'red'} />
+                      <rect x='0' y='80' width='100%' height='100%' fill={'black'} />
                       <path d='M100 0.587l30.52 66.76L200 81.25l-50 48.5L161.92 200 100 165.83 38.08 200 50 129.75 0 81.25l69.44-13.29z' />
                       <path d='M100 0.587l30.52 66.76L200 81.25l-50 48.5L161.92 200 100 165.83 38.08 200 50 129.75 0 81.25l69.44-13.29z' transform='scale(0.7) translate(42.5, 47)' fill='white' />
                     </svg>
@@ -801,7 +798,6 @@ const Navbar = ({ window }: Props) => {
                     sx={{
                       position: 'absolute',
                       '& svg': {
-                        filter: 'drop-shadow(-2px 3px 10px rgba(0,0,0,0.5))',
                       },
                       top: '-10px',
                       left: '-45px'
@@ -810,10 +806,10 @@ const Navbar = ({ window }: Props) => {
                       <svg
                         width='200px'
                         height='1000px'
-                        fill={'red'}
+                        fill={'black'}
                         xmlns='http://www.w3.org/2000/svg'
                       >
-                        <rect x='0' y='80' width='100%' height='100%' fill={'red'} />
+                        <rect x='0' y='80' width='100%' height='100%' fill={'black'} />
                         <path d='M100 0.587l30.52 66.76L200 81.25l-50 48.5L161.92 200 100 165.83 38.08 200 50 129.75 0 81.25l69.44-13.29z' />
                         <path d='M100 0.587l30.52 66.76L200 81.25l-50 48.5L161.92 200 100 165.83 38.08 200 50 129.75 0 81.25l69.44-13.29z' transform='scale(0.7) translate(42.5, 47)' fill='white' />
                       </svg>
@@ -871,7 +867,6 @@ const Navbar = ({ window }: Props) => {
                   sx={{
                     position: 'absolute',
                     '& svg': {
-                      filter: 'drop-shadow(-2px 3px 10px rgba(0,0,0,0.5))',
                     },
                     cursor: 'pointer',
                     top: '120px',
@@ -891,10 +886,10 @@ const Navbar = ({ window }: Props) => {
                     <svg
                       width='200px'
                       height='1000px'
-                      fill={'black'}
+                      fill={'red'}
                       xmlns='http://www.w3.org/2000/svg'
                     >
-                      <rect x='0' y='80' width='100%' height='100%' fill={'black'} />
+                      <rect x='0' y='80' width='100%' height='100%' fill={'red'} />
                       <path d='M100 0.587l30.52 66.76L200 81.25l-50 48.5L161.92 200 100 165.83 38.08 200 50 129.75 0 81.25l69.44-13.29z' />
                       <path d='M100 0.587l30.52 66.76L200 81.25l-50 48.5L161.92 200 100 165.83 38.08 200 50 129.75 0 81.25l69.44-13.29z' transform='scale(0.7) translate(42.5, 47)' fill='white' />
                     </svg>
@@ -913,7 +908,7 @@ const Navbar = ({ window }: Props) => {
                     cursor: 'pointer',
                     backgroundColor: 'transparent',
                     border: `20px solid ${'red'}`,
-                    filter: 'drop-shadow(-2px 2px 2px rgba(0,0,0,0.5))',
+                    boxShadow: '-2px 2px 10px rgba(0,0,0,0.5)',
                     top: '-40px',
                     left: '90px'
                   }}
@@ -971,7 +966,7 @@ const Navbar = ({ window }: Props) => {
                     cursor: 'pointer',
                     backgroundColor: 'transparent',
                     border: `20px solid ${'red'}`,
-                    filter: 'drop-shadow(-2px 2px 2px rgba(0,0,0,0.5))',
+                    boxShadow: '-2px 2px 10px rgba(0,0,0,0.2)',
                     top: '35px',
                     left: '-60px'
                   }}
@@ -1028,7 +1023,7 @@ const Navbar = ({ window }: Props) => {
               padding: '10px',
               background: 'linear-gradient(100deg, red, #d10000)',
               borderRadius: '20px',
-              filter: 'drop-shadow(-2px 2px 2px rgba(0,0,0,0.5))',
+              boxShadow: '-2px 2px 10px rgba(0,0,0,0.5)',
             }}>
             {/* striped circle */}
             <Box
