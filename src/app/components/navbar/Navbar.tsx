@@ -1023,7 +1023,7 @@ const Navbar = ({ window }: Props) => {
               padding: '10px',
               background: 'linear-gradient(100deg, red, #d10000)',
               borderRadius: '20px',
-              boxShadow: '-2px 2px 10px rgba(0,0,0,0.5)',
+              boxShadow: '-2px 2px 10px rgba(0,0,0,0.2)',
             }}>
             {/* striped circle */}
             <Box
