@@ -321,7 +321,7 @@ const IntroCardContents = () => {
               </Typography>
             </Button>
           </Box>
-          <Box sx={{ width: '100%', height: '3px', backgroundColor: 'red', borderRadius: '3px' }} />
+          <Box sx={{ width: '100%', height: '5px', backgroundColor: 'red', borderRadius: '5px' }} />
           <Box
             ml={1}
             component={motion.div}
