@@ -523,7 +523,8 @@ const IntroCardContents = () => {
             borderRadius: '10px',
             overflow: 'hidden',
           }}>
-          <Box position='absolute'
+          <Box
+            position='absolute'
             sx={{ top: -15, left: 157, transform: 'rotate(15deg)' }}>
             <Typography variant='h2'
               sx={{
