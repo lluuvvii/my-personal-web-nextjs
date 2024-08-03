@@ -1,7 +1,7 @@
 'use client'
 
 import { Button, Stack, Typography, Box, Slide } from '@mui/material'
-import { IconCaretLeftFilled, IconCaretRightFilled, IconExclamationCircle, IconSquareX } from '@tabler/icons-react'
+import { IconCaretLeftFilled, IconCaretRightFilled, IconExclamationCircle, IconSquareX, IconSquareXFilled } from '@tabler/icons-react'
 import { motion } from 'framer-motion'
 import { useState } from 'react'
 
@@ -306,7 +306,58 @@ const IntroCardContents = () => {
                     fontFamily: 'Nunito, Arial, sans-serif',
                     fontWeight: 700,
                   }}>
-                  yayaya
+                  blablabla
+                </Typography>
+              </Box>
+            </Slide>
+          </Box>
+          : null}
+        {questionActive && questionDialog.secondOption ?
+          <Box
+            sx={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              height: '260px',
+              overflow: 'hidden',
+              px: 1,
+              boxShadow: 'inset 0px 0px 5px rgba(0, 0, 0, 0.5)',
+              borderRadius: '5px',
+              position: 'relative',
+              backgroundColor: 'rgba(250, 250, 250, 1)',
+              overFlow: 'hidden',
+              '&::before': {
+                content: '""',
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                right: 0,
+                bottom: 0,
+                background: 'linear-gradient(120deg, transparent, rgba(255,255,255,0.8), transparent)',
+                opacity: 0,
+                animation: 'moveGradient 0.5s forwards',
+                animationDelay: '0.5s',
+              },
+              '@keyframes moveGradient': {
+                '0%': {
+                  opacity: 1,
+                  transform: 'translateX(-100%)',
+                },
+                '100%': {
+                  opacity: 1,
+                  transform: 'translateX(100%)',
+                },
+              },
+            }}>
+            <Slide direction='right' in={questionDialog.secondOption}>
+              <Box>
+                <Typography
+                  variant='h6'
+                  sx={{
+                    fontFamily: 'Nunito, Arial, sans-serif',
+                    fontWeight: 700,
+                  }}>
+                  second option example
                 </Typography>
               </Box>
             </Slide>
@@ -327,9 +378,9 @@ const IntroCardContents = () => {
             <Box
               mr={1}
               component={motion.div}
+              initial={{ scale: 0 }}
               whileHover={{ scale: dialogVal > 0 ? 1.1 : 0 }}
               whileTap={{ scale: dialogVal > 0 ? 1 : 0 }}
-              initial={{ scale: 0 }}
               animate={{ scale: dialogVal > 0 ? 1 : 0 }}
               transition={{
                 type: 'spring',
@@ -389,8 +440,8 @@ const IntroCardContents = () => {
             <Box
               ml={1}
               component={motion.div}
-              whileHover={{ scale: dialogVal < 3 ? 1.1 : 0 }}
               initial={{ scale: 0 }}
+              whileHover={{ scale: dialogVal < 3 ? 1.1 : 0 }}
               whileTap={{ scale: dialogVal < 3 ? 1 : 0 }}
               animate={{ scale: dialogVal < 3 ? 1 : 0 }}
               transition={{
@@ -490,7 +541,7 @@ const IntroCardContents = () => {
                     color: 'transparent'
                   }
                 }}>
-                <IconSquareX color='red' size={33} />
+                <IconSquareXFilled color='red' size={33} />
               </Button>
             </Box>
           </Stack>
@@ -722,6 +773,7 @@ const IntroCardContents = () => {
                     damping: 20
                   }}
                   onClick={() => {
+                    resetQuestionDialog()
                     setQuestionDialog(prevState => ({ ...prevState, thisWebsite: true }))
                     setAskActive(false)
                     setQuestionActive(true)
@@ -808,7 +860,12 @@ const IntroCardContents = () => {
                     stiffness: 500,
                     damping: 20
                   }}
-                  onClick={() => { }}
+                  onClick={() => {
+                    resetQuestionDialog()
+                    setQuestionDialog(prevState => ({ ...prevState, secondOption: true }))
+                    setAskActive(false)
+                    setQuestionActive(true)
+                  }}
                   size='small'
                   sx={{
                     width: '100%',
