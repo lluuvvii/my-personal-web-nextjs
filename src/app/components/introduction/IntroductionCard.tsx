@@ -39,7 +39,7 @@ const IntroductionCard = () => {
           '& svg': {
             // filter: 'drop-shadow(-2px 3px 10px rgba(0,0,0,0.5))',
           },
-          top: '-15px',
+          top: '-20px',
           left: '100px'
         }}
       >

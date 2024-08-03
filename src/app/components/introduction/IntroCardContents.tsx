@@ -603,6 +603,8 @@ const IntroCardContents = () => {
                   whileTap={{ scale: 1 }}
                   onHoverStart={() => setMarkQuestions((prevState) => ({ ...prevState, thisWebsite: true }))}
                   onHoverEnd={() => setMarkQuestions((prevState) => ({ ...prevState, thisWebsite: false }))}
+                  onTouchStart={() => setMarkQuestions((prevState) => ({ ...prevState, thisWebsite: true }))}
+                  onTouchEnd={() => setMarkQuestions((prevState) => ({ ...prevState, thisWebsite: false }))}
                   animate={{ scale: 1 }}
                   transition={{
                     type: 'spring',
@@ -684,6 +686,8 @@ const IntroCardContents = () => {
                   whileTap={{ scale: 1 }}
                   onHoverStart={() => setMarkQuestions((prevState) => ({ ...prevState, secondOption: true }))}
                   onHoverEnd={() => setMarkQuestions((prevState) => ({ ...prevState, secondOption: false }))}
+                  onTouchStart={() => setMarkQuestions((prevState) => ({ ...prevState, secondOption: true }))}
+                  onTouchEnd={() => setMarkQuestions((prevState) => ({ ...prevState, secondOption: false }))}
                   animate={{ scale: 1 }}
                   transition={{
                     type: 'spring',
