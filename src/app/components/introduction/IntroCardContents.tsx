@@ -1,7 +1,7 @@
 'use client'
 
 import { Button, Stack, Typography, Box, Slide } from '@mui/material'
-import { IconCaretLeftFilled, IconCaretRightFilled, IconExclamationCircle, IconSquareX, IconSquareXFilled } from '@tabler/icons-react'
+import { IconCaretLeftFilled, IconCaretRightFilled, IconExclamationCircle, IconSquareXFilled } from '@tabler/icons-react'
 import { motion } from 'framer-motion'
 import { useState } from 'react'
 
@@ -18,8 +18,6 @@ const IntroCardContents = () => {
       secondOption: false
     })
   }
-
-  console.log(questionDialog)
 
   return (
     <Box>
@@ -364,16 +362,17 @@ const IntroCardContents = () => {
           </Box>
           : null}
       </Box>
-      {!questionActive ?
-        <Box
-          component={motion.div}
-          initial={{ scale: 0 }}
-          animate={{ opacity: !askActive ? 1 : 0, scale: 1 }}
-          transition={{
-            type: 'spring',
-            stiffness: 500,
-            damping: 25
-          }}>
+      <Box
+        position='relative'
+        component={motion.div}
+        initial={{ scale: 0 }}
+        animate={{ opacity: !askActive ? 1 : 0, scale: 1 }}
+        transition={{
+          type: 'spring',
+          stiffness: 500,
+          damping: 25
+        }}>
+        {!questionActive ?
           <Stack direction='row' justifyContent='space-between' alignItems='center'>
             <Box
               mr={1}
@@ -499,54 +498,57 @@ const IntroCardContents = () => {
               </Button>
             </Box>
           </Stack>
-        </Box>
-        :
-        <Box
+          : null}
+        <Stack
           component={motion.div}
           initial={{ scale: 0 }}
-          animate={{ opacity: !askActive ? 1 : 0, scale: 1 }}
+          animate={{ opacity: !askActive ? 1 : 0, scale: questionActive ? 1 : 0 }}
           transition={{
             type: 'spring',
             stiffness: 500,
             damping: 25
-          }}>
-          <Stack direction='row' justifyContent='center' alignItems='center'>
-            <Box
-              ml={1}
-              component={motion.div}
-              whileHover={{ scale: 1.1 }}
-              initial={{ scale: 0 }}
-              whileTap={{ scale: 1 }}
-              animate={{ scale: 1 }}
-              transition={{
-                type: 'spring',
-                stiffness: 500,
-                damping: 20
-              }}>
-              <Button
-                onClick={() => {
-                  setQuestionActive(false)
-                  resetQuestionDialog()
-                }}
-                size='small'
-                sx={{
-                  color: 'grey',
-                  borderRadius: '10px',
+          }}
+          direction='row'
+          justifyContent='center'
+          alignItems='center'
+          position={questionActive ? 'relative' : 'absolute'}
+          top={0}
+          left={questionActive ? -120 : -26.5}>
+          <Box
+            ml={1}
+            component={motion.div}
+            whileHover={{ scale: 1.1 }}
+            initial={{ scale: 0 }}
+            whileTap={{ scale: 1 }}
+            animate={{ scale: 1 }}
+            transition={{
+              type: 'spring',
+              stiffness: 500,
+              damping: 20
+            }}>
+            <Button
+              onClick={() => {
+                resetQuestionDialog()
+                setQuestionActive(false)
+              }}
+              size='small'
+              sx={{
+                color: 'grey',
+                borderRadius: '10px',
+                backgroundColor: 'transparent',
+                '&:active': {
+                  color: 'transparent'
+                },
+                '&:hover': {
                   backgroundColor: 'transparent',
-                  '&:active': {
-                    color: 'transparent'
-                  },
-                  '&:hover': {
-                    backgroundColor: 'transparent',
-                    color: 'transparent'
-                  }
-                }}>
-                <IconSquareXFilled color='red' size={33} />
-              </Button>
-            </Box>
-          </Stack>
-        </Box>
-      }
+                  color: 'transparent'
+                }
+              }}>
+              <IconSquareXFilled color='red' size={33} />
+            </Button>
+          </Box>
+        </Stack>
+      </Box>
       {/* ask me button */}
       <Box
         sx={{

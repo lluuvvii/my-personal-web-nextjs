@@ -8,6 +8,8 @@ import { motion } from 'framer-motion'
 const IntroductionCard = () => {
   const [onHover, setOnHover] = useState(false)
   const [onTouch, setOnTouch] = useState(false)
+
+  console.log(onHover)
   return (
     <Box
       position='relative'
@@ -140,7 +142,7 @@ const IntroductionCard = () => {
           position: 'absolute',
           width: '40px',
           height: '40px',
-          borderRadius: '25%',
+          borderRadius: '12.5%',
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
