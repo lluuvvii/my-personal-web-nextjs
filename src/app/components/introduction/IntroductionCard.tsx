@@ -9,7 +9,6 @@ const IntroductionCard = () => {
   const [onHover, setOnHover] = useState(false)
   const [onTouch, setOnTouch] = useState(false)
 
-  console.log(onHover)
   return (
     <Box
       position='relative'
