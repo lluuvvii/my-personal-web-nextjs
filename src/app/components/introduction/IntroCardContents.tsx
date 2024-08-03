@@ -1,7 +1,7 @@
 'use client'
 
 import { Button, Stack, Typography, Box, Slide } from '@mui/material'
-import { IconCaretLeftFilled, IconCaretRightFilled, IconExclamationCircle } from '@tabler/icons-react'
+import { IconCaretLeftFilled, IconCaretRightFilled, IconExclamationCircle, IconSquareX } from '@tabler/icons-react'
 import { motion } from 'framer-motion'
 import { useState } from 'react'
 
@@ -9,6 +9,17 @@ const IntroCardContents = () => {
   const [dialogVal, setDialogVal] = useState(0)
   const [askActive, setAskActive] = useState(false)
   const [markQuestions, setMarkQuestions] = useState({ thisWebsite: false, secondOption: false })
+  const [questionDialog, setQuestionDialog] = useState({ thisWebsite: false, secondOption: false })
+  const [questionActive, setQuestionActive] = useState(false)
+
+  const resetQuestionDialog = () => {
+    setQuestionDialog({
+      thisWebsite: false,
+      secondOption: false
+    })
+  }
+
+  console.log(questionDialog)
 
   return (
     <Box>
@@ -21,7 +32,7 @@ const IntroCardContents = () => {
           stiffness: 500,
           damping: 30
         }}>
-        {dialogVal === 0 ?
+        {!questionActive && dialogVal === 0 ?
           <Box
             sx={{
               display: 'flex',
@@ -95,7 +106,7 @@ const IntroCardContents = () => {
             </Slide>
           </Box>
           : null}
-        {dialogVal === 1 ?
+        {!questionActive && dialogVal === 1 ?
           <Box
             sx={{
               display: 'flex',
@@ -146,7 +157,7 @@ const IntroCardContents = () => {
             </Slide>
           </Box>
           : null}
-        {dialogVal === 2 ?
+        {!questionActive && dialogVal === 2 ?
           <Box
             sx={{
               display: 'flex',
@@ -198,7 +209,7 @@ const IntroCardContents = () => {
             </Slide>
           </Box>
           : null}
-        {dialogVal === 3 ?
+        {!questionActive && dialogVal === 3 ?
           <Box
             sx={{
               display: 'flex',
@@ -250,56 +261,108 @@ const IntroCardContents = () => {
             </Slide>
           </Box>
           : null}
-      </Box>
-      <Box
-        component={motion.div}
-        initial={{ scale: 0 }}
-        animate={{ opacity: !askActive ? 1 : 0, scale: 1 }}
-        transition={{
-          type: 'spring',
-          stiffness: 500,
-          damping: 25
-        }}>
-        <Stack direction='row' justifyContent='space-between' alignItems='center'>
+        {questionActive && questionDialog.thisWebsite ?
           <Box
-            mr={1}
-            component={motion.div}
-            whileHover={{ scale: dialogVal > 0 ? 1.1 : 0 }}
-            whileTap={{ scale: dialogVal > 0 ? 1 : 0 }}
-            initial={{ scale: 0 }}
-            animate={{ scale: dialogVal > 0 ? 1 : 0 }}
-            transition={{
-              type: 'spring',
-              stiffness: 500,
-              damping: 20
-            }}>
-            <Button
-              onClick={() => {
-                if (dialogVal > 0) {
-                  setDialogVal(dialogVal - 1)
-                }
-              }}
-              size='small'
-              sx={{
-                color: 'grey',
-                borderRadius: '10px',
-                backgroundColor: 'transparent',
-                '&:active': {
-                  color: 'transparent'
+            sx={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              height: '260px',
+              overflow: 'hidden',
+              px: 1,
+              boxShadow: 'inset 0px 0px 5px rgba(0, 0, 0, 0.5)',
+              borderRadius: '5px',
+              position: 'relative',
+              backgroundColor: 'rgba(250, 250, 250, 1)',
+              overFlow: 'hidden',
+              '&::before': {
+                content: '""',
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                right: 0,
+                bottom: 0,
+                background: 'linear-gradient(120deg, transparent, rgba(255,255,255,0.8), transparent)',
+                opacity: 0,
+                animation: 'moveGradient 0.5s forwards',
+                animationDelay: '0.5s',
+              },
+              '@keyframes moveGradient': {
+                '0%': {
+                  opacity: 1,
+                  transform: 'translateX(-100%)',
                 },
-                '&:hover': {
-                  backgroundColor: 'transparent',
-                  color: 'transparent'
-                }
+                '100%': {
+                  opacity: 1,
+                  transform: 'translateX(100%)',
+                },
+              },
+            }}>
+            <Slide direction='right' in={questionDialog.thisWebsite}>
+              <Box>
+                <Typography
+                  variant='h6'
+                  sx={{
+                    fontFamily: 'Nunito, Arial, sans-serif',
+                    fontWeight: 700,
+                  }}>
+                  yayaya
+                </Typography>
+              </Box>
+            </Slide>
+          </Box>
+          : null}
+      </Box>
+      {!questionActive ?
+        <Box
+          component={motion.div}
+          initial={{ scale: 0 }}
+          animate={{ opacity: !askActive ? 1 : 0, scale: 1 }}
+          transition={{
+            type: 'spring',
+            stiffness: 500,
+            damping: 25
+          }}>
+          <Stack direction='row' justifyContent='space-between' alignItems='center'>
+            <Box
+              mr={1}
+              component={motion.div}
+              whileHover={{ scale: dialogVal > 0 ? 1.1 : 0 }}
+              whileTap={{ scale: dialogVal > 0 ? 1 : 0 }}
+              initial={{ scale: 0 }}
+              animate={{ scale: dialogVal > 0 ? 1 : 0 }}
+              transition={{
+                type: 'spring',
+                stiffness: 500,
+                damping: 20
               }}>
-              <IconCaretLeftFilled color='red' />
-              <Typography
-                variant='h5'
+              <Button
+                onClick={() => {
+                  if (dialogVal > 0) {
+                    setDialogVal(dialogVal - 1)
+                  }
+                }}
+                size='small'
                 sx={{
-                  fontFamily: 'Nunito, Arial, sans-serif',
-                  fontWeight: 700,
-                  color: 'white',
-                  textShadow: `
+                  color: 'grey',
+                  borderRadius: '10px',
+                  backgroundColor: 'transparent',
+                  '&:active': {
+                    color: 'transparent'
+                  },
+                  '&:hover': {
+                    backgroundColor: 'transparent',
+                    color: 'transparent'
+                  }
+                }}>
+                <IconCaretLeftFilled color='red' />
+                <Typography
+                  variant='h5'
+                  sx={{
+                    fontFamily: 'Nunito, Arial, sans-serif',
+                    fontWeight: 700,
+                    color: 'white',
+                    textShadow: `
               0px 1.5px 3px rgba(200,0,0,1), 
               0px 1.5px 3px rgba(200,0,0,1), 
               0px 1.5px 3px rgba(200,0,0,1), 
@@ -316,51 +379,51 @@ const IntroCardContents = () => {
               0px 1.5px 3px rgba(200,0,0,1), 
               0px 1.5px 3px rgba(200,0,0,1), 
               0px 1.5px 3px rgba(200,0,0,1)`
-                }}
-              >
-                PREV
-              </Typography>
-            </Button>
-          </Box>
-          <Box sx={{ width: '100%', height: '5px', backgroundColor: 'red', borderRadius: '5px' }} />
-          <Box
-            ml={1}
-            component={motion.div}
-            whileHover={{ scale: dialogVal < 3 ? 1.1 : 0 }}
-            initial={{ scale: 0 }}
-            whileTap={{ scale: dialogVal < 3 ? 1 : 0 }}
-            animate={{ scale: dialogVal < 3 ? 1 : 0 }}
-            transition={{
-              type: 'spring',
-              stiffness: 500,
-              damping: 20
-            }}>
-            <Button
-              onClick={() => {
-                if (dialogVal < 3) {
-                  setDialogVal(dialogVal + 1)
-                }
-              }}
-              size='small'
-              sx={{
-                color: 'grey',
-                borderRadius: '10px',
-                backgroundColor: 'transparent',
-                '&:active': {
-                  color: 'transparent'
-                },
-                '&:hover': {
-                  backgroundColor: 'transparent',
-                  color: 'transparent'
-                }
+                  }}
+                >
+                  PREV
+                </Typography>
+              </Button>
+            </Box>
+            <Box sx={{ width: '100%', height: '5px', backgroundColor: 'red', borderRadius: '5px' }} />
+            <Box
+              ml={1}
+              component={motion.div}
+              whileHover={{ scale: dialogVal < 3 ? 1.1 : 0 }}
+              initial={{ scale: 0 }}
+              whileTap={{ scale: dialogVal < 3 ? 1 : 0 }}
+              animate={{ scale: dialogVal < 3 ? 1 : 0 }}
+              transition={{
+                type: 'spring',
+                stiffness: 500,
+                damping: 20
               }}>
-              <Typography
-                variant='h5'
+              <Button
+                onClick={() => {
+                  if (dialogVal < 3) {
+                    setDialogVal(dialogVal + 1)
+                  }
+                }}
+                size='small'
                 sx={{
-                  fontFamily: 'Nunito, Arial, sans-serif',
-                  fontWeight: 700,
-                  color: 'white',
-                  textShadow: `
+                  color: 'grey',
+                  borderRadius: '10px',
+                  backgroundColor: 'transparent',
+                  '&:active': {
+                    color: 'transparent'
+                  },
+                  '&:hover': {
+                    backgroundColor: 'transparent',
+                    color: 'transparent'
+                  }
+                }}>
+                <Typography
+                  variant='h5'
+                  sx={{
+                    fontFamily: 'Nunito, Arial, sans-serif',
+                    fontWeight: 700,
+                    color: 'white',
+                    textShadow: `
               0px 1.5px 3px rgba(200,0,0,1), 
               0px 1.5px 3px rgba(200,0,0,1), 
               0px 1.5px 3px rgba(200,0,0,1), 
@@ -377,15 +440,62 @@ const IntroCardContents = () => {
               0px 1.5px 3px rgba(200,0,0,1), 
               0px 1.5px 3px rgba(200,0,0,1), 
               0px 1.5px 3px rgba(200,0,0,1)`
+                  }}
+                >
+                  Next
+                </Typography>
+                <IconCaretRightFilled color='red' />
+              </Button>
+            </Box>
+          </Stack>
+        </Box>
+        :
+        <Box
+          component={motion.div}
+          initial={{ scale: 0 }}
+          animate={{ opacity: !askActive ? 1 : 0, scale: 1 }}
+          transition={{
+            type: 'spring',
+            stiffness: 500,
+            damping: 25
+          }}>
+          <Stack direction='row' justifyContent='center' alignItems='center'>
+            <Box
+              ml={1}
+              component={motion.div}
+              whileHover={{ scale: 1.1 }}
+              initial={{ scale: 0 }}
+              whileTap={{ scale: 1 }}
+              animate={{ scale: 1 }}
+              transition={{
+                type: 'spring',
+                stiffness: 500,
+                damping: 20
+              }}>
+              <Button
+                onClick={() => {
+                  setQuestionActive(false)
+                  resetQuestionDialog()
                 }}
-              >
-                Next
-              </Typography>
-              <IconCaretRightFilled color='red' />
-            </Button>
-          </Box>
-        </Stack>
-      </Box>
+                size='small'
+                sx={{
+                  color: 'grey',
+                  borderRadius: '10px',
+                  backgroundColor: 'transparent',
+                  '&:active': {
+                    color: 'transparent'
+                  },
+                  '&:hover': {
+                    backgroundColor: 'transparent',
+                    color: 'transparent'
+                  }
+                }}>
+                <IconSquareX color='red' size={33} />
+              </Button>
+            </Box>
+          </Stack>
+        </Box>
+      }
       {/* ask me button */}
       <Box
         sx={{
@@ -611,7 +721,11 @@ const IntroCardContents = () => {
                     stiffness: 500,
                     damping: 20
                   }}
-                  onClick={() => { }}
+                  onClick={() => {
+                    setQuestionDialog(prevState => ({ ...prevState, thisWebsite: true }))
+                    setAskActive(false)
+                    setQuestionActive(true)
+                  }}
                   size='small'
                   sx={{
                     width: '100%',
