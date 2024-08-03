@@ -272,7 +272,6 @@ const IntroCardContents = () => {
               borderRadius: '5px',
               position: 'relative',
               backgroundColor: 'rgba(250, 250, 250, 1)',
-              overFlow: 'hidden',
               '&::before': {
                 content: '""',
                 position: 'absolute',
@@ -297,14 +296,19 @@ const IntroCardContents = () => {
               },
             }}>
             <Slide direction='right' in={questionDialog.thisWebsite}>
-              <Box>
+              <Box
+                sx={{
+                  width: '100%',
+                  height: '100%',
+                  overflow: 'auto'
+                }}>
                 <Typography
-                  variant='h6'
                   sx={{
+                    fontSize: '18px',
                     fontFamily: 'Nunito, Arial, sans-serif',
                     fontWeight: 700,
                   }}>
-                  blablabla
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum laboriosam cum fuga maxime quod exercitationem nulla tempora! Cum dolore obcaecati cumque, magnam vero molestias nisi laborum soluta assumenda, voluptatem alias. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam libero dicta ducimus eaque corrupti nihil quae saepe obcaecati, vel quisquam distinctio rerum assumenda eius doloribus velit harum architecto. Praesentium, facilis.
                 </Typography>
               </Box>
             </Slide>
@@ -323,7 +327,6 @@ const IntroCardContents = () => {
               borderRadius: '5px',
               position: 'relative',
               backgroundColor: 'rgba(250, 250, 250, 1)',
-              overFlow: 'hidden',
               '&::before': {
                 content: '""',
                 position: 'absolute',
@@ -348,14 +351,19 @@ const IntroCardContents = () => {
               },
             }}>
             <Slide direction='right' in={questionDialog.secondOption}>
-              <Box>
+              <Box
+                sx={{
+                  width: '100%',
+                  height: '100%',
+                  overflow: 'auto'
+                }}>
                 <Typography
-                  variant='h6'
                   sx={{
+                    fontSize: '18px',
                     fontFamily: 'Nunito, Arial, sans-serif',
                     fontWeight: 700,
                   }}>
-                  second option example
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni deleniti doloremque laudantium quo molestias neque quas, optio voluptas sunt doloribus tempora dolores assumenda labore voluptatum expedita, aut, natus inventore facere? Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti delectus impedit quisquam molestias nam repellat sint aliquid, dolorum et eos, suscipit sapiente doloribus alias odio iure? Ullam vel molestias neque?
                 </Typography>
               </Box>
             </Slide>
@@ -544,7 +552,7 @@ const IntroCardContents = () => {
                   color: 'transparent'
                 }
               }}>
-              <IconSquareXFilled color='red' size={33} />
+              <IconSquareXFilled color='red' size={32} />
             </Button>
           </Box>
         </Stack>
@@ -711,6 +719,7 @@ const IntroCardContents = () => {
               <IconExclamationCircle color='white' size='100px' />
             </Typography>
           </Box>
+          {/* ask me about title */}
           <Typography
             position='relative'
             variant='h5'
@@ -746,6 +755,7 @@ const IntroCardContents = () => {
               backgroundColor: 'white',
               borderRadius: '5px',
             }}>
+            {/* this website button */}
             <Box>
               <Stack direction='row' alignItems='center' justifyContent='space-between'>
                 <Box
@@ -834,6 +844,7 @@ const IntroCardContents = () => {
                 </Box>
               </Stack>
             </Box>
+            {/* yayaya button */}
             <Box>
               <Stack direction='row' alignItems='center' justifyContent='space-between'>
                 <Box
