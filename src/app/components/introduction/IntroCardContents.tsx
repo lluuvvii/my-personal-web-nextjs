@@ -201,7 +201,7 @@ const IntroCardContents = () => {
                     fontWeight: 700,
                   }}
                 >
-                  I have been studying web development since 2023 and continue to explore it until now, at that time I also tried to learn consistently and balance mentally by playing games or other hobbies
+                  I have been studying web development since 2023 and continue to explore it until now, at that time I also tried to learn consistently and balance mentally by playing games or other hobbies.
                 </Typography>
               </Box>
             </Slide>
@@ -253,7 +253,7 @@ const IntroCardContents = () => {
                     fontWeight: 700,
                   }}
                 >
-                  On this personal website, I created it because I wanted to express how I can pour out the creativity, knowledge, logic, and innovation that is in my mind, Enjoy !!
+                  On this personal website, I created it because I wanted to express how I can pour out the creativity, knowledge, logic, and innovation that is in my mind, Enjoy !!.
                 </Typography>
               </Box>
             </Slide>
@@ -298,8 +298,8 @@ const IntroCardContents = () => {
             <Slide direction='right' in={questionDialog.thisWebsite}>
               <Box
                 sx={{
-                  width: '100%',
-                  height: '100%',
+                  // width: '100%',
+                  // height: '100%',
                   overflow: 'auto'
                 }}>
                 <Typography
@@ -308,7 +308,7 @@ const IntroCardContents = () => {
                     fontFamily: 'Nunito, Arial, sans-serif',
                     fontWeight: 700,
                   }}>
-                  This website is inspired by the UI of the game Sonic Generations.
+                  This website is inspired by the UI of the game Sonic Generations and I made it for personal use and to introduce myself and my work to visitors.
                 </Typography>
               </Box>
             </Slide>
@@ -353,7 +353,7 @@ const IntroCardContents = () => {
             <Slide direction='right' in={questionDialog.secondOption}>
               <Box
                 sx={{
-                  width: '100%',
+                  // width: '100%',
                   height: '100%',
                   overflow: 'auto'
                 }}>
