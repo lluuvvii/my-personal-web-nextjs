@@ -308,7 +308,7 @@ const IntroCardContents = () => {
                     fontFamily: 'Nunito, Arial, sans-serif',
                     fontWeight: 700,
                   }}>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum laboriosam cum fuga maxime quod exercitationem nulla tempora! Cum dolore obcaecati cumque, magnam vero molestias nisi laborum soluta assumenda, voluptatem alias. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam libero dicta ducimus eaque corrupti nihil quae saepe obcaecati, vel quisquam distinctio rerum assumenda eius doloribus velit harum architecto. Praesentium, facilis.
+                  This website is inspired by the UI of the game Sonic Generations.
                 </Typography>
               </Box>
             </Slide>
