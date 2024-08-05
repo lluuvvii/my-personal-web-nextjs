@@ -1058,7 +1058,6 @@ const IntroCardContents = () => {
                 onClick={() => window.open('https://github.com/lluuvvii', '_blank')}
                 size='small'
                 sx={{
-                  borderRadius: '10px',
                   backgroundColor: 'transparent',
                   textTransform: 'none',
                   '&:active': {
@@ -1077,7 +1076,6 @@ const IntroCardContents = () => {
                 onClick={() => window.open('https://instagram.com/loovee_luvi', '_blank')}
                 size='small'
                 sx={{
-                  borderRadius: '10px',
                   backgroundColor: 'transparent',
                   textTransform: 'none',
                   '&:active': {
