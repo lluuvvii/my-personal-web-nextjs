@@ -1055,7 +1055,7 @@ const IntroCardContents = () => {
           <Stack direction='row' alignItems='center' justifyContent='center' spacing={1}>
             <Box>
               <Button
-                onClick={() => { }}
+                onClick={() => window.open('https://github.com/lluuvvii', '_blank')}
                 size='small'
                 sx={{
                   borderRadius: '10px',
@@ -1074,7 +1074,7 @@ const IntroCardContents = () => {
             </Box>
             <Box>
               <Button
-                onClick={() => { }}
+                onClick={() => window.open('https://instagram.com/loovee_luvi', '_blank')}
                 size='small'
                 sx={{
                   borderRadius: '10px',
