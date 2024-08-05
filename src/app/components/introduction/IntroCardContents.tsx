@@ -793,27 +793,41 @@ const IntroCardContents = () => {
             variant='h5'
             mb={1}
             sx={{
+              position: 'absolute',
+              width: '100%',
+              top: 12,
+              left: 0,
               textAlign: 'center',
               fontFamily: 'Nunito, Arial, sans-serif',
               fontWeight: 700,
               color: 'white',
-              textShadow: `
-              0px 1.5px 2.5px rgba(0,0,0,1), 
-              0px 1.5px 2.5px rgba(0,0,0,1), 
-              0px 1.5px 2.5px rgba(0,0,0,1), 
-              0px 1.5px 2.5px rgba(0,0,0,1), 
-              0px 1.5px 2.5px rgba(0,0,0,1), 
-              0px 1.5px 2.5px rgba(0,0,0,1), 
-              0px 1.5px 2.5px rgba(0,0,0,1), 
-              0px 1.5px 2.5px rgba(0,0,0,1), 
-              0px 1.5px 2.5px rgba(0,0,0,1), 
-              0px 1.5px 2.5px rgba(0,0,0,1), 
-              0px 1.5px 2.5px rgba(0,0,0,1), 
-              0px 1.5px 2.5px rgba(0,0,0,1), 
-              0px 1.5px 2.5px rgba(0,0,0,1), 
-              0px 1.5px 2.5px rgba(0,0,0,1), 
-              0px 1.5px 2.5px rgba(0,0,0,1), 
-              0px 1.5px 2.5px rgba(0,0,0,1)`
+              WebkitTextStroke: '10px white'
+            }}>Ask Me About :</Typography>
+          <Typography
+            position='relative'
+            variant='h5'
+            mb={1}
+            sx={{
+              position: 'absolute',
+              width: '100%',
+              top: 12,
+              left: 0,
+              textAlign: 'center',
+              fontFamily: 'Nunito, Arial, sans-serif',
+              fontWeight: 700,
+              color: 'black',
+              WebkitTextStroke: '5px black'
+            }}>Ask Me About :</Typography>
+          <Typography
+            position='relative'
+            variant='h5'
+            mb={1}
+            sx={{
+              position: 'relative',
+              textAlign: 'center',
+              fontFamily: 'Nunito, Arial, sans-serif',
+              fontWeight: 700,
+              color: 'white',
             }}>Ask Me About :</Typography>
           <Box
             sx={{
@@ -874,27 +888,41 @@ const IntroCardContents = () => {
                   <Typography
                     variant='h6'
                     sx={{
+                      position: 'absolute',
+                      width: '100%',
+                      top: 6,
+                      left: 0,
+                      textAlign: 'center',
+                      fontFamily: 'Nunito, Arial, sans-serif',
+                      fontWeight: 700,
+                      color: 'red',
+                      WebkitTextStroke: '10px red'
+                    }}>
+                    This Website
+                  </Typography>
+                  <Typography
+                    variant='h6'
+                    sx={{
+                      position: 'absolute',
+                      width: '100%',
+                      top: 6,
+                      left: 0,
+                      textAlign: 'center',
+                      fontFamily: 'Nunito, Arial, sans-serif',
+                      fontWeight: 700,
+                      color: 'black',
+                      WebkitTextStroke: '5px black'
+                    }}>
+                    This Website
+                  </Typography>
+                  <Typography
+                    variant='h6'
+                    sx={{
+                      position: 'relative',
                       textAlign: 'center',
                       fontFamily: 'Nunito, Arial, sans-serif',
                       fontWeight: 700,
                       color: 'white',
-                      textShadow: `
-              0px 1.5px 2.5px rgba(200,0,0,1), 
-              0px 1.5px 2.5px rgba(200,0,0,1), 
-              0px 1.5px 2.5px rgba(200,0,0,1), 
-              0px 1.5px 2.5px rgba(200,0,0,1), 
-              0px 1.5px 2.5px rgba(200,0,0,1), 
-              0px 1.5px 2.5px rgba(200,0,0,1), 
-              0px 1.5px 2.5px rgba(200,0,0,1), 
-              0px 1.5px 2.5px rgba(200,0,0,1), 
-              0px 1.5px 2.5px rgba(200,0,0,1), 
-              0px 1.5px 2.5px rgba(200,0,0,1), 
-              0px 1.5px 2.5px rgba(200,0,0,1), 
-              0px 1.5px 2.5px rgba(200,0,0,1), 
-              0px 1.5px 2.5px rgba(200,0,0,1), 
-              0px 1.5px 2.5px rgba(200,0,0,1), 
-              0px 1.5px 2.5px rgba(200,0,0,1), 
-              0px 1.5px 2.5px rgba(200,0,0,1)`
                     }}>
                     This Website
                   </Typography>
@@ -963,29 +991,43 @@ const IntroCardContents = () => {
                   <Typography
                     variant='h6'
                     sx={{
+                      position: 'absolute',
+                      width: '100%',
+                      top: 6,
+                      left: 0,
+                      textAlign: 'center',
+                      fontFamily: 'Nunito, Arial, sans-serif',
+                      fontWeight: 700,
+                      color: 'red',
+                      WebkitTextStroke: '10px red'
+                    }}>
+                    Second Option
+                  </Typography>
+                  <Typography
+                    variant='h6'
+                    sx={{
+                      position: 'absolute',
+                      width: '100%',
+                      top: 6,
+                      left: 0,
+                      textAlign: 'center',
+                      fontFamily: 'Nunito, Arial, sans-serif',
+                      fontWeight: 700,
+                      color: 'black',
+                      WebkitTextStroke: '5px black'
+                    }}>
+                    Second Option
+                  </Typography>
+                  <Typography
+                    variant='h6'
+                    sx={{
+                      position: 'relative',
                       textAlign: 'center',
                       fontFamily: 'Nunito, Arial, sans-serif',
                       fontWeight: 700,
                       color: 'white',
-                      textShadow: `
-              0px 1.5px 2.5px rgba(200,0,0,1), 
-              0px 1.5px 2.5px rgba(200,0,0,1), 
-              0px 1.5px 2.5px rgba(200,0,0,1), 
-              0px 1.5px 2.5px rgba(200,0,0,1), 
-              0px 1.5px 2.5px rgba(200,0,0,1), 
-              0px 1.5px 2.5px rgba(200,0,0,1), 
-              0px 1.5px 2.5px rgba(200,0,0,1), 
-              0px 1.5px 2.5px rgba(200,0,0,1), 
-              0px 1.5px 2.5px rgba(200,0,0,1), 
-              0px 1.5px 2.5px rgba(200,0,0,1), 
-              0px 1.5px 2.5px rgba(200,0,0,1), 
-              0px 1.5px 2.5px rgba(200,0,0,1), 
-              0px 1.5px 2.5px rgba(200,0,0,1), 
-              0px 1.5px 2.5px rgba(200,0,0,1), 
-              0px 1.5px 2.5px rgba(200,0,0,1), 
-              0px 1.5px 2.5px rgba(200,0,0,1)`
                     }}>
-                    yayayayaya
+                    Second Option
                   </Typography>
                 </Button>
                 <Box
