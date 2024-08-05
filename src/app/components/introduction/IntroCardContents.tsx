@@ -82,41 +82,13 @@ const IntroCardContents = () => {
                 </Typography>
                 <Typography
                   variant='h5'
-                  sx={{
-                    position: 'absolute',
-                    textAlign: 'center',
-                    top: '115.5px',
-                    left: '0px',
-                    fontFamily: 'Nunito, Arial, sans-serif',
-                    fontWeight: 600,
-                    color: 'red',
-                    WebkitTextStroke: '8px red'
-                  }}>
-                  I Love Shollakhuddin Kurniawan
-                </Typography>
-                <Typography
-                  variant='h5'
-                  sx={{
-                    position: 'absolute',
-                    textAlign: 'center',
-                    top: '115.5px',
-                    left: '0px',
-                    fontFamily: 'Nunito, Arial, sans-serif',
-                    fontWeight: 600,
-                    color: 'black',
-                    WebkitTextStroke: '4px black'
-                  }}>
-                  I Love Shollakhuddin Kurniawan
-                </Typography>
-                <Typography
-                  variant='h5'
                   mt={1}
                   sx={{
                     position: 'relative',
                     textAlign: 'center',
                     fontFamily: 'Nunito, Arial, sans-serif',
-                    fontWeight: 600,
-                    color: 'white',
+                    fontWeight: 700,
+                    color: 'red',
                   }}>
                   I Love Shollakhuddin Kurniawan
                 </Typography>
