@@ -1,7 +1,7 @@
 'use client'
 
 import { Button, Stack, Typography, Box, Slide } from '@mui/material'
-import { IconBrandGithub, IconCaretLeftFilled, IconCaretRightFilled, IconExclamationCircle, IconSquareXFilled } from '@tabler/icons-react'
+import { IconBrandGithub, IconBrandInstagram, IconCaretLeftFilled, IconCaretRightFilled, IconExclamationCircle, IconSquareXFilled } from '@tabler/icons-react'
 import { motion } from 'framer-motion'
 import { useState } from 'react'
 
@@ -1052,13 +1052,12 @@ const IntroCardContents = () => {
         </Box>
         {/* social media */}
         <Box>
-          <Stack direction='row' alignItems='center' justifyContent='center'>
+          <Stack direction='row' alignItems='center' justifyContent='center' spacing={1}>
             <Box>
               <Button
                 onClick={() => { }}
                 size='small'
                 sx={{
-                  width: '100%',
                   borderRadius: '10px',
                   backgroundColor: 'transparent',
                   textTransform: 'none',
@@ -1071,6 +1070,25 @@ const IntroCardContents = () => {
                   }
                 }}>
                 <IconBrandGithub color='red' />
+              </Button>
+            </Box>
+            <Box>
+              <Button
+                onClick={() => { }}
+                size='small'
+                sx={{
+                  borderRadius: '10px',
+                  backgroundColor: 'transparent',
+                  textTransform: 'none',
+                  '&:active': {
+                    color: 'transparent'
+                  },
+                  '&:hover': {
+                    backgroundColor: 'transparent',
+                    color: 'transparent'
+                  }
+                }}>
+                <IconBrandInstagram color='red' />
               </Button>
             </Box>
           </Stack>
