@@ -84,7 +84,6 @@ const IntroCardContents = () => {
                   variant='h5'
                   mt={1}
                   sx={{
-                    position: 'relative',
                     textAlign: 'center',
                     fontFamily: 'Nunito, Arial, sans-serif',
                     fontWeight: 700,
