@@ -77,7 +77,7 @@ const IntroCardContents = () => {
                     fontWeight: 700,
                     color: 'black',
                   }}>
-                  Welcome Visitors !!<br/>
+                  Welcome Visitors !!<br />
                   My Name Is :
                 </Typography>
                 <Typography
@@ -418,29 +418,44 @@ const IntroCardContents = () => {
                 <Typography
                   variant='h5'
                   sx={{
+                    top: 6,
+                    left: 29,
+                    position: 'absolute',
+                    fontFamily: 'Nunito, Arial, sans-serif',
+                    fontWeight: 700,
+                    color: 'red',
+                    WebkitTextStroke: '10px red',
+                    textTransform: 'none',
+                  }}
+                >
+                  Prev
+                </Typography>
+                <Typography
+                  variant='h5'
+                  sx={{
+                    top: 6,
+                    left: 29,
+                    position: 'absolute',
+                    fontFamily: 'Nunito, Arial, sans-serif',
+                    fontWeight: 700,
+                    color: 'black',
+                    WebkitTextStroke: '5px black',
+                    textTransform: 'none',
+                  }}
+                >
+                  Prev
+                </Typography>
+                <Typography
+                  variant='h5'
+                  sx={{
+                    position: 'relative',
                     fontFamily: 'Nunito, Arial, sans-serif',
                     fontWeight: 700,
                     color: 'white',
-                    textShadow: `
-              0px 1.5px 3px rgba(200,0,0,1), 
-              0px 1.5px 3px rgba(200,0,0,1), 
-              0px 1.5px 3px rgba(200,0,0,1), 
-              0px 1.5px 3px rgba(200,0,0,1), 
-              0px 1.5px 3px rgba(200,0,0,1), 
-              0px 1.5px 3px rgba(200,0,0,1), 
-              0px 1.5px 3px rgba(200,0,0,1), 
-              0px 1.5px 3px rgba(200,0,0,1), 
-              0px 1.5px 3px rgba(200,0,0,1), 
-              0px 1.5px 3px rgba(200,0,0,1), 
-              0px 1.5px 3px rgba(200,0,0,1), 
-              0px 1.5px 3px rgba(200,0,0,1), 
-              0px 1.5px 3px rgba(200,0,0,1), 
-              0px 1.5px 3px rgba(200,0,0,1), 
-              0px 1.5px 3px rgba(200,0,0,1), 
-              0px 1.5px 3px rgba(200,0,0,1)`
+                    textTransform: 'none',
                   }}
                 >
-                  PREV
+                  Prev
                 </Typography>
               </Button>
             </Box>
@@ -479,26 +494,58 @@ const IntroCardContents = () => {
                 <Typography
                   variant='h5'
                   sx={{
+                    top: 6,
+                    left: 5,
+                    position: 'absolute',
+                    fontFamily: 'Nunito, Arial, sans-serif',
+                    fontWeight: 700,
+                    color: 'red',
+                    WebkitTextStroke: '10px red',
+                    textTransform: 'none',
+                  }}
+                >
+                  Next
+                </Typography>
+                <Typography
+                  variant='h5'
+                  sx={{
+                    top: 6,
+                    left: 5,
+                    position: 'absolute',
+                    fontFamily: 'Nunito, Arial, sans-serif',
+                    fontWeight: 700,
+                    color: 'black',
+                    WebkitTextStroke: '5px black',
+                    textTransform: 'none',
+                  }}
+                >
+                  Next
+                </Typography>
+                <Typography
+                  variant='h5'
+                  sx={{
+                    position: 'relative',
                     fontFamily: 'Nunito, Arial, sans-serif',
                     fontWeight: 700,
                     color: 'white',
-                    textShadow: `
-              0px 1.5px 3px rgba(200,0,0,1), 
-              0px 1.5px 3px rgba(200,0,0,1), 
-              0px 1.5px 3px rgba(200,0,0,1), 
-              0px 1.5px 3px rgba(200,0,0,1), 
-              0px 1.5px 3px rgba(200,0,0,1), 
-              0px 1.5px 3px rgba(200,0,0,1), 
-              0px 1.5px 3px rgba(200,0,0,1), 
-              0px 1.5px 3px rgba(200,0,0,1), 
-              0px 1.5px 3px rgba(200,0,0,1), 
-              0px 1.5px 3px rgba(200,0,0,1), 
-              0px 1.5px 3px rgba(200,0,0,1), 
-              0px 1.5px 3px rgba(200,0,0,1), 
-              0px 1.5px 3px rgba(200,0,0,1), 
-              0px 1.5px 3px rgba(200,0,0,1), 
-              0px 1.5px 3px rgba(200,0,0,1), 
-              0px 1.5px 3px rgba(200,0,0,1)`
+                    textTransform: 'none'
+              //       textShadow: `
+              // 0px 1.5px 3px rgba(200,0,0,1), 
+              // 0px 1.5px 3px rgba(200,0,0,1), 
+              // 0px 1.5px 3px rgba(200,0,0,1), 
+              // 0px 1.5px 3px rgba(200,0,0,1), 
+              // 0px 1.5px 3px rgba(200,0,0,1), 
+              // 0px 1.5px 3px rgba(200,0,0,1), 
+              // 0px 1.5px 3px rgba(200,0,0,1), 
+              // 0px 1.5px 3px rgba(200,0,0,1), 
+              // 0px 1.5px 3px rgba(200,0,0,1), 
+              // 0px 1.5px 3px rgba(200,0,0,1), 
+              // 0px 1.5px 3px rgba(200,0,0,1), 
+              // 0px 1.5px 3px rgba(200,0,0,1), 
+              // 0px 1.5px 3px rgba(200,0,0,1), 
+              // 0px 1.5px 3px rgba(200,0,0,1), 
+              // 0px 1.5px 3px rgba(200,0,0,1), 
+              // 0px 1.5px 3px rgba(200,0,0,1)`
                   }}
                 >
                   Next
