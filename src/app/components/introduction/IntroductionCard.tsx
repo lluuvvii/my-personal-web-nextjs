@@ -652,6 +652,36 @@ const IntroductionCard = () => {
           variant='h4'
           sx={{
             position: 'absolute',
+            top: '-18px',
+            left: '-10px',
+            textAlign: 'center',
+            fontFamily: 'Nunito, Arial, sans-serif',
+            fontWeight: 600,
+            WebkitTextStroke: '10px red',
+            color: 'red',
+            transform: 'rotate(-5deg)',
+          }}>
+          Introduction
+        </Typography>
+        <Typography
+          variant='h4'
+          sx={{
+            position: 'absolute',
+            top: '-18px',
+            left: '-10px',
+            textAlign: 'center',
+            fontFamily: 'Nunito, Arial, sans-serif',
+            fontWeight: 600,
+            WebkitTextStroke: '5px black',
+            color: 'red',
+            transform: 'rotate(-5deg)',
+          }}>
+          Introduction
+        </Typography>
+        <Typography
+          variant='h4'
+          sx={{
+            position: 'absolute',
             top: '-20px',
             left: '-10px',
             textAlign: 'center',
@@ -659,20 +689,6 @@ const IntroductionCard = () => {
             fontWeight: 600,
             color: 'white',
             transform: 'rotate(-5deg)',
-            textShadow: `
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1), 
-              0px 1.5px 3px rgba(0,0,0,1)`
           }}>
           Introduction
         </Typography>
