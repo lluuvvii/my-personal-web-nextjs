@@ -529,23 +529,23 @@ const IntroCardContents = () => {
                     fontWeight: 700,
                     color: 'white',
                     textTransform: 'none'
-              //       textShadow: `
-              // 0px 1.5px 3px rgba(200,0,0,1), 
-              // 0px 1.5px 3px rgba(200,0,0,1), 
-              // 0px 1.5px 3px rgba(200,0,0,1), 
-              // 0px 1.5px 3px rgba(200,0,0,1), 
-              // 0px 1.5px 3px rgba(200,0,0,1), 
-              // 0px 1.5px 3px rgba(200,0,0,1), 
-              // 0px 1.5px 3px rgba(200,0,0,1), 
-              // 0px 1.5px 3px rgba(200,0,0,1), 
-              // 0px 1.5px 3px rgba(200,0,0,1), 
-              // 0px 1.5px 3px rgba(200,0,0,1), 
-              // 0px 1.5px 3px rgba(200,0,0,1), 
-              // 0px 1.5px 3px rgba(200,0,0,1), 
-              // 0px 1.5px 3px rgba(200,0,0,1), 
-              // 0px 1.5px 3px rgba(200,0,0,1), 
-              // 0px 1.5px 3px rgba(200,0,0,1), 
-              // 0px 1.5px 3px rgba(200,0,0,1)`
+                    //       textShadow: `
+                    // 0px 1.5px 3px rgba(200,0,0,1), 
+                    // 0px 1.5px 3px rgba(200,0,0,1), 
+                    // 0px 1.5px 3px rgba(200,0,0,1), 
+                    // 0px 1.5px 3px rgba(200,0,0,1), 
+                    // 0px 1.5px 3px rgba(200,0,0,1), 
+                    // 0px 1.5px 3px rgba(200,0,0,1), 
+                    // 0px 1.5px 3px rgba(200,0,0,1), 
+                    // 0px 1.5px 3px rgba(200,0,0,1), 
+                    // 0px 1.5px 3px rgba(200,0,0,1), 
+                    // 0px 1.5px 3px rgba(200,0,0,1), 
+                    // 0px 1.5px 3px rgba(200,0,0,1), 
+                    // 0px 1.5px 3px rgba(200,0,0,1), 
+                    // 0px 1.5px 3px rgba(200,0,0,1), 
+                    // 0px 1.5px 3px rgba(200,0,0,1), 
+                    // 0px 1.5px 3px rgba(200,0,0,1), 
+                    // 0px 1.5px 3px rgba(200,0,0,1)`
                   }}
                 >
                   Next
@@ -673,27 +673,47 @@ const IntroCardContents = () => {
                 <Typography
                   variant='h5'
                   sx={{
+                    position: 'absolute',
+                    width: '100%',
+                    top: '6px',
+                    left: '0px',
                     textAlign: 'center',
                     fontFamily: 'Nunito, Arial, sans-serif',
                     fontWeight: 700,
                     color: 'white',
-                    textShadow: `
-                    0px 1.5px 3px rgba(150,0,0,1), 
-                    0px 1.5px 3px rgba(150,0,0,1), 
-                    0px 1.5px 3px rgba(150,0,0,1), 
-                    0px 1.5px 3px rgba(150,0,0,1), 
-                    0px 1.5px 3px rgba(150,0,0,1), 
-                    0px 1.5px 3px rgba(150,0,0,1), 
-                    0px 1.5px 3px rgba(150,0,0,1), 
-                    0px 1.5px 3px rgba(150,0,0,1), 
-                    0px 1.5px 3px rgba(150,0,0,1), 
-                    0px 1.5px 3px rgba(150,0,0,1), 
-                    0px 1.5px 3px rgba(150,0,0,1), 
-                    0px 1.5px 3px rgba(150,0,0,1), 
-                    0px 1.5px 3px rgba(150,0,0,1), 
-                    0px 1.5px 3px rgba(150,0,0,1), 
-                    0px 1.5px 3px rgba(150,0,0,1), 
-                    0px 1.5px 3px rgba(150,0,0,1)`
+                    WebkitTextStroke: '10px white'
+                  }}>
+                  {askActive ?
+                    <>Close</>
+                    :
+                    <>Ask Me?</>}
+                </Typography>
+                <Typography
+                  variant='h5'
+                  sx={{
+                    position: 'absolute',
+                    width: '100%',
+                    top: '6px',
+                    left: '0px',
+                    textAlign: 'center',
+                    fontFamily: 'Nunito, Arial, sans-serif',
+                    fontWeight: 700,
+                    color: 'black',
+                    WebkitTextStroke: '5px black'
+                  }}>
+                  {askActive ?
+                    <>Close</>
+                    :
+                    <>Ask Me?</>}
+                </Typography>
+                <Typography
+                  variant='h5'
+                  sx={{
+                    position: 'relative',
+                    textAlign: 'center',
+                    fontFamily: 'Nunito, Arial, sans-serif',
+                    fontWeight: 700,
+                    color: 'white',
                   }}>
                   {askActive ?
                     <>Close</>
