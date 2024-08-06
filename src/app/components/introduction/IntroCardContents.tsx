@@ -9,6 +9,7 @@ const IntroCardContents = () => {
   const [dialogVal, setDialogVal] = useState(0)
   const [askActive, setAskActive] = useState(false)
   const [markQuestions, setMarkQuestions] = useState({ thisWebsite: false, secondOption: false })
+  const [markAskMe, setMarkAskMe] = useState(false)
   const [questionDialog, setQuestionDialog] = useState({ thisWebsite: false, secondOption: false })
   const [questionActive, setQuestionActive] = useState(false)
 
@@ -643,91 +644,119 @@ const IntroCardContents = () => {
               ?
             </Typography>
           </Box>
-          <Box
-            component={motion.div}
-            whileHover={{ scale: 1.1 }}
-            initial={{ scale: 0 }}
-            whileTap={{ scale: 1 }}
-            animate={{ scale: 1 }}
-            transition={{
-              type: 'spring',
-              stiffness: 500,
-              damping: 20
-            }}>
-            <Button
-              onClick={() => setAskActive(!askActive)}
-              size='small'
-              sx={{
-                width: '100%',
-                borderRadius: '10px',
-                backgroundColor: 'transparent',
-                textTransform: 'none',
-                '&:active': {
-                  color: 'transparent'
-                },
-                '&:hover': {
-                  backgroundColor: 'transparent',
-                  color: 'transparent'
-                }
+          <Stack direction='row' alignItems='center' justifyContent='space-between'>
+            <Box
+              component={motion.div}
+              initial={{ x: 0 }}
+              animate={{ x: markAskMe ? 20 : 0 }}
+              transition={{
+                type: 'spring',
+                stiffness: 500,
+                damping: 20
               }}>
-              <Box width='100%'>
-                <Stack direction='row' alignItems='center' justifyContent='space-between'>
-                  <IconCaretRightFilled color='white' />
-                  <Typography
-                    variant='h5'
-                    sx={{
-                      position: 'absolute',
-                      width: '100%',
-                      top: '6px',
-                      left: '0px',
-                      textAlign: 'center',
-                      fontFamily: 'Nunito, Arial, sans-serif',
-                      fontWeight: 700,
-                      color: 'white',
-                      WebkitTextStroke: '10px white'
-                    }}>
-                    {askActive ?
-                      <>Close</>
-                      :
-                      <>Ask Me?</>}
-                  </Typography>
-                  <Typography
-                    variant='h5'
-                    sx={{
-                      position: 'absolute',
-                      width: '100%',
-                      top: '6px',
-                      left: '0px',
-                      textAlign: 'center',
-                      fontFamily: 'Nunito, Arial, sans-serif',
-                      fontWeight: 700,
-                      color: 'black',
-                      WebkitTextStroke: '5px black'
-                    }}>
-                    {askActive ?
-                      <>Close</>
-                      :
-                      <>Ask Me?</>}
-                  </Typography>
-                  <Typography
-                    variant='h5'
-                    sx={{
-                      position: 'relative',
-                      textAlign: 'center',
-                      fontFamily: 'Nunito, Arial, sans-serif',
-                      fontWeight: 700,
-                      color: 'white',
-                    }}>
-                    {askActive ?
-                      <>Close</>
-                      :
-                      <>Ask Me?</>}
-                  </Typography>
-                  <IconCaretLeftFilled color='white' />
-                </Stack>
-              </Box>
-            </Button>
-          </Box>
+              <IconCaretRightFilled color='white' />
+            </Box>
+            <Box
+              component={motion.div}
+              whileHover={{ scale: 1.1 }}
+              onHoverStart={() => setMarkAskMe(true)}
+              onHoverEnd={() => setMarkAskMe(false)}
+              onTouchStart={() => setMarkAskMe(true)}
+              onTouchEnd={() => setMarkAskMe(false)}
+              initial={{ scale: 0 }}
+              whileTap={{ scale: 1 }}
+              animate={{ scale: 1 }}
+              transition={{
+                type: 'spring',
+                stiffness: 500,
+                damping: 20
+              }}>
+              <Button
+                onClick={() => {
+                  setAskActive(!askActive)
+                }}
+                size='small'
+                sx={{
+                  width: '100%',
+                  borderRadius: '10px',
+                  backgroundColor: 'transparent',
+                  textTransform: 'none',
+                  '&:active': {
+                    color: 'transparent'
+                  },
+                  '&:hover': {
+                    backgroundColor: 'transparent',
+                    color: 'transparent'
+                  }
+                }}>
+                <Box width='100%'>
+                  <Stack direction='row' alignItems='center' justifyContent='space-between'>
+                    <Typography
+                      variant='h5'
+                      sx={{
+                        position: 'absolute',
+                        width: '100%',
+                        top: '6px',
+                        left: '0px',
+                        textAlign: 'center',
+                        fontFamily: 'Nunito, Arial, sans-serif',
+                        fontWeight: 700,
+                        color: 'white',
+                        WebkitTextStroke: '10px white'
+                      }}>
+                      {askActive ?
+                        <>Close</>
+                        :
+                        <>Ask Me?</>}
+                    </Typography>
+                    <Typography
+                      variant='h5'
+                      sx={{
+                        position: 'absolute',
+                        width: '100%',
+                        top: '6px',
+                        left: '0px',
+                        textAlign: 'center',
+                        fontFamily: 'Nunito, Arial, sans-serif',
+                        fontWeight: 700,
+                        color: 'black',
+                        WebkitTextStroke: '5px black'
+                      }}>
+                      {askActive ?
+                        <>Close</>
+                        :
+                        <>Ask Me?</>}
+                    </Typography>
+                    <Typography
+                      variant='h5'
+                      sx={{
+                        position: 'relative',
+                        textAlign: 'center',
+                        fontFamily: 'Nunito, Arial, sans-serif',
+                        fontWeight: 700,
+                        color: 'white',
+                      }}>
+                      {askActive ?
+                        <>Close</>
+                        :
+                        <>Ask Me?</>}
+                    </Typography>
+                  </Stack>
+                </Box>
+              </Button>
+            </Box>
+            <Box
+              component={motion.div}
+              initial={{ x: 0 }}
+              animate={{ x: markAskMe ? -20 : 0 }}
+              transition={{
+                type: 'spring',
+                stiffness: 500,
+                damping: 20
+              }}>
+              <IconCaretLeftFilled color='white' />
+            </Box>
+          </Stack>
         </Box>
         {/* ask me about card */}
         <Box
