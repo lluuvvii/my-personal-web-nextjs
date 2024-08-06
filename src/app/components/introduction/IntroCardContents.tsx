@@ -1096,7 +1096,17 @@ const IntroCardContents = () => {
               overflow: 'hidden',
             }}>
             <Stack direction='row' alignItems='center' justifyContent='center' spacing={1}>
-              <Box>
+              <Box
+                component={motion.div}
+                initial={{ scale: 0 }}
+                whileHover={{ scale: 1.2 }}
+                whileTap={{ scale: 1 }}
+                animate={{ scale: 1 }}
+                transition={{
+                  type: 'spring',
+                  stiffness: 500,
+                  damping: 20
+                }}>
                 <Button
                   onClick={() => window.open('https://github.com/lluuvvii', '_blank')}
                   size='small'
@@ -1114,7 +1124,17 @@ const IntroCardContents = () => {
                   <IconBrandGithub color='red' size={22} />
                 </Button>
               </Box>
-              <Box>
+              <Box
+                component={motion.div}
+                initial={{ scale: 0 }}
+                whileHover={{ scale: 1.2 }}
+                whileTap={{ scale: 1 }}
+                animate={{ scale: 1 }}
+                transition={{
+                  type: 'spring',
+                  stiffness: 500,
+                  damping: 20
+                }}>
                 <Button
                   onClick={() => window.open('https://instagram.com/loovee_luvi', '_blank')}
                   size='small'
