@@ -8,8 +8,10 @@ import { useState } from 'react'
 const IntroCardContents = () => {
   const [dialogVal, setDialogVal] = useState(0)
   const [askActive, setAskActive] = useState(false)
+  const [socialMediaActive, setSocialMediaActive] = useState(false)
   const [markQuestions, setMarkQuestions] = useState({ thisWebsite: false, secondOption: false })
   const [markAskMe, setMarkAskMe] = useState(false)
+  const [markSocialMedia, setMarkSocialMedia] = useState(false)
   const [questionDialog, setQuestionDialog] = useState({ thisWebsite: false, secondOption: false })
   const [questionActive, setQuestionActive] = useState(false)
 
@@ -21,7 +23,7 @@ const IntroCardContents = () => {
   }
 
   return (
-    <Box>
+    <Box position='relative'>
       <Stack direction='column' justifyContent='center' spacing={1}>
         {/* screen content */}
         <Box
@@ -617,7 +619,6 @@ const IntroCardContents = () => {
             borderRadius: '5px',
             overflow: 'hidden',
             position: 'relative'
-            // filter: 'drop-shadow(-2px 2px 2px rgba(0,0,0,0.5))',
           }}
         >
           <Box position='absolute'
@@ -770,10 +771,9 @@ const IntroCardContents = () => {
             damping: 30
           }}
           sx={{
-            top: '10px',
-            left: '10px',
+            top: '0px',
+            left: '0px',
             borderRadius: '10px',
-            // boxShadow: '0px 0px 4px rgba(0,0,0,0.5)'
           }}>
           <Box
             component={motion.div}
@@ -1080,13 +1080,131 @@ const IntroCardContents = () => {
           </Box>
         </Box>
         {/* social media */}
-        <Box>
-          <Stack direction='row' alignItems='center' justifyContent='center' spacing={1}>
-            <Box>
+        <Box
+          sx={{
+            width: '100%',
+            background: 'linear-gradient(100deg, red, #f70000, #d10000)',
+            p: '5px',
+            borderRadius: '5px',
+            overflow: 'hidden',
+          }}>
+          <Box
+            sx={{
+              width: '100%',
+              backgroundColor: 'white',
+              borderRadius: '2.5px',
+              overflow: 'hidden',
+            }}>
+            <Stack direction='row' alignItems='center' justifyContent='center' spacing={1}>
+              <Box>
+                <Button
+                  onClick={() => window.open('https://github.com/lluuvvii', '_blank')}
+                  size='small'
+                  sx={{
+                    backgroundColor: 'transparent',
+                    textTransform: 'none',
+                    '&:active': {
+                      color: 'transparent'
+                    },
+                    '&:hover': {
+                      backgroundColor: 'transparent',
+                      color: 'transparent'
+                    }
+                  }}>
+                  <IconBrandGithub color='red' size={22} />
+                </Button>
+              </Box>
+              <Box>
+                <Button
+                  onClick={() => window.open('https://instagram.com/loovee_luvi', '_blank')}
+                  size='small'
+                  sx={{
+                    backgroundColor: 'transparent',
+                    textTransform: 'none',
+                    '&:active': {
+                      color: 'transparent'
+                    },
+                    '&:hover': {
+                      backgroundColor: 'transparent',
+                      color: 'transparent'
+                    }
+                  }}>
+                  <IconBrandInstagram color='red' size={22} />
+                </Button>
+              </Box>
+            </Stack>
+          </Box>
+        </Box>
+        <Box
+          sx={{
+            width: socialMediaActive ? '10%' : '100%',
+            background: `linear-gradient(100deg, red, ${socialMediaActive ? 'red' : '#f70000'}, ${socialMediaActive ? 'red' : '#d10000'})`,
+            borderRadius: '5px',
+            overflow: 'hidden',
+            position: 'absolute',
+            top: 356,
+            transition: 'ease 0.5s',
+          }}
+        >
+          <Box position='absolute'
+            sx={{ top: -10, left: 155, transform: 'rotate(15deg)' }}>
+            <Typography variant='h2'
+              sx={{
+                textAlign: 'center',
+                fontFamily: 'Nunito, Arial, sans-serif',
+                fontWeight: 900,
+                color: 'black',
+              }}>
+              ?
+            </Typography>
+          </Box>
+          <Box position='absolute'
+            sx={{ top: -14, left: 163, transform: 'rotate(15deg)' }}>
+            <Typography variant='h2'
+              sx={{
+                textAlign: 'center',
+                fontFamily: 'Nunito, Arial, sans-serif',
+                fontWeight: 900,
+                color: 'white',
+              }}>
+              ?
+            </Typography>
+          </Box>
+          <Stack direction='row' alignItems='center' justifyContent='space-between'>
+            {!socialMediaActive ?
+              <Box
+                component={motion.div}
+                initial={{ x: 0 }}
+                animate={{ x: markSocialMedia ? 20 : 0 }}
+                transition={{
+                  type: 'spring',
+                  stiffness: 500,
+                  damping: 20
+                }}>
+                <IconCaretRightFilled color='white' />
+              </Box>
+              : null}
+            <Box
+              component={motion.div}
+              whileHover={{ scale: 1.1 }}
+              onHoverStart={() => setMarkSocialMedia(true)}
+              onHoverEnd={() => setMarkSocialMedia(false)}
+              onTouchStart={() => setMarkSocialMedia(true)}
+              onTouchEnd={() => setMarkSocialMedia(false)}
+              initial={{ scale: 0 }}
+              whileTap={{ scale: 1 }}
+              animate={{ scale: 1 }}
+              transition={{
+                type: 'spring',
+                stiffness: 500,
+                damping: 20
+              }}>
               <Button
-                onClick={() => window.open('https://github.com/lluuvvii', '_blank')}
+                onClick={() => setSocialMediaActive(!socialMediaActive)}
                 size='small'
                 sx={{
+                  width: '100%',
+                  borderRadius: '10px',
                   backgroundColor: 'transparent',
                   textTransform: 'none',
                   '&:active': {
@@ -1097,27 +1215,80 @@ const IntroCardContents = () => {
                     color: 'transparent'
                   }
                 }}>
-                <IconBrandGithub color='red' />
+                <Box width='142px'>
+                  <Stack direction='row' alignItems='center' justifyContent='space-between'>
+                    <Typography
+                      variant='h5'
+                      sx={{
+                        position: 'absolute',
+                        width: '100%',
+                        top: '6px',
+                        left: '0px',
+                        textAlign: 'center',
+                        fontFamily: 'Nunito, Arial, sans-serif',
+                        fontWeight: 700,
+                        color: 'white',
+                        WebkitTextStroke: '10px white'
+                      }}>
+                      {socialMediaActive ?
+                        <></>
+                        :
+                        <>Social Media</>}
+                    </Typography>
+                    <Typography
+                      variant='h5'
+                      sx={{
+                        position: 'absolute',
+                        width: '100%',
+                        top: '6px',
+                        left: '0px',
+                        textAlign: 'center',
+                        fontFamily: 'Nunito, Arial, sans-serif',
+                        fontWeight: 700,
+                        color: 'black',
+                        WebkitTextStroke: '5px black',
+                      }}>
+                      {socialMediaActive ?
+                        <></>
+                        :
+                        <>Social Media</>}
+                    </Typography>
+                    <Typography
+                      variant='h5'
+                      sx={{
+                        top: 0,
+                        left: 0,
+                        position: 'relative',
+                        textAlign: 'center',
+                        fontFamily: 'Nunito, Arial, sans-serif',
+                        fontWeight: 700,
+                        color: 'white',
+                        wordBreak: 'none'
+                      }}>
+                      {socialMediaActive ?
+                        <>
+                          <IconCaretRightFilled color='white' size={32} style={{ position: 'relative', left: -7, transform: 'scale(0.8)' }} />
+                        </>
+                        :
+                        <>Social Media</>}
+                    </Typography>
+                  </Stack>
+                </Box>
               </Button>
             </Box>
-            <Box>
-              <Button
-                onClick={() => window.open('https://instagram.com/loovee_luvi', '_blank')}
-                size='small'
-                sx={{
-                  backgroundColor: 'transparent',
-                  textTransform: 'none',
-                  '&:active': {
-                    color: 'transparent'
-                  },
-                  '&:hover': {
-                    backgroundColor: 'transparent',
-                    color: 'transparent'
-                  }
+            {!socialMediaActive ?
+              <Box
+                component={motion.div}
+                initial={{ x: 0 }}
+                animate={{ x: markSocialMedia ? -20 : 0 }}
+                transition={{
+                  type: 'spring',
+                  stiffness: 500,
+                  damping: 20
                 }}>
-                <IconBrandInstagram color='red' />
-              </Button>
-            </Box>
+                <IconCaretLeftFilled color='white' />
+              </Box>
+              : null}
           </Stack>
         </Box>
       </Stack>
