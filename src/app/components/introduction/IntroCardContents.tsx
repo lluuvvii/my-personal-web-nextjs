@@ -1163,7 +1163,7 @@ const IntroCardContents = () => {
             overflow: 'hidden',
             position: 'absolute',
             top: 356,
-            transition: 'ease 0.5s',
+            transition: 'ease 0.3s',
           }}
         >
           <Box position='absolute'
@@ -1175,7 +1175,7 @@ const IntroCardContents = () => {
                 fontWeight: 900,
                 color: 'black',
               }}>
-              ?
+              <IconBrandInstagram color='black' size={70} />
             </Typography>
           </Box>
           <Box position='absolute'
@@ -1187,7 +1187,7 @@ const IntroCardContents = () => {
                 fontWeight: 900,
                 color: 'white',
               }}>
-              ?
+              <IconBrandInstagram color='white' size={70} />
             </Typography>
           </Box>
           <Stack direction='row' alignItems='center' justifyContent='space-between'>
@@ -1206,7 +1206,7 @@ const IntroCardContents = () => {
               : null}
             <Box
               component={motion.div}
-              whileHover={{ scale: 1.1 }}
+              whileHover={{ scale: socialMediaActive ? 1 : 1.1, x: socialMediaActive ? 5 : 0 }}
               onHoverStart={() => setMarkSocialMedia(true)}
               onHoverEnd={() => setMarkSocialMedia(false)}
               onTouchStart={() => setMarkSocialMedia(true)}
@@ -1287,7 +1287,7 @@ const IntroCardContents = () => {
                       }}>
                       {socialMediaActive ?
                         <>
-                          <IconCaretRightFilled color='white' size={32} style={{ position: 'relative', left: -7, transform: 'scale(0.8)' }} />
+                          <IconCaretRightFilled color='white' size={32} style={{ position: 'relative', left: -9, transform: 'scale(0.75)' }} />
                         </>
                         :
                         <>Social Media</>}
