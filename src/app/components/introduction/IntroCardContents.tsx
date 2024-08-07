@@ -535,23 +535,6 @@ const IntroCardContents = () => {
                       fontWeight: 700,
                       color: 'white',
                       textTransform: 'none'
-                      //       textShadow: `
-                      // 0px 1.5px 3px rgba(200,0,0,1), 
-                      // 0px 1.5px 3px rgba(200,0,0,1), 
-                      // 0px 1.5px 3px rgba(200,0,0,1), 
-                      // 0px 1.5px 3px rgba(200,0,0,1), 
-                      // 0px 1.5px 3px rgba(200,0,0,1), 
-                      // 0px 1.5px 3px rgba(200,0,0,1), 
-                      // 0px 1.5px 3px rgba(200,0,0,1), 
-                      // 0px 1.5px 3px rgba(200,0,0,1), 
-                      // 0px 1.5px 3px rgba(200,0,0,1), 
-                      // 0px 1.5px 3px rgba(200,0,0,1), 
-                      // 0px 1.5px 3px rgba(200,0,0,1), 
-                      // 0px 1.5px 3px rgba(200,0,0,1), 
-                      // 0px 1.5px 3px rgba(200,0,0,1), 
-                      // 0px 1.5px 3px rgba(200,0,0,1), 
-                      // 0px 1.5px 3px rgba(200,0,0,1), 
-                      // 0px 1.5px 3px rgba(200,0,0,1)`
                     }}
                   >
                     Next
@@ -1218,6 +1201,9 @@ const IntroCardContents = () => {
                 type: 'spring',
                 stiffness: 500,
                 damping: 20
+              }}
+              sx={{
+                height: '40px'
               }}>
               <Button
                 onClick={() => setSocialMediaActive(!socialMediaActive)}
@@ -1285,12 +1271,21 @@ const IntroCardContents = () => {
                         color: 'white',
                         wordBreak: 'none'
                       }}>
-                      {socialMediaActive ?
-                        <>
-                          <IconCaretRightFilled color='white' size={32} style={{ position: 'relative', left: -9, transform: 'scale(0.75)' }} />
-                        </>
-                        :
-                        <>Social Media</>}
+                      <Box
+                        component={motion.div}
+                        initial={{ scale: 1 }}
+                        animate={{ scale: socialMediaActive ? 1 : 0 }}
+                        sx={{
+                          position: 'absolute',
+                          width: '100%',
+                          top: 0,
+                          lef: 0
+                        }}>
+                        <IconCaretRightFilled color='white' size={32} style={{ position: 'relative', left: -9, top: -9, transform: 'scale(0.75)' }} />
+                      </Box>
+                      {!socialMediaActive ?
+                        <>Social Media</>
+                        : null}
                     </Typography>
                   </Stack>
                 </Box>
