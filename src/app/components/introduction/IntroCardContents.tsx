@@ -1167,7 +1167,7 @@ const IntroCardContents = () => {
           }}
         >
           <Box position='absolute'
-            sx={{ top: -10, left: 155, transform: 'rotate(15deg)' }}>
+            sx={{ top: -8, left: 25, transform: 'rotate(-15deg)' }}>
             <Typography variant='h2'
               sx={{
                 textAlign: 'center',
@@ -1175,11 +1175,11 @@ const IntroCardContents = () => {
                 fontWeight: 900,
                 color: 'black',
               }}>
-              <IconBrandInstagram color='black' size={70} />
+              <IconBrandInstagram color='black' size={60} />
             </Typography>
           </Box>
           <Box position='absolute'
-            sx={{ top: -14, left: 163, transform: 'rotate(15deg)' }}>
+            sx={{ top: -12, left: 33, transform: 'rotate(-15deg)' }}>
             <Typography variant='h2'
               sx={{
                 textAlign: 'center',
@@ -1187,7 +1187,7 @@ const IntroCardContents = () => {
                 fontWeight: 900,
                 color: 'white',
               }}>
-              <IconBrandInstagram color='white' size={70} />
+              <IconBrandInstagram color='white' size={60} />
             </Typography>
           </Box>
           <Stack direction='row' alignItems='center' justifyContent='space-between'>
