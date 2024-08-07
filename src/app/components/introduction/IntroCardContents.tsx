@@ -1277,7 +1277,6 @@ const IntroCardContents = () => {
                         animate={{ scale: socialMediaActive ? 1 : 0 }}
                         sx={{
                           position: 'absolute',
-                          width: '100%',
                           top: 0,
                           lef: 0
                         }}>
