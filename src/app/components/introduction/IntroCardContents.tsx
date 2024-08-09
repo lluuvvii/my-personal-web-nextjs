@@ -871,8 +871,7 @@ const IntroCardContents = () => {
                       transition={{
                         type: 'spring',
                         stiffness: 500,
-                        damping: 20,
-                        delay: 0.3
+                        damping: 20
                       }}
                       onClick={() => {
                         resetQuestionDialog()
@@ -977,8 +976,7 @@ const IntroCardContents = () => {
                       transition={{
                         type: 'spring',
                         stiffness: 500,
-                        damping: 20,
-                        delay: 0.3
+                        damping: 20
                       }}
                       onClick={() => {
                         resetQuestionDialog()
