@@ -860,13 +860,11 @@ const IntroCardContents = () => {
                   <Button
                     component={motion.div}
                     whileHover={{ scale: 1.1 }}
-                    initial={{ scale: 0 }}
                     whileTap={{ scale: 1 }}
                     onHoverStart={() => setMarkQuestions((prevState) => ({ ...prevState, thisWebsite: true }))}
                     onHoverEnd={() => setMarkQuestions((prevState) => ({ ...prevState, thisWebsite: false }))}
                     onTouchStart={() => setMarkQuestions((prevState) => ({ ...prevState, thisWebsite: true }))}
                     onTouchEnd={() => setMarkQuestions((prevState) => ({ ...prevState, thisWebsite: false }))}
-                    animate={{ scale: 1 }}
                     transition={{
                       type: 'spring',
                       stiffness: 500,
@@ -963,17 +961,15 @@ const IntroCardContents = () => {
                   <Button
                     component={motion.div}
                     whileHover={{ scale: 1.1 }}
-                    initial={{ scale: 0 }}
                     whileTap={{ scale: 1 }}
                     onHoverStart={() => setMarkQuestions((prevState) => ({ ...prevState, secondOption: true }))}
                     onHoverEnd={() => setMarkQuestions((prevState) => ({ ...prevState, secondOption: false }))}
                     onTouchStart={() => setMarkQuestions((prevState) => ({ ...prevState, secondOption: true }))}
                     onTouchEnd={() => setMarkQuestions((prevState) => ({ ...prevState, secondOption: false }))}
-                    animate={{ scale: 1 }}
                     transition={{
                       type: 'spring',
                       stiffness: 500,
-                      damping: 20
+                      damping: 20,
                     }}
                     onClick={() => {
                       resetQuestionDialog()
