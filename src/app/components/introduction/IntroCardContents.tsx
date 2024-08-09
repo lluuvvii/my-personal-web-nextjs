@@ -857,80 +857,85 @@ const IntroCardContents = () => {
                     }}>
                     <IconCaretRightFilled color='red' />
                   </Box>
-                  <Button
-                    component={motion.div}
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 1 }}
-                    onHoverStart={() => setMarkQuestions((prevState) => ({ ...prevState, thisWebsite: true }))}
-                    onHoverEnd={() => setMarkQuestions((prevState) => ({ ...prevState, thisWebsite: false }))}
-                    onTouchStart={() => setMarkQuestions((prevState) => ({ ...prevState, thisWebsite: true }))}
-                    onTouchEnd={() => setMarkQuestions((prevState) => ({ ...prevState, thisWebsite: false }))}
-                    transition={{
-                      type: 'spring',
-                      stiffness: 500,
-                      damping: 20
-                    }}
-                    onClick={() => {
-                      resetQuestionDialog()
-                      setQuestionDialog(prevState => ({ ...prevState, thisWebsite: true }))
-                      setAskActive(false)
-                      setQuestionActive(true)
-                    }}
-                    size='small'
-                    sx={{
-                      width: '100%',
-                      backgroundColor: 'transparent',
-                      textTransform: 'none',
-                      '&:active': {
-                        color: 'transparent'
-                      },
-                      '&:hover': {
+                  {askActive ?
+                    <Button
+                      component={motion.div}
+                      whileHover={{ scale: 1.1 }}
+                      whileTap={{ scale: 1 }}
+                      initial={{ scale: 0 }}
+                      animate={{ scale: 1 }}
+                      onHoverStart={() => setMarkQuestions((prevState) => ({ ...prevState, thisWebsite: true }))}
+                      onHoverEnd={() => setMarkQuestions((prevState) => ({ ...prevState, thisWebsite: false }))}
+                      onTouchStart={() => setMarkQuestions((prevState) => ({ ...prevState, thisWebsite: true }))}
+                      onTouchEnd={() => setMarkQuestions((prevState) => ({ ...prevState, thisWebsite: false }))}
+                      transition={{
+                        type: 'spring',
+                        stiffness: 500,
+                        damping: 20,
+                        delay: 0.3
+                      }}
+                      onClick={() => {
+                        resetQuestionDialog()
+                        setQuestionDialog(prevState => ({ ...prevState, thisWebsite: true }))
+                        setAskActive(false)
+                        setQuestionActive(true)
+                      }}
+                      size='small'
+                      sx={{
+                        width: '100%',
                         backgroundColor: 'transparent',
-                        color: 'transparent'
-                      }
-                    }}>
-                    <Typography
-                      variant='h6'
-                      sx={{
-                        position: 'absolute',
-                        width: '100%',
-                        top: 6,
-                        left: 0,
-                        textAlign: 'center',
-                        fontFamily: 'Nunito, Arial, sans-serif',
-                        fontWeight: 700,
-                        color: 'red',
-                        WebkitTextStroke: '10px red'
+                        textTransform: 'none',
+                        '&:active': {
+                          color: 'transparent'
+                        },
+                        '&:hover': {
+                          backgroundColor: 'transparent',
+                          color: 'transparent'
+                        }
                       }}>
-                      This Website
-                    </Typography>
-                    <Typography
-                      variant='h6'
-                      sx={{
-                        position: 'absolute',
-                        width: '100%',
-                        top: 6,
-                        left: 0,
-                        textAlign: 'center',
-                        fontFamily: 'Nunito, Arial, sans-serif',
-                        fontWeight: 700,
-                        color: 'black',
-                        WebkitTextStroke: '5px black'
-                      }}>
-                      This Website
-                    </Typography>
-                    <Typography
-                      variant='h6'
-                      sx={{
-                        position: 'relative',
-                        textAlign: 'center',
-                        fontFamily: 'Nunito, Arial, sans-serif',
-                        fontWeight: 700,
-                        color: 'white',
-                      }}>
-                      This Website
-                    </Typography>
-                  </Button>
+                      <Typography
+                        variant='h6'
+                        sx={{
+                          position: 'absolute',
+                          width: '100%',
+                          top: 6,
+                          left: 0,
+                          textAlign: 'center',
+                          fontFamily: 'Nunito, Arial, sans-serif',
+                          fontWeight: 700,
+                          color: 'red',
+                          WebkitTextStroke: '10px red'
+                        }}>
+                        This Website
+                      </Typography>
+                      <Typography
+                        variant='h6'
+                        sx={{
+                          position: 'absolute',
+                          width: '100%',
+                          top: 6,
+                          left: 0,
+                          textAlign: 'center',
+                          fontFamily: 'Nunito, Arial, sans-serif',
+                          fontWeight: 700,
+                          color: 'black',
+                          WebkitTextStroke: '5px black'
+                        }}>
+                        This Website
+                      </Typography>
+                      <Typography
+                        variant='h6'
+                        sx={{
+                          position: 'relative',
+                          textAlign: 'center',
+                          fontFamily: 'Nunito, Arial, sans-serif',
+                          fontWeight: 700,
+                          color: 'white',
+                        }}>
+                        This Website
+                      </Typography>
+                    </Button>
+                    : null}
                   <Box
                     component={motion.div}
                     initial={{ scale: 0 }}
@@ -958,80 +963,85 @@ const IntroCardContents = () => {
                     }}>
                     <IconCaretRightFilled color='red' />
                   </Box>
-                  <Button
-                    component={motion.div}
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 1 }}
-                    onHoverStart={() => setMarkQuestions((prevState) => ({ ...prevState, secondOption: true }))}
-                    onHoverEnd={() => setMarkQuestions((prevState) => ({ ...prevState, secondOption: false }))}
-                    onTouchStart={() => setMarkQuestions((prevState) => ({ ...prevState, secondOption: true }))}
-                    onTouchEnd={() => setMarkQuestions((prevState) => ({ ...prevState, secondOption: false }))}
-                    transition={{
-                      type: 'spring',
-                      stiffness: 500,
-                      damping: 20,
-                    }}
-                    onClick={() => {
-                      resetQuestionDialog()
-                      setQuestionDialog(prevState => ({ ...prevState, secondOption: true }))
-                      setAskActive(false)
-                      setQuestionActive(true)
-                    }}
-                    size='small'
-                    sx={{
-                      width: '100%',
-                      backgroundColor: 'transparent',
-                      textTransform: 'none',
-                      '&:active': {
-                        color: 'transparent'
-                      },
-                      '&:hover': {
+                  {askActive ?
+                    <Button
+                      component={motion.div}
+                      whileHover={{ scale: 1.1 }}
+                      whileTap={{ scale: 1 }}
+                      initial={{ scale: 0 }}
+                      animate={{ scale: 1 }}
+                      onHoverStart={() => setMarkQuestions((prevState) => ({ ...prevState, secondOption: true }))}
+                      onHoverEnd={() => setMarkQuestions((prevState) => ({ ...prevState, secondOption: false }))}
+                      onTouchStart={() => setMarkQuestions((prevState) => ({ ...prevState, secondOption: true }))}
+                      onTouchEnd={() => setMarkQuestions((prevState) => ({ ...prevState, secondOption: false }))}
+                      transition={{
+                        type: 'spring',
+                        stiffness: 500,
+                        damping: 20,
+                        delay: 0.3
+                      }}
+                      onClick={() => {
+                        resetQuestionDialog()
+                        setQuestionDialog(prevState => ({ ...prevState, secondOption: true }))
+                        setAskActive(false)
+                        setQuestionActive(true)
+                      }}
+                      size='small'
+                      sx={{
+                        width: '100%',
                         backgroundColor: 'transparent',
-                        color: 'transparent'
-                      }
-                    }}>
-                    <Typography
-                      variant='h6'
-                      sx={{
-                        position: 'absolute',
-                        width: '100%',
-                        top: 6,
-                        left: 0,
-                        textAlign: 'center',
-                        fontFamily: 'Nunito, Arial, sans-serif',
-                        fontWeight: 700,
-                        color: 'red',
-                        WebkitTextStroke: '10px red'
+                        textTransform: 'none',
+                        '&:active': {
+                          color: 'transparent'
+                        },
+                        '&:hover': {
+                          backgroundColor: 'transparent',
+                          color: 'transparent'
+                        }
                       }}>
-                      Second Option
-                    </Typography>
-                    <Typography
-                      variant='h6'
-                      sx={{
-                        position: 'absolute',
-                        width: '100%',
-                        top: 6,
-                        left: 0,
-                        textAlign: 'center',
-                        fontFamily: 'Nunito, Arial, sans-serif',
-                        fontWeight: 700,
-                        color: 'black',
-                        WebkitTextStroke: '5px black'
-                      }}>
-                      Second Option
-                    </Typography>
-                    <Typography
-                      variant='h6'
-                      sx={{
-                        position: 'relative',
-                        textAlign: 'center',
-                        fontFamily: 'Nunito, Arial, sans-serif',
-                        fontWeight: 700,
-                        color: 'white',
-                      }}>
-                      Second Option
-                    </Typography>
-                  </Button>
+                      <Typography
+                        variant='h6'
+                        sx={{
+                          position: 'absolute',
+                          width: '100%',
+                          top: 6,
+                          left: 0,
+                          textAlign: 'center',
+                          fontFamily: 'Nunito, Arial, sans-serif',
+                          fontWeight: 700,
+                          color: 'red',
+                          WebkitTextStroke: '10px red'
+                        }}>
+                        Second Option
+                      </Typography>
+                      <Typography
+                        variant='h6'
+                        sx={{
+                          position: 'absolute',
+                          width: '100%',
+                          top: 6,
+                          left: 0,
+                          textAlign: 'center',
+                          fontFamily: 'Nunito, Arial, sans-serif',
+                          fontWeight: 700,
+                          color: 'black',
+                          WebkitTextStroke: '5px black'
+                        }}>
+                        Second Option
+                      </Typography>
+                      <Typography
+                        variant='h6'
+                        sx={{
+                          position: 'relative',
+                          textAlign: 'center',
+                          fontFamily: 'Nunito, Arial, sans-serif',
+                          fontWeight: 700,
+                          color: 'white',
+                        }}>
+                        Second Option
+                      </Typography>
+                    </Button>
+                    : null}
                   <Box
                     component={motion.div}
                     initial={{ scale: 0 }}
