@@ -544,28 +544,17 @@ const IntroCardContents = () => {
               </Box>
             </Stack>
             : null}
-          <Stack
-            component={motion.div}
-            initial={{ scale: 0 }}
-            animate={{ opacity: !askActive ? 1 : 0, scale: questionActive ? 1 : 0 }}
-            transition={{
-              type: 'spring',
-              stiffness: 500,
-              damping: 25
-            }}
-            direction='row'
-            justifyContent='center'
-            alignItems='center'
-            position={questionActive ? 'relative' : 'absolute'}
-            top={0}
-            left={questionActive ? -120 : -26.5}>
+          {questionActive ?
             <Box
-              ml={1}
+              position='relative'
+              display='flex'
+              alignItems='center'
+              justifyContent='center'
               component={motion.div}
               whileHover={{ scale: 1.1 }}
               initial={{ scale: 0 }}
               whileTap={{ scale: 1 }}
-              animate={{ scale: 1 }}
+              animate={{ scale: questionActive ? 1 : 0 }}
               transition={{
                 type: 'spring',
                 stiffness: 500,
@@ -578,6 +567,7 @@ const IntroCardContents = () => {
                 }}
                 size='small'
                 sx={{
+                  px: 0,
                   color: 'grey',
                   borderRadius: '10px',
                   backgroundColor: 'transparent',
@@ -592,7 +582,7 @@ const IntroCardContents = () => {
                 <IconSquareXFilled color='red' size={32} />
               </Button>
             </Box>
-          </Stack>
+            : null}
         </Box>
         {/* ask me button */}
         <Box

@@ -15,10 +15,10 @@ const IntroductionCard = () => {
       component={motion.div}
       initial={{ scale: 0 }}
       animate={{ scale: 1 }}
-      onHoverStart={() => setOnHover(!onHover)}
-      onHoverEnd={() => setOnHover(!onHover)}
-      onTouchStart={() => setOnTouch(!onTouch)}
-      onTouchEnd={() => setOnTouch(!onTouch)}
+      onHoverStart={() => setOnHover(true)}
+      onHoverEnd={() => setOnHover(false)}
+      onTouchStart={() => setOnTouch(true)}
+      onTouchEnd={() => setOnTouch(false)}
       transition={{
         type: 'spring',
         stiffness: 500,
