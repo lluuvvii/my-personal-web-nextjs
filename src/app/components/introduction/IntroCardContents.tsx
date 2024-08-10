@@ -736,8 +736,8 @@ const IntroCardContents = () => {
         <Box
           position='absolute'
           component={motion.div}
-          initial={{ scale: 0 }}
-          animate={{ scale: askActive ? 1 : 0 }}
+          initial={{ opacity: 0, y: 300, scale: 0 }}
+          animate={{ scale: askActive ? 1 : 0, opacity: askActive ? 1 : 0, y: askActive ? 0 : 300 }}
           transition={{
             type: 'spring',
             stiffness: 500,
@@ -764,11 +764,14 @@ const IntroCardContents = () => {
               width: '260px',
               height: '280px',
               p: '10px',
-              background: 'linear-gradient(100deg, red, red, #d10000)',
+              backgroundColor: 'red',
               borderRadius: '10px',
               overflow: 'hidden',
             }}>
             <Box
+              component={motion.div}
+              initial={{ opacity: 0, scale: 0 }}
+              animate={{ opacity: 1, scale: 1 }}
               position='absolute'
               sx={{ top: -15, left: 157, transform: 'rotate(15deg)' }}>
               <Typography variant='h2'
@@ -781,7 +784,11 @@ const IntroCardContents = () => {
                 <IconExclamationCircle color='black' size='100px' />
               </Typography>
             </Box>
-            <Box position='absolute'
+            <Box
+              component={motion.div}
+              initial={{ opacity: 0, scale: 0 }}
+              animate={{ opacity: 1, scale: 1 }}
+              position='absolute'
               sx={{ top: -19, left: 165, transform: 'rotate(15deg)' }}>
               <Typography variant='h2'
                 sx={{
@@ -794,47 +801,52 @@ const IntroCardContents = () => {
               </Typography>
             </Box>
             {/* ask me about title */}
-            <Typography
-              position='relative'
-              variant='h5'
-              mb={1}
-              sx={{
-                position: 'absolute',
-                width: '100%',
-                top: 12,
-                left: 0,
-                textAlign: 'center',
-                fontFamily: 'Nunito, Arial, sans-serif',
-                fontWeight: 700,
-                color: 'white',
-                WebkitTextStroke: '10px white'
-              }}>Ask Me About :</Typography>
-            <Typography
-              position='relative'
-              variant='h5'
-              mb={1}
-              sx={{
-                position: 'absolute',
-                width: '100%',
-                top: 12,
-                left: 0,
-                textAlign: 'center',
-                fontFamily: 'Nunito, Arial, sans-serif',
-                fontWeight: 700,
-                color: 'black',
-                WebkitTextStroke: '5px black'
-              }}>Ask Me About :</Typography>
-            <Typography
-              position='relative'
-              variant='h5'
-              mb={1}
-              sx={{
-                position: 'relative',
-                textAlign: 'center',
-                fontFamily: 'Nunito, Arial, sans-serif',
-                fontWeight: 700,
-                color: 'white',
-              }}>Ask Me About :</Typography>
+            <Box
+              component={motion.div}
+              initial={{ opacity: 0, scale: 0 }}
+              animate={{ opacity: 1, scale: 1 }}>
+              <Typography
+                position='relative'
+                variant='h5'
+                mb={1}
+                sx={{
+                  position: 'absolute',
+                  width: '100%',
+                  top: 12,
+                  left: 0,
+                  textAlign: 'center',
+                  fontFamily: 'Nunito, Arial, sans-serif',
+                  fontWeight: 700,
+                  color: 'white',
+                  WebkitTextStroke: '10px white'
+                }}>Ask Me About :</Typography>
+              <Typography
+                position='relative'
+                variant='h5'
+                mb={1}
+                sx={{
+                  position: 'absolute',
+                  width: '100%',
+                  top: 12,
+                  left: 0,
+                  textAlign: 'center',
+                  fontFamily: 'Nunito, Arial, sans-serif',
+                  fontWeight: 700,
+                  color: 'black',
+                  WebkitTextStroke: '5px black'
+                }}>Ask Me About :</Typography>
+              <Typography
+                position='relative'
+                variant='h5'
+                mb={1}
+                sx={{
+                  position: 'relative',
+                  textAlign: 'center',
+                  fontFamily: 'Nunito, Arial, sans-serif',
+                  fontWeight: 700,
+                  color: 'white',
+                }}>Ask Me About :</Typography>
+            </Box>
             <Box
               sx={{
                 position: 'relative',
@@ -862,8 +874,8 @@ const IntroCardContents = () => {
                       component={motion.div}
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 1 }}
-                      initial={{ scale: 0 }}
-                      animate={{ scale: 1 }}
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
                       onHoverStart={() => setMarkQuestions((prevState) => ({ ...prevState, thisWebsite: true }))}
                       onHoverEnd={() => setMarkQuestions((prevState) => ({ ...prevState, thisWebsite: false }))}
                       onTouchStart={() => setMarkQuestions((prevState) => ({ ...prevState, thisWebsite: true }))}
@@ -967,8 +979,8 @@ const IntroCardContents = () => {
                       component={motion.div}
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 1 }}
-                      initial={{ scale: 0 }}
-                      animate={{ scale: 1 }}
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
                       onHoverStart={() => setMarkQuestions((prevState) => ({ ...prevState, secondOption: true }))}
                       onHoverEnd={() => setMarkQuestions((prevState) => ({ ...prevState, secondOption: false }))}
                       onTouchStart={() => setMarkQuestions((prevState) => ({ ...prevState, secondOption: true }))}
