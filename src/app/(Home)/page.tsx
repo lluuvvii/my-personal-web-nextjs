@@ -9,33 +9,6 @@ const Home = () => {
       <Box mt={20}>
         <Grid container spacing={2} justifyContent='center'>
           <Grid item>
-            <Stack direction='column' spacing={2}>
-              <IntroductionCard />
-              {/* <AskMeCard /> */}
-            </Stack>
-          </Grid>
-          <Grid item>
-            <IntroductionCard />
-          </Grid>
-          <Grid item>
-            <IntroductionCard />
-          </Grid>
-          <Grid item>
-            <IntroductionCard />
-          </Grid>
-          <Grid item>
-            <IntroductionCard />
-          </Grid>
-          <Grid item>
-            <IntroductionCard />
-          </Grid>
-          <Grid item>
-            <IntroductionCard />
-          </Grid>
-          <Grid item>
-            <IntroductionCard />
-          </Grid>
-          <Grid item>
             <IntroductionCard />
           </Grid>
           <Grid item xs={12}>
