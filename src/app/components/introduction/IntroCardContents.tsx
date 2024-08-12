@@ -806,7 +806,6 @@ const IntroCardContents = () => {
               initial={{ opacity: 0, scale: 0 }}
               animate={{ opacity: 1, scale: 1 }}>
               <Typography
-                position='relative'
                 variant='h5'
                 mb={1}
                 sx={{
@@ -821,7 +820,6 @@ const IntroCardContents = () => {
                   WebkitTextStroke: '10px white'
                 }}>Ask Me About :</Typography>
               <Typography
-                position='relative'
                 variant='h5'
                 mb={1}
                 sx={{
@@ -836,7 +834,6 @@ const IntroCardContents = () => {
                   WebkitTextStroke: '5px black'
                 }}>Ask Me About :</Typography>
               <Typography
-                position='relative'
                 variant='h5'
                 mb={1}
                 sx={{

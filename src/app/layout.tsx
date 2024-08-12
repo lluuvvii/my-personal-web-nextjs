@@ -4,8 +4,7 @@ import "./globals.css"
 import React, { Suspense } from 'react';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { red, blue, yellow } from '@mui/material/colors';
-import { Box, CssBaseline } from "@mui/material";
-import Navbar from "./components/navbar/Navbar";
+import { CssBaseline } from "@mui/material";
 
 const theme = createTheme({
   typography: {
@@ -43,7 +42,6 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       </head>
       <body>
         <Suspense>
-          <Navbar />
           <ThemeProvider theme={theme}>
             <CssBaseline />
             {children}
