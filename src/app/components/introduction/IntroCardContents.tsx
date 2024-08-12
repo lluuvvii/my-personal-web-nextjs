@@ -385,7 +385,7 @@ const IntroCardContents = () => {
           transition={{
             type: 'spring',
             stiffness: 500,
-            damping: 25
+            damping: 25,
           }}>
           {!questionActive ?
             <Stack direction='row' justifyContent='space-between' alignItems='center'>
@@ -498,6 +498,15 @@ const IntroCardContents = () => {
                     }
                   }}>
                   <Typography
+                    component={motion.div}
+                    initial={{ scale: 0 }}
+                    animate={{ scale: 1 }}
+                    transition={{
+                      type: 'spring',
+                      stiffness: 500,
+                      damping: 30,
+                      delay: 0.2
+                    }}
                     variant='h5'
                     sx={{
                       top: 6,
@@ -513,6 +522,15 @@ const IntroCardContents = () => {
                     Next
                   </Typography>
                   <Typography
+                    component={motion.div}
+                    initial={{ scale: 0 }}
+                    animate={{ scale: 1 }}
+                    transition={{
+                      type: 'spring',
+                      stiffness: 500,
+                      damping: 30,
+                      delay: 0.4
+                    }}
                     variant='h5'
                     sx={{
                       top: 6,
@@ -528,6 +546,15 @@ const IntroCardContents = () => {
                     Next
                   </Typography>
                   <Typography
+                    component={motion.div}
+                    initial={{ scale: 0 }}
+                    animate={{ scale: 1 }}
+                    transition={{
+                      type: 'spring',
+                      stiffness: 500,
+                      damping: 30,
+                      delay: 0.6
+                    }}
                     variant='h5'
                     sx={{
                       position: 'relative',

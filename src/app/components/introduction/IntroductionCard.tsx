@@ -13,8 +13,8 @@ const IntroductionCard = () => {
     <Box
       position='relative'
       component={motion.div}
-      initial={{ scale: 0 }}
-      animate={{ scale: 1 }}
+      initial={{ scale: 0, y: 400 }}
+      animate={{ scale: 1, y: 0 }}
       onHoverStart={() => setOnHover(true)}
       onHoverEnd={() => setOnHover(false)}
       onTouchStart={() => setOnTouch(true)}
@@ -643,6 +643,15 @@ const IntroductionCard = () => {
         </Box>
         {/* title text */}
         <Typography
+          component={motion.div}
+          initial={{ scale: 0, rotate: -5 }}
+          animate={{ scale: 1 }}
+          transition={{
+            type: 'spring',
+            stiffness: 500,
+            damping: 30,
+            delay: 0.2
+          }}
           variant='h4'
           sx={{
             position: 'absolute',
@@ -653,11 +662,19 @@ const IntroductionCard = () => {
             fontWeight: 600,
             WebkitTextStroke: '10px red',
             color: 'red',
-            transform: 'rotate(-5deg)',
           }}>
           Introduction
         </Typography>
         <Typography
+          component={motion.div}
+          initial={{ scale: 0, rotate: -5 }}
+          animate={{ scale: 1 }}
+          transition={{
+            type: 'spring',
+            stiffness: 500,
+            damping: 30,
+            delay: 0.4
+          }}
           variant='h4'
           sx={{
             position: 'absolute',
@@ -668,11 +685,19 @@ const IntroductionCard = () => {
             fontWeight: 600,
             WebkitTextStroke: '5px black',
             color: 'red',
-            transform: 'rotate(-5deg)',
           }}>
           Introduction
         </Typography>
         <Typography
+          component={motion.div}
+          initial={{ scale: 0, rotate: -5 }}
+          animate={{ scale: 1 }}
+          transition={{
+            type: 'spring',
+            stiffness: 500,
+            damping: 30,
+            delay: 0.6
+          }}
           variant='h4'
           sx={{
             position: 'absolute',
@@ -682,7 +707,6 @@ const IntroductionCard = () => {
             fontFamily: 'Nunito, Arial, sans-serif',
             fontWeight: 600,
             color: 'white',
-            transform: 'rotate(-5deg)',
           }}>
           Introduction
         </Typography>
