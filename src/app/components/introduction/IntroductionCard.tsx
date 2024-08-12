@@ -490,9 +490,8 @@ const IntroductionCard = () => {
         sx={{
           position: 'relative',
           padding: '10px',
-          background: 'linear-gradient(100deg, red, red, #d10000)',
+          backgroundColor: 'red',
           borderRadius: '20px',
-          boxShadow: '0px 0px 4px rgba(0,0,0,0.5)'
         }}
       >
         {/* introcard contents */}

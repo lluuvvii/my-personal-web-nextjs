@@ -588,7 +588,7 @@ const IntroCardContents = () => {
         <Box
           sx={{
             width: '100%',
-            background: 'linear-gradient(100deg, red, #f70000, #d10000)',
+            backgroundColor: 'red',
             borderRadius: '5px',
             overflow: 'hidden',
             position: 'relative'
@@ -1069,7 +1069,7 @@ const IntroCardContents = () => {
         <Box
           sx={{
             width: '100%',
-            background: 'linear-gradient(100deg, red, #f70000, #d10000)',
+            backgroundColor: 'red',
             p: '5px',
             borderRadius: '5px',
             overflow: 'hidden',
@@ -1144,7 +1144,7 @@ const IntroCardContents = () => {
         <Box
           sx={{
             width: socialMediaActive ? '10%' : '100%',
-            background: `linear-gradient(100deg, red, ${socialMediaActive ? 'red' : '#f70000'}, ${socialMediaActive ? 'red' : '#d10000'})`,
+            backgroundColor: 'red',
             borderRadius: '5px',
             overflow: 'hidden',
             position: 'absolute',
