@@ -505,7 +505,7 @@ const IntroCardContents = () => {
                       type: 'spring',
                       stiffness: 500,
                       damping: 30,
-                      delay: 0.2
+                      delay: 0.1
                     }}
                     variant='h5'
                     sx={{
@@ -529,7 +529,7 @@ const IntroCardContents = () => {
                       type: 'spring',
                       stiffness: 500,
                       damping: 30,
-                      delay: 0.4
+                      delay: 0.2
                     }}
                     variant='h5'
                     sx={{
@@ -553,7 +553,7 @@ const IntroCardContents = () => {
                       type: 'spring',
                       stiffness: 500,
                       damping: 30,
-                      delay: 0.6
+                      delay: 0.3
                     }}
                     variant='h5'
                     sx={{
@@ -797,10 +797,10 @@ const IntroCardContents = () => {
             }}>
             <Box
               component={motion.div}
-              initial={{ opacity: 0, scale: 0 }}
+              initial={{ opacity: 0, scale: 0, rotate: 15 }}
               animate={{ opacity: 1, scale: 1 }}
               position='absolute'
-              sx={{ top: -15, left: 157, transform: 'rotate(15deg)' }}>
+              sx={{ top: -15, left: 157 }}>
               <Typography variant='h2'
                 sx={{
                   textAlign: 'center',
@@ -813,10 +813,10 @@ const IntroCardContents = () => {
             </Box>
             <Box
               component={motion.div}
-              initial={{ opacity: 0, scale: 0 }}
+              initial={{ opacity: 0, scale: 0, rotate: 15 }}
               animate={{ opacity: 1, scale: 1 }}
               position='absolute'
-              sx={{ top: -19, left: 165, transform: 'rotate(15deg)' }}>
+              sx={{ top: -19, left: 165 }}>
               <Typography variant='h2'
                 sx={{
                   textAlign: 'center',
@@ -828,10 +828,7 @@ const IntroCardContents = () => {
               </Typography>
             </Box>
             {/* ask me about title */}
-            <Box
-              component={motion.div}
-              initial={{ opacity: 0, scale: 0 }}
-              animate={{ opacity: 1, scale: 1 }}>
+            <Box>
               <Typography
                 variant='h5'
                 mb={1}
@@ -929,6 +926,15 @@ const IntroCardContents = () => {
                         }
                       }}>
                       <Typography
+                        component={motion.div}
+                        initial={{ scale: 0 }}
+                        animate={{ scale: askActive ? 1 : 0 }}
+                        transition={{
+                          type: 'spring',
+                          stiffness: 500,
+                          damping: 30,
+                          delay: 0.1
+                        }}
                         variant='h6'
                         sx={{
                           position: 'absolute',
@@ -944,6 +950,15 @@ const IntroCardContents = () => {
                         This Website
                       </Typography>
                       <Typography
+                        component={motion.div}
+                        initial={{ scale: 0 }}
+                        animate={{ scale: askActive ? 1 : 0 }}
+                        transition={{
+                          type: 'spring',
+                          stiffness: 500,
+                          damping: 30,
+                          delay: 0.2
+                        }}
                         variant='h6'
                         sx={{
                           position: 'absolute',
@@ -959,6 +974,15 @@ const IntroCardContents = () => {
                         This Website
                       </Typography>
                       <Typography
+                        component={motion.div}
+                        initial={{ scale: 0 }}
+                        animate={{ scale: askActive ? 1 : 0 }}
+                        transition={{
+                          type: 'spring',
+                          stiffness: 500,
+                          damping: 30,
+                          delay: 0.3
+                        }}
                         variant='h6'
                         sx={{
                           position: 'relative',
@@ -1034,6 +1058,15 @@ const IntroCardContents = () => {
                         }
                       }}>
                       <Typography
+                        component={motion.div}
+                        initial={{ scale: 0 }}
+                        animate={{ scale: askActive ? 1 : 0 }}
+                        transition={{
+                          type: 'spring',
+                          stiffness: 500,
+                          damping: 30,
+                          delay: 0.1
+                        }}
                         variant='h6'
                         sx={{
                           position: 'absolute',
@@ -1049,6 +1082,15 @@ const IntroCardContents = () => {
                         Second Option
                       </Typography>
                       <Typography
+                        component={motion.div}
+                        initial={{ scale: 0 }}
+                        animate={{ scale: askActive ? 1 : 0 }}
+                        transition={{
+                          type: 'spring',
+                          stiffness: 500,
+                          damping: 30,
+                          delay: 0.2
+                        }}
                         variant='h6'
                         sx={{
                           position: 'absolute',
@@ -1064,6 +1106,15 @@ const IntroCardContents = () => {
                         Second Option
                       </Typography>
                       <Typography
+                        component={motion.div}
+                        initial={{ scale: 0 }}
+                        animate={{ scale: askActive ? 1 : 0 }}
+                        transition={{
+                          type: 'spring',
+                          stiffness: 500,
+                          damping: 30,
+                          delay: 0.3
+                        }}
                         variant='h6'
                         sx={{
                           position: 'relative',

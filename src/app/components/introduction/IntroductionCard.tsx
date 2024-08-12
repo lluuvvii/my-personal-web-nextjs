@@ -650,7 +650,7 @@ const IntroductionCard = () => {
             type: 'spring',
             stiffness: 500,
             damping: 30,
-            delay: 0.2
+            delay: 0.1
           }}
           variant='h4'
           sx={{
@@ -673,7 +673,7 @@ const IntroductionCard = () => {
             type: 'spring',
             stiffness: 500,
             damping: 30,
-            delay: 0.4
+            delay: 0.2
           }}
           variant='h4'
           sx={{
@@ -696,7 +696,7 @@ const IntroductionCard = () => {
             type: 'spring',
             stiffness: 500,
             damping: 30,
-            delay: 0.6
+            delay: 0.3
           }}
           variant='h4'
           sx={{
