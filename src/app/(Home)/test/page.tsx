@@ -1,4 +1,5 @@
 import ZigzagContainer from '@/app/components/materials/ZigzagContainer'
+import GithubStats from '@/app/components/stats/GithubStats'
 import { Box, Grid, Stack, Typography } from '@mui/material'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -19,6 +20,9 @@ const BackgroundContainer = () => {
           <Image src='/assets/img/sonic_generations_background_by_sonicguru_d66i4ax.png' alt='sonicbg' width={500} height={500} />
           <Image src='/assets/img/sonic_generations_background_by_sonicguru_d66i4ax.png' alt='sonicbg' width={500} height={500} />
           <Image src='/assets/img/sonic_generations_background_by_sonicguru_d66i4ax.png' alt='sonicbg' width={500} height={500} />
+        </Grid>
+        <Grid item>
+          <GithubStats />
         </Grid>
       </Grid>
       <Box component='footer' mt={4}>
