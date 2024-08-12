@@ -6,7 +6,7 @@ import AskMeCard from '../components/questions/AskMeCard'
 const Home = () => {
   return (
     <Container sx={{ overflow: 'hidden' }}>
-      <Box mt={20}>
+      <Box mt={10}>
         <Grid container spacing={2} justifyContent='center'>
           <Grid item>
             <IntroductionCard />

@@ -647,7 +647,7 @@ const IntroductionCard = () => {
           sx={{
             position: 'absolute',
             top: '-18px',
-            left: '-10px',
+            left: '-5px',
             textAlign: 'center',
             fontFamily: 'Nunito, Arial, sans-serif',
             fontWeight: 600,
@@ -662,7 +662,7 @@ const IntroductionCard = () => {
           sx={{
             position: 'absolute',
             top: '-18px',
-            left: '-10px',
+            left: '-5px',
             textAlign: 'center',
             fontFamily: 'Nunito, Arial, sans-serif',
             fontWeight: 600,
@@ -677,7 +677,7 @@ const IntroductionCard = () => {
           sx={{
             position: 'absolute',
             top: '-20px',
-            left: '-10px',
+            left: '-5px',
             textAlign: 'center',
             fontFamily: 'Nunito, Arial, sans-serif',
             fontWeight: 600,
