@@ -1228,7 +1228,7 @@ const IntroCardContents = () => {
           transition={{
             type: 'spring',
             stiffness: 500,
-            damping: 25,
+            damping: 32,
           }}
           sx={{
             // width: socialMediaActive ? '10%' : '100%',
