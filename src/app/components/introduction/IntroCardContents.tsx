@@ -31,6 +31,7 @@ const IntroCardContents = () => {
         type: 'string',
         stiffness: 500,
         damping: 30,
+        delay: 0.4
       }}
       position='relative'
     >
@@ -1258,7 +1259,7 @@ const IntroCardContents = () => {
         </Box>
         <Box
           component={motion.div}
-          initial={{ scale: 0, width: '100%' }}
+          initial={{ scale: 1, width: '100%' }}
           animate={{ scale: 1, width: socialMediaActive ? '10%' : '100%' }}
           transition={{
             type: 'spring',
