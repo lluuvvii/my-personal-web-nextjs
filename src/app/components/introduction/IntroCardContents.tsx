@@ -422,6 +422,15 @@ const IntroCardContents = () => {
                   }}>
                   <IconCaretLeftFilled color='red' />
                   <Typography
+                    component={motion.div}
+                    initial={{ scale: 0 }}
+                    animate={{ scale: 1 }}
+                    transition={{
+                      type: 'spring',
+                      stiffness: 500,
+                      damping: 30,
+                      delay: 0.1
+                    }}
                     variant='h5'
                     sx={{
                       top: 6,
@@ -437,6 +446,15 @@ const IntroCardContents = () => {
                     Prev
                   </Typography>
                   <Typography
+                    component={motion.div}
+                    initial={{ scale: 0 }}
+                    animate={{ scale: 1 }}
+                    transition={{
+                      type: 'spring',
+                      stiffness: 500,
+                      damping: 30,
+                      delay: 0.2
+                    }}
                     variant='h5'
                     sx={{
                       top: 6,
@@ -452,6 +470,15 @@ const IntroCardContents = () => {
                     Prev
                   </Typography>
                   <Typography
+                    component={motion.div}
+                    initial={{ scale: 0 }}
+                    animate={{ scale: 1 }}
+                    transition={{
+                      type: 'spring',
+                      stiffness: 500,
+                      damping: 30,
+                      delay: 0.3
+                    }}
                     variant='h5'
                     sx={{
                       position: 'relative',
