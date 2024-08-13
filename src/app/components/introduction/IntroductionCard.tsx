@@ -26,7 +26,7 @@ const IntroductionCard = () => {
       }}>
       {/* top left particles */}
       {/* star long shadow */}
-      <Box
+      {/* <Box
         component={motion.div}
         initial={{ scale: 0 }}
         animate={{ scale: onHover || onTouch ? 1 : 0 }}
@@ -56,9 +56,9 @@ const IntroductionCard = () => {
             <path d='M100 0.587l30.52 66.76L200 81.25l-50 48.5L161.92 200 100 165.83 38.08 200 50 129.75 0 81.25l69.44-13.29z' transform='scale(0.7) translate(42.5, 47)' fill='white' />
           </svg>
         </div>
-      </Box>
+      </Box> */}
       {/* striped circle */}
-      <Box
+      {/* <Box
         component={motion.div}
         initial={{ scale: 0, rotate: 15 }}
         animate={{ scale: onHover || onTouch ? 1 : 0 }}
@@ -79,9 +79,9 @@ const IntroductionCard = () => {
           top: '-25px',
           left: '40px',
         }}>
-      </Box>
+      </Box> */}
       {/* circle */}
-      <Box
+      {/* <Box
         component={motion.div}
         initial={{ scale: 0, rotate: 15 }}
         animate={{ scale: onHover || onTouch ? 1 : 0 }}
@@ -218,9 +218,9 @@ const IntroductionCard = () => {
           left: '50px',
         }}
       >
-      </Box>
+      </Box> */}
       {/* striped circle */}
-      <Box
+      {/* <Box
         component={motion.div}
         initial={{ scale: 0, rotate: 15 }}
         animate={{ scale: onHover || onTouch ? 1 : 0 }}
@@ -241,10 +241,10 @@ const IntroductionCard = () => {
           top: '15px',
           left: '-30px',
         }}>
-      </Box>
+      </Box> */}
       {/* bottom right */}
       {/* circle */}
-      <Box
+      {/* <Box
         component={motion.div}
         initial={{ scale: 0, rotate: 15 }}
         animate={{ scale: onHover || onTouch ? 1 : 0 }}
@@ -289,9 +289,9 @@ const IntroductionCard = () => {
           right: '-15px',
         }}
       >
-      </Box>
+      </Box> */}
       {/* striped circle */}
-      <Box
+      {/* <Box
         component={motion.div}
         initial={{ scale: 0, rotate: 15 }}
         animate={{ scale: onHover || onTouch ? 1 : 0 }}
@@ -312,9 +312,9 @@ const IntroductionCard = () => {
           bottom: '25px',
           right: '-30px',
         }}>
-      </Box>
+      </Box> */}
       {/* circle */}
-      <Box
+      {/* <Box
         component={motion.div}
         initial={{ scale: 0, rotate: 15 }}
         animate={{ scale: onHover || onTouch ? 1 : 0 }}
@@ -382,9 +382,9 @@ const IntroductionCard = () => {
           right: '-10px',
         }}
       >
-      </Box>
+      </Box> */}
       {/* striped circle */}
-      <Box
+      {/* <Box
         component={motion.div}
         initial={{ scale: 0, rotate: 15 }}
         animate={{ scale: onHover || onTouch ? 1 : 0 }}
@@ -405,9 +405,9 @@ const IntroductionCard = () => {
           bottom: '-25px',
           right: '30px',
         }}>
-      </Box>
+      </Box> */}
       {/* spike */}
-      <Box
+      {/* <Box
         component={motion.div}
         initial={{ scale: 0, rotate: 15 }}
         animate={{ scale: onHover || onTouch ? 1 : 0 }}
@@ -429,9 +429,9 @@ const IntroductionCard = () => {
           right: '-35px'
         }}
       >
-      </Box>
+      </Box> */}
       {/* circle */}
-      <Box
+      {/* <Box
         component={motion.div}
         initial={{ scale: 0, rotate: 15 }}
         animate={{ scale: onHover || onTouch ? 1 : 0 }}
@@ -453,9 +453,9 @@ const IntroductionCard = () => {
           right: '-20px',
         }}
       >
-      </Box>
+      </Box> */}
       {/* star long shadow */}
-      <Box
+      {/* <Box
         component={motion.div}
         initial={{ scale: 0 }}
         animate={{ scale: onHover || onTouch ? 1 : 0 }}
@@ -484,7 +484,7 @@ const IntroductionCard = () => {
             <path d='M100 0.587l30.52 66.76L200 81.25l-50 48.5L161.92 200 100 165.83 38.08 200 50 129.75 0 81.25l69.44-13.29z' transform='scale(0.7) translate(42.5, 47)' fill='white' />
           </svg>
         </div>
-      </Box>
+      </Box> */}
       {/* introcard contents */}
       <Box
         sx={{
@@ -505,7 +505,7 @@ const IntroductionCard = () => {
           <IntroCardContents />
         </Box>
         {/* striped circle */}
-        <Box
+        {/* <Box
           component={motion.div}
           initial={{ scale: 0, rotate: 15 }}
           animate={{ scale: onHover || onTouch ? 1 : 0 }}
@@ -527,9 +527,9 @@ const IntroductionCard = () => {
             right: '-20px',
           }}
         >
-        </Box>
+        </Box> */}
         {/* spike */}
-        <Box
+        {/* <Box
           component={motion.div}
           initial={{ scale: 0 }}
           animate={{ scale: onHover || onTouch ? 1 : 0 }}
@@ -551,7 +551,7 @@ const IntroductionCard = () => {
             left: '-20px'
           }}
         >
-        </Box>
+        </Box> */}
         {/* circle around */}
         {/* <Box
           component={motion.div}
@@ -594,7 +594,7 @@ const IntroductionCard = () => {
           })}
         </Box> */}
         {/* circle */}
-        <Box
+        {/* <Box
           component={motion.div}
           initial={{ scale: 0, rotate: 15 }}
           animate={{ scale: onHover || onTouch ? 1 : 0 }}
@@ -640,7 +640,7 @@ const IntroductionCard = () => {
             right: '20px',
           }}
         >
-        </Box>
+        </Box> */}
         {/* title text */}
         <Typography
           component={motion.div}

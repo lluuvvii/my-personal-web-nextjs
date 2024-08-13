@@ -805,8 +805,8 @@ const IntroCardContents = () => {
           animate={{ scale: askActive ? 1 : 0, opacity: askActive ? 1 : 0, y: askActive ? 0 : 300 }}
           transition={{
             type: 'spring',
-            stiffness: 500,
-            damping: 30
+            stiffness: 600,
+            damping: 35
           }}
           sx={{
             top: '0px',
@@ -835,8 +835,11 @@ const IntroCardContents = () => {
             }}>
             <Box
               component={motion.div}
-              initial={{ opacity: 0, scale: 0, rotate: 15 }}
-              animate={{ opacity: 1, scale: 1 }}
+              initial={{ opacity: 0, rotate: 15 }}
+              animate={{ opacity: askActive ? 1 : 0 }}
+              transition={{
+                delay: 0.3
+              }}
               position='absolute'
               sx={{ top: -15, left: 157 }}>
               <Typography variant='h2'
@@ -851,8 +854,11 @@ const IntroCardContents = () => {
             </Box>
             <Box
               component={motion.div}
-              initial={{ opacity: 0, scale: 0, rotate: 15 }}
-              animate={{ opacity: 1, scale: 1 }}
+              initial={{ opacity: 0, rotate: 15 }}
+              animate={{ opacity: askActive ? 1 : 0 }}
+              transition={{
+                delay: 0.3
+              }}
               position='absolute'
               sx={{ top: -19, left: 165 }}>
               <Typography variant='h2'
@@ -866,7 +872,13 @@ const IntroCardContents = () => {
               </Typography>
             </Box>
             {/* ask me about title */}
-            <Box>
+            <Box
+              component={motion.div}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: askActive ? 1 : 0 }}
+              transition={{
+                delay: 0.2
+              }}>
               <Typography
                 variant='h5'
                 mb={1}
@@ -915,7 +927,13 @@ const IntroCardContents = () => {
                 borderRadius: '5px',
               }}>
               {/* this website button */}
-              <Box>
+              <Box
+                component={motion.div}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: askActive ? 1 : 0 }}
+                transition={{
+                  delay: 0.3
+                }}>
                 <Stack direction='row' alignItems='center' justifyContent='space-between'>
                   <Box
                     component={motion.div}
@@ -947,6 +965,7 @@ const IntroCardContents = () => {
                       onClick={() => {
                         resetQuestionDialog()
                         setQuestionDialog(prevState => ({ ...prevState, thisWebsite: true }))
+                        setMarkQuestions((prevState) => ({ ...prevState, thisWebsite: false }))
                         setAskActive(false)
                         setQuestionActive(true)
                       }}
@@ -964,15 +983,6 @@ const IntroCardContents = () => {
                         }
                       }}>
                       <Typography
-                        component={motion.div}
-                        initial={{ scale: 0 }}
-                        animate={{ scale: askActive ? 1 : 0 }}
-                        transition={{
-                          type: 'spring',
-                          stiffness: 500,
-                          damping: 30,
-                          delay: 0.1
-                        }}
                         variant='h6'
                         sx={{
                           position: 'absolute',
@@ -988,15 +998,6 @@ const IntroCardContents = () => {
                         This Website
                       </Typography>
                       <Typography
-                        component={motion.div}
-                        initial={{ scale: 0 }}
-                        animate={{ scale: askActive ? 1 : 0 }}
-                        transition={{
-                          type: 'spring',
-                          stiffness: 500,
-                          damping: 30,
-                          delay: 0.2
-                        }}
                         variant='h6'
                         sx={{
                           position: 'absolute',
@@ -1012,15 +1013,6 @@ const IntroCardContents = () => {
                         This Website
                       </Typography>
                       <Typography
-                        component={motion.div}
-                        initial={{ scale: 0 }}
-                        animate={{ scale: askActive ? 1 : 0 }}
-                        transition={{
-                          type: 'spring',
-                          stiffness: 500,
-                          damping: 30,
-                          delay: 0.3
-                        }}
                         variant='h6'
                         sx={{
                           position: 'relative',
@@ -1045,9 +1037,7 @@ const IntroCardContents = () => {
                     <IconCaretLeftFilled color='red' />
                   </Box>
                 </Stack>
-              </Box>
-              {/* yayaya button */}
-              <Box>
+                {/* yayaya button */}
                 <Stack direction='row' alignItems='center' justifyContent='space-between'>
                   <Box
                     component={motion.div}
@@ -1079,6 +1069,7 @@ const IntroCardContents = () => {
                       onClick={() => {
                         resetQuestionDialog()
                         setQuestionDialog(prevState => ({ ...prevState, secondOption: true }))
+                        setMarkQuestions((prevState) => ({ ...prevState, secondOption: false }))
                         setAskActive(false)
                         setQuestionActive(true)
                       }}
@@ -1096,15 +1087,6 @@ const IntroCardContents = () => {
                         }
                       }}>
                       <Typography
-                        component={motion.div}
-                        initial={{ scale: 0 }}
-                        animate={{ scale: askActive ? 1 : 0 }}
-                        transition={{
-                          type: 'spring',
-                          stiffness: 500,
-                          damping: 30,
-                          delay: 0.1
-                        }}
                         variant='h6'
                         sx={{
                           position: 'absolute',
@@ -1120,15 +1102,6 @@ const IntroCardContents = () => {
                         Second Option
                       </Typography>
                       <Typography
-                        component={motion.div}
-                        initial={{ scale: 0 }}
-                        animate={{ scale: askActive ? 1 : 0 }}
-                        transition={{
-                          type: 'spring',
-                          stiffness: 500,
-                          damping: 30,
-                          delay: 0.2
-                        }}
                         variant='h6'
                         sx={{
                           position: 'absolute',
@@ -1144,15 +1117,6 @@ const IntroCardContents = () => {
                         Second Option
                       </Typography>
                       <Typography
-                        component={motion.div}
-                        initial={{ scale: 0 }}
-                        animate={{ scale: askActive ? 1 : 0 }}
-                        transition={{
-                          type: 'spring',
-                          stiffness: 500,
-                          damping: 30,
-                          delay: 0.3
-                        }}
                         variant='h6'
                         sx={{
                           position: 'relative',
