@@ -13,7 +13,7 @@ const IntroductionCard = () => {
     <Box
       position='relative'
       component={motion.div}
-      initial={{ scale: 1, x: -200, opacity: 0 }}
+      initial={{ scale: 0, x: -400, opacity: 0 }}
       animate={{ scale: 1, x: 0, opacity: 1 }}
       onHoverStart={() => setOnHover(true)}
       onHoverEnd={() => setOnHover(false)}
