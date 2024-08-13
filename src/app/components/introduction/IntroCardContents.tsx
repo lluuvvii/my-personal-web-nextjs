@@ -23,12 +23,22 @@ const IntroCardContents = () => {
   }
 
   return (
-    <Box position='relative'>
+    <Box
+      component={motion.div}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{
+        type: 'string',
+        stiffness: 500,
+        damping: 30,
+      }}
+      position='relative'
+    >
       <Stack direction='column' justifyContent='center' spacing={1}>
         {/* screen content */}
         <Box
           component={motion.div}
-          initial={{ scale: 0 }}
+          initial={{ scale: 1 }}
           animate={{ opacity: !askActive ? 1 : 0, scale: 1 }}
           transition={{
             type: 'spring',
@@ -640,14 +650,6 @@ const IntroCardContents = () => {
         </Box>
         {/* ask me button */}
         <Box
-          component={motion.div}
-          initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
-          transition={{
-            type: 'spring',
-            stiffness: 500,
-            damping: 25,
-          }}
           sx={{
             width: '100%',
             backgroundColor: 'red',
@@ -1180,14 +1182,6 @@ const IntroCardContents = () => {
         </Box>
         {/* social media */}
         <Box
-          component={motion.div}
-          initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
-          transition={{
-            type: 'spring',
-            stiffness: 500,
-            damping: 25
-          }}
           sx={{
             width: '100%',
             backgroundColor: 'red',
