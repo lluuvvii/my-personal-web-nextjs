@@ -640,6 +640,14 @@ const IntroCardContents = () => {
         </Box>
         {/* ask me button */}
         <Box
+          component={motion.div}
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          transition={{
+            type: 'spring',
+            stiffness: 500,
+            damping: 25,
+          }}
           sx={{
             width: '100%',
             backgroundColor: 'red',
@@ -1172,6 +1180,14 @@ const IntroCardContents = () => {
         </Box>
         {/* social media */}
         <Box
+          component={motion.div}
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          transition={{
+            type: 'spring',
+            stiffness: 500,
+            damping: 25
+          }}
           sx={{
             width: '100%',
             backgroundColor: 'red',
@@ -1247,14 +1263,22 @@ const IntroCardContents = () => {
           </Box>
         </Box>
         <Box
+          component={motion.div}
+          initial={{ scale: 0, width: '100%' }}
+          animate={{ scale: 1, width: socialMediaActive ? '10%' : '100%' }}
+          transition={{
+            type: 'spring',
+            stiffness: 500,
+            damping: 25,
+          }}
           sx={{
-            width: socialMediaActive ? '10%' : '100%',
+            // width: socialMediaActive ? '10%' : '100%',
             backgroundColor: 'red',
             borderRadius: '5px',
             overflow: 'hidden',
             position: 'absolute',
             top: 356,
-            transition: 'ease 0.3s',
+            // transition: 'ease 0.3s',
           }}
         >
           <Box position='absolute'
