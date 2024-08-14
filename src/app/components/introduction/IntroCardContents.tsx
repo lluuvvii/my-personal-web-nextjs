@@ -45,8 +45,7 @@ const IntroCardContents = () => {
         damping: 30,
         delay: 0.4
       }}
-      position='relative'
-    >
+      position='relative'>
       <Stack direction='column' justifyContent='center' spacing={1}>
         {/* screen content */}
         <Box
