@@ -3,7 +3,7 @@
 import { Button, Stack, Typography, Box, Slide } from '@mui/material'
 import { IconBrandGithub, IconBrandInstagram, IconCaretLeftFilled, IconCaretRightFilled, IconExclamationCircle, IconSquareXFilled } from '@tabler/icons-react'
 import { motion } from 'framer-motion'
-import { useState } from 'react'
+import { useMemo, useState } from 'react'
 
 const IntroCardContents = () => {
   const [dialogVal, setDialogVal] = useState(0)
@@ -14,6 +14,18 @@ const IntroCardContents = () => {
   const [markSocialMedia, setMarkSocialMedia] = useState(false)
   const [questionDialog, setQuestionDialog] = useState({ thisWebsite: false, secondOption: false })
   const [questionActive, setQuestionActive] = useState(false)
+
+  const animateAskMeCard = useMemo(() => ({
+    scale: askActive ? 1 : 0,
+    opacity: askActive ? 1 : 0,
+    y: askActive ? 0 : 300
+  }), [askActive])
+
+  const transitionAskMeCard = useMemo(() => ({
+    type: 'spring',
+    stiffness: 600,
+    damping: 35
+  }), [])
 
   const resetQuestionDialog = () => {
     setQuestionDialog({
@@ -39,8 +51,7 @@ const IntroCardContents = () => {
         {/* screen content */}
         <Box
           component={motion.div}
-          initial={{ scale: 1 }}
-          animate={{ opacity: !askActive ? 1 : 0, scale: 1 }}
+          animate={{ opacity: !askActive ? 1 : 0 }}
           transition={{
             type: 'spring',
             stiffness: 500,
@@ -802,12 +813,8 @@ const IntroCardContents = () => {
           position='absolute'
           component={motion.div}
           initial={{ opacity: 0, y: 300, scale: 0 }}
-          animate={{ scale: askActive ? 1 : 0, opacity: askActive ? 1 : 0, y: askActive ? 0 : 300 }}
-          transition={{
-            type: 'spring',
-            stiffness: 600,
-            damping: 35
-          }}
+          animate={animateAskMeCard}
+          transition={transitionAskMeCard}
           sx={{
             top: '0px',
             left: '0px',
