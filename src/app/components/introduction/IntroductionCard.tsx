@@ -488,6 +488,24 @@ const IntroductionCard = () => {
       {/* introcard contents */}
       <Box
         sx={{
+          position: 'absolute',
+          backgroundColor: 'black',
+          borderRadius: '20px',
+          bottom: 0,
+          height: '50px',
+          width: '100%'
+        }}>
+      </Box>
+      <Box
+        component={motion.div}
+        initial={{ y: -10 }}
+        animate={{ y: onHover || onTouch ? -5 : -10 }}
+        transition={{
+          type: 'spring',
+          stiffness: 600,
+          damping: 15
+        }}
+        sx={{
           position: 'relative',
           padding: '10px',
           backgroundColor: 'red',
