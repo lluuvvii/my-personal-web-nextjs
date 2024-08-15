@@ -7,7 +7,7 @@ import ScrollAnimation from '../components/animateOnScroll/ScrollAnimation'
 const Home = () => {
   return (
     <Container sx={{ overflow: 'hidden' }}>
-      <Box p={5}>
+      <Box p={10}>
         <Grid container spacing={2} justifyContent='center'>
           <Grid item>
             <IntroductionCard />
