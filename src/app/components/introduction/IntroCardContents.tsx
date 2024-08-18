@@ -2,8 +2,8 @@
 
 import { Button, Stack, Typography, Box, Slide } from '@mui/material'
 import { IconBrandGithub, IconBrandInstagram, IconCaretLeftFilled, IconCaretRightFilled, IconExclamationCircle, IconSquareXFilled } from '@tabler/icons-react'
-import { motion } from 'framer-motion'
-import { useMemo, useState } from 'react'
+import { AnimatePresence, motion } from 'framer-motion'
+import { useState } from 'react'
 
 const IntroCardContents = () => {
   const [dialogVal, setDialogVal] = useState(0)
@@ -14,18 +14,6 @@ const IntroCardContents = () => {
   const [markSocialMedia, setMarkSocialMedia] = useState(false)
   const [questionDialog, setQuestionDialog] = useState({ thisWebsite: false, secondOption: false })
   const [questionActive, setQuestionActive] = useState(false)
-
-  const animateAskMeCard = useMemo(() => ({
-    scale: askActive ? 1 : 0,
-    opacity: askActive ? 1 : 0,
-    y: askActive ? 0 : 300
-  }), [askActive])
-
-  const transitionAskMeCard = useMemo(() => ({
-    type: 'spring',
-    stiffness: 600,
-    damping: 35
-  }), [])
 
   const resetQuestionDialog = () => {
     setQuestionDialog({
@@ -808,349 +796,362 @@ const IntroCardContents = () => {
           </Stack>
         </Box>
         {/* ask me about card */}
-        <Box
-          position='absolute'
-          component={motion.div}
-          initial={{ opacity: 0, y: 300, scale: 0 }}
-          animate={animateAskMeCard}
-          transition={transitionAskMeCard}
-          sx={{
-            top: '0px',
-            left: '0px',
-            borderRadius: '10px',
-          }}>
-          <Box
-            component={motion.div}
-            initial={{ scale: 2 }}
-            position='absolute'
-            sx={{
-              top: '264px',
-              left: '-6px',
-            }}>
-            <IconCaretRightFilled color='red' />
-          </Box>
-          <Box
-            sx={{
-              position: 'relative',
-              width: '260px',
-              height: '280px',
-              p: '10px',
-              backgroundColor: 'red',
-              borderRadius: '10px',
-              overflow: 'hidden',
-            }}>
+        <AnimatePresence>
+          {askActive ?
             <Box
-              component={motion.div}
-              initial={{ opacity: 0, rotate: 15 }}
-              animate={{ opacity: askActive ? 1 : 0 }}
-              transition={{
-                delay: 0.3
-              }}
               position='absolute'
-              sx={{ top: -15, left: 157 }}>
-              <Typography variant='h2'
-                sx={{
-                  textAlign: 'center',
-                  fontFamily: 'Nunito, Arial, sans-serif',
-                  fontWeight: 900,
-                  color: 'black',
-                }}>
-                <IconExclamationCircle color='black' size='100px' />
-              </Typography>
-            </Box>
-            <Box
               component={motion.div}
-              initial={{ opacity: 0, rotate: 15 }}
-              animate={{ opacity: askActive ? 1 : 0 }}
-              transition={{
-                delay: 0.3
+              initial={{ opacity: 0, y: 100 }}
+              animate={{
+                scale: askActive ? 1 : 0,
+                opacity: askActive ? 1 : 0,
+                y: askActive ? 0 : 300
               }}
-              position='absolute'
-              sx={{ top: -19, left: 165 }}>
-              <Typography variant='h2'
-                sx={{
-                  textAlign: 'center',
-                  fontFamily: 'Nunito, Arial, sans-serif',
-                  fontWeight: 900,
-                  color: 'white',
-                }}>
-                <IconExclamationCircle color='white' size='100px' />
-              </Typography>
-            </Box>
-            {/* ask me about title */}
-            <Box
-              component={motion.div}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: askActive ? 1 : 0 }}
               transition={{
-                delay: 0.2
-              }}>
-              <Typography
-                variant='h5'
-                mb={1}
-                sx={{
-                  position: 'absolute',
-                  width: '100%',
-                  top: 12,
-                  left: 0,
-                  textAlign: 'center',
-                  fontFamily: 'Nunito, Arial, sans-serif',
-                  fontWeight: 700,
-                  color: 'white',
-                  WebkitTextStroke: '10px white'
-                }}>Ask Me About :</Typography>
-              <Typography
-                variant='h5'
-                mb={1}
-                sx={{
-                  position: 'absolute',
-                  width: '100%',
-                  top: 12,
-                  left: 0,
-                  textAlign: 'center',
-                  fontFamily: 'Nunito, Arial, sans-serif',
-                  fontWeight: 700,
-                  color: 'black',
-                  WebkitTextStroke: '5px black'
-                }}>Ask Me About :</Typography>
-              <Typography
-                variant='h5'
-                mb={1}
-                sx={{
-                  position: 'relative',
-                  textAlign: 'center',
-                  fontFamily: 'Nunito, Arial, sans-serif',
-                  fontWeight: 700,
-                  color: 'white',
-                }}>Ask Me About :</Typography>
-            </Box>
-            <Box
+                type: 'spring',
+                stiffness: 500,
+                damping: 30
+              }}
+              exit={{ opacity: 0, y: 100 }}
               sx={{
-                position: 'relative',
-                width: '100%',
-                height: '219px',
-                backgroundColor: 'white',
-                borderRadius: '5px',
+                top: '0px',
+                left: '0px',
+                borderRadius: '10px',
               }}>
-              {/* this website button */}
               <Box
                 component={motion.div}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: askActive ? 1 : 0 }}
-                transition={{
-                  delay: 0.3
+                initial={{ scale: 2 }}
+                position='absolute'
+                sx={{
+                  top: '264px',
+                  left: '-6px',
                 }}>
-                <Stack direction='row' alignItems='center' justifyContent='space-between'>
+                <IconCaretRightFilled color='red' />
+              </Box>
+              <Box
+                sx={{
+                  position: 'relative',
+                  width: '260px',
+                  height: '280px',
+                  p: '10px',
+                  backgroundColor: 'red',
+                  borderRadius: '10px',
+                  overflow: 'hidden',
+                }}>
+                <Box
+                  component={motion.div}
+                  initial={{ opacity: 0, rotate: 15 }}
+                  animate={{ opacity: askActive ? 1 : 0 }}
+                  transition={{
+                    delay: 0.3
+                  }}
+                  position='absolute'
+                  sx={{ top: -15, left: 157 }}>
+                  <Typography variant='h2'
+                    sx={{
+                      textAlign: 'center',
+                      fontFamily: 'Nunito, Arial, sans-serif',
+                      fontWeight: 900,
+                      color: 'black',
+                    }}>
+                    <IconExclamationCircle color='black' size='100px' />
+                  </Typography>
+                </Box>
+                <Box
+                  component={motion.div}
+                  initial={{ opacity: 0, rotate: 15 }}
+                  animate={{ opacity: askActive ? 1 : 0 }}
+                  transition={{
+                    delay: 0.3
+                  }}
+                  position='absolute'
+                  sx={{ top: -19, left: 165 }}>
+                  <Typography variant='h2'
+                    sx={{
+                      textAlign: 'center',
+                      fontFamily: 'Nunito, Arial, sans-serif',
+                      fontWeight: 900,
+                      color: 'white',
+                    }}>
+                    <IconExclamationCircle color='white' size='100px' />
+                  </Typography>
+                </Box>
+                {/* ask me about title */}
+                <Box
+                  component={motion.div}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: askActive ? 1 : 0 }}
+                  transition={{
+                    delay: 0.2
+                  }}>
+                  <Typography
+                    variant='h5'
+                    mb={1}
+                    sx={{
+                      position: 'absolute',
+                      width: '100%',
+                      top: 12,
+                      left: 0,
+                      textAlign: 'center',
+                      fontFamily: 'Nunito, Arial, sans-serif',
+                      fontWeight: 700,
+                      color: 'white',
+                      WebkitTextStroke: '10px white'
+                    }}>Ask Me About :</Typography>
+                  <Typography
+                    variant='h5'
+                    mb={1}
+                    sx={{
+                      position: 'absolute',
+                      width: '100%',
+                      top: 12,
+                      left: 0,
+                      textAlign: 'center',
+                      fontFamily: 'Nunito, Arial, sans-serif',
+                      fontWeight: 700,
+                      color: 'black',
+                      WebkitTextStroke: '5px black'
+                    }}>Ask Me About :</Typography>
+                  <Typography
+                    variant='h5'
+                    mb={1}
+                    sx={{
+                      position: 'relative',
+                      textAlign: 'center',
+                      fontFamily: 'Nunito, Arial, sans-serif',
+                      fontWeight: 700,
+                      color: 'white',
+                    }}>Ask Me About :</Typography>
+                </Box>
+                <Box
+                  sx={{
+                    position: 'relative',
+                    width: '100%',
+                    height: '219px',
+                    backgroundColor: 'white',
+                    borderRadius: '5px',
+                  }}>
+                  {/* this website button */}
                   <Box
                     component={motion.div}
-                    initial={{ scale: 0 }}
-                    animate={{ scale: markQuestions.thisWebsite ? 1 : 0 }}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: askActive ? 1 : 0 }}
                     transition={{
-                      type: 'spring',
-                      stiffness: 500,
-                      damping: 20
+                      delay: 0.3
                     }}>
-                    <IconCaretRightFilled color='red' />
+                    <Stack direction='row' alignItems='center' justifyContent='space-between'>
+                      <Box
+                        component={motion.div}
+                        initial={{ scale: 0 }}
+                        animate={{ scale: markQuestions.thisWebsite ? 1 : 0 }}
+                        transition={{
+                          type: 'spring',
+                          stiffness: 500,
+                          damping: 20
+                        }}>
+                        <IconCaretRightFilled color='red' />
+                      </Box>
+                      {askActive ?
+                        <Button
+                          component={motion.div}
+                          whileHover={{ scale: 1.1 }}
+                          whileTap={{ scale: 1 }}
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          onHoverStart={() => setMarkQuestions((prevState) => ({ ...prevState, thisWebsite: true }))}
+                          onHoverEnd={() => setMarkQuestions((prevState) => ({ ...prevState, thisWebsite: false }))}
+                          onTouchStart={() => setMarkQuestions((prevState) => ({ ...prevState, thisWebsite: true }))}
+                          onTouchEnd={() => setMarkQuestions((prevState) => ({ ...prevState, thisWebsite: false }))}
+                          transition={{
+                            type: 'spring',
+                            stiffness: 500,
+                            damping: 20
+                          }}
+                          onClick={() => {
+                            resetQuestionDialog()
+                            setQuestionDialog(prevState => ({ ...prevState, thisWebsite: true }))
+                            setMarkQuestions((prevState) => ({ ...prevState, thisWebsite: false }))
+                            setAskActive(false)
+                            setQuestionActive(true)
+                          }}
+                          size='small'
+                          sx={{
+                            width: '100%',
+                            backgroundColor: 'transparent',
+                            textTransform: 'none',
+                            '&:active': {
+                              color: 'transparent'
+                            },
+                            '&:hover': {
+                              backgroundColor: 'transparent',
+                              color: 'transparent'
+                            }
+                          }}>
+                          <Typography
+                            variant='h6'
+                            sx={{
+                              position: 'absolute',
+                              width: '100%',
+                              top: 6,
+                              left: 0,
+                              textAlign: 'center',
+                              fontFamily: 'Nunito, Arial, sans-serif',
+                              fontWeight: 700,
+                              color: 'red',
+                              WebkitTextStroke: '10px red'
+                            }}>
+                            This Website
+                          </Typography>
+                          <Typography
+                            variant='h6'
+                            sx={{
+                              position: 'absolute',
+                              width: '100%',
+                              top: 6,
+                              left: 0,
+                              textAlign: 'center',
+                              fontFamily: 'Nunito, Arial, sans-serif',
+                              fontWeight: 700,
+                              color: 'black',
+                              WebkitTextStroke: '5px black'
+                            }}>
+                            This Website
+                          </Typography>
+                          <Typography
+                            variant='h6'
+                            sx={{
+                              position: 'relative',
+                              textAlign: 'center',
+                              fontFamily: 'Nunito, Arial, sans-serif',
+                              fontWeight: 700,
+                              color: 'white',
+                            }}>
+                            This Website
+                          </Typography>
+                        </Button>
+                        : null}
+                      <Box
+                        component={motion.div}
+                        initial={{ scale: 0 }}
+                        animate={{ scale: markQuestions.thisWebsite ? 1 : 0 }}
+                        transition={{
+                          type: 'spring',
+                          stiffness: 500,
+                          damping: 20
+                        }}>
+                        <IconCaretLeftFilled color='red' />
+                      </Box>
+                    </Stack>
+                    {/* yayaya button */}
+                    <Stack direction='row' alignItems='center' justifyContent='space-between'>
+                      <Box
+                        component={motion.div}
+                        initial={{ scale: 0 }}
+                        animate={{ scale: markQuestions.secondOption ? 1 : 0 }}
+                        transition={{
+                          type: 'spring',
+                          stiffness: 500,
+                          damping: 20
+                        }}>
+                        <IconCaretRightFilled color='red' />
+                      </Box>
+                      {askActive ?
+                        <Button
+                          component={motion.div}
+                          whileHover={{ scale: 1.1 }}
+                          whileTap={{ scale: 1 }}
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          onHoverStart={() => setMarkQuestions((prevState) => ({ ...prevState, secondOption: true }))}
+                          onHoverEnd={() => setMarkQuestions((prevState) => ({ ...prevState, secondOption: false }))}
+                          onTouchStart={() => setMarkQuestions((prevState) => ({ ...prevState, secondOption: true }))}
+                          onTouchEnd={() => setMarkQuestions((prevState) => ({ ...prevState, secondOption: false }))}
+                          transition={{
+                            type: 'spring',
+                            stiffness: 500,
+                            damping: 20
+                          }}
+                          onClick={() => {
+                            resetQuestionDialog()
+                            setQuestionDialog(prevState => ({ ...prevState, secondOption: true }))
+                            setMarkQuestions((prevState) => ({ ...prevState, secondOption: false }))
+                            setAskActive(false)
+                            setQuestionActive(true)
+                          }}
+                          size='small'
+                          sx={{
+                            width: '100%',
+                            backgroundColor: 'transparent',
+                            textTransform: 'none',
+                            '&:active': {
+                              color: 'transparent'
+                            },
+                            '&:hover': {
+                              backgroundColor: 'transparent',
+                              color: 'transparent'
+                            }
+                          }}>
+                          <Typography
+                            variant='h6'
+                            sx={{
+                              position: 'absolute',
+                              width: '100%',
+                              top: 6,
+                              left: 0,
+                              textAlign: 'center',
+                              fontFamily: 'Nunito, Arial, sans-serif',
+                              fontWeight: 700,
+                              color: 'red',
+                              WebkitTextStroke: '10px red'
+                            }}>
+                            Second Option
+                          </Typography>
+                          <Typography
+                            variant='h6'
+                            sx={{
+                              position: 'absolute',
+                              width: '100%',
+                              top: 6,
+                              left: 0,
+                              textAlign: 'center',
+                              fontFamily: 'Nunito, Arial, sans-serif',
+                              fontWeight: 700,
+                              color: 'black',
+                              WebkitTextStroke: '5px black'
+                            }}>
+                            Second Option
+                          </Typography>
+                          <Typography
+                            variant='h6'
+                            sx={{
+                              position: 'relative',
+                              textAlign: 'center',
+                              fontFamily: 'Nunito, Arial, sans-serif',
+                              fontWeight: 700,
+                              color: 'white',
+                            }}>
+                            Second Option
+                          </Typography>
+                        </Button>
+                        : null}
+                      <Box
+                        component={motion.div}
+                        initial={{ scale: 0 }}
+                        animate={{ scale: markQuestions.secondOption ? 1 : 0 }}
+                        transition={{
+                          type: 'spring',
+                          stiffness: 500,
+                          damping: 20
+                        }}>
+                        <IconCaretLeftFilled color='red' />
+                      </Box>
+                    </Stack>
                   </Box>
-                  {askActive ?
-                    <Button
-                      component={motion.div}
-                      whileHover={{ scale: 1.1 }}
-                      whileTap={{ scale: 1 }}
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      onHoverStart={() => setMarkQuestions((prevState) => ({ ...prevState, thisWebsite: true }))}
-                      onHoverEnd={() => setMarkQuestions((prevState) => ({ ...prevState, thisWebsite: false }))}
-                      onTouchStart={() => setMarkQuestions((prevState) => ({ ...prevState, thisWebsite: true }))}
-                      onTouchEnd={() => setMarkQuestions((prevState) => ({ ...prevState, thisWebsite: false }))}
-                      transition={{
-                        type: 'spring',
-                        stiffness: 500,
-                        damping: 20
-                      }}
-                      onClick={() => {
-                        resetQuestionDialog()
-                        setQuestionDialog(prevState => ({ ...prevState, thisWebsite: true }))
-                        setMarkQuestions((prevState) => ({ ...prevState, thisWebsite: false }))
-                        setAskActive(false)
-                        setQuestionActive(true)
-                      }}
-                      size='small'
-                      sx={{
-                        width: '100%',
-                        backgroundColor: 'transparent',
-                        textTransform: 'none',
-                        '&:active': {
-                          color: 'transparent'
-                        },
-                        '&:hover': {
-                          backgroundColor: 'transparent',
-                          color: 'transparent'
-                        }
-                      }}>
-                      <Typography
-                        variant='h6'
-                        sx={{
-                          position: 'absolute',
-                          width: '100%',
-                          top: 6,
-                          left: 0,
-                          textAlign: 'center',
-                          fontFamily: 'Nunito, Arial, sans-serif',
-                          fontWeight: 700,
-                          color: 'red',
-                          WebkitTextStroke: '10px red'
-                        }}>
-                        This Website
-                      </Typography>
-                      <Typography
-                        variant='h6'
-                        sx={{
-                          position: 'absolute',
-                          width: '100%',
-                          top: 6,
-                          left: 0,
-                          textAlign: 'center',
-                          fontFamily: 'Nunito, Arial, sans-serif',
-                          fontWeight: 700,
-                          color: 'black',
-                          WebkitTextStroke: '5px black'
-                        }}>
-                        This Website
-                      </Typography>
-                      <Typography
-                        variant='h6'
-                        sx={{
-                          position: 'relative',
-                          textAlign: 'center',
-                          fontFamily: 'Nunito, Arial, sans-serif',
-                          fontWeight: 700,
-                          color: 'white',
-                        }}>
-                        This Website
-                      </Typography>
-                    </Button>
-                    : null}
-                  <Box
-                    component={motion.div}
-                    initial={{ scale: 0 }}
-                    animate={{ scale: markQuestions.thisWebsite ? 1 : 0 }}
-                    transition={{
-                      type: 'spring',
-                      stiffness: 500,
-                      damping: 20
-                    }}>
-                    <IconCaretLeftFilled color='red' />
-                  </Box>
-                </Stack>
-                {/* yayaya button */}
-                <Stack direction='row' alignItems='center' justifyContent='space-between'>
-                  <Box
-                    component={motion.div}
-                    initial={{ scale: 0 }}
-                    animate={{ scale: markQuestions.secondOption ? 1 : 0 }}
-                    transition={{
-                      type: 'spring',
-                      stiffness: 500,
-                      damping: 20
-                    }}>
-                    <IconCaretRightFilled color='red' />
-                  </Box>
-                  {askActive ?
-                    <Button
-                      component={motion.div}
-                      whileHover={{ scale: 1.1 }}
-                      whileTap={{ scale: 1 }}
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      onHoverStart={() => setMarkQuestions((prevState) => ({ ...prevState, secondOption: true }))}
-                      onHoverEnd={() => setMarkQuestions((prevState) => ({ ...prevState, secondOption: false }))}
-                      onTouchStart={() => setMarkQuestions((prevState) => ({ ...prevState, secondOption: true }))}
-                      onTouchEnd={() => setMarkQuestions((prevState) => ({ ...prevState, secondOption: false }))}
-                      transition={{
-                        type: 'spring',
-                        stiffness: 500,
-                        damping: 20
-                      }}
-                      onClick={() => {
-                        resetQuestionDialog()
-                        setQuestionDialog(prevState => ({ ...prevState, secondOption: true }))
-                        setMarkQuestions((prevState) => ({ ...prevState, secondOption: false }))
-                        setAskActive(false)
-                        setQuestionActive(true)
-                      }}
-                      size='small'
-                      sx={{
-                        width: '100%',
-                        backgroundColor: 'transparent',
-                        textTransform: 'none',
-                        '&:active': {
-                          color: 'transparent'
-                        },
-                        '&:hover': {
-                          backgroundColor: 'transparent',
-                          color: 'transparent'
-                        }
-                      }}>
-                      <Typography
-                        variant='h6'
-                        sx={{
-                          position: 'absolute',
-                          width: '100%',
-                          top: 6,
-                          left: 0,
-                          textAlign: 'center',
-                          fontFamily: 'Nunito, Arial, sans-serif',
-                          fontWeight: 700,
-                          color: 'red',
-                          WebkitTextStroke: '10px red'
-                        }}>
-                        Second Option
-                      </Typography>
-                      <Typography
-                        variant='h6'
-                        sx={{
-                          position: 'absolute',
-                          width: '100%',
-                          top: 6,
-                          left: 0,
-                          textAlign: 'center',
-                          fontFamily: 'Nunito, Arial, sans-serif',
-                          fontWeight: 700,
-                          color: 'black',
-                          WebkitTextStroke: '5px black'
-                        }}>
-                        Second Option
-                      </Typography>
-                      <Typography
-                        variant='h6'
-                        sx={{
-                          position: 'relative',
-                          textAlign: 'center',
-                          fontFamily: 'Nunito, Arial, sans-serif',
-                          fontWeight: 700,
-                          color: 'white',
-                        }}>
-                        Second Option
-                      </Typography>
-                    </Button>
-                    : null}
-                  <Box
-                    component={motion.div}
-                    initial={{ scale: 0 }}
-                    animate={{ scale: markQuestions.secondOption ? 1 : 0 }}
-                    transition={{
-                      type: 'spring',
-                      stiffness: 500,
-                      damping: 20
-                    }}>
-                    <IconCaretLeftFilled color='red' />
-                  </Box>
-                </Stack>
+                </Box>
               </Box>
             </Box>
-          </Box>
-        </Box>
+            : null}
+        </AnimatePresence>
         {/* social media */}
         <Box
           sx={{
