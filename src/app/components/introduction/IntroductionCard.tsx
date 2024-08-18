@@ -497,8 +497,9 @@ const IntroductionCard = () => {
         }}
         sx={{
           position: 'absolute',
-          backgroundColor: 'white',
+          backgroundColor: 'transparent',
           borderRadius: '22.5px',
+          border: '5px solid white',
           left: -2.5,
           bottom: -2.5,
           width: '305px'
@@ -516,8 +517,8 @@ const IntroductionCard = () => {
           variant='h4'
           sx={{
             position: 'absolute',
-            top: '-15px',
-            left: '-2.5px',
+            top: '-20px',
+            left: '-7px',
             textAlign: 'center',
             fontFamily: 'Nunito, Arial, sans-serif',
             fontWeight: 600,
