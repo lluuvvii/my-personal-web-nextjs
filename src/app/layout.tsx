@@ -41,7 +41,8 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         />
       </head>
       <body style={{
-        backgroundColor: 'rgba(230, 230, 230, 1)'
+        // background: 'linear-gradient(45deg, black 50px, white 50px, white 80px, #d10000 80px, #d10000 400px, white 400px)',
+        backgroundColor: '#d10000'
       }}>
         <Suspense>
           <ThemeProvider theme={theme}>

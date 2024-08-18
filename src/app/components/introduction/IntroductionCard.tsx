@@ -487,6 +487,47 @@ const IntroductionCard = () => {
       </Box> */}
       {/* introcard contents */}
       <Box
+        component={motion.div}
+        initial={{ height: '459px' }}
+        animate={{ height: onHover || onTouch ? '454px' : '459px' }}
+        transition={{
+          type: 'spring',
+          stiffness: 600,
+          damping: 20
+        }}
+        sx={{
+          position: 'absolute',
+          backgroundColor: 'white',
+          borderRadius: '22.5px',
+          left: -2.5,
+          bottom: -2.5,
+          width: '305px'
+        }}>
+        <Typography
+          component={motion.div}
+          initial={{ scale: 0, rotate: -5 }}
+          animate={{ scale: 1 }}
+          transition={{
+            type: 'spring',
+            stiffness: 500,
+            damping: 30,
+            delay: 0.1
+          }}
+          variant='h4'
+          sx={{
+            position: 'absolute',
+            top: '-15px',
+            left: '-2.5px',
+            textAlign: 'center',
+            fontFamily: 'Nunito, Arial, sans-serif',
+            fontWeight: 600,
+            WebkitTextStroke: '15px white',
+            color: 'white',
+          }}>
+          Introduction
+        </Typography>
+      </Box>
+      <Box
         sx={{
           position: 'absolute',
           backgroundColor: 'black',
