@@ -549,6 +549,7 @@ const IntroductionCard = () => {
         }}
         sx={{
           position: 'relative',
+          width: '300px',
           padding: '10px',
           backgroundColor: 'red',
           borderRadius: '20px',
@@ -557,9 +558,10 @@ const IntroductionCard = () => {
         {/* introcard contents */}
         <Box
           sx={{
-            width: '280px',
+            width: '100%',
             position: 'relative',
-            borderRadius: '10px', backgroundColor: 'white',
+            borderRadius: '10px',
+            backgroundColor: 'white',
             padding: '10px',
           }}>
           <IntroCardContents />
