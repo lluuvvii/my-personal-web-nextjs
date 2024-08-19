@@ -40,10 +40,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           rel="stylesheet"
         />
       </head>
-      <body style={{
-        // background: 'linear-gradient(-15deg, black 50px, white 50px, white 70px, black 70px, black 150px, #d10000 150px, #d10000 400px, white 400px, white 600px, #d10000 600px, #d10000 760px, black 760px, black 780px, #d10000 780px, #d10000 800px, black 800px)',
-        // backgroundColor: '#d10000'
-      }}>
+      <body>
         <Suspense>
           <ThemeProvider theme={theme}>
             <CssBaseline />
