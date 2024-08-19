@@ -13,7 +13,7 @@ const Home = () => {
           height: '100vh',
           top: 0,
           left: 0,
-          background: 'linear-gradient(-15deg, black 50px, #d10000 50px, #d10000 70px, black 70px, black 150px, #d10000 150px, #d10000 400px, white 400px, white 600px, #d10000 600px, #d10000 760px, black 760px, black 780px, #d10000 780px, #d10000 800px, black 800px)',
+          background: 'linear-gradient(-15deg, black 6%, #d10000 6%, #d10000 8%, black 8%, black 17%, #d10000 17%, #d10000 42%, white 42%, white 50%, #d10000 50%, #d10000 85%, black 85%, black 87%, #d10000 87%, #d10000 90%, black 90%)',
         }} />
         <Grid container spacing={2} justifyContent='center'>
           <Grid item>
