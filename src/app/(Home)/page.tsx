@@ -1,9 +1,6 @@
-import { Box, Container, Grid, Stack } from '@mui/material'
-import GithubStats from '../components/stats/GithubStats'
+import { Box, Container, Grid } from '@mui/material'
 import IntroductionCard from '../components/introduction/IntroductionCard'
-import AskMeCard from '../components/questions/AskMeCard'
-import ScrollAnimation from '../components/animateOnScroll/ScrollAnimation'
-import TechStackIconMenu from '../components/techStack/techStackIconMenu'
+import TechStackIconMenu from '../components/techStack/TechStackIconMenu'
 
 const Home = () => {
   return (
