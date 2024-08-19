@@ -22,8 +22,11 @@ const TechStackIconMenu = () => {
       <Box position='absolute'>
         <IconCategory size='50px' color='white' stroke={4.5} />
       </Box>
+      <Box position='absolute'>
+        <IconCategoryFilled size='50px' color='red' />
+      </Box>
       <Box position='relative'>
-        <IconCategoryFilled size='50px' color='black' />
+        <IconCategory size='50px' color='black' />
       </Box>
     </Box>
   )
