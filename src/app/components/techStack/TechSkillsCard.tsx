@@ -58,6 +58,29 @@ const TechSkillsCard = () => {
           variant='h4'
           sx={{
             position: 'absolute',
+            top: '10px',
+            left: '118px',
+            textAlign: 'center',
+            fontFamily: 'Nunito, Arial, sans-serif',
+            fontWeight: 600,
+            WebkitTextStroke: '15px white',
+            color: 'white',
+          }}>
+          Frameworks
+        </Typography>
+        <Typography
+          component={motion.div}
+          initial={{ scale: 0, rotate: -5 }}
+          animate={{ scale: 1 }}
+          transition={{
+            type: 'spring',
+            stiffness: 500,
+            damping: 30,
+            delay: 0.1
+          }}
+          variant='h4'
+          sx={{
+            position: 'absolute',
             top: '-20px',
             left: '-7px',
             textAlign: 'center',
@@ -66,7 +89,7 @@ const TechSkillsCard = () => {
             WebkitTextStroke: '15px white',
             color: 'white',
           }}>
-          Language & Frameworks
+          Language &
         </Typography>
       </Box>
       <Box
@@ -126,6 +149,74 @@ const TechSkillsCard = () => {
           variant='h4'
           sx={{
             position: 'absolute',
+            top: '12px',
+            left: '120px',
+            textAlign: 'center',
+            fontFamily: 'Nunito, Arial, sans-serif',
+            fontWeight: 600,
+            WebkitTextStroke: '10px red',
+            color: 'red',
+          }}>
+          Frameworks
+        </Typography>
+        <Typography
+          component={motion.div}
+          initial={{ scale: 0, rotate: -5 }}
+          animate={{ scale: 1 }}
+          transition={{
+            type: 'spring',
+            stiffness: 500,
+            damping: 30,
+            delay: 0.2
+          }}
+          variant='h4'
+          sx={{
+            position: 'absolute',
+            top: '12px',
+            left: '120px',
+            textAlign: 'center',
+            fontFamily: 'Nunito, Arial, sans-serif',
+            fontWeight: 600,
+            WebkitTextStroke: '5px black',
+            color: 'red',
+          }}>
+          Frameworks
+        </Typography>
+        <Typography
+          component={motion.div}
+          initial={{ scale: 0, rotate: -5 }}
+          animate={{ scale: 1 }}
+          transition={{
+            type: 'spring',
+            stiffness: 500,
+            damping: 30,
+            delay: 0.3
+          }}
+          variant='h4'
+          sx={{
+            position: 'absolute',
+            top: '10px',
+            left: '120px',
+            textAlign: 'center',
+            fontFamily: 'Nunito, Arial, sans-serif',
+            fontWeight: 600,
+            color: 'white',
+          }}>
+          Frameworks
+        </Typography>
+        <Typography
+          component={motion.div}
+          initial={{ scale: 0, rotate: -5 }}
+          animate={{ scale: 1 }}
+          transition={{
+            type: 'spring',
+            stiffness: 500,
+            damping: 30,
+            delay: 0.1
+          }}
+          variant='h4'
+          sx={{
+            position: 'absolute',
             top: '-18px',
             left: '-5px',
             textAlign: 'center',
@@ -134,7 +225,7 @@ const TechSkillsCard = () => {
             WebkitTextStroke: '10px red',
             color: 'red',
           }}>
-          Language & Frameworks
+          Language &
         </Typography>
         <Typography
           component={motion.div}
@@ -157,7 +248,7 @@ const TechSkillsCard = () => {
             WebkitTextStroke: '5px black',
             color: 'red',
           }}>
-          Language & Frameworks
+          Language &
         </Typography>
         <Typography
           component={motion.div}
@@ -179,7 +270,7 @@ const TechSkillsCard = () => {
             fontWeight: 600,
             color: 'white',
           }}>
-          Language & Frameworks
+          Language &
         </Typography>
       </Box>
     </Box>
