@@ -24,7 +24,7 @@ const TechSkillsCard = () => {
         type: 'spring',
         stiffness: 600,
         damping: 35,
-        delay: 0.6
+        delay: 0.6,
       }}
       sx={{
         width: 300

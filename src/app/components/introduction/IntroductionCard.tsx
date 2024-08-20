@@ -8,6 +8,7 @@ import { motion } from 'framer-motion'
 const IntroductionCard = () => {
   const [onHover, setOnHover] = useState(false)
   const [onTouch, setOnTouch] = useState(false)
+  const [completeAnimation, setCompleteAnimation] = useState(false)
 
   return (
     <Box
@@ -19,6 +20,7 @@ const IntroductionCard = () => {
       onHoverEnd={() => setOnHover(false)}
       onTouchStart={() => setOnTouch(true)}
       onTouchEnd={() => setOnTouch(false)}
+      onAnimationComplete={() => setCompleteAnimation(true)}
       transition={{
         type: 'spring',
         stiffness: 600,
@@ -507,7 +509,7 @@ const IntroductionCard = () => {
         <Typography
           component={motion.div}
           initial={{ scale: 0, rotate: -5 }}
-          animate={{ scale: 1 }}
+          animate={{ scale: completeAnimation ? 1 : 0 }}
           transition={{
             type: 'spring',
             stiffness: 500,
@@ -564,7 +566,7 @@ const IntroductionCard = () => {
             backgroundColor: 'white',
             padding: '10px',
           }}>
-          <IntroCardContents />
+          <IntroCardContents completeAnimation={completeAnimation} />
         </Box>
         {/* striped circle */}
         {/* <Box
@@ -707,7 +709,7 @@ const IntroductionCard = () => {
         <Typography
           component={motion.div}
           initial={{ scale: 0, rotate: -5 }}
-          animate={{ scale: 1 }}
+          animate={{ scale: completeAnimation ? 1 : 0 }}
           transition={{
             type: 'spring',
             stiffness: 500,
@@ -730,7 +732,7 @@ const IntroductionCard = () => {
         <Typography
           component={motion.div}
           initial={{ scale: 0, rotate: -5 }}
-          animate={{ scale: 1 }}
+          animate={{ scale: completeAnimation ? 1 : 0 }}
           transition={{
             type: 'spring',
             stiffness: 500,
@@ -753,7 +755,7 @@ const IntroductionCard = () => {
         <Typography
           component={motion.div}
           initial={{ scale: 0, rotate: -5 }}
-          animate={{ scale: 1 }}
+          animate={{ scale: completeAnimation ? 1 : 0 }}
           transition={{
             type: 'spring',
             stiffness: 500,

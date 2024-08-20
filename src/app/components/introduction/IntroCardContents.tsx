@@ -5,7 +5,11 @@ import { IconBrandGithub, IconBrandInstagram, IconCaretLeftFilled, IconCaretRigh
 import { AnimatePresence, motion } from 'framer-motion'
 import { useState } from 'react'
 
-const IntroCardContents = () => {
+interface IntroCardContentsProps {
+  completeAnimation: boolean;
+}
+
+const IntroCardContents = ({ completeAnimation }: IntroCardContentsProps) => {
   const [dialogVal, setDialogVal] = useState(0)
   const [askActive, setAskActive] = useState(false)
   const [socialMediaActive, setSocialMediaActive] = useState(false)
@@ -26,12 +30,11 @@ const IntroCardContents = () => {
     <Box
       component={motion.div}
       initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
+      animate={{ opacity: completeAnimation ? 1 : 0 }}
       transition={{
         type: 'string',
         stiffness: 500,
         damping: 30,
-        delay: 0.4
       }}
       position='relative'>
       <Stack direction='column' justifyContent='center' spacing={1}>
