@@ -25,6 +25,7 @@ const IntroductionCard = () => {
         type: 'spring',
         stiffness: 600,
         damping: 35,
+        delay: 0.5
       }}>
       {/* top left particles */}
       {/* star long shadow */}
