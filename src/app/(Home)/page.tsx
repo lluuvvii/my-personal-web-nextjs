@@ -1,6 +1,6 @@
 import { Box, Container, Grid } from '@mui/material'
 import IntroductionCard from '../components/introduction/IntroductionCard'
-import TechStackIconMenu from '../components/techStack/TechStackIconMenu'
+import TechSkillsCard from '../components/techStack/TechSkillsCard'
 
 const Home = () => {
   return (
@@ -19,9 +19,9 @@ const Home = () => {
           <Grid item>
             <IntroductionCard />
           </Grid>
-          {/* <Grid item>
-            <TechStackIconMenu />
-          </Grid> */}
+          <Grid item>
+            <TechSkillsCard />
+          </Grid>
           {/* <Grid item>
             <IntroductionCard />
           </Grid>
