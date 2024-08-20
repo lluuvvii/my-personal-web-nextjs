@@ -13,7 +13,7 @@ const IntroductionCard = () => {
     <Box
       position='relative'
       component={motion.div}
-      initial={{ x: -400, opacity: 0 }}
+      initial={{ x: -200, opacity: 0 }}
       animate={{ x: 0, opacity: 1 }}
       onHoverStart={() => setOnHover(true)}
       onHoverEnd={() => setOnHover(false)}
@@ -22,7 +22,7 @@ const IntroductionCard = () => {
       transition={{
         type: 'spring',
         stiffness: 600,
-        damping: 35
+        damping: 35,
       }}>
       {/* top left particles */}
       {/* star long shadow */}
