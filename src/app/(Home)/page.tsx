@@ -23,30 +23,6 @@ const Home = () => {
           <Grid item>
             <TechSkillsCard />
           </Grid>
-          {/* <Grid item>
-            <IntroductionCard />
-          </Grid>
-          <Grid item>
-            <IntroductionCard />
-          </Grid>
-          <Grid item>
-            <IntroductionCard />
-          </Grid>
-          <Grid item>
-            <IntroductionCard />
-          </Grid>
-          <Grid item>
-            <IntroductionCard />
-          </Grid>
-          <Grid item>
-            <IntroductionCard />
-          </Grid>
-          <Grid item>
-            <IntroductionCard />
-          </Grid>
-          <Grid item>
-            <IntroductionCard />
-          </Grid> */}
         </Grid>
       </Box>
     </Container>
