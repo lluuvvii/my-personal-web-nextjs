@@ -20,9 +20,9 @@ const Home = () => {
           <Grid item>
             <IntroductionCard />
           </Grid>
-          <Grid item>
+          {/* <Grid item>
             <TechSkillsCard />
-          </Grid>
+          </Grid> */}
         </Grid>
       </Box>
     </Container>
