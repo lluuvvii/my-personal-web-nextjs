@@ -554,7 +554,7 @@ const IntroductionCard = () => {
           position: 'relative',
           width: '300px',
           padding: '10px',
-          backgroundColor: 'red',
+          background: 'linear-gradient(135deg, red, #d10000)',
           borderRadius: '20px',
         }}
       >
