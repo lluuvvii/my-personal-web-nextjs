@@ -496,7 +496,7 @@ const IntroductionCard = () => {
         transition={{
           type: 'spring',
           stiffness: 600,
-          damping: 20
+          damping: 15
         }}
         sx={{
           position: 'absolute',
