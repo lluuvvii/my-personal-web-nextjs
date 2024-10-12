@@ -654,7 +654,7 @@ const IntroCardContents = ({ completeAnimation }: IntroCardContentsProps) => {
         <Box
           sx={{
             width: '100%',
-            background: 'radial-gradient(circle, red 50%, #eb0000 100%)',
+            background: 'radial-gradient(circle, red 50%, #e00000 100%)',
             borderRadius: '5px',
             overflow: 'hidden',
             position: 'relative'
@@ -1241,13 +1241,11 @@ const IntroCardContents = ({ completeAnimation }: IntroCardContentsProps) => {
             damping: 32,
           }}
           sx={{
-            // width: socialMediaActive ? '10%' : '100%',
-            background: 'radial-gradient(circle, red 50%, #eb0000 100%)',
+            background: 'radial-gradient(circle, red 50%, #e00000 100%)',
             borderRadius: '5px',
             overflow: 'hidden',
             position: 'absolute',
             top: 356,
-            // transition: 'ease 0.3s',
           }}
         >
           <Box position='absolute'
