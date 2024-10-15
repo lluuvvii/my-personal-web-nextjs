@@ -564,7 +564,7 @@ const IntroductionCard = () => {
             width: '100%',
             position: 'relative',
             borderRadius: '10px',
-            background: 'linear-gradient(90deg, white, rgba(240,240,240,1))',
+            background: 'linear-gradient(180deg, white, white, rgba(240,240,240,1))',
             padding: '10px',
           }}>
           <IntroCardContents completeAnimation={completeAnimation} />
