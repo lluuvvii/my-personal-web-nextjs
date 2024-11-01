@@ -432,7 +432,18 @@ const IntroCardContents = ({ completeAnimation }: IntroCardContentsProps) => {
                       color: 'transparent'
                     }
                   }}>
-                  <IconCaretLeftFilled color='red' />
+                  <Box
+                    component={motion.div}
+                    animate={{ x: dialogVal > 0 ? 0 : 100 }}
+                    transition={{
+                      type: 'spring',
+                      stiffness: 500,
+                      damping: 30,
+                      delay: 0.3
+                    }}
+                  >
+                    <IconCaretLeftFilled color='red' />
+                  </Box>
                   <Typography
                     component={motion.div}
                     initial={{ scale: 0 }}
@@ -605,7 +616,18 @@ const IntroCardContents = ({ completeAnimation }: IntroCardContentsProps) => {
                   >
                     Next
                   </Typography>
-                  <IconCaretRightFilled color='red' />
+                  <Box
+                    component={motion.div}
+                    animate={{ x: dialogVal < 3 ? 0 : -100 }}
+                    transition={{
+                      type: 'spring',
+                      stiffness: 500,
+                      damping: 30,
+                      delay: 0.3
+                    }}
+                  >
+                    <IconCaretRightFilled color='red' />
+                  </Box>
                 </Button>
               </Box>
             </Stack>
