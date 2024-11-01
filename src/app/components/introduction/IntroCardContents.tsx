@@ -436,7 +436,7 @@ const IntroCardContents = ({ completeAnimation }: IntroCardContentsProps) => {
                   <Typography
                     component={motion.div}
                     initial={{ scale: 0 }}
-                    animate={{ scale: 1 }}
+                    animate={{ scale: dialogVal > 0 ? 1 : 0 }}
                     transition={{
                       type: 'spring',
                       stiffness: 500,
@@ -460,7 +460,7 @@ const IntroCardContents = ({ completeAnimation }: IntroCardContentsProps) => {
                   <Typography
                     component={motion.div}
                     initial={{ scale: 0 }}
-                    animate={{ scale: 1 }}
+                    animate={{ scale: dialogVal > 0 ? 1 : 0 }}
                     transition={{
                       type: 'spring',
                       stiffness: 500,
@@ -484,7 +484,7 @@ const IntroCardContents = ({ completeAnimation }: IntroCardContentsProps) => {
                   <Typography
                     component={motion.div}
                     initial={{ scale: 0 }}
-                    animate={{ scale: 1 }}
+                    animate={{ scale: dialogVal > 0 ? 1 : 0 }}
                     transition={{
                       type: 'spring',
                       stiffness: 500,
@@ -539,7 +539,7 @@ const IntroCardContents = ({ completeAnimation }: IntroCardContentsProps) => {
                   <Typography
                     component={motion.div}
                     initial={{ scale: 0 }}
-                    animate={{ scale: 1 }}
+                    animate={{ scale: dialogVal < 3 ? 1 : 0 }}
                     transition={{
                       type: 'spring',
                       stiffness: 500,
@@ -563,7 +563,7 @@ const IntroCardContents = ({ completeAnimation }: IntroCardContentsProps) => {
                   <Typography
                     component={motion.div}
                     initial={{ scale: 0 }}
-                    animate={{ scale: 1 }}
+                    animate={{ scale: dialogVal < 3 ? 1 : 0 }}
                     transition={{
                       type: 'spring',
                       stiffness: 500,
@@ -587,7 +587,7 @@ const IntroCardContents = ({ completeAnimation }: IntroCardContentsProps) => {
                   <Typography
                     component={motion.div}
                     initial={{ scale: 0 }}
-                    animate={{ scale: 1 }}
+                    animate={{ scale: dialogVal < 3 ? 1 : 0 }}
                     transition={{
                       type: 'spring',
                       stiffness: 500,
