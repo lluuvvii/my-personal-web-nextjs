@@ -10,6 +10,8 @@ const IntroductionCard = () => {
   const [onTouch, setOnTouch] = useState(false)
   const [completeAnimation, setCompleteAnimation] = useState(false)
 
+  const letters = Array.from('Introduction');
+
   return (
     <Box
       position='relative'
@@ -509,14 +511,7 @@ const IntroductionCard = () => {
         }}>
         <Typography
           component={motion.div}
-          initial={{ scale: 0, rotate: -5 }}
-          animate={{ scale: completeAnimation ? 1 : 0 }}
-          transition={{
-            type: 'spring',
-            stiffness: 500,
-            damping: 30,
-            delay: 0.1
-          }}
+          initial={{ rotate: -5 }}
           variant='h4'
           sx={{
             position: 'absolute',
@@ -527,8 +522,23 @@ const IntroductionCard = () => {
             fontWeight: 600,
             WebkitTextStroke: '15px white',
             color: 'white',
+            display: 'flex'
           }}>
-          Introduction
+          {letters.map((letter, index) => (
+            <motion.span
+              key={index}
+              initial={{ scale: 0 }}
+              animate={{ scale: completeAnimation ? 1 : 0 }}
+              transition={{
+                type: 'spring',
+                stiffness: 500,
+                damping: 20,
+                delay: 0 + index * 0.03,
+              }}
+            >
+              {letter}
+            </motion.span>
+          ))}
         </Typography>
       </Box>
       <Box
@@ -709,14 +719,7 @@ const IntroductionCard = () => {
         {/* title text */}
         <Typography
           component={motion.div}
-          initial={{ scale: 0, rotate: -5 }}
-          animate={{ scale: completeAnimation ? 1 : 0 }}
-          transition={{
-            type: 'spring',
-            stiffness: 500,
-            damping: 30,
-            delay: 0.1
-          }}
+          initial={{ rotate: -5 }}
           variant='h4'
           sx={{
             position: 'absolute',
@@ -727,19 +730,27 @@ const IntroductionCard = () => {
             fontWeight: 600,
             WebkitTextStroke: '10px red',
             color: 'red',
+            display: 'flex'
           }}>
-          Introduction
+          {letters.map((letter, index) => (
+            <motion.span
+              key={index}
+              initial={{ scale: 0 }}
+              animate={{ scale: completeAnimation ? 1 : 0 }}
+              transition={{
+                type: 'spring',
+                stiffness: 500,
+                damping: 20,
+                delay: 0.1 + index * 0.03,
+              }}
+            >
+              {letter}
+            </motion.span>
+          ))}
         </Typography>
         <Typography
           component={motion.div}
-          initial={{ scale: 0, rotate: -5 }}
-          animate={{ scale: completeAnimation ? 1 : 0 }}
-          transition={{
-            type: 'spring',
-            stiffness: 500,
-            damping: 30,
-            delay: 0.2
-          }}
+          initial={{ rotate: -5 }}
           variant='h4'
           sx={{
             position: 'absolute',
@@ -750,10 +761,56 @@ const IntroductionCard = () => {
             fontWeight: 600,
             WebkitTextStroke: '5px black',
             color: 'red',
+            display: 'flex'
           }}>
-          Introduction
+          {letters.map((letter, index) => (
+            <motion.span
+              key={index}
+              initial={{ scale: 0 }}
+              animate={{ scale: completeAnimation ? 1 : 0 }}
+              transition={{
+                type: 'spring',
+                stiffness: 500,
+                damping: 20,
+                delay: 0.2 + index * 0.03,
+              }}
+            >
+              {letter}
+            </motion.span>
+          ))}
         </Typography>
         <Typography
+          component={motion.div}
+          initial={{ rotate: -5 }}
+          variant="h4"
+          sx={{
+            position: 'absolute',
+            top: '-20px',
+            left: '-5px',
+            textAlign: 'center',
+            fontFamily: 'Nunito, Arial, sans-serif',
+            fontWeight: 600,
+            color: 'white',
+            display: 'flex',
+          }}
+        >
+          {letters.map((letter, index) => (
+            <motion.span
+              key={index}
+              initial={{ scale: 0 }}
+              animate={{ scale: completeAnimation ? 1 : 0 }}
+              transition={{
+                type: 'spring',
+                stiffness: 500,
+                damping: 20,
+                delay: 0.3 + index * 0.03,
+              }}
+            >
+              {letter}
+            </motion.span>
+          ))}
+        </Typography>
+        {/* <Typography
           component={motion.div}
           initial={{ scale: 0, rotate: -5 }}
           animate={{ scale: completeAnimation ? 1 : 0 }}
@@ -774,7 +831,7 @@ const IntroductionCard = () => {
             color: 'white',
           }}>
           Introduction
-        </Typography>
+        </Typography> */}
       </Box>
     </Box>
   )
