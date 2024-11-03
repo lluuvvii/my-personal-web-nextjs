@@ -810,28 +810,6 @@ const IntroductionCard = () => {
             </motion.span>
           ))}
         </Typography>
-        {/* <Typography
-          component={motion.div}
-          initial={{ scale: 0, rotate: -5 }}
-          animate={{ scale: completeAnimation ? 1 : 0 }}
-          transition={{
-            type: 'spring',
-            stiffness: 500,
-            damping: 30,
-            delay: 0.3
-          }}
-          variant='h4'
-          sx={{
-            position: 'absolute',
-            top: '-20px',
-            left: '-5px',
-            textAlign: 'center',
-            fontFamily: 'Nunito, Arial, sans-serif',
-            fontWeight: 600,
-            color: 'white',
-          }}>
-          Introduction
-        </Typography> */}
       </Box>
     </Box>
   )
