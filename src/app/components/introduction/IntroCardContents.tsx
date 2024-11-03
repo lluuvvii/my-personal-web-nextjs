@@ -706,119 +706,118 @@ const IntroCardContents = ({ completeAnimation }: IntroCardContentsProps) => {
               ?
             </Typography>
           </Box>
-          <Stack direction='row' alignItems='center' justifyContent='space-between'>
-            <Box
-              component={motion.div}
-              initial={{ x: 0 }}
-              animate={{ x: markAskMe ? 20 : 0 }}
-              transition={{
-                type: 'spring',
-                stiffness: 500,
-                damping: 20
-              }}>
-              <IconCaretRightFilled color='white' />
-            </Box>
-            <Box
-              component={motion.div}
-              whileHover={{ scale: 1.1 }}
-              onHoverStart={() => setMarkAskMe(true)}
-              onHoverEnd={() => setMarkAskMe(false)}
-              onTouchStart={() => setMarkAskMe(true)}
-              onTouchEnd={() => setMarkAskMe(false)}
-              initial={{ scale: 0 }}
-              whileTap={{ scale: 1 }}
-              animate={{ scale: 1 }}
-              transition={{
-                type: 'spring',
-                stiffness: 500,
-                damping: 20
-              }}>
-              <Button
-                onClick={() => {
-                  setAskActive(!askActive)
-                }}
-                size='small'
-                sx={{
-                  width: '100%',
-                  borderRadius: '10px',
-                  backgroundColor: 'transparent',
-                  textTransform: 'none',
-                  '&:active': {
-                    color: 'transparent'
-                  },
-                  '&:hover': {
-                    backgroundColor: 'transparent',
-                    color: 'transparent'
-                  }
+          <Button
+            component={motion.div}
+            whileHover={{ scale: 1.1 }}
+            onHoverStart={() => setMarkAskMe(true)}
+            onHoverEnd={() => setMarkAskMe(false)}
+            onTouchStart={() => setMarkAskMe(true)}
+            onTouchEnd={() => setMarkAskMe(false)}
+            initial={{ scale: 0 }}
+            whileTap={{ scale: 1 }}
+            animate={{ scale: 1 }}
+            transition={{
+              type: 'spring',
+              stiffness: 500,
+              damping: 20
+            }}
+            onClick={() => {
+              setAskActive(!askActive)
+            }}
+            size='small'
+            sx={{
+              width: '100%',
+              borderRadius: '10px',
+              backgroundColor: 'transparent',
+              textTransform: 'none',
+              '&:active': {
+                color: 'transparent'
+              },
+              '&:hover': {
+                backgroundColor: 'transparent',
+                color: 'transparent'
+              }
+            }}>
+            <Stack direction='row' alignItems='center' justifyContent='space-between' width='100%'>
+              <Box
+                component={motion.div}
+                initial={{ x: 0 }}
+                animate={{ x: markAskMe ? 20 : 0 }}
+                transition={{
+                  type: 'spring',
+                  stiffness: 500,
+                  damping: 20
                 }}>
-                <Box width='100%'>
-                  <Stack direction='row' alignItems='center' justifyContent='space-between'>
-                    <Typography
-                      variant='h5'
-                      sx={{
-                        position: 'absolute',
-                        width: '100%',
-                        top: '6px',
-                        left: '0px',
-                        textAlign: 'center',
-                        fontFamily: 'Nunito, Arial, sans-serif',
-                        fontWeight: 700,
-                        color: 'white',
-                        WebkitTextStroke: '10px white'
-                      }}>
-                      {askActive ?
-                        <>Close</>
-                        :
-                        <>Ask Me?</>}
-                    </Typography>
-                    <Typography
-                      variant='h5'
-                      sx={{
-                        position: 'absolute',
-                        width: '100%',
-                        top: '6px',
-                        left: '0px',
-                        textAlign: 'center',
-                        fontFamily: 'Nunito, Arial, sans-serif',
-                        fontWeight: 700,
-                        color: 'black',
-                        WebkitTextStroke: '5px black'
-                      }}>
-                      {askActive ?
-                        <>Close</>
-                        :
-                        <>Ask Me?</>}
-                    </Typography>
-                    <Typography
-                      variant='h5'
-                      sx={{
-                        position: 'relative',
-                        textAlign: 'center',
-                        fontFamily: 'Nunito, Arial, sans-serif',
-                        fontWeight: 700,
-                        color: 'white',
-                      }}>
-                      {askActive ?
-                        <>Close</>
-                        :
-                        <>Ask Me?</>}
-                    </Typography>
-                  </Stack>
-                </Box>
-              </Button>
-            </Box>
-            <Box
-              component={motion.div}
-              initial={{ x: 0 }}
-              animate={{ x: markAskMe ? -20 : 0 }}
-              transition={{
-                type: 'spring',
-                stiffness: 500,
-                damping: 20
-              }}>
-              <IconCaretLeftFilled color='white' />
-            </Box>
-          </Stack>
+                <IconCaretRightFilled color='white' />
+              </Box>
+              <Box width='100%'>
+                <Stack direction='row' alignItems='center' justifyContent='space-between'>
+                  <Typography
+                    variant='h5'
+                    sx={{
+                      position: 'absolute',
+                      width: '100%',
+                      top: '6px',
+                      left: '0px',
+                      textAlign: 'center',
+                      fontFamily: 'Nunito, Arial, sans-serif',
+                      fontWeight: 700,
+                      color: 'white',
+                      WebkitTextStroke: '10px white'
+                    }}>
+                    {askActive ?
+                      <>Close</>
+                      :
+                      <>Ask Me?</>}
+                  </Typography>
+                  <Typography
+                    variant='h5'
+                    sx={{
+                      position: 'absolute',
+                      width: '100%',
+                      top: '6px',
+                      left: '0px',
+                      textAlign: 'center',
+                      fontFamily: 'Nunito, Arial, sans-serif',
+                      fontWeight: 700,
+                      color: 'black',
+                      WebkitTextStroke: '5px black'
+                    }}>
+                    {askActive ?
+                      <>Close</>
+                      :
+                      <>Ask Me?</>}
+                  </Typography>
+                  <Typography
+                    variant='h5'
+                    sx={{
+                      width: '100%',
+                      position: 'relative',
+                      textAlign: 'center',
+                      fontFamily: 'Nunito, Arial, sans-serif',
+                      fontWeight: 700,
+                      color: 'white',
+                    }}>
+                    {askActive ?
+                      <>Close</>
+                      :
+                      <>Ask Me?</>}
+                  </Typography>
+                </Stack>
+              </Box>
+              <Box
+                component={motion.div}
+                initial={{ x: 0 }}
+                animate={{ x: markAskMe ? -20 : 0 }}
+                transition={{
+                  type: 'spring',
+                  stiffness: 500,
+                  damping: 20
+                }}>
+                <IconCaretLeftFilled color='white' />
+              </Box>
+            </Stack>
+          </Button>
         </Box>
         {/* ask me about card */}
         <AnimatePresence>
@@ -1294,140 +1293,136 @@ const IntroCardContents = ({ completeAnimation }: IntroCardContentsProps) => {
               <IconBrandInstagram color='white' size={60} />
             </Typography>
           </Box>
-          <Stack direction='row' alignItems='center' justifyContent='space-between'>
-            {!socialMediaActive ?
-              <Box
-                component={motion.div}
-                initial={{ x: 0 }}
-                animate={{ x: markSocialMedia ? 20 : 0 }}
-                transition={{
-                  type: 'spring',
-                  stiffness: 500,
-                  damping: 20
-                }}>
-                <IconCaretRightFilled color='white' />
-              </Box>
-              : null}
-            <Box
-              component={motion.div}
-              whileHover={{ scale: socialMediaActive ? 1 : 1.1, x: socialMediaActive ? 5 : 0 }}
-              onHoverStart={() => setMarkSocialMedia(true)}
-              onHoverEnd={() => setMarkSocialMedia(false)}
-              onTouchStart={() => setMarkSocialMedia(true)}
-              onTouchEnd={() => setMarkSocialMedia(false)}
-              initial={{ scale: 0 }}
-              whileTap={{ scale: 1 }}
-              animate={{ scale: 1 }}
-              transition={{
-                type: 'spring',
-                stiffness: 500,
-                damping: 20
-              }}
-              sx={{
-                height: '40px'
-              }}>
-              <Button
-                onClick={() => setSocialMediaActive(!socialMediaActive)}
-                size='small'
-                sx={{
-                  width: '100%',
-                  borderRadius: '10px',
-                  backgroundColor: 'transparent',
-                  textTransform: 'none',
-                  '&:active': {
-                    color: 'transparent'
-                  },
-                  '&:hover': {
-                    backgroundColor: 'transparent',
-                    color: 'transparent'
-                  }
-                }}>
-                <Box width='142px'>
-                  <Stack direction='row' alignItems='center' justifyContent='space-between'>
-                    <Typography
-                      variant='h5'
-                      sx={{
-                        position: 'absolute',
-                        width: '100%',
-                        top: '6px',
-                        left: '0px',
-                        textAlign: 'center',
-                        fontFamily: 'Nunito, Arial, sans-serif',
-                        fontWeight: 700,
-                        color: 'white',
-                        WebkitTextStroke: '10px white'
-                      }}>
-                      {socialMediaActive ?
-                        <></>
-                        :
-                        <>Social Media</>}
-                    </Typography>
-                    <Typography
-                      variant='h5'
-                      sx={{
-                        position: 'absolute',
-                        width: '100%',
-                        top: '6px',
-                        left: '0px',
-                        textAlign: 'center',
-                        fontFamily: 'Nunito, Arial, sans-serif',
-                        fontWeight: 700,
-                        color: 'black',
-                        WebkitTextStroke: '5px black',
-                      }}>
-                      {socialMediaActive ?
-                        <></>
-                        :
-                        <>Social Media</>}
-                    </Typography>
-                    <Typography
-                      variant='h5'
-                      sx={{
-                        top: 0,
-                        left: 0,
-                        position: 'relative',
-                        textAlign: 'center',
-                        fontFamily: 'Nunito, Arial, sans-serif',
-                        fontWeight: 700,
-                        color: 'white',
-                        wordBreak: 'none'
-                      }}>
-                      <Box
-                        component={motion.div}
-                        initial={{ scale: 1 }}
-                        animate={{ scale: socialMediaActive ? 1 : 0 }}
-                        sx={{
-                          position: 'absolute',
-                          top: 0,
-                          lef: 0
-                        }}>
-                        <IconCaretRightFilled color='white' size={32} style={{ position: 'relative', left: -9, top: -9, transform: 'scale(0.75)' }} />
-                      </Box>
-                      {!socialMediaActive ?
-                        <>Social Media</>
-                        : null}
-                    </Typography>
-                  </Stack>
+          <Button
+            component={motion.div}
+            whileHover={{ scale: socialMediaActive ? 1 : 1.1, x: socialMediaActive ? 5 : 0 }}
+            onHoverStart={() => setMarkSocialMedia(true)}
+            onHoverEnd={() => setMarkSocialMedia(false)}
+            onTouchStart={() => setMarkSocialMedia(true)}
+            onTouchEnd={() => setMarkSocialMedia(false)}
+            initial={{ scale: 0 }}
+            whileTap={{ scale: 1 }}
+            animate={{ scale: 1 }}
+            transition={{
+              type: 'spring',
+              stiffness: 500,
+              damping: 20
+            }}
+            onClick={() => setSocialMediaActive(!socialMediaActive)}
+            size='small'
+            sx={{
+              width: '100%',
+              height: '40px',
+              borderRadius: '10px',
+              backgroundColor: 'transparent',
+              textTransform: 'none',
+              '&:active': {
+                color: 'transparent'
+              },
+              '&:hover': {
+                backgroundColor: 'transparent',
+                color: 'transparent'
+              }
+            }}>
+            <Stack direction='row' alignItems='center' justifyContent='space-between' width='100%'>
+              {!socialMediaActive ?
+                <Box
+                  component={motion.div}
+                  initial={{ x: 0 }}
+                  animate={{ x: markSocialMedia ? 20 : 0 }}
+                  transition={{
+                    type: 'spring',
+                    stiffness: 500,
+                    damping: 20
+                  }}>
+                  <IconCaretRightFilled color='white' />
                 </Box>
-              </Button>
-            </Box>
-            {!socialMediaActive ?
-              <Box
-                component={motion.div}
-                initial={{ x: 0 }}
-                animate={{ x: markSocialMedia ? -20 : 0 }}
-                transition={{
-                  type: 'spring',
-                  stiffness: 500,
-                  damping: 20
-                }}>
-                <IconCaretLeftFilled color='white' />
+                : null}
+              <Box width='142px'>
+                <Stack direction='row' alignItems='center' justifyContent='space-between'>
+                  <Typography
+                    variant='h5'
+                    sx={{
+                      position: 'absolute',
+                      width: '100%',
+                      top: '6px',
+                      left: '0px',
+                      textAlign: 'center',
+                      fontFamily: 'Nunito, Arial, sans-serif',
+                      fontWeight: 700,
+                      color: 'white',
+                      WebkitTextStroke: '10px white'
+                    }}>
+                    {socialMediaActive ?
+                      <></>
+                      :
+                      <>Social Media</>}
+                  </Typography>
+                  <Typography
+                    variant='h5'
+                    sx={{
+                      position: 'absolute',
+                      width: '100%',
+                      top: '6px',
+                      left: '0px',
+                      textAlign: 'center',
+                      fontFamily: 'Nunito, Arial, sans-serif',
+                      fontWeight: 700,
+                      color: 'black',
+                      WebkitTextStroke: '5px black',
+                    }}>
+                    {socialMediaActive ?
+                      <></>
+                      :
+                      <>Social Media</>}
+                  </Typography>
+                  <Typography
+                    variant='h5'
+                    sx={{
+                      top: 0,
+                      left: 0,
+                      position: 'relative',
+                      textAlign: 'center',
+                      fontFamily: 'Nunito, Arial, sans-serif',
+                      fontWeight: 700,
+                      color: 'white',
+                      wordBreak: 'none'
+                    }}>
+                    <Box
+                      component={motion.div}
+                      initial={{ scale: 1 }}
+                      animate={{ scale: socialMediaActive ? 1 : 0 }}
+                      sx={{
+                        position: 'absolute',
+                        top: 0,
+                        lef: 0
+                      }}>
+                      <IconCaretRightFilled color='white' size={32} style={{ position: 'relative', left: -9, top: -15, transform: 'scale(0.75)' }} />
+                    </Box>
+                    {!socialMediaActive ?
+                      <>Social Media</>
+                      : null}
+                  </Typography>
+                </Stack>
               </Box>
-              : null}
-          </Stack>
+              {!socialMediaActive ?
+                <Box
+                  component={motion.div}
+                  initial={{ x: 0 }}
+                  animate={{ x: markSocialMedia ? -20 : 0 }}
+                  transition={{
+                    type: 'spring',
+                    stiffness: 500,
+                    damping: 20
+                  }}>
+                  <IconCaretLeftFilled color='white' />
+                </Box>
+                : null}
+            </Stack>
+          </Button>
         </Box>
-      </Stack>
-    </Box>
+      </Stack >
+    </Box >
   )
 }
 
