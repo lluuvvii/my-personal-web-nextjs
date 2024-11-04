@@ -326,7 +326,7 @@ const IntroCardContents = ({ completeAnimation }: IntroCardContentsProps) => {
                       fontFamily: 'Nunito, Arial, sans-serif',
                       fontWeight: 700,
                     }}>
-                    This website is inspired by the UI of the game Sonic Generations and I made it for personal use and to introduce myself and my work to visitors.
+                    This is my personal website inspired by the UI of the game Persona 5 Color palette and I made it for personal use and to introduce myself and my work to visitors.
                   </Typography>
                 </Box>
               </Slide>
@@ -955,7 +955,6 @@ const IntroCardContents = ({ completeAnimation }: IntroCardContentsProps) => {
                     backgroundColor: 'white',
                     borderRadius: '5px',
                   }}>
-                  {/* this website button */}
                   <Box
                     component={motion.div}
                     initial={{ opacity: 0 }}
@@ -963,6 +962,7 @@ const IntroCardContents = ({ completeAnimation }: IntroCardContentsProps) => {
                     transition={{
                       delay: 0.3
                     }}>
+                    {/* this website button */}
                     <Stack direction='row' alignItems='center' justifyContent='space-between'>
                       <Box
                         component={motion.div}
