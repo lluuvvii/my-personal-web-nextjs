@@ -1421,7 +1421,7 @@ const IntroCardContents = ({ completeAnimation }: IntroCardContentsProps) => {
             </Stack>
           </Button>
         </Box>
-      </Stack >
+      </Stack>
     </Box >
   )
 }
