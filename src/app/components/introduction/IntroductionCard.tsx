@@ -3,14 +3,19 @@
 import React, { useState } from 'react'
 import { Box, Typography } from '@mui/material'
 import IntroCardContents from './IntroCardContents'
-import { motion } from 'framer-motion'
+import { motion, useScroll, useTransform } from 'framer-motion'
 
 const IntroductionCard = () => {
   const [onHover, setOnHover] = useState(false)
   const [onTouch, setOnTouch] = useState(false)
   const [completeAnimation, setCompleteAnimation] = useState(false)
+  const { scrollYProgress } = useScroll();
+  const x = useTransform(scrollYProgress, [0, 1], ['100%', '0%']);
 
   const letters = Array.from('Introduction');
+
+  const text = "WHO ARE YOU?";
+  
 
   return (
     <Box
@@ -29,6 +34,33 @@ const IntroductionCard = () => {
         damping: 35,
         delay: 0.5
       }}>
+      <Box
+        sx={{
+          position: 'fixed',
+          bottom: 100,
+          left: 0,
+          overflow: 'hidden',
+          width: '100%',
+          border: '2px solid #333',
+          padding: '16px',
+          backgroundColor: '#f0f0f0',
+        }}
+      >
+        {/* Animasi teks menggunakan keyframes dan transform */}
+        <motion.div
+          style={{
+            whiteSpace: 'nowrap',
+            fontSize: '5rem',
+            fontWeight: 'bold',
+            fontFamily: 'fantasy',
+            color: 'black',
+            display: 'inline-block',
+            x
+          }}
+        >
+          {text}
+        </motion.div>
+      </Box>
       {/* top left particles */}
       {/* star long shadow */}
       {/* <Box
