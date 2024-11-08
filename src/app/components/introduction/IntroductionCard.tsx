@@ -3,19 +3,23 @@
 import React, { useState } from 'react'
 import { Box, Typography } from '@mui/material'
 import IntroCardContents from './IntroCardContents'
-import { motion, useScroll, useTransform } from 'framer-motion'
+import { motion, useScroll, useSpring, useTransform } from 'framer-motion'
 
 const IntroductionCard = () => {
   const [onHover, setOnHover] = useState(false)
   const [onTouch, setOnTouch] = useState(false)
   const [completeAnimation, setCompleteAnimation] = useState(false)
   const { scrollYProgress } = useScroll();
-  const x = useTransform(scrollYProgress, [0, 1], ['100%', '0%']);
+  const rawX = useTransform(scrollYProgress, [0, 1], ['0%', '600%']);
+  const x = useSpring(rawX, {
+    stiffness: 500,
+    damping: 100,
+  });
 
   const letters = Array.from('Introduction');
 
   const text = "WHO ARE YOU?";
-  
+
 
   return (
     <Box
@@ -52,7 +56,7 @@ const IntroductionCard = () => {
             whiteSpace: 'nowrap',
             fontSize: '5rem',
             fontWeight: 'bold',
-            fontFamily: 'fantasy',
+            fontFamily: '"Bebas Neue", sans-serif',
             color: 'black',
             display: 'inline-block',
             x
