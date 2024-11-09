@@ -4,6 +4,8 @@ import React, { useState } from 'react'
 import { Box, Typography } from '@mui/material'
 import IntroCardContents from './IntroCardContents'
 import { motion, useScroll, useSpring, useTransform } from 'framer-motion'
+import splatter from '@/../public/assets/img/splatter.svg'
+import Image from 'next/image'
 
 const IntroductionCard = () => {
   const [onHover, setOnHover] = useState(false)
@@ -40,6 +42,22 @@ const IntroductionCard = () => {
       }}>
       <Box
         sx={{
+          position: 'absolute',
+          top: 200,
+          left: 100,
+        }}>
+        <Image src={splatter} alt="splatter" width={100} height={100} style={{ scale: 8 }} />
+      </Box>
+      <Box
+        sx={{
+          position: 'absolute',
+          top: 200,
+          left: 100,
+        }}>
+        <Image src={splatter} alt="splatter" width={100} height={100} style={{ scale: 8 }} />
+      </Box>
+      {/* <Box
+        sx={{
           position: 'fixed',
           bottom: 100,
           left: 0,
@@ -50,7 +68,6 @@ const IntroductionCard = () => {
           backgroundColor: '#f0f0f0',
         }}
       >
-        {/* Animasi teks menggunakan keyframes dan transform */}
         <motion.div
           style={{
             whiteSpace: 'nowrap',
@@ -64,7 +81,7 @@ const IntroductionCard = () => {
         >
           {text}
         </motion.div>
-      </Box>
+      </Box> */}
       {/* top left particles */}
       {/* star long shadow */}
       {/* <Box
