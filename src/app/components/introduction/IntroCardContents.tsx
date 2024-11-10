@@ -690,12 +690,15 @@ const IntroCardContents = ({ completeAnimation }: IntroCardContentsProps) => {
             width: '100%',
             background: 'radial-gradient(circle, red 50%, #e00000 100%)',
             borderRadius: '5px',
-            overflow: 'hidden',
+            overflow: markAskMe ? 'visible' : 'hidden',
             position: 'relative'
           }}
         >
-          <Box position='absolute'
-            sx={{ top: -10, left: 155, transform: 'rotate(15deg)' }}>
+          <Box
+            component={motion.div}
+            initial={{ scale: 1, y: -10, x: 155, rotate: 0 }}
+            animate={{ y: markAskMe ? -20 : -10, x: markAskMe ? 165 : 155, scale: 1.2, rotate: markAskMe ? 15 : 0 }}
+            sx={{ position: 'absolute' }}>
             <Typography variant='h2'
               sx={{
                 textAlign: 'center',
@@ -706,8 +709,11 @@ const IntroCardContents = ({ completeAnimation }: IntroCardContentsProps) => {
               ?
             </Typography>
           </Box>
-          <Box position='absolute'
-            sx={{ top: -14, left: 163, transform: 'rotate(15deg)' }}>
+          <Box
+            component={motion.div}
+            initial={{ scale: 1, y: -14, x: 163, rotate: 0 }}
+            animate={{ y: markAskMe ? -24 : -14, x: markAskMe ? 173 : 163, scale: 1.2, rotate: markAskMe ? 15 : 0 }}
+            sx={{ position: 'absolute' }}>
             <Typography variant='h2'
               sx={{
                 textAlign: 'center',
@@ -750,85 +756,61 @@ const IntroCardContents = ({ completeAnimation }: IntroCardContentsProps) => {
                 color: 'transparent'
               }
             }}>
-            <Stack direction='row' alignItems='center' justifyContent='space-between' width='100%'>
-              <Box
-                component={motion.div}
-                initial={{ x: 0 }}
-                animate={{ x: markAskMe ? 20 : 0 }}
-                transition={{
-                  type: 'spring',
-                  stiffness: 500,
-                  damping: 20
-                }}>
-                <IconCaretRightFilled color='white' />
-              </Box>
-              <Box width='100%'>
-                <Stack direction='row' alignItems='center' justifyContent='space-between'>
-                  <Typography
-                    variant='h5'
-                    sx={{
-                      position: 'absolute',
-                      width: '100%',
-                      top: '6px',
-                      left: '0px',
-                      textAlign: 'center',
-                      fontFamily: 'Nunito, Arial, sans-serif',
-                      fontWeight: 700,
-                      color: 'white',
-                      WebkitTextStroke: '10px white'
-                    }}>
-                    {askActive ?
-                      <>Close</>
-                      :
-                      <>Ask Me?</>}
-                  </Typography>
-                  <Typography
-                    variant='h5'
-                    sx={{
-                      position: 'absolute',
-                      width: '100%',
-                      top: '6px',
-                      left: '0px',
-                      textAlign: 'center',
-                      fontFamily: 'Nunito, Arial, sans-serif',
-                      fontWeight: 700,
-                      color: 'black',
-                      WebkitTextStroke: '5px black'
-                    }}>
-                    {askActive ?
-                      <>Close</>
-                      :
-                      <>Ask Me?</>}
-                  </Typography>
-                  <Typography
-                    variant='h5'
-                    sx={{
-                      width: '100%',
-                      position: 'relative',
-                      textAlign: 'center',
-                      fontFamily: 'Nunito, Arial, sans-serif',
-                      fontWeight: 700,
-                      color: 'white',
-                    }}>
-                    {askActive ?
-                      <>Close</>
-                      :
-                      <>Ask Me?</>}
-                  </Typography>
-                </Stack>
-              </Box>
-              <Box
-                component={motion.div}
-                initial={{ x: 0 }}
-                animate={{ x: markAskMe ? -20 : 0 }}
-                transition={{
-                  type: 'spring',
-                  stiffness: 500,
-                  damping: 20
-                }}>
-                <IconCaretLeftFilled color='white' />
-              </Box>
-            </Stack>
+            <Box width='100%'>
+              <Stack direction='row' alignItems='center' justifyContent='space-between'>
+                <Typography
+                  variant='h5'
+                  sx={{
+                    position: 'absolute',
+                    width: '100%',
+                    top: '6px',
+                    left: '0px',
+                    textAlign: 'center',
+                    fontFamily: 'Nunito, Arial, sans-serif',
+                    fontWeight: 700,
+                    color: 'white',
+                    WebkitTextStroke: '10px white'
+                  }}>
+                  {askActive ?
+                    <>Close</>
+                    :
+                    <>Ask Me?</>}
+                </Typography>
+                <Typography
+                  variant='h5'
+                  sx={{
+                    position: 'absolute',
+                    width: '100%',
+                    top: '6px',
+                    left: '0px',
+                    textAlign: 'center',
+                    fontFamily: 'Nunito, Arial, sans-serif',
+                    fontWeight: 700,
+                    color: 'black',
+                    WebkitTextStroke: '5px black'
+                  }}>
+                  {askActive ?
+                    <>Close</>
+                    :
+                    <>Ask Me?</>}
+                </Typography>
+                <Typography
+                  variant='h5'
+                  sx={{
+                    width: '100%',
+                    position: 'relative',
+                    textAlign: 'center',
+                    fontFamily: 'Nunito, Arial, sans-serif',
+                    fontWeight: 700,
+                    color: 'white',
+                  }}>
+                  {askActive ?
+                    <>Close</>
+                    :
+                    <>Ask Me?</>}
+                </Typography>
+              </Stack>
+            </Box>
           </Button>
         </Box>
         {/* ask me about card */}
@@ -1286,13 +1268,16 @@ const IntroCardContents = ({ completeAnimation }: IntroCardContentsProps) => {
           sx={{
             background: 'radial-gradient(circle, red 50%, #e00000 100%)',
             borderRadius: '5px',
-            overflow: 'hidden',
+            overflow: markSocialMedia && !socialMediaActive ? 'visible' : 'hidden',
             position: 'absolute',
             top: 356,
           }}
         >
-          <Box position='absolute'
-            sx={{ top: -8, left: 25, transform: 'rotate(-15deg)' }}>
+          <Box
+            component={motion.div}
+            initial={{ scale: 1, y: -8, x: 25, rotate: 0 }}
+            animate={{ y: markSocialMedia && !socialMediaActive ? -18 : -8, x: markSocialMedia && !socialMediaActive ? 15 : 25, rotate: markSocialMedia && !socialMediaActive ? -15 : 0 }}
+            sx={{ position: 'absolute' }}>
             <Typography variant='h2'
               sx={{
                 textAlign: 'center',
@@ -1303,8 +1288,11 @@ const IntroCardContents = ({ completeAnimation }: IntroCardContentsProps) => {
               <IconBrandInstagram color='black' size={60} />
             </Typography>
           </Box>
-          <Box position='absolute'
-            sx={{ top: -12, left: 33, transform: 'rotate(-15deg)' }}>
+          <Box
+            component={motion.div}
+            initial={{ scale: 1, y: -12, x: 33, rotate: 0 }}
+            animate={{ y: markSocialMedia && !socialMediaActive ? -22 : -12, x: markSocialMedia && !socialMediaActive ? 23 : 33, rotate: markSocialMedia && !socialMediaActive ? -15 : 0 }}
+            sx={{ position: 'absolute' }}>
             <Typography variant='h2'
               sx={{
                 textAlign: 'center',
@@ -1346,101 +1334,90 @@ const IntroCardContents = ({ completeAnimation }: IntroCardContentsProps) => {
                 color: 'transparent'
               }
             }}>
-            <Stack direction='row' alignItems='center' justifyContent='space-between' width='100%'>
-              {!socialMediaActive ?
+            <Box width='142px'>
+              <Stack direction='row' alignItems='center' justifyContent='space-between'>
+                <Typography
+                  component={motion.div}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: socialMediaActive ? 0 : 1 }}
+                  transition={{
+                    delay: 0.2
+                  }}
+                  variant='h5'
+                  sx={{
+                    position: 'absolute',
+                    width: '100%',
+                    top: '6px',
+                    left: '0px',
+                    textAlign: 'center',
+                    fontFamily: 'Nunito, Arial, sans-serif',
+                    fontWeight: 700,
+                    color: 'white',
+                    WebkitTextStroke: '10px white'
+                  }}>
+                  {socialMediaActive ?
+                    <></>
+                    :
+                    <>Social Media</>}
+                </Typography>
+                <Typography
+                  component={motion.div}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: socialMediaActive ? 0 : 1 }}
+                  transition={{
+                    delay: 0.2
+                  }}
+                  variant='h5'
+                  sx={{
+                    position: 'absolute',
+                    width: '100%',
+                    top: '6px',
+                    left: '0px',
+                    textAlign: 'center',
+                    fontFamily: 'Nunito, Arial, sans-serif',
+                    fontWeight: 700,
+                    color: 'black',
+                    WebkitTextStroke: '5px black',
+                  }}>
+                  {socialMediaActive ?
+                    <></>
+                    :
+                    <>Social Media</>}
+                </Typography>
+                <Typography
+                  component={motion.div}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: socialMediaActive ? 0 : 1 }}
+                  transition={{
+                    delay: 0.2
+                  }}
+                  variant='h5'
+                  sx={{
+                    top: 0,
+                    left: 0,
+                    position: 'relative',
+                    textAlign: 'center',
+                    fontFamily: 'Nunito, Arial, sans-serif',
+                    fontWeight: 700,
+                    color: 'white',
+                    wordBreak: 'none'
+                  }}>
+                  {!socialMediaActive ?
+                    <>Social Media</>
+                    : null}
+                </Typography>
                 <Box
                   component={motion.div}
-                  initial={{ x: 0 }}
-                  animate={{ x: markSocialMedia ? 20 : 0 }}
-                  transition={{
-                    type: 'spring',
-                    stiffness: 500,
-                    damping: 20
+                  initial={{ scale: 1 }}
+                  animate={{ scale: socialMediaActive ? 1 : 0 }}
+                  sx={{
+                    position: 'absolute',
+                    top: 19,
                   }}>
-                  <IconCaretRightFilled color='white' />
+                  <IconCaretRightFilled color='white' size={32} style={{ position: 'relative', left: -9, top: -15, transform: 'scale(0.75)' }} />
                 </Box>
-                : null}
-              <Box width='142px'>
-                <Stack direction='row' alignItems='center' justifyContent='space-between'>
-                  <Typography
-                    variant='h5'
-                    sx={{
-                      position: 'absolute',
-                      width: '100%',
-                      top: '6px',
-                      left: '0px',
-                      textAlign: 'center',
-                      fontFamily: 'Nunito, Arial, sans-serif',
-                      fontWeight: 700,
-                      color: 'white',
-                      WebkitTextStroke: '10px white'
-                    }}>
-                    {socialMediaActive ?
-                      <></>
-                      :
-                      <>Social Media</>}
-                  </Typography>
-                  <Typography
-                    variant='h5'
-                    sx={{
-                      position: 'absolute',
-                      width: '100%',
-                      top: '6px',
-                      left: '0px',
-                      textAlign: 'center',
-                      fontFamily: 'Nunito, Arial, sans-serif',
-                      fontWeight: 700,
-                      color: 'black',
-                      WebkitTextStroke: '5px black',
-                    }}>
-                    {socialMediaActive ?
-                      <></>
-                      :
-                      <>Social Media</>}
-                  </Typography>
-                  <Typography
-                    variant='h5'
-                    sx={{
-                      top: 0,
-                      left: 0,
-                      position: 'relative',
-                      textAlign: 'center',
-                      fontFamily: 'Nunito, Arial, sans-serif',
-                      fontWeight: 700,
-                      color: 'white',
-                      wordBreak: 'none'
-                    }}>
-                    <Box
-                      component={motion.div}
-                      initial={{ scale: 1 }}
-                      animate={{ scale: socialMediaActive ? 1 : 0 }}
-                      sx={{
-                        position: 'absolute',
-                        top: 0,
-                        lef: 0
-                      }}>
-                      <IconCaretRightFilled color='white' size={32} style={{ position: 'relative', left: -9, top: -15, transform: 'scale(0.75)' }} />
-                    </Box>
-                    {!socialMediaActive ?
-                      <>Social Media</>
-                      : null}
-                  </Typography>
-                </Stack>
-              </Box>
-              {!socialMediaActive ?
-                <Box
-                  component={motion.div}
-                  initial={{ x: 0 }}
-                  animate={{ x: markSocialMedia ? -20 : 0 }}
-                  transition={{
-                    type: 'spring',
-                    stiffness: 500,
-                    damping: 20
-                  }}>
-                  <IconCaretLeftFilled color='white' />
-                </Box>
-                : null}
-            </Stack>
+              </Stack>
+            </Box>
           </Button>
         </Box>
       </Stack>

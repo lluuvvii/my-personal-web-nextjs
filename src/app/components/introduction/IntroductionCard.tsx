@@ -564,13 +564,11 @@ const IntroductionCard = () => {
         }}>
         <Typography
           component={motion.div}
-          initial={{ rotate: 0 }}
-          animate={{ rotate: -5 }}
+          initial={{ rotate: -5 }}
           transition={{
             type: 'spring',
             stiffness: 500,
             damping: 50,
-            delay: 2
           }}
           variant='h4'
           sx={{
@@ -779,13 +777,11 @@ const IntroductionCard = () => {
         {/* title text */}
         <Typography
           component={motion.div}
-          initial={{ rotate: 0 }}
-          animate={{ rotate: -5 }}
+          initial={{ rotate: -5 }}
           transition={{
             type: 'spring',
             stiffness: 500,
             damping: 50,
-            delay: 2
           }}
           variant='h4'
           sx={{
@@ -817,13 +813,11 @@ const IntroductionCard = () => {
         </Typography>
         <Typography
           component={motion.div}
-          initial={{ rotate: 0 }}
-          animate={{ rotate: -5 }}
+          initial={{ rotate: -5 }}
           transition={{
             type: 'spring',
             stiffness: 500,
             damping: 50,
-            delay: 2
           }}
           variant='h4'
           sx={{
@@ -855,13 +849,11 @@ const IntroductionCard = () => {
         </Typography>
         <Typography
           component={motion.div}
-          initial={{ rotate: 0 }}
-          animate={{ rotate: -5 }}
+          initial={{ rotate: -5 }}
           transition={{
             type: 'spring',
             stiffness: 500,
             damping: 50,
-            delay: 2
           }}
           variant="h4"
           sx={{
