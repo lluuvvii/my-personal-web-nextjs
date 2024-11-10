@@ -29,8 +29,8 @@ const IntroCardContents = ({ completeAnimation }: IntroCardContentsProps) => {
   return (
     <Box
       component={motion.div}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: completeAnimation ? 1 : 0 }}
+      // initial={{ opacity: 0 }}
+      // animate={{ opacity: completeAnimation ? 1 : 0 }}
       transition={{
         type: 'string',
         stiffness: 500,
@@ -40,12 +40,14 @@ const IntroCardContents = ({ completeAnimation }: IntroCardContentsProps) => {
       <Stack direction='column' justifyContent='center' spacing={1}>
         {/* screen content */}
         <Box
+          initial={{ y: -50, opacity: 0 }}
           component={motion.div}
-          animate={{ opacity: !askActive ? 1 : 0 }}
+          animate={{ opacity: !askActive && completeAnimation ? 1 : 0, y: completeAnimation ? 0 : -100 }}
           transition={{
             type: 'spring',
             stiffness: 500,
-            damping: 30
+            damping: 60,
+            delay: 0.3
           }}>
           {!questionActive && dialogVal === 0 ?
             <Box
@@ -392,12 +394,13 @@ const IntroCardContents = ({ completeAnimation }: IntroCardContentsProps) => {
         <Box
           position='relative'
           component={motion.div}
-          initial={{ scale: 0 }}
-          animate={{ opacity: !askActive ? 1 : 0, scale: 1 }}
+          initial={{ scale: 0, opacity: 0, y: -50 }}
+          animate={{ opacity: !askActive && completeAnimation ? 1 : 0, scale: 1, y: completeAnimation ? 0 : -100 }}
           transition={{
             type: 'spring',
             stiffness: 500,
-            damping: 25,
+            damping: 60,
+            delay: 0.2
           }}>
           {!questionActive ?
             <Stack direction='row' justifyContent='space-between' alignItems='center'>
@@ -674,6 +677,15 @@ const IntroCardContents = ({ completeAnimation }: IntroCardContentsProps) => {
         </Box>
         {/* ask me button */}
         <Box
+          component={motion.div}
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: completeAnimation ? 1 : 0, y: completeAnimation ? 0 : -50 }}
+          transition={{
+            type: 'spring',
+            stiffness: 500,
+            damping: 60,
+            delay: 0.1
+          }}
           sx={{
             width: '100%',
             background: 'radial-gradient(circle, red 50%, #e00000 100%)',
@@ -1178,6 +1190,15 @@ const IntroCardContents = ({ completeAnimation }: IntroCardContentsProps) => {
         </AnimatePresence>
         {/* social media */}
         <Box
+          component={motion.div}
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: completeAnimation ? 1 : 0, y: completeAnimation ? 0 : -50 }}
+          transition={{
+            type: 'spring',
+            stiffness: 500,
+            damping: 35,
+            delay: 0
+          }}
           sx={{
             width: '100%',
             backgroundColor: 'red',
@@ -1254,12 +1275,13 @@ const IntroCardContents = ({ completeAnimation }: IntroCardContentsProps) => {
         </Box>
         <Box
           component={motion.div}
-          initial={{ scale: 1, width: '100%' }}
-          animate={{ scale: 1, width: socialMediaActive ? '10%' : '100%' }}
+          initial={{ opacity: 0, width: '100%', y: -50 }}
+          animate={{ opacity: completeAnimation ? 1 : 0, width: socialMediaActive ? '10%' : '100%', y: completeAnimation ? 0 : -50 }}
           transition={{
             type: 'spring',
             stiffness: 500,
-            damping: 32,
+            damping: 35,
+            delay: 0
           }}
           sx={{
             background: 'radial-gradient(circle, red 50%, #e00000 100%)',
