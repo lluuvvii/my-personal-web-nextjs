@@ -2,7 +2,7 @@
   "name": "my-personal-web-nextjs",
   "version": "0.1.0",
   "private": true,
-  "license":"MIT",
+  "license": "MIT",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -15,7 +15,7 @@
     "@mui/icons-material": "^5.15.20",
     "@mui/material": "^5.15.18",
     "@tabler/icons-react": "^3.6.0",
-    "framer-motion": "^11.2.10",
+    "framer-motion": "^11.11.11",
     "next": "^14.2.3",
     "react": "^18.3.1",
     "react-audio-player": "^0.17.0",
