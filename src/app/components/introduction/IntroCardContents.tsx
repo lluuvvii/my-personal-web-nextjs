@@ -29,8 +29,6 @@ const IntroCardContents = ({ completeAnimation }: IntroCardContentsProps) => {
   return (
     <Box
       component={motion.div}
-      // initial={{ opacity: 0 }}
-      // animate={{ opacity: completeAnimation ? 1 : 0 }}
       transition={{
         type: 'string',
         stiffness: 500,
