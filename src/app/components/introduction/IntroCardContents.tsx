@@ -13,16 +13,16 @@ const IntroCardContents = ({ completeAnimation }: IntroCardContentsProps) => {
   const [dialogVal, setDialogVal] = useState(0)
   const [askActive, setAskActive] = useState(false)
   const [socialMediaActive, setSocialMediaActive] = useState(false)
-  const [markQuestions, setMarkQuestions] = useState({ thisWebsite: false, secondOption: false })
+  const [markQuestions, setMarkQuestions] = useState({ thisWebsite: false, hobbies: false })
   const [markAskMe, setMarkAskMe] = useState(false)
   const [markSocialMedia, setMarkSocialMedia] = useState(false)
-  const [questionDialog, setQuestionDialog] = useState({ thisWebsite: false, secondOption: false })
+  const [questionDialog, setQuestionDialog] = useState({ thisWebsite: false, hobbies: false })
   const [questionActive, setQuestionActive] = useState(false)
 
   const resetQuestionDialog = () => {
     setQuestionDialog({
       thisWebsite: false,
-      secondOption: false
+      hobbies: false,
     })
   }
 
@@ -332,7 +332,7 @@ const IntroCardContents = ({ completeAnimation }: IntroCardContentsProps) => {
               </Slide>
             </Box>
             : null}
-          {questionActive && questionDialog.secondOption ?
+          {questionActive && questionDialog.hobbies ?
             <Box
               sx={{
                 display: 'flex',
@@ -368,11 +368,11 @@ const IntroCardContents = ({ completeAnimation }: IntroCardContentsProps) => {
                   },
                 },
               }}>
-              <Slide direction='right' in={questionDialog.secondOption}>
+              <Slide direction='right' in={questionDialog.hobbies}>
                 <Box
                   sx={{
                     // width: '100%',
-                    height: '100%',
+                    // height: '100%',
                     overflow: 'auto'
                   }}>
                   <Typography
@@ -381,7 +381,7 @@ const IntroCardContents = ({ completeAnimation }: IntroCardContentsProps) => {
                       fontFamily: 'Nunito, Arial, sans-serif',
                       fontWeight: 700,
                     }}>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni deleniti doloremque laudantium quo molestias neque quas, optio voluptas sunt doloribus tempora dolores assumenda labore voluptatum expedita, aut, natus inventore facere? Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti delectus impedit quisquam molestias nam repellat sint aliquid, dolorum et eos, suscipit sapiente doloribus alias odio iure? Ullam vel molestias neque?
+                    I usually spend my free time working on my personal website, exploring and experimenting with new things to expand my skills. I also enjoy playing games as a way to relax and unwind, helping me relieve stress after a busy day.
                   </Typography>
                 </Box>
               </Slide>
@@ -1063,7 +1063,7 @@ const IntroCardContents = ({ completeAnimation }: IntroCardContentsProps) => {
                       <Box
                         component={motion.div}
                         initial={{ scale: 0 }}
-                        animate={{ scale: markQuestions.secondOption ? 1 : 0 }}
+                        animate={{ scale: markQuestions.hobbies ? 1 : 0 }}
                         transition={{
                           type: 'spring',
                           stiffness: 500,
@@ -1078,10 +1078,10 @@ const IntroCardContents = ({ completeAnimation }: IntroCardContentsProps) => {
                           whileTap={{ scale: 1 }}
                           initial={{ opacity: 0 }}
                           animate={{ opacity: 1 }}
-                          onHoverStart={() => setMarkQuestions((prevState) => ({ ...prevState, secondOption: true }))}
-                          onHoverEnd={() => setMarkQuestions((prevState) => ({ ...prevState, secondOption: false }))}
-                          onTouchStart={() => setMarkQuestions((prevState) => ({ ...prevState, secondOption: true }))}
-                          onTouchEnd={() => setMarkQuestions((prevState) => ({ ...prevState, secondOption: false }))}
+                          onHoverStart={() => setMarkQuestions((prevState) => ({ ...prevState, hobbies: true }))}
+                          onHoverEnd={() => setMarkQuestions((prevState) => ({ ...prevState, hobbies: false }))}
+                          onTouchStart={() => setMarkQuestions((prevState) => ({ ...prevState, hobbies: true }))}
+                          onTouchEnd={() => setMarkQuestions((prevState) => ({ ...prevState, hobbies: false }))}
                           transition={{
                             type: 'spring',
                             stiffness: 500,
@@ -1089,8 +1089,8 @@ const IntroCardContents = ({ completeAnimation }: IntroCardContentsProps) => {
                           }}
                           onClick={() => {
                             resetQuestionDialog()
-                            setQuestionDialog(prevState => ({ ...prevState, secondOption: true }))
-                            setMarkQuestions((prevState) => ({ ...prevState, secondOption: false }))
+                            setQuestionDialog(prevState => ({ ...prevState, hobbies: true }))
+                            setMarkQuestions((prevState) => ({ ...prevState, hobbies: false }))
                             setAskActive(false)
                             setQuestionActive(true)
                           }}
@@ -1120,7 +1120,7 @@ const IntroCardContents = ({ completeAnimation }: IntroCardContentsProps) => {
                               color: 'red',
                               WebkitTextStroke: '10px red'
                             }}>
-                            Second Option
+                            My Hobbies
                           </Typography>
                           <Typography
                             variant='h6'
@@ -1135,7 +1135,7 @@ const IntroCardContents = ({ completeAnimation }: IntroCardContentsProps) => {
                               color: 'black',
                               WebkitTextStroke: '5px black'
                             }}>
-                            Second Option
+                            My Hobbies
                           </Typography>
                           <Typography
                             variant='h6'
@@ -1146,14 +1146,14 @@ const IntroCardContents = ({ completeAnimation }: IntroCardContentsProps) => {
                               fontWeight: 700,
                               color: 'white',
                             }}>
-                            Second Option
+                            My Hobbies
                           </Typography>
                         </Button>
                         : null}
                       <Box
                         component={motion.div}
                         initial={{ scale: 0 }}
-                        animate={{ scale: markQuestions.secondOption ? 1 : 0 }}
+                        animate={{ scale: markQuestions.hobbies ? 1 : 0 }}
                         transition={{
                           type: 'spring',
                           stiffness: 500,
