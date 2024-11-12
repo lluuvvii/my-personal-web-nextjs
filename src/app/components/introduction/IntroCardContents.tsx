@@ -435,7 +435,7 @@ const IntroCardContents = ({ completeAnimation }: IntroCardContentsProps) => {
                   }}>
                   <Box
                     component={motion.div}
-                    animate={{ x: dialogVal > 0 ? 0 : 100 }}
+                    animate={{ x: dialogVal > 0 ? 0 : 50 }}
                     transition={{
                       type: 'spring',
                       stiffness: 500,
@@ -619,7 +619,7 @@ const IntroCardContents = ({ completeAnimation }: IntroCardContentsProps) => {
                   </Typography>
                   <Box
                     component={motion.div}
-                    animate={{ x: dialogVal < 3 ? 0 : -100 }}
+                    animate={{ x: dialogVal < 3 ? 0 : -50 }}
                     transition={{
                       type: 'spring',
                       stiffness: 500,
