@@ -401,7 +401,7 @@ const IntroCardContents = ({ completeAnimation }: IntroCardContentsProps) => {
             delay: 0.2
           }}>
           {!questionActive ?
-            <Stack direction='row' justifyContent='space-between' alignItems='center'>
+            <Stack direction='row' justifyContent='space-between' alignItems='center' gap={0.5}>
               <Box
                 mr={1}
                 component={motion.div}
@@ -516,6 +516,7 @@ const IntroCardContents = ({ completeAnimation }: IntroCardContentsProps) => {
                   </Typography>
                 </Button>
               </Box>
+              <Box sx={{ width: '100%', height: '5px', backgroundColor: 'red', borderRadius: '5px' }} />
               <Box sx={{ width: '100%', height: '5px', backgroundColor: 'red', borderRadius: '5px' }} />
               <Box
                 ml={1}
