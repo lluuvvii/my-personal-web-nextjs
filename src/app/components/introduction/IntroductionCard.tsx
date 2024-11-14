@@ -546,21 +546,21 @@ const IntroductionCard = () => {
       {/* introcard contents */}
       <Box
         component={motion.div}
-        initial={{ height: '459px' }}
-        animate={{ height: onHover || onTouch ? '454px' : '459px' }}
+        initial={{ height: '463.5px' }}
+        animate={{ height: onHover || onTouch ? '458px' : '463.5px' }}
         transition={{
           type: 'spring',
-          stiffness: 600,
-          damping: 15
+          stiffness: 500,
+          damping: 35
         }}
         sx={{
           position: 'absolute',
           backgroundColor: 'transparent',
-          borderRadius: '22.5px',
-          border: '5px solid white',
-          left: -2.5,
-          bottom: -2.5,
-          width: '305px'
+          borderRadius: '25px',
+          border: '10px solid white',
+          left: -5,
+          bottom: -5,
+          width: '310px'
         }}>
         <Typography
           component={motion.div}
@@ -573,12 +573,12 @@ const IntroductionCard = () => {
           variant='h4'
           sx={{
             position: 'absolute',
-            top: '-20px',
-            left: '-7px',
+            top: '-22.5px',
+            left: '-9.5px',
             textAlign: 'center',
             fontFamily: 'Nunito, Arial, sans-serif',
             fontWeight: 600,
-            WebkitTextStroke: '15px white',
+            WebkitTextStroke: '18px white',
             color: 'white',
             display: 'flex'
           }}>
@@ -615,8 +615,8 @@ const IntroductionCard = () => {
         animate={{ y: onHover || onTouch ? -5 : -10 }}
         transition={{
           type: 'spring',
-          stiffness: 600,
-          damping: 15
+          stiffness: 500,
+          damping: 30
         }}
         sx={{
           position: 'relative',
