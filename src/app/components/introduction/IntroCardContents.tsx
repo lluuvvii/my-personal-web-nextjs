@@ -818,8 +818,9 @@ const IntroCardContents = ({ completeAnimation }: IntroCardContentsProps) => {
             <Box
               position='absolute'
               component={motion.div}
-              initial={{ opacity: 0, y: 100 }}
+              initial={{ opacity: 0, rotate: 15, y: 100 }}
               animate={{
+                rotate: askActive ? 0 : 15,
                 scale: askActive ? 1 : 0,
                 opacity: askActive ? 1 : 0,
                 y: askActive ? 0 : 300
@@ -829,28 +830,19 @@ const IntroCardContents = ({ completeAnimation }: IntroCardContentsProps) => {
                 stiffness: 500,
                 damping: 30
               }}
-              exit={{ opacity: 0, y: 100 }}
+              exit={{ opacity: 0, y: 100, rotate: 15 }}
               sx={{
                 top: '0px',
                 left: '0px',
                 borderRadius: '10px',
               }}>
               <Box
-                component={motion.div}
-                initial={{ scale: 2 }}
-                position='absolute'
-                sx={{
-                  top: '264px',
-                  left: '-6px',
-                }}>
-                <IconCaretRightFilled color='red' />
-              </Box>
-              <Box
                 sx={{
                   position: 'relative',
                   width: '260px',
                   height: '280px',
                   p: '10px',
+                  boxShadow: '0px 0px 10px 1px #cfcfcf',
                   background: 'linear-gradient(0deg, red, #eb0000)',
                   borderRadius: '10px',
                   overflow: 'hidden',
@@ -1165,6 +1157,16 @@ const IntroCardContents = ({ completeAnimation }: IntroCardContentsProps) => {
                     </Stack>
                   </Box>
                 </Box>
+              </Box>
+              <Box
+                component={motion.div}
+                initial={{ scale: 2 }}
+                position='absolute'
+                sx={{
+                  top: '264px',
+                  left: '-5.5px',
+                }}>
+                <IconCaretRightFilled color='red' />
               </Box>
             </Box>
             : null}

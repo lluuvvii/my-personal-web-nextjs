@@ -40,22 +40,22 @@ const IntroductionCard = () => {
         damping: 60,
         delay: 0.5
       }}>
-      <Box
+      {/* <Box
         sx={{
           position: 'absolute',
           top: 200,
           left: 100,
         }}>
         <Image src={splatter} alt="splatter" width={100} height={100} style={{ scale: 8 }} />
-      </Box>
-      <Box
+      </Box> */}
+      {/* <Box
         sx={{
           position: 'absolute',
           top: 200,
           left: 100,
         }}>
         <Image src={splatter} alt="splatter" width={100} height={100} style={{ scale: 8 }} />
-      </Box>
+      </Box> */}
       {/* <Box
         sx={{
           position: 'fixed',
