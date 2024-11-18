@@ -3,25 +3,14 @@
 import React, { useState } from 'react'
 import { Box, Typography } from '@mui/material'
 import IntroCardContents from './IntroCardContents'
-import { motion, useScroll, useSpring, useTransform } from 'framer-motion'
-import splatter from '@/../public/assets/img/splatter.svg'
-import Image from 'next/image'
+import { motion } from 'framer-motion'
 
 const IntroductionCard = () => {
   const [onHover, setOnHover] = useState(false)
   const [onTouch, setOnTouch] = useState(false)
   const [completeAnimation, setCompleteAnimation] = useState(false)
-  const { scrollYProgress } = useScroll();
-  const rawX = useTransform(scrollYProgress, [0, 1], ['0%', '600%']);
-  const x = useSpring(rawX, {
-    stiffness: 500,
-    damping: 100,
-  });
 
   const letters = Array.from('Introduction');
-
-  const text = "WHO ARE YOU?";
-
 
   return (
     <Box
@@ -40,48 +29,6 @@ const IntroductionCard = () => {
         damping: 60,
         delay: 0.5
       }}>
-      {/* <Box
-        sx={{
-          position: 'absolute',
-          top: 200,
-          left: 100,
-        }}>
-        <Image src={splatter} alt="splatter" width={100} height={100} style={{ scale: 8 }} />
-      </Box> */}
-      {/* <Box
-        sx={{
-          position: 'absolute',
-          top: 200,
-          left: 100,
-        }}>
-        <Image src={splatter} alt="splatter" width={100} height={100} style={{ scale: 8 }} />
-      </Box> */}
-      {/* <Box
-        sx={{
-          position: 'fixed',
-          bottom: 100,
-          left: 0,
-          overflow: 'hidden',
-          width: '100%',
-          border: '2px solid #333',
-          padding: '16px',
-          backgroundColor: '#f0f0f0',
-        }}
-      >
-        <motion.div
-          style={{
-            whiteSpace: 'nowrap',
-            fontSize: '5rem',
-            fontWeight: 'bold',
-            fontFamily: '"Bebas Neue", sans-serif',
-            color: 'black',
-            display: 'inline-block',
-            x
-          }}
-        >
-          {text}
-        </motion.div>
-      </Box> */}
       {/* top left particles */}
       {/* star long shadow */}
       {/* <Box
