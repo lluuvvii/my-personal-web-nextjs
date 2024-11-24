@@ -534,6 +534,12 @@ const IntroductionCard = () => {
               key={index}
               initial={{ scale: 0 }}
               animate={{ scale: completeAnimation ? 1 : 0 }}
+              // whileHover={{
+              //   y: -10,
+              //   transition: {
+              //     duration: 0
+              //   }
+              // }}
               transition={{
                 type: 'spring',
                 stiffness: 500,
@@ -747,6 +753,12 @@ const IntroductionCard = () => {
               key={index}
               initial={{ scale: 0 }}
               animate={{ scale: completeAnimation ? 1 : 0 }}
+              // whileHover={{
+              //   y: -10,
+              //   transition: {
+              //     duration: 0
+              //   }
+              // }}
               transition={{
                 type: 'spring',
                 stiffness: 500,
@@ -783,6 +795,12 @@ const IntroductionCard = () => {
               key={index}
               initial={{ scale: 0 }}
               animate={{ scale: completeAnimation ? 1 : 0 }}
+              // whileHover={{
+              //   y: -10,
+              //   transition: {
+              //     duration: 0
+              //   }
+              // }}
               transition={{
                 type: 'spring',
                 stiffness: 500,
@@ -819,6 +837,12 @@ const IntroductionCard = () => {
               key={index}
               initial={{ scale: 0 }}
               animate={{ scale: completeAnimation ? 1 : 0 }}
+              // whileHover={{
+              //   y: -10,
+              //   transition: {
+              //     duration: 0
+              //   }
+              // }}
               transition={{
                 type: 'spring',
                 stiffness: 500,
