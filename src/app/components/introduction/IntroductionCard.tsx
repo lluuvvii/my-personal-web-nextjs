@@ -532,14 +532,8 @@ const IntroductionCard = () => {
           {letters.map((letter, index) => (
             <motion.span
               key={index}
-              initial={{ scale: 0 }}
-              animate={{ scale: completeAnimation ? 1 : 0 }}
-              // whileHover={{
-              //   y: -10,
-              //   transition: {
-              //     duration: 0
-              //   }
-              // }}
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: completeAnimation ? 1 : 0, y: completeAnimation ? 0 : -20 }}
               transition={{
                 type: 'spring',
                 stiffness: 500,
@@ -751,14 +745,8 @@ const IntroductionCard = () => {
           {letters.map((letter, index) => (
             <motion.span
               key={index}
-              initial={{ scale: 0 }}
-              animate={{ scale: completeAnimation ? 1 : 0 }}
-              // whileHover={{
-              //   y: -10,
-              //   transition: {
-              //     duration: 0
-              //   }
-              // }}
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: completeAnimation ? 1 : 0, y: completeAnimation ? 0 : -20 }}
               transition={{
                 type: 'spring',
                 stiffness: 500,
@@ -793,14 +781,8 @@ const IntroductionCard = () => {
           {letters.map((letter, index) => (
             <motion.span
               key={index}
-              initial={{ scale: 0 }}
-              animate={{ scale: completeAnimation ? 1 : 0 }}
-              // whileHover={{
-              //   y: -10,
-              //   transition: {
-              //     duration: 0
-              //   }
-              // }}
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: completeAnimation ? 1 : 0, y: completeAnimation ? 0 : -20 }}
               transition={{
                 type: 'spring',
                 stiffness: 500,
@@ -835,14 +817,8 @@ const IntroductionCard = () => {
           {letters.map((letter, index) => (
             <motion.span
               key={index}
-              initial={{ scale: 0 }}
-              animate={{ scale: completeAnimation ? 1 : 0 }}
-              // whileHover={{
-              //   y: -10,
-              //   transition: {
-              //     duration: 0
-              //   }
-              // }}
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: completeAnimation ? 1 : 0, y: completeAnimation ? 0 : -20 }}
               transition={{
                 type: 'spring',
                 stiffness: 500,

@@ -34,18 +34,16 @@ const IntroCardContents = ({ completeAnimation }: IntroCardContentsProps) => {
         stiffness: 500,
         damping: 30,
       }}
-      position='relative'>
+      position='relative'
+      sx={{ overflow: 'hidden' }}>
       <Stack direction='column' justifyContent='center' spacing={1}>
         {/* screen content */}
         <Box
-          initial={{ y: -50, opacity: 0 }}
+          initial={{ x: -300 }}
           component={motion.div}
-          animate={{ opacity: !askActive && completeAnimation ? 1 : 0, y: completeAnimation ? 0 : -100 }}
+          animate={{ x: completeAnimation ? 0 : -300, opacity: askActive ? 0 : 1 }}
           transition={{
-            type: 'spring',
-            stiffness: 500,
-            damping: 60,
-            delay: 0.3
+            x: { type: 'spring', stiffness: 500, damping: 35, delay: 0.7 }
           }}>
           {!questionActive && dialogVal === 0 ?
             <Box
@@ -392,13 +390,12 @@ const IntroCardContents = ({ completeAnimation }: IntroCardContentsProps) => {
         <Box
           position='relative'
           component={motion.div}
-          initial={{ scale: 0, opacity: 0, y: -50 }}
-          animate={{ opacity: !askActive && completeAnimation ? 1 : 0, scale: 1, y: completeAnimation ? 0 : -100 }}
+          initial={{ scale: 0, x: -300, width: '100%' }}
+          animate={{ scale: 1, x: completeAnimation ? 0 : -300, width: askActive ? '0px' : '100%' }}
+          sx={{ overflow: 'hidden' }}
           transition={{
-            type: 'spring',
-            stiffness: 500,
-            damping: 60,
-            delay: 0.2
+            x: { type: 'spring', stiffness: 500, damping: 35, delay: 0.6 },
+            width: { type: 'spring', stiffness: 500, damping: 35, delay: 0.2 }
           }}>
           {!questionActive ?
             <Stack direction='row' justifyContent='space-between' alignItems='center' gap={0.5}>
@@ -677,13 +674,10 @@ const IntroCardContents = ({ completeAnimation }: IntroCardContentsProps) => {
         {/* ask me button */}
         <Box
           component={motion.div}
-          initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: completeAnimation ? 1 : 0, y: completeAnimation ? 0 : -50 }}
+          initial={{ x: -300 }}
+          animate={{ x: completeAnimation ? 0 : -300 }}
           transition={{
-            type: 'spring',
-            stiffness: 500,
-            damping: 60,
-            delay: 0.1
+            x: { type: 'spring', stiffness: 500, damping: 35, delay: 0.5 }
           }}
           sx={{
             width: '100%',
@@ -1174,13 +1168,10 @@ const IntroCardContents = ({ completeAnimation }: IntroCardContentsProps) => {
         {/* social media */}
         <Box
           component={motion.div}
-          initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: completeAnimation ? 1 : 0, y: completeAnimation ? 0 : -50 }}
+          initial={{ x: -300 }}
+          animate={{ x: completeAnimation ? 0 : -300 }}
           transition={{
-            type: 'spring',
-            stiffness: 500,
-            damping: 35,
-            delay: 0
+            x: { type: 'spring', stiffness: 500, damping: 35, delay: 0.4 }
           }}
           sx={{
             width: '100%',
@@ -1258,13 +1249,11 @@ const IntroCardContents = ({ completeAnimation }: IntroCardContentsProps) => {
         </Box>
         <Box
           component={motion.div}
-          initial={{ opacity: 0, width: '100%', y: -50 }}
-          animate={{ opacity: completeAnimation ? 1 : 0, width: socialMediaActive ? '10%' : '100%', y: completeAnimation ? 0 : -50 }}
+          initial={{ width: '100%', x: -300 }}
+          animate={{ width: socialMediaActive ? '10%' : '100%', x: completeAnimation ? 0 : -300 }}
           transition={{
-            type: 'spring',
-            stiffness: 500,
-            damping: 35,
-            delay: 0
+            width: { type: 'spring', stiffness: 500, damping: 35 },
+            x: { type: 'spring', stiffness: 500, damping: 35, delay: 0.4 }
           }}
           sx={{
             background: 'radial-gradient(circle, red 50%, #e00000 100%)',
