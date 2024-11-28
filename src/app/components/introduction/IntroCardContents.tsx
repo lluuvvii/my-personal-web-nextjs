@@ -513,8 +513,26 @@ const IntroCardContents = ({ completeAnimation }: IntroCardContentsProps) => {
                   </Typography>
                 </Button>
               </Box>
-              <Box sx={{ width: '100%', height: '5px', backgroundColor: 'red', borderRadius: '5px' }} />
-              <Box sx={{ width: '100%', height: '5px', backgroundColor: 'red', borderRadius: '5px' }} />
+              <Box
+                component={motion.div}
+                initial={{ scale: 0 }}
+                animate={{ scale: 1 }}
+                transition={{
+                  type: 'spring',
+                  stiffness: 500,
+                  damping: 20
+                }}
+                sx={{ width: '100%', height: '5px', backgroundColor: 'red', borderRadius: '5px' }} />
+              <Box
+                component={motion.div}
+                initial={{ scale: 0 }}
+                animate={{ scale: 1 }}
+                transition={{
+                  type: 'spring',
+                  stiffness: 500,
+                  damping: 20
+                }}
+                sx={{ width: '100%', height: '5px', backgroundColor: 'red', borderRadius: '5px' }} />
               <Box
                 ml={1}
                 component={motion.div}
