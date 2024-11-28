@@ -43,7 +43,7 @@ const IntroCardContents = ({ completeAnimation }: IntroCardContentsProps) => {
           component={motion.div}
           animate={{ x: completeAnimation ? 0 : -300, opacity: askActive ? 0 : 1 }}
           transition={{
-            x: { type: 'spring', stiffness: 500, damping: 35, delay: 0.7 }
+            x: { type: 'spring', stiffness: 500, damping: 35, delay: 0.6 }
           }}>
           {!questionActive && dialogVal === 0 ?
             <Box
@@ -394,7 +394,7 @@ const IntroCardContents = ({ completeAnimation }: IntroCardContentsProps) => {
           animate={{ scale: 1, x: completeAnimation ? 0 : -300, width: askActive ? '0px' : '100%' }}
           sx={{ overflow: 'hidden' }}
           transition={{
-            x: { type: 'spring', stiffness: 500, damping: 35, delay: 0.6 },
+            x: { type: 'spring', stiffness: 500, damping: 35, delay: 0.4 },
             width: { type: 'spring', stiffness: 500, damping: 35, delay: 0.2 }
           }}>
           {!questionActive ?
@@ -677,7 +677,7 @@ const IntroCardContents = ({ completeAnimation }: IntroCardContentsProps) => {
           initial={{ x: -300 }}
           animate={{ x: completeAnimation ? 0 : -300 }}
           transition={{
-            x: { type: 'spring', stiffness: 500, damping: 35, delay: 0.5 }
+            x: { type: 'spring', stiffness: 500, damping: 35, delay: 0.2 }
           }}
           sx={{
             width: '100%',
@@ -1171,7 +1171,7 @@ const IntroCardContents = ({ completeAnimation }: IntroCardContentsProps) => {
           initial={{ x: -300 }}
           animate={{ x: completeAnimation ? 0 : -300 }}
           transition={{
-            x: { type: 'spring', stiffness: 500, damping: 35, delay: 0.4 }
+            x: { type: 'spring', stiffness: 500, damping: 35, delay: 0 }
           }}
           sx={{
             width: '100%',
@@ -1253,7 +1253,7 @@ const IntroCardContents = ({ completeAnimation }: IntroCardContentsProps) => {
           animate={{ width: socialMediaActive ? '10%' : '100%', x: completeAnimation ? 0 : -300 }}
           transition={{
             width: { type: 'spring', stiffness: 500, damping: 35 },
-            x: { type: 'spring', stiffness: 500, damping: 35, delay: 0.4 }
+            x: { type: 'spring', stiffness: 500, damping: 35, delay: 0 }
           }}
           sx={{
             background: 'radial-gradient(circle, red 50%, #e00000 100%)',
