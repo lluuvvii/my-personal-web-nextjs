@@ -26,7 +26,7 @@ const IntroductionCard = () => {
       transition={{
         type: 'spring',
         stiffness: 500,
-        damping: 60,
+        damping: 35,
         delay: 0.5
       }}>
       {/* top left particles */}
@@ -538,7 +538,7 @@ const IntroductionCard = () => {
                 type: 'spring',
                 stiffness: 500,
                 damping: 20,
-                delay: 0 + index * 0.05,
+                delay: 0.7 + index * 0.05,
               }}
             >
               {letter}
@@ -751,7 +751,7 @@ const IntroductionCard = () => {
                 type: 'spring',
                 stiffness: 500,
                 damping: 20,
-                delay: 0.1 + index * 0.05,
+                delay: 0.8 + index * 0.05,
               }}
             >
               {letter}
@@ -787,7 +787,7 @@ const IntroductionCard = () => {
                 type: 'spring',
                 stiffness: 500,
                 damping: 20,
-                delay: 0.2 + index * 0.05,
+                delay: 0.9 + index * 0.05,
               }}
             >
               {letter}
@@ -823,7 +823,7 @@ const IntroductionCard = () => {
                 type: 'spring',
                 stiffness: 500,
                 damping: 20,
-                delay: 0.3 + index * 0.05,
+                delay: 1 + index * 0.05,
               }}
             >
               {letter}
