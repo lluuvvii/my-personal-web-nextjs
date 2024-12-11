@@ -26,7 +26,7 @@ const IntroductionCard = () => {
       transition={{
         type: 'spring',
         stiffness: 500,
-        damping: 35,
+        damping: 60,
         delay: 0.5
       }}>
       {/* top left particles */}
