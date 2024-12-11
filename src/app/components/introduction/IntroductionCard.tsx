@@ -532,8 +532,8 @@ const IntroductionCard = () => {
           {letters.map((letter, index) => (
             <motion.span
               key={index}
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: completeAnimation ? 1 : 0, y: completeAnimation ? 0 : -20 }}
+              initial={{ y: 20, scale: 0 }}
+              animate={{ y: completeAnimation ? 0 : 20, scale: completeAnimation ? 1 : 0 }}
               transition={{
                 type: 'spring',
                 stiffness: 500,
@@ -745,8 +745,8 @@ const IntroductionCard = () => {
           {letters.map((letter, index) => (
             <motion.span
               key={index}
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: completeAnimation ? 1 : 0, y: completeAnimation ? 0 : -20 }}
+              initial={{ y: 20, scale: 0 }}
+              animate={{ y: completeAnimation ? 0 : 20, scale: completeAnimation ? 1 : 0 }}
               transition={{
                 type: 'spring',
                 stiffness: 500,
@@ -781,8 +781,8 @@ const IntroductionCard = () => {
           {letters.map((letter, index) => (
             <motion.span
               key={index}
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: completeAnimation ? 1 : 0, y: completeAnimation ? 0 : -20 }}
+              initial={{ y: 20, scale: 0 }}
+              animate={{ y: completeAnimation ? 0 : 20, scale: completeAnimation ? 1 : 0 }}
               transition={{
                 type: 'spring',
                 stiffness: 500,
@@ -817,8 +817,8 @@ const IntroductionCard = () => {
           {letters.map((letter, index) => (
             <motion.span
               key={index}
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: completeAnimation ? 1 : 0, y: completeAnimation ? 0 : -20 }}
+              initial={{ y: 20, scale: 0 }}
+              animate={{ y: completeAnimation ? 0 : 20, scale: completeAnimation ? 1 : 0 }}
               transition={{
                 type: 'spring',
                 stiffness: 500,
