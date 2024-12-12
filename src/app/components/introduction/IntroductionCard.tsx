@@ -532,13 +532,13 @@ const IntroductionCard = () => {
           {letters.map((letter, index) => (
             <motion.span
               key={index}
-              initial={{ y: 20, scale: 0 }}
-              animate={{ y: completeAnimation ? 0 : 20, scale: completeAnimation ? 1 : 0 }}
+              initial={{ y: -20, opacity: 0 }}
+              animate={{ y: completeAnimation ? 0 : -20, opacity: completeAnimation ? 1 : 0 }}
               transition={{
                 type: 'spring',
                 stiffness: 500,
                 damping: 20,
-                delay: 0.7 + index * 0.05,
+                delay: 0.7 + index * 0.1,
               }}
             >
               {letter}
@@ -745,13 +745,13 @@ const IntroductionCard = () => {
           {letters.map((letter, index) => (
             <motion.span
               key={index}
-              initial={{ y: 20, scale: 0 }}
-              animate={{ y: completeAnimation ? 0 : 20, scale: completeAnimation ? 1 : 0 }}
+              initial={{ y: -20, opacity: 0 }}
+              animate={{ y: completeAnimation ? 0 : -20, opacity: completeAnimation ? 1 : 0 }}
               transition={{
                 type: 'spring',
                 stiffness: 500,
                 damping: 20,
-                delay: 0.8 + index * 0.05,
+                delay: 0.8 + index * 0.1,
               }}
             >
               {letter}
@@ -781,13 +781,13 @@ const IntroductionCard = () => {
           {letters.map((letter, index) => (
             <motion.span
               key={index}
-              initial={{ y: 20, scale: 0 }}
-              animate={{ y: completeAnimation ? 0 : 20, scale: completeAnimation ? 1 : 0 }}
+              initial={{ y: -20, opacity: 0 }}
+              animate={{ y: completeAnimation ? 0 : -20, opacity: completeAnimation ? 1 : 0 }}
               transition={{
                 type: 'spring',
                 stiffness: 500,
                 damping: 20,
-                delay: 0.9 + index * 0.05,
+                delay: 0.9 + index * 0.1,
               }}
             >
               {letter}
@@ -817,13 +817,13 @@ const IntroductionCard = () => {
           {letters.map((letter, index) => (
             <motion.span
               key={index}
-              initial={{ y: 20, scale: 0 }}
-              animate={{ y: completeAnimation ? 0 : 20, scale: completeAnimation ? 1 : 0 }}
+              initial={{ y: -20, opacity: 0 }}
+              animate={{ y: completeAnimation ? 0 : -20, opacity: completeAnimation ? 1 : 0 }}
               transition={{
                 type: 'spring',
                 stiffness: 500,
                 damping: 20,
-                delay: 1 + index * 0.05,
+                delay: 1 + index * 0.1,
               }}
             >
               {letter}
