@@ -823,7 +823,7 @@ const IntroductionCard = () => {
                 type: 'spring',
                 stiffness: 500,
                 damping: 20,
-                delay: 1 + index * 0.1,
+                delay: 1 + index * 0.1
               }}
             >
               {letter}
