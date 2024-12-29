@@ -16,8 +16,8 @@ const IntroductionCard = () => {
     <Box
       position='relative'
       component={motion.div}
-      initial={{ y: 1000, rotate: -15 }}
-      animate={{ y: 0, rotate: 0 }}
+      initial={{ y: 550, rotate: -15, opacity: 0 }}
+      animate={{ y: 0, rotate: 0, opacity: 1 }}
       onHoverStart={() => setOnHover(true)}
       onHoverEnd={() => setOnHover(false)}
       onTouchStart={() => setOnTouch(true)}

@@ -868,15 +868,7 @@ const IntroCardContents = ({ completeAnimation }: IntroCardContentsProps) => {
                   }}
                   position='absolute'
                   sx={{ top: -15, left: 157 }}>
-                  <Typography variant='h2'
-                    sx={{
-                      textAlign: 'center',
-                      fontFamily: 'Nunito, Arial, sans-serif',
-                      fontWeight: 900,
-                      color: 'black',
-                    }}>
-                    <IconExclamationCircle color='black' size='100px' />
-                  </Typography>
+                  <IconExclamationCircle color='black' size='100px' />
                 </Box>
                 <Box
                   component={motion.div}
@@ -1286,30 +1278,14 @@ const IntroCardContents = ({ completeAnimation }: IntroCardContentsProps) => {
             initial={{ scale: 1, y: -8, x: 25, rotate: 0 }}
             animate={{ y: markSocialMedia && !socialMediaActive ? -18 : -8, x: markSocialMedia && !socialMediaActive ? 15 : 25, rotate: markSocialMedia && !socialMediaActive ? -15 : 0 }}
             sx={{ position: 'absolute' }}>
-            <Typography variant='h2'
-              sx={{
-                textAlign: 'center',
-                fontFamily: 'Nunito, Arial, sans-serif',
-                fontWeight: 900,
-                color: 'black',
-              }}>
-              <IconBrandInstagram color='black' size={60} />
-            </Typography>
+            <IconBrandInstagram color='black' stroke={3} size={60} />
           </Box>
           <Box
             component={motion.div}
             initial={{ scale: 1, y: -12, x: 33, rotate: 0 }}
             animate={{ y: markSocialMedia && !socialMediaActive ? -22 : -12, x: markSocialMedia && !socialMediaActive ? 23 : 33, rotate: markSocialMedia && !socialMediaActive ? -15 : 0 }}
             sx={{ position: 'absolute' }}>
-            <Typography variant='h2'
-              sx={{
-                textAlign: 'center',
-                fontFamily: 'Nunito, Arial, sans-serif',
-                fontWeight: 900,
-                color: 'white',
-              }}>
-              <IconBrandInstagram color='white' size={60} />
-            </Typography>
+            <IconBrandInstagram color='white' stroke={3} size={60} />
           </Box>
           <Button
             component={motion.div}
