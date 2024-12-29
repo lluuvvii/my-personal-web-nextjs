@@ -1275,17 +1275,17 @@ const IntroCardContents = ({ completeAnimation }: IntroCardContentsProps) => {
         >
           <Box
             component={motion.div}
-            initial={{ scale: 1, y: -8, x: 25, rotate: 0 }}
-            animate={{ y: markSocialMedia && !socialMediaActive ? -18 : -8, x: markSocialMedia && !socialMediaActive ? 15 : 25, rotate: markSocialMedia && !socialMediaActive ? -15 : 0 }}
+            initial={{ scale: 1, y: -8, x: 20, rotate: 0 }}
+            animate={{ y: markSocialMedia && !socialMediaActive ? -18 : -8, x: markSocialMedia && !socialMediaActive ? 10 : 20, rotate: markSocialMedia && !socialMediaActive ? -15 : 0 }}
             sx={{ position: 'absolute' }}>
-            <IconBrandInstagram color='black' stroke={3} size={60} />
+            <IconBrandInstagram color='black' stroke={2.5} size={70} />
           </Box>
           <Box
             component={motion.div}
-            initial={{ scale: 1, y: -12, x: 33, rotate: 0 }}
-            animate={{ y: markSocialMedia && !socialMediaActive ? -22 : -12, x: markSocialMedia && !socialMediaActive ? 23 : 33, rotate: markSocialMedia && !socialMediaActive ? -15 : 0 }}
+            initial={{ scale: 1, y: -14, x: 28, rotate: 0 }}
+            animate={{ y: markSocialMedia && !socialMediaActive ? -24 : -14, x: markSocialMedia && !socialMediaActive ? 18 : 28, rotate: markSocialMedia && !socialMediaActive ? -15 : 0 }}
             sx={{ position: 'absolute' }}>
-            <IconBrandInstagram color='white' stroke={3} size={60} />
+            <IconBrandInstagram color='white' stroke={2.5} size={70} />
           </Box>
           <Button
             component={motion.div}
