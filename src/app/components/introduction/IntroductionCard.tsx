@@ -16,8 +16,8 @@ const IntroductionCard = () => {
     <Box
       position='relative'
       component={motion.div}
-      initial={{ x: -200, opacity: 0 }}
-      animate={{ x: 0, opacity: 1 }}
+      initial={{ y: 1000, rotate: -15 }}
+      animate={{ y: 0, rotate: 0 }}
       onHoverStart={() => setOnHover(true)}
       onHoverEnd={() => setOnHover(false)}
       onTouchStart={() => setOnTouch(true)}
@@ -25,9 +25,9 @@ const IntroductionCard = () => {
       onAnimationComplete={() => setCompleteAnimation(true)}
       transition={{
         type: 'spring',
-        stiffness: 500,
-        damping: 60,
-        delay: 0.5
+        stiffness: 350,
+        damping: 30,
+        delay: 0.5,
       }}>
       {/* top left particles */}
       {/* star long shadow */}
@@ -538,7 +538,7 @@ const IntroductionCard = () => {
                 type: 'spring',
                 stiffness: 500,
                 damping: 20,
-                delay: 0.7 + index * 0.1,
+                delay: 0.7 + index * 0.05,
               }}
             >
               {letter}
@@ -751,7 +751,7 @@ const IntroductionCard = () => {
                 type: 'spring',
                 stiffness: 500,
                 damping: 20,
-                delay: 0.8 + index * 0.1,
+                delay: 0.8 + index * 0.05,
               }}
             >
               {letter}
@@ -787,7 +787,7 @@ const IntroductionCard = () => {
                 type: 'spring',
                 stiffness: 500,
                 damping: 20,
-                delay: 0.9 + index * 0.1,
+                delay: 0.9 + index * 0.05,
               }}
             >
               {letter}
@@ -823,7 +823,7 @@ const IntroductionCard = () => {
                 type: 'spring',
                 stiffness: 500,
                 damping: 20,
-                delay: 1 + index * 0.1
+                delay: 1 + index * 0.05
               }}
             >
               {letter}
