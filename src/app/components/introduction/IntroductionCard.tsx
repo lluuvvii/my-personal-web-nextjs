@@ -10,7 +10,7 @@ const IntroductionCard = () => {
   const [onTouch, setOnTouch] = useState(false)
   const [completeAnimation, setCompleteAnimation] = useState(false)
 
-  const letters = Array.from('Introduction');
+  const letters = Array.from('Introduction')
 
   return (
     <Box
