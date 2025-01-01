@@ -808,7 +808,7 @@ const IntroductionCard = () => {
             stiffness: 500,
             damping: 50,
           }}
-          variant="h4"
+          variant='h4'
           sx={{
             position: 'absolute',
             top: '-20px',
