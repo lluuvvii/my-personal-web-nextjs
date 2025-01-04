@@ -1,10 +1,10 @@
-"use client"
+'use client'
 
 import "./globals.css"
-import React, { Suspense } from 'react';
-import { ThemeProvider, createTheme } from '@mui/material/styles';
-import { red, blue, yellow } from '@mui/material/colors';
-import { CssBaseline } from "@mui/material";
+import React, { Suspense } from 'react'
+import { ThemeProvider, createTheme } from '@mui/material/styles'
+import { red, blue, yellow } from '@mui/material/colors'
+import { CssBaseline } from "@mui/material"
 
 const theme = createTheme({
   typography: {
@@ -28,18 +28,18 @@ const theme = createTheme({
       dark: red[700],
     },
   },
-});
+})
 
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode; }>) {
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
       <head>
         <title>Luvi Portfolio</title>
         <link
-          href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..10001,200..1000&display=swap"
           rel="stylesheet"
         />
-        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Oswald:wght@200..700&display=swap" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:ital,wght@0,200..10001,200..1000&family=Oswald:wght@200..700&display=swap" rel="stylesheet"/>
       </head>
       <body>
         <Suspense>
@@ -50,5 +50,5 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         </Suspense>
       </body>
     </html>
-  );
+  )
 }
