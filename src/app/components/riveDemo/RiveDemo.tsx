@@ -15,6 +15,7 @@ const RiveDemo = () => {
       alignment: Alignment.Center,
     }),
     autoplay: true,
+    isTouchScrollEnabled: true
   })
 
   const { RiveComponent: IsoToy } = useRive({
@@ -25,6 +26,7 @@ const RiveDemo = () => {
       alignment: Alignment.Center,
     }),
     autoplay: true,
+    isTouchScrollEnabled: true
   })
 
   return (
