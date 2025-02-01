@@ -1,5 +1,6 @@
 'use client'
 
+import { Box } from '@mui/material'
 import { useRive, Layout, Fit, Alignment } from '@rive-app/react-canvas'
 
 const RiveDemo = () => {
@@ -27,14 +28,14 @@ const RiveDemo = () => {
   })
 
   return (
-    <div>
-      <div style={{ width: '100%', height: '800px' }}>
+    <Box>
+      <Box sx={{ p: '10px', width: '100%', height: { xs: '200px', sm: '420px', md: '640px', lg: '860px', xl: '1080px' } }}>
         <DumbWays />
-      </div>
-      <div style={{ width: '100%', height: '800px' }}>
+      </Box>
+      <Box sx={{ p: '10px', width: '100%', height: { xs: '200px', sm: '420px', md: '640px', lg: '860px', xl: '1080px' } }}>
         <IsoToy />
-      </div>
-    </div>
+      </Box>
+    </Box>
   )
 }
 

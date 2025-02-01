@@ -25,7 +25,7 @@ const BackgroundContainer = () => {
         <Grid item xs={12}>
           <RiveDemo />
         </Grid>
-        <Grid item>
+        <Grid item xs={12}>
           <GithubStats />
         </Grid>
       </Grid>
