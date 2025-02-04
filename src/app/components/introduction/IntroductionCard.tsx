@@ -16,7 +16,7 @@ const IntroductionCard = () => {
     <Box
       position='relative'
       component={motion.div}
-      initial={{ scaleY: 0.1, scaleX: 0 }}
+      initial={{ scaleY: 0.02, scaleX: 0 }}
       animate={{ scaleY: 1, scaleX: 1 }}
       onHoverStart={() => setOnHover(true)}
       onHoverEnd={() => setOnHover(false)}
@@ -544,7 +544,7 @@ const IntroductionCard = () => {
                 type: 'spring',
                 stiffness: 500,
                 damping: 20,
-                delay: 0.7 + index * 0.05,
+                delay: 0.1 + index * 0.05,
               }}
             >
               {letter}
@@ -757,7 +757,7 @@ const IntroductionCard = () => {
                 type: 'spring',
                 stiffness: 500,
                 damping: 20,
-                delay: 0.8 + index * 0.05,
+                delay: 0.2 + index * 0.05,
               }}
             >
               {letter}
@@ -793,7 +793,7 @@ const IntroductionCard = () => {
                 type: 'spring',
                 stiffness: 500,
                 damping: 20,
-                delay: 0.9 + index * 0.05,
+                delay: 0.3 + index * 0.05,
               }}
             >
               {letter}
@@ -829,7 +829,7 @@ const IntroductionCard = () => {
                 type: 'spring',
                 stiffness: 500,
                 damping: 20,
-                delay: 1 + index * 0.05
+                delay: 0.4 + index * 0.05
               }}
             >
               {letter}

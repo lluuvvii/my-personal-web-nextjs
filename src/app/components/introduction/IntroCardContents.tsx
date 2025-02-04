@@ -43,7 +43,7 @@ const IntroCardContents = ({ completeAnimation }: IntroCardContentsProps) => {
           component={motion.div}
           animate={{ x: completeAnimation ? 0 : -300, opacity: askActive ? 0 : 1 }}
           transition={{
-            x: { type: 'spring', stiffness: 500, damping: 35, delay: 0.6 }
+            x: { type: 'spring', stiffness: 500, damping: 35, delay: 0.3 }
           }}>
           {!questionActive && dialogVal === 0 ?
             <Box
@@ -394,7 +394,7 @@ const IntroCardContents = ({ completeAnimation }: IntroCardContentsProps) => {
           animate={{ scale: 1, x: completeAnimation ? 0 : -300, width: askActive ? '0px' : '100%' }}
           sx={{ overflow: 'hidden' }}
           transition={{
-            x: { type: 'spring', stiffness: 500, damping: 35, delay: 0.4 },
+            x: { type: 'spring', stiffness: 500, damping: 35, delay: 0.2 },
             width: { type: 'spring', stiffness: 500, damping: 35, delay: 0.2 }
           }}>
           {!questionActive ?
@@ -695,7 +695,7 @@ const IntroCardContents = ({ completeAnimation }: IntroCardContentsProps) => {
           initial={{ x: -300 }}
           animate={{ x: completeAnimation ? 0 : -300 }}
           transition={{
-            x: { type: 'spring', stiffness: 500, damping: 35, delay: 0.2 }
+            x: { type: 'spring', stiffness: 500, damping: 35, delay: 0.1 }
           }}
           sx={{
             width: '100%',
