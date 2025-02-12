@@ -1,5 +1,6 @@
 import { Box, Container, Grid } from '@mui/material'
 import IntroductionCard from '../components/introduction/IntroductionCard'
+import SlantedMenu from '../components/selectMenu/Menus'
 // import TechSkillsCard from '../components/techStack/TechSkillsCard'
 
 const Home = () => {
@@ -17,6 +18,10 @@ const Home = () => {
           backgroundColor: 'rgba(200, 0, 0, 1)'
         }} />
         <Grid container spacing={2} rowSpacing={3} justifyContent='center'>
+          {/* <div className="rotate-[-10deg]">
+            <SlantedMenu />
+          </div> */}
+
           <Grid item>
             <IntroductionCard />
           </Grid>
