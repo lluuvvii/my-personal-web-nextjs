@@ -15,10 +15,10 @@ const Home = () => {
           top: 0,
           left: 0,
           // background: 'linear-gradient(-15deg, black 6%, #d10000 6%, #d10000 8%, black 8%, black 17%, #d10000 17%, #d10000 42%, white 42%, white 50%, #d10000 50%, #d10000 85%, black 85%, black 87%, #d10000 87%, #d10000 90%, black 90%)',
-          backgroundColor: 'rgba(200, 0, 0, 1)'
+          backgroundColor: 'rgba(230, 230, 230, 1)'
         }} />
         <Grid container spacing={2} rowSpacing={3} justifyContent='center'>
-          {/* <div className="rotate-[-10deg]">
+          {/* <div>
             <SlantedMenu />
           </div> */}
 
