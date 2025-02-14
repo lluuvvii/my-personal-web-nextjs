@@ -1,5 +1,6 @@
 import ZigzagContainer from '@/app/components/materials/ZigzagContainer'
 import RiveDemo from '@/app/components/riveDemo/RiveDemo'
+import SelectMenu from '@/app/components/selectMenu/Menus'
 import GithubStats from '@/app/components/stats/GithubStats'
 import { Box, Grid, Stack, Typography } from '@mui/material'
 import Image from 'next/image'
@@ -93,6 +94,7 @@ const BackgroundContainer = () => {
           </Grid>
         </ZigzagContainer>
       </Box>
+      <SelectMenu />
     </>
   )
 }

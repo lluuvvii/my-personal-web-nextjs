@@ -1,6 +1,5 @@
 import { Box, Container, Grid } from '@mui/material'
 import IntroductionCard from '../components/introduction/IntroductionCard'
-import SlantedMenu from '../components/selectMenu/Menus'
 // import TechSkillsCard from '../components/techStack/TechSkillsCard'
 
 const Home = () => {
@@ -8,7 +7,6 @@ const Home = () => {
     <>
       <Container sx={{ overflow: 'hidden' }}>
         <Box p={10}>
-          {/* background */}
           <Box sx={{
             position: 'fixed',
             width: '100%',
@@ -19,19 +17,15 @@ const Home = () => {
             backgroundColor: 'rgba(230, 0, 0, 1)'
           }} />
           <Grid container spacing={2} rowSpacing={3} justifyContent='center'>
-
             <Grid item>
-            <IntroductionCard />
-          </Grid>
+              <IntroductionCard />
+            </Grid>
             {/* <Grid item>
             <TechSkillsCard />
           </Grid> */}
           </Grid>
         </Box>
       </Container>
-        {/* <div>
-          <SlantedMenu />
-        </div> */}
     </>
   )
 }
