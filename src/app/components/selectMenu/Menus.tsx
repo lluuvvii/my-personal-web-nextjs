@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
-import { Box, List, ListItem, ListItemText } from '@mui/material';
+import { Box, List, ListItem, ListItemText, Typography } from '@mui/material';
 import { useRouter } from 'next/navigation';
 
 const menuItems = ['INTRODUCTION', 'PROJECTS', 'GALLERIES', 'JOURNEY', 'CONTACT ME'];
@@ -27,45 +27,58 @@ export default function SelectMenu() {
   };
 
   return (
-    <div>
-      <List
-        ref={menuRef}
-        onKeyDown={handleKeyDown}
-        tabIndex={0}
-        className="text-center space-y-4 outline-none font-sans"
-      >
-        {menuItems.map((item, index) => (
-          <motion.div
-            key={item}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.2 }}
-          >
-            <ListItem
-              onClick={() => router.push('/test')}
-              onMouseEnter={() => setSelectedIndex(index)}
-              className={`relative justify-center cursor-pointer ${selectedIndex === index ? 'text-white' : ''}`}
+    <div style={{ overflow: 'hidden', perspective: '1000px' }}>
+      <div style={{ position: 'relative', transform: 'rotateY(-30deg)' }}>
+        <List
+          ref={menuRef}
+          onKeyDown={handleKeyDown}
+          tabIndex={0}
+          className="text-center space-y-4 outline-none font-sans"
+        >
+          {menuItems.map((item, index) => (
+            <motion.div
+              key={item}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.2 }}
             >
-              <AnimatePresence mode="wait">
-                {selectedIndex === index && (
-                  <motion.div
-                    initial={{ width: '0%' }}
-                    animate={{ width: '100%' }}
-                    exit={{ width: '0%' }}
-                    className="absolute inset-0 w-screen bg-red-500"
-                    transition={{ duration: 0.1, ease: 'easeInOut' }}
-                  />
-                )}
-              </AnimatePresence>
-              <ListItemText
-                primary={
-                  <h1 className="relative z-10 text-xl font-bold font-sans">{item}</h1>
-                }
-              />
-            </ListItem>
-          </motion.div>
-        ))}
-      </List>
+              <ListItem
+                onClick={() => router.push('/test')}
+                onMouseEnter={() => setSelectedIndex(index)}
+                className={`relative justify-center cursor-pointer ${selectedIndex === index ? 'text-white' : ''}`}
+              >
+                <AnimatePresence mode="wait">
+                  {selectedIndex === index && (
+                    <motion.div
+                      initial={{ width: '0%', rotate: `${selectedIndex * 3}deg`, originX: 0.4 }}
+                      animate={{ width: '120%' }}
+                      exit={{ width: '0%' }}
+                      className="absolute inset-0 w-screen bg-red-500"
+                      transition={{ duration: 0.1, ease: 'easeInOut' }}
+                    />
+                  )}
+                </AnimatePresence>
+                <ListItemText
+                  primary={
+                    <motion.div
+                      initial={{ rotate: `${index * 3}deg` }}
+                    >
+                      <Typography variant="h4"
+                        sx={{
+                          fontSize: { xs: "1.5rem", sm: "2rem", md: "2.5rem", lg: "3rem" },
+                          fontFamily: "Arial, Helvetica, sans-serif",
+                          fontWeight: "bold",
+                          textAlign: "center",
+                          position: "relative"
+                        }}>{item}</Typography>
+                    </motion.div>
+                  }
+                />
+              </ListItem>
+            </motion.div>
+          ))}
+        </List>
+      </div>
       <>{selectedIndex}</>
       {/* Flip Card */}
       {/* FLIP CARD */}
