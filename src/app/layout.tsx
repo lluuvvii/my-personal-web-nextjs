@@ -9,7 +9,7 @@ import { CssBaseline } from "@mui/material"
 const theme = createTheme({
   typography: {
     fontFamily:
-      'Nunito, Arial, sans-serif',
+      'Times New Roman, Times, sans-serif',
   },
   palette: {
     primary: {
