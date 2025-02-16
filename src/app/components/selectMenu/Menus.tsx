@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 import { Box, Typography } from '@mui/material'
 import { useRouter } from 'next/navigation'
 
-const menuItems = ['INTRODUCTION', 'PROJECTS', 'GALLERIES', 'JOURNEY', 'CONTACT ME']
+const menuItems = ['Introduction', 'Projects', 'Galleries', 'Journey', 'Contact Me']
 
 export default function SelectMenu() {
   const router = useRouter()
@@ -35,11 +35,9 @@ export default function SelectMenu() {
       tabIndex={0}
       onKeyDown={handleKeyDown}
       sx={{ overflow: 'hidden', height: '100vh' }}>
-      <Box sx={{
-        position: 'relative', marginTop: '200px',
-      }}>
+      <Box sx={{ position: 'relative', top: '30vh' }}>
         {menuItems.map((item, index) => {
-          const angleList = (index - selectedIndex) * 8
+          const angle = (index - selectedIndex) * 8
 
           return (
             <Box
@@ -49,20 +47,20 @@ export default function SelectMenu() {
               animate={{ opacity: 1 }}
               onHoverStart={() => setSelectedIndex(index)}
               onTouchStart={() => setSelectedIndex(index)}
-              transition={{ duration: 0.1 }}
+              transition={{ type: 'spring', stiffness: 500, damping: 50 }}
               sx={{
-                transform: `rotate(${angleList}deg)`,
+                transform: `rotate(${angle}deg)`,
                 cursor: 'pointer',
                 position: 'relative',
-                transformOrigin: '0% 50%',
-                marginTop: '0% 5%',
+                transformOrigin: `0% 50%`,
+                marginTop: { xs: '-0.5rem', sm: '-0.7rem', md: '-0.9rem', lg: '-1.1rem' },
               }}
             >
               <Box
                 component={motion.div}
-                initial={{ width: '0%' }}
-                animate={selectedIndex === index ? { width: '100%' } : { width: '0%' }}
-                transition={{ duration: 0.2, ease: 'easeInOut' }}
+                initial={{ width: '0%', x: -10 }}
+                animate={selectedIndex === index ? { width: '110%' } : { width: '0%' }}
+                transition={{ duration: 0.1, ease: 'easeInOut' }}
                 sx={{
                   position: 'absolute',
                   inset: 0,
@@ -75,10 +73,12 @@ export default function SelectMenu() {
                 sx={{
                   position: 'relative',
                   fontSize: { xs: '1.5rem', sm: '2rem', md: '2.5rem', lg: '3rem' },
-                  fontFamily: 'Oswald, serif',
+                  // fontFamily: 'Oswald, serif',
+                  transform: 'scale(2, 1.5)',
+                  fontVariant: 'small-caps',
                   fontWeight: 'bold',
                   textAlign: 'start',
-                  marginLeft: '10%',
+                  marginLeft: '35%',
                   color: selectedIndex === index ? 'white' : 'black',
                   transition: 'color 0.1s ease-in-out',
                 }}
