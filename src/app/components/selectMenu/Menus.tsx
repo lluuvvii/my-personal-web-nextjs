@@ -54,26 +54,26 @@ export default function SelectMenu() {
                 position: 'relative',
                 transformOrigin: `0% 50%`,
                 marginTop: { xs: '-0.5rem', sm: '-0.7rem', md: '-0.9rem', lg: '-1.1rem' },
-              }}
-            >
-              <Box
-                component={motion.div}
-                initial={{ width: '0%', x: -10 }}
-                animate={selectedIndex === index ? { width: '110%' } : { width: '0%' }}
-                transition={{ duration: 0.1, ease: 'easeInOut' }}
-                sx={{
-                  position: 'absolute',
-                  inset: 0,
-                  height: '100%',
-                  backgroundColor: '#ef4444',
-                }}
-              />
+              }}>
+              {selectedIndex === index ?
+                <Box
+                  component={motion.div}
+                  initial={{ width: '0%', x: '-5%' }}
+                  animate={{ width: '110%' }}
+                  transition={{ duration: 0.2, ease: 'easeInOut' }}
+                  sx={{
+                    position: 'absolute',
+                    inset: 0,
+                    height: '100%',
+                    backgroundColor: '#ef4444',
+                  }}
+                />
+                : null}
               <Typography
                 variant='h4'
                 sx={{
                   position: 'relative',
                   fontSize: { xs: '1.5rem', sm: '2rem', md: '2.5rem', lg: '3rem' },
-                  // fontFamily: 'Oswald, serif',
                   transform: 'scale(2, 1.5)',
                   fontVariant: 'small-caps',
                   fontWeight: 'bold',
