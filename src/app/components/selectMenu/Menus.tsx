@@ -1,79 +1,94 @@
-'use client';
+'use client'
 
-import { useState, useEffect, useRef } from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
-import { Box, Typography } from '@mui/material';
-import { useRouter } from 'next/navigation';
+import { useState, useEffect, useRef } from 'react'
+import { motion } from 'framer-motion'
+import { Box, Typography } from '@mui/material'
+import { useRouter } from 'next/navigation'
 
-const menuItems = ['INTRODUCTION', 'PROJECTS', 'GALLERIES', 'JOURNEY', 'CONTACT ME'];
+const menuItems = ['INTRODUCTION', 'PROJECTS', 'GALLERIES', 'JOURNEY', 'CONTACT ME']
 
 export default function SelectMenu() {
   const router = useRouter()
-  const [selectedIndex, setSelectedIndex] = useState(0);
-  const menuRef = useRef<HTMLUListElement>(null);
+  const [selectedIndex, setSelectedIndex] = useState(0)
+  const menuRef = useRef<HTMLUListElement>(null)
 
   useEffect(() => {
-    menuRef.current?.focus();
-  }, []);
+    menuRef.current?.focus()
+  }, [])
 
-  const handleKeyDown = (event: React.KeyboardEvent<HTMLUListElement>) => {
+  const handleKeyDown = (event: any) => {
     if (event.key === 'ArrowDown') {
-      setSelectedIndex((prev) => (prev + 1) % menuItems.length);
-    } else if (event.key === 'ArrowUp') {
-      setSelectedIndex((prev) => (prev - 1 + menuItems.length) % menuItems.length);
-    } else if (event.key === 'Enter') {
-      alert(`Selected: ${menuItems[selectedIndex]}`);
+      setSelectedIndex((prev) => (prev + 1) % menuItems.length)
     }
-  };
+    if (event.key === 'ArrowUp') {
+      setSelectedIndex((prev) => (prev - 1 + menuItems.length) % menuItems.length)
+    }
+    if (event.key === 'Enter') {
+      alert(`Selected: ${menuItems[selectedIndex]}`)
+    }
+  }
 
   return (
-    <div style={{ overflow: 'hidden', perspective: '500px', height: '100vh' }}>
-      <Box sx={{ position: 'relative', transform: 'rotateY(-15deg)' }}>
-        {menuItems.map((item, index) => (
-          <motion.div
-            key={item}
-            initial={{ opacity: 0, rotate: '5deg' }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0 }}
-          >
-            <motion.div initial={{ rotate: `${index * 2}deg` }}>
-              <AnimatePresence mode="wait">
-                {selectedIndex === index && (
-                  <Box
-                    component={motion.div}
-                    initial={{ width: '0%' }}
-                    animate={{ width: '120%' }}
-                    exit={{ width: '0%' }}
-                    sx={{
-                      position: "absolute",
-                      inset: 0,
-                      width: "100vw",
-                      height: { xs: "2rem", sm: "2.5rem", md: "3rem", lg: "3.5rem" },
-                      backgroundColor: "#ef4444"
-                    }}
-                    transition={{ duration: 0.1, ease: 'easeInOut' }}
-                  />
-                )}
-              </AnimatePresence>
-              <Typography
+    <Box
+      component={motion.div}
+      ref={menuRef}
+      tabIndex={0}
+      onKeyDown={handleKeyDown}
+      sx={{ overflow: 'hidden', height: '100vh' }}>
+      <Box sx={{
+        position: 'relative', marginTop: '200px',
+      }}>
+        {menuItems.map((item, index) => {
+          const angleList = (index - selectedIndex) * 8
+
+          return (
+            <Box
+              component={motion.div}
+              key={item}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              onHoverStart={() => setSelectedIndex(index)}
+              onTouchStart={() => setSelectedIndex(index)}
+              transition={{ duration: 0.1 }}
+              sx={{
+                transform: `rotate(${angleList}deg)`,
+                cursor: 'pointer',
+                position: 'relative',
+                transformOrigin: '0% 50%',
+                marginTop: '0% 5%',
+              }}
+            >
+              <Box
                 component={motion.div}
-                onHoverStart={() => setSelectedIndex(index)}
-                onTouchStart={() => setSelectedIndex(index)}
-                variant="h4"
+                initial={{ width: '0%' }}
+                animate={selectedIndex === index ? { width: '100%' } : { width: '0%' }}
+                transition={{ duration: 0.2, ease: 'easeInOut' }}
                 sx={{
-                  fontSize: { xs: "1.5rem", sm: "2rem", md: "2.5rem", lg: "3rem" },
-                  fontFamily: "Oswald, serif",
-                  marginLeft: "20%",
-                  fontWeight: "bold",
-                  transform: 'scale(1.5, 1)', // font stretch
-                  textAlign: "start",
-                  position: "relative",
-                  color: `${selectedIndex === index ? 'white' : 'black'}`
-                }}>{item}</Typography>
-            </motion.div>
-          </motion.div>
-        ))}
+                  position: 'absolute',
+                  inset: 0,
+                  height: '100%',
+                  backgroundColor: '#ef4444',
+                }}
+              />
+              <Typography
+                variant='h4'
+                sx={{
+                  position: 'relative',
+                  fontSize: { xs: '1.5rem', sm: '2rem', md: '2.5rem', lg: '3rem' },
+                  fontFamily: 'Oswald, serif',
+                  fontWeight: 'bold',
+                  textAlign: 'start',
+                  marginLeft: '10%',
+                  color: selectedIndex === index ? 'white' : 'black',
+                  transition: 'color 0.1s ease-in-out',
+                }}
+              >
+                {item}
+              </Typography>
+            </Box>
+          )
+        })}
       </Box>
-    </div>
-  );
+    </Box>
+  )
 }
