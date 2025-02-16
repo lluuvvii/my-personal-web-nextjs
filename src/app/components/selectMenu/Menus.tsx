@@ -98,7 +98,7 @@ export default function SelectMenu() {
                 sx={{
                   position: 'relative',
                   fontSize: { xs: '1.5rem', sm: '2rem', md: '2.5rem', lg: '3rem' },
-                  transform: 'scale(2, 1.5)',
+                  transform: selectedIndex === index ? 'scale(2, 1.5)' : 'scale(1.7, 1.3)',
                   fontVariant: 'small-caps',
                   fontWeight: 'bold',
                   textAlign: 'start',
