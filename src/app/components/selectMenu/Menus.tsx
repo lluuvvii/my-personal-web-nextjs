@@ -87,9 +87,6 @@ export default function SelectMenu() {
           height: '100vh',
           color: 'transparent',
           borderRadius: '50%',
-          // borderLeft: '0.25rem solid black',
-          // borderTop: '0.25rem solid black',
-          // borderBottom: '0.25rem solid black'
         }}
       />
       <Box sx={{ position: 'relative', top: '37.5vh' }}>
