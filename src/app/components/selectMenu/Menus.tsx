@@ -28,8 +28,6 @@ export default function SelectMenu() {
     }
   }
 
-  const rangeMenu = (menuItems.length) - 3
-
   return (
     <Box
       component={motion.div}
@@ -40,7 +38,8 @@ export default function SelectMenu() {
       <Box sx={{ position: 'relative', top: '30vh', }}>
         {menuItems.map((item, index) => {
           const angle = (index - selectedIndex) * 6
-          const leftMarginText = Math.abs(selectedIndex - index)
+          const differenceVal = Math.abs(selectedIndex - index)
+          const leftTextPosition = selectedIndex === index ? null : `-${index > 2 || index < 2 ? differenceVal * 0.5 : 0.3}rem`
 
           return (
             <Box
@@ -99,7 +98,7 @@ export default function SelectMenu() {
               <Typography
                 variant='h4'
                 sx={{
-                  left: selectedIndex === index ? null : `-${index > 2 || index < 2 ? leftMarginText * 0.5 : 0.3}rem`,
+                  left: leftTextPosition,
                   position: 'relative',
                   fontSize: { xs: '1.5rem', sm: '2rem', md: '2.5rem', lg: '3rem' },
                   transform: selectedIndex === index ? 'scale(2, 1.5)' : 'scale(1.7, 1.3)',
