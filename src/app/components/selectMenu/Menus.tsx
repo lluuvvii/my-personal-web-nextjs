@@ -35,6 +35,16 @@ export default function SelectMenu() {
       tabIndex={0}
       onKeyDown={handleKeyDown}
       sx={{ overflow: 'hidden', height: '100vh' }}>
+      <Box
+        sx={{
+          position: 'fixed',
+          backgroundImage: 'url(/assets/img/background_texture.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          width: '100vw',
+          height: '100vh',
+        }} />
       <Box sx={{ position: 'relative', top: '30vh', }}>
         {menuItems.map((item, index) => {
           const angle = (index - selectedIndex) * 6
