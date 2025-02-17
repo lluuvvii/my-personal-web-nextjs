@@ -39,7 +39,7 @@ export default function SelectMenu() {
         {menuItems.map((item, index) => {
           const angle = (index - selectedIndex) * 6
           const differenceVal = Math.abs(selectedIndex - index)
-          const leftTextPosition = selectedIndex === index ? null : `-${index > 2 || index < 2 ? differenceVal * 0.5 : 0.3}rem`
+          const leftTextPosition = selectedIndex === index ? null : `-${differenceVal * 1.1 - 3}rem`
 
           return (
             <Box
