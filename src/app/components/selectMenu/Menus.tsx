@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
-import { Box, Typography } from '@mui/material'
+import { Box, easing, Typography } from '@mui/material'
 import { useRouter } from 'next/navigation'
 
 const menuItems = ['Introduction', 'Projects', 'Galleries', 'Journey', 'Contact Me']
@@ -43,9 +43,56 @@ export default function SelectMenu() {
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
           width: '100vw',
-          height: '100vh',
+          height: '100vh'
         }} />
-      <Box sx={{ position: 'relative', top: '30vh', }}>
+      <Box
+        component={motion.div}
+        initial={{
+          scale: '0.1%',
+          borderLeft: '5rem solid black',
+          borderTop: '5rem solid black',
+          borderBottom: '5rem solid black'
+        }}
+        animate={{
+          scale: '100%',
+          borderLeft: '0.25rem solid black',
+          borderTop: '0.25rem solid black',
+          borderBottom: '0.25rem solid black'
+        }}
+        transition={{
+          scale: {
+            duration: 0.2,
+            easing: 'easeInOut'
+          },
+          borderTop: {
+            duration: 0.2,
+            easing: 'easeInOut',
+            delay: 0.2
+          },
+          borderLeft: {
+            duration: 0.2,
+            easing: 'easeInOut',
+            delay: 0.2
+          },
+          borderBottom: {
+            duration: 0.2,
+            easing: 'easeInOut',
+            delay: 0.2
+          }
+        }}
+        sx={{
+          position: 'fixed',
+          left: '-50vh',
+          width: '100vh',
+          height: '100vh',
+          color: 'transparent',
+          borderRadius: '50%',
+          // borderLeft: '0.25rem solid black',
+          // borderTop: '0.25rem solid black',
+          // borderBottom: '0.25rem solid black'
+        }}
+      />
+      <Box sx={{ position: 'relative', top: '37.5vh' }}>
         {menuItems.map((item, index) => {
           const angle = (index - selectedIndex) * 6
           const differenceVal = Math.abs(selectedIndex - index)
