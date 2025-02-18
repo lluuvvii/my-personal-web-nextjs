@@ -83,11 +83,11 @@ export default function SelectMenu() {
       />
       <Box
         component={motion.div}
-        initial={{ opacity: 0, originX: '0%', rotate: '90deg' }}
+        initial={{ opacity: 0, originX: '0%', rotate: '135deg' }}
         animate={{ opacity: 1, rotate: '0deg' }}
         onAnimationComplete={() => setCompleteAnimation1(true)}
         transition={{
-          duration: 0.2,
+          duration: 0.3,
           ease: 'easeInOut'
         }}
         sx={{ position: 'relative', top: '37.5vh' }}>
@@ -115,7 +115,7 @@ export default function SelectMenu() {
                     component={motion.div}
                     initial={{ x: '0%', scaleX: 2, scaleY: 1.5 }}
                     animate={{ x: '100%' }}
-                    transition={{ duration: 0.2, ease: [0, 0.71, 0.2, 1.01] }}
+                    transition={{ duration: 0.2, ease: 'easeInOut' }}
                     variant='h4'
                     sx={{
                       position: 'absolute',
