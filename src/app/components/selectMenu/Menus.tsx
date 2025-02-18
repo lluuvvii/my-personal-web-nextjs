@@ -87,6 +87,7 @@ export default function SelectMenu() {
         animate={{ opacity: 1, rotate: '0deg' }}
         onAnimationComplete={() => setCompleteAnimation1(true)}
         transition={{
+          delay: 0.2,
           duration: 0.3,
           ease: 'easeInOut'
         }}
