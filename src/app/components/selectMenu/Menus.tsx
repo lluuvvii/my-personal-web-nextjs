@@ -2,13 +2,14 @@
 
 import { useState, useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
-import { Box, easing, Typography } from '@mui/material'
+import { Box, Typography } from '@mui/material'
 import { useRouter } from 'next/navigation'
 
 const menuItems = ['Introduction', 'Projects', 'Galleries', 'Journey', 'Contact Me']
 
 export default function SelectMenu() {
   const router = useRouter()
+  const [completeAnimation1, setCompleteAnimation1] = useState(false)
   const [selectedIndex, setSelectedIndex] = useState(0)
   const menuRef = useRef<HTMLUListElement>(null)
 
@@ -49,36 +50,27 @@ export default function SelectMenu() {
         component={motion.div}
         initial={{
           scale: '0.1%',
+          borderRight: '5rem solid black',
           borderLeft: '5rem solid black',
           borderTop: '5rem solid black',
           borderBottom: '5rem solid black'
         }}
         animate={{
           scale: '100%',
+          borderRight: '0rem solid black',
           borderLeft: '0.25rem solid black',
           borderTop: '0.25rem solid black',
           borderBottom: '0.25rem solid black'
         }}
         transition={{
+          duration: 0.2,
+          easing: 'easeInOut',
+          delay: 0.2,
           scale: {
             duration: 0.2,
-            easing: 'easeInOut'
-          },
-          borderTop: {
-            duration: 0.2,
             easing: 'easeInOut',
-            delay: 0.2
+            delay: 0
           },
-          borderLeft: {
-            duration: 0.2,
-            easing: 'easeInOut',
-            delay: 0.2
-          },
-          borderBottom: {
-            duration: 0.2,
-            easing: 'easeInOut',
-            delay: 0.2
-          }
         }}
         sx={{
           position: 'fixed',
@@ -89,21 +81,27 @@ export default function SelectMenu() {
           borderRadius: '50%',
         }}
       />
-      <Box sx={{ position: 'relative', top: '37.5vh' }}>
+      <Box
+        component={motion.div}
+        initial={{ opacity: 0, originX: '0%', rotate: '90deg' }}
+        animate={{ opacity: 1, rotate: '0deg' }}
+        onAnimationComplete={() => setCompleteAnimation1(true)}
+        transition={{
+          duration: 0.2,
+          ease: 'easeInOut'
+        }}
+        sx={{ position: 'relative', top: '37.5vh' }}>
         {menuItems.map((item, index) => {
           const angle = (index - selectedIndex) * 6
           const differenceVal = Math.abs(selectedIndex - index)
-          const leftTextPosition = selectedIndex === index ? null : `-${differenceVal * 1.1 - 3}rem`
+          const leftTextPosition = selectedIndex === index && completeAnimation1 ? null : `-${differenceVal * 1.1 - 3}rem`
 
           return (
             <Box
               component={motion.div}
               key={item}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
               onHoverStart={() => setSelectedIndex(index)}
               onTouchStart={() => setSelectedIndex(index)}
-              transition={{ type: 'spring', stiffness: 500, damping: 50 }}
               sx={{
                 transform: `rotate(${angle}deg)`,
                 cursor: 'pointer',
@@ -111,7 +109,7 @@ export default function SelectMenu() {
                 transformOrigin: `0% 50%`,
                 marginTop: { xs: '-0.5rem', sm: '-0.7rem', md: '-0.9rem', lg: '-1.1rem' },
               }}>
-              {selectedIndex === index ?
+              {selectedIndex === index && completeAnimation1 ?
                 <>
                   <Typography
                     component={motion.div}
@@ -155,12 +153,12 @@ export default function SelectMenu() {
                   left: leftTextPosition,
                   position: 'relative',
                   fontSize: { xs: '1.5rem', sm: '2rem', md: '2.5rem', lg: '3rem' },
-                  transform: selectedIndex === index ? 'scale(2, 1.5)' : 'scale(1.7, 1.3)',
+                  transform: selectedIndex === index && completeAnimation1 ? 'scale(2, 1.5)' : 'scale(1.7, 1.3)',
                   fontVariant: 'small-caps',
                   fontWeight: 'bold',
                   textAlign: 'start',
                   marginLeft: '35%',
-                  color: selectedIndex === index ? 'white' : 'black',
+                  color: selectedIndex === index && completeAnimation1 ? 'white' : 'black',
                   transition: 'color 0.1s ease-in-out',
                 }}
               >
