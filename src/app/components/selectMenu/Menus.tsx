@@ -83,6 +83,26 @@ export default function SelectMenu() {
       />
       <Box
         component={motion.div}
+        initial={{ width: '1rem', height: '0vh' }}
+        animate={{ width: '0rem', height: '100vh' }}
+        sx={{
+          position: 'fixed',
+          left: '60%',
+          backgroundColor: '#ef4444',
+        }}
+      />
+      <Box
+        component={motion.div}
+        initial={{ height: '1rem', width: '0vw' }}
+        animate={{ height: '0rem', width: '100vw' }}
+        sx={{
+          position: 'fixed',
+          top: '38vh',
+          backgroundColor: '#ef4444',
+        }}
+      />
+      <Box
+        component={motion.div}
         initial={{ opacity: 0, originX: '0%', rotate: '135deg' }}
         animate={{ opacity: 1, rotate: '0deg' }}
         onAnimationComplete={() => setCompleteAnimation1(true)}
