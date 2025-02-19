@@ -159,11 +159,8 @@ export default function SelectMenu() {
                     transition={{ duration: 0.2, ease: 'easeInOut' }}
                     sx={{
                       position: 'absolute',
-                      inset: 0,
                       height: '100%',
                       backgroundColor: '#ef4444',
-                      transformStyle: 'preserve-3d',
-                      transform: 'rotateY(-10deg)'
                     }}
                   />
                 </>
