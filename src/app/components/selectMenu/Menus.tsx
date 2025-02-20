@@ -83,22 +83,19 @@ export default function SelectMenu() {
       />
       <Box
         component={motion.div}
-        initial={{ width: '1rem', height: '0vh' }}
-        animate={{ width: '0rem', height: '100vh' }}
-        sx={{
-          position: 'fixed',
-          left: '60%',
-          backgroundColor: '#ef4444',
+        initial={{ opacity: 0, height: '0.5rem', width: '100vw', x: '100vw' }}
+        animate={{ opacity: 1, height: '0.5rem', x: '-100vw' }}
+        transition={{
+          duration: 0.2,
+          delay: 0.2,
+          opacity: {
+            delay: 0
+          }
         }}
-      />
-      <Box
-        component={motion.div}
-        initial={{ height: '1rem', width: '0vw' }}
-        animate={{ height: '0rem', width: '100vw' }}
         sx={{
           position: 'fixed',
           top: '38vh',
-          backgroundColor: '#ef4444',
+          backgroundColor: '#d93f3f',
         }}
       />
       <Box
