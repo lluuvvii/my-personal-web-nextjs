@@ -162,7 +162,7 @@ export default function SelectMenu() {
                     component={motion.div}
                     initial={{ width: '0%', x: '-5%' }}
                     animate={{ width: '110%' }}
-                    transition={{ duration: 0.2, ease: 'easeInOut' }}
+                    transition={{ duration: 0.2, ease: 'easeInOut', delay: 0.05 }}
                     sx={{
                       position: 'absolute',
                       height: '100%',
@@ -184,6 +184,7 @@ export default function SelectMenu() {
                   marginLeft: '35%',
                   color: selectedIndex === index && completeAnimation1 ? 'white' : 'black',
                   transition: 'color 0.1s ease-in-out, left 0.1s ease-in-out, transform 0.15s ease-in-out',
+                  transitionDelay: '0.05s, 0s, 0s'
                 }}
               >
                 {item}
