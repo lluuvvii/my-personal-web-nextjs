@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useRef, useMemo } from 'react'
 import { motion } from 'framer-motion'
 import { Box, Typography } from '@mui/material'
 import { useRouter } from 'next/navigation'
@@ -110,18 +110,27 @@ export default function SelectMenu() {
         }}
         sx={{ position: 'relative', top: '37.5vh' }}>
         {menuItems.map((item, index) => {
-          const angle = (index - selectedIndex) * 6
-          const differenceVal = Math.abs(selectedIndex - index)
-          const leftTextPosition = selectedIndex === index && completeAnimation1 ? null : `-${differenceVal * 1.1 - 3}rem`
+          const angle = useMemo(() => (index - selectedIndex) * 6, [index, selectedIndex]);
+          const differenceVal = useMemo(() => Math.abs(selectedIndex - index), [selectedIndex, index]);
+          const leftTextPosition = useMemo(() => {
+            return completeAnimation1 && selectedIndex === index
+              ? null
+              : `-${(differenceVal - 2.5) * 1.1}rem`
+          }, [completeAnimation1, selectedIndex, index, differenceVal])
 
           return (
             <Box
               component={motion.div}
               key={item}
+              initial={{ transform: `rotate(0deg)` }}
+              animate={{ transform: `rotate(${angle}deg)` }}
               onHoverStart={() => setSelectedIndex(index)}
               onTouchStart={() => setSelectedIndex(index)}
+              transition={{
+                duration: 0.15,
+                ease: 'easeInOut'
+              }}
               sx={{
-                transform: `rotate(${angle}deg)`,
                 cursor: 'pointer',
                 position: 'relative',
                 transformOrigin: `0% 50%`,
@@ -174,7 +183,7 @@ export default function SelectMenu() {
                   textAlign: 'start',
                   marginLeft: '35%',
                   color: selectedIndex === index && completeAnimation1 ? 'white' : 'black',
-                  transition: 'color 0.1s ease-in-out',
+                  transition: 'color 0.1s ease-in-out, left 0.1s ease-in-out, transform 0.15s ease-in-out',
                 }}
               >
                 {item}
