@@ -110,13 +110,9 @@ export default function SelectMenu() {
         }}
         sx={{ position: 'relative', top: '37.5vh' }}>
         {menuItems.map((item, index) => {
-          const angle = useMemo(() => (index - selectedIndex) * 6, [index, selectedIndex]);
-          const differenceVal = useMemo(() => Math.abs(selectedIndex - index), [selectedIndex, index]);
-          const leftTextPosition = useMemo(() => {
-            return completeAnimation1 && selectedIndex === index
-              ? null
-              : `-${(differenceVal - 2.5) * 1.1}rem`
-          }, [completeAnimation1, selectedIndex, index, differenceVal])
+          const angle = (index - selectedIndex) * 6
+          const differenceVal = Math.abs(selectedIndex - index)
+          const leftTextPosition = completeAnimation1 && selectedIndex === index ? null : `-${(differenceVal - 2.5) * 1.1}rem`
 
           return (
             <Box
