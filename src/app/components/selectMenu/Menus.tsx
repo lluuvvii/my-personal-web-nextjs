@@ -106,8 +106,9 @@ export default function SelectMenu() {
         onAnimationComplete={() => setCompleteAnimation1(true)}
         transition={{
           delay: 0.2,
-          duration: 0.3,
-          ease: 'easeInOut'
+          type: 'spring',
+          stiffness: 500,
+          damping: 50,
         }}
         sx={{ position: 'relative', top: '37.5vh' }}>
         {menuItems.map((item, index) => {
@@ -124,8 +125,9 @@ export default function SelectMenu() {
               onHoverStart={() => setSelectedIndex(index)}
               onTouchStart={() => setSelectedIndex(index)}
               transition={{
-                duration: 0.15,
-                ease: 'easeInOut'
+                type: 'spring',
+                stiffness: 500,
+                damping: 45
               }}
               sx={{
                 cursor: 'pointer',
