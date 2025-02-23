@@ -74,9 +74,10 @@ export default function SelectMenu() {
         }}
         sx={{
           position: 'fixed',
-          left: '-50vh',
-          width: '100vh',
-          height: '100vh',
+          marginY: { xs: '25vh', sm: '20vh', md: '15vh', lg: '10vh' },
+          left: { xs: '-25vh', sm: '-30vh', md: '-35vh', lg: '-40vh' },
+          width: { xs: '50vh', sm: '60vh', md: '70vh', lg: '80vh' },
+          height: { xs: '50vh', sm: '60vh', md: '70vh', lg: '80vh' },
           color: 'transparent',
           borderRadius: '50%',
         }}
