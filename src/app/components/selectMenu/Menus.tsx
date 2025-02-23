@@ -74,8 +74,8 @@ export default function SelectMenu() {
         }}
         sx={{
           position: 'fixed',
-          marginY: { xs: '25vh', sm: '20vh', md: '15vh', lg: '10vh' },
-          left: { xs: '-25vh', sm: '-30vh', md: '-35vh', lg: '-40vh' },
+          top: '50%',
+          translate: '-50% -50%',
           width: { xs: '50vh', sm: '60vh', md: '70vh', lg: '80vh' },
           height: { xs: '50vh', sm: '60vh', md: '70vh', lg: '80vh' },
           color: 'transparent',
@@ -110,7 +110,11 @@ export default function SelectMenu() {
           stiffness: 500,
           damping: 50,
         }}
-        sx={{ position: 'relative', top: '37.5vh' }}>
+        sx={{
+          position: 'relative',
+          top: '50%',
+          translate: '0% -50%'
+        }}>
         {menuItems.map((item, index) => {
           const angle = (index - selectedIndex) * 6
           const differenceVal = Math.abs(selectedIndex - index)
@@ -133,7 +137,7 @@ export default function SelectMenu() {
                 cursor: 'pointer',
                 position: 'relative',
                 transformOrigin: `0% 50%`,
-                marginTop: { xs: '-0.5rem', sm: '-0.7rem', md: '-0.9rem', lg: '-1.1rem' },
+                marginTop: index === 0 ? null : { xs: '-0.5rem', sm: '-0.7rem', md: '-0.9rem', lg: '-1.1rem' },
               }}>
               {selectedIndex === index && completeAnimation1 ?
                 <>
