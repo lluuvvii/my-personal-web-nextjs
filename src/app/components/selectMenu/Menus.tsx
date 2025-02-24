@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect, useRef, useMemo } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
 import { Box, Typography } from '@mui/material'
 import { useRouter } from 'next/navigation'
@@ -151,7 +151,6 @@ export default function SelectMenu() {
                       position: 'absolute',
                       height: '100%',
                       backgroundColor: '#ef4444',
-                      // boxShadow: '0px 0.1rem 0.3rem #888888',
                     }}
                   >
                     <Typography
