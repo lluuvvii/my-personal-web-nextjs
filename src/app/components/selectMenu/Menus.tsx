@@ -113,7 +113,7 @@ export default function SelectMenu() {
         sx={{
           position: 'relative',
           top: '50%',
-          translate: '0% -50%'
+          translate: '0% -50%',
         }}>
         {menuItems.map((item, index) => {
           const angle = (index - selectedIndex) * 6
@@ -138,40 +138,42 @@ export default function SelectMenu() {
                 position: 'relative',
                 transformOrigin: `0% 50%`,
                 marginTop: index === 0 ? null : { xs: '-0.5rem', sm: '-0.7rem', md: '-0.9rem', lg: '-1.1rem' },
+                perspective: '100vh'
               }}>
               {selectedIndex === index && completeAnimation1 ?
                 <>
-                  <Typography
-                    component={motion.div}
-                    initial={{ x: '0%', scaleX: 2, scaleY: 1.5 }}
-                    animate={{ x: '100%' }}
-                    transition={{ duration: 0.2, ease: 'easeInOut' }}
-                    variant='h4'
-                    sx={{
-                      position: 'absolute',
-                      bottom: '-40%',
-                      fontSize: { xs: '1.5rem', sm: '2rem', md: '2.5rem', lg: '3rem' },
-                      fontVariant: 'small-caps',
-                      fontWeight: 'bold',
-                      textAlign: 'start',
-                      color: '#ef4444',
-                      opacity: 0.5,
-                      transition: 'color 0.1s ease-in-out',
-                    }}
-                  >
-                    {item}
-                  </Typography>
                   <Box
                     component={motion.div}
-                    initial={{ width: '0%', x: '-5%' }}
-                    animate={{ width: '110%' }}
+                    initial={{ width: '0%' }}
+                    animate={{ width: '100%' }}
                     transition={{ duration: 0.2, ease: 'easeInOut', delay: 0.05 }}
                     sx={{
                       position: 'absolute',
                       height: '100%',
                       backgroundColor: '#ef4444',
+                      // boxShadow: '0px 0.1rem 0.3rem #888888',
                     }}
-                  />
+                  >
+                    <Typography
+                      component={motion.div}
+                      initial={{ x: '0%', scaleX: 2, scaleY: 1.5 }}
+                      animate={{ x: '50%' }}
+                      transition={{ duration: 0.2, ease: 'easeInOut' }}
+                      variant='h4'
+                      sx={{
+                        position: 'absolute',
+                        bottom: '-40%',
+                        fontSize: { xs: '1.5rem', sm: '2rem', md: '2.5rem', lg: '3rem' },
+                        fontVariant: 'small-caps',
+                        fontWeight: 'bold',
+                        textAlign: 'start',
+                        color: '#f06262',
+                        opacity: 0.5,
+                      }}
+                    >
+                      {item}
+                    </Typography>
+                  </Box>
                 </>
                 : null}
               <Typography
