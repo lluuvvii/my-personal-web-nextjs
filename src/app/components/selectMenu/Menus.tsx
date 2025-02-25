@@ -35,7 +35,7 @@ export default function SelectMenu() {
       ref={menuRef}
       tabIndex={0}
       onKeyDown={handleKeyDown}
-      sx={{ overflow: 'hidden', height: '100vh' }}>
+      sx={{ overflow: 'hidden', height: '100vh', width: '100vw' }}>
       <Box
         sx={{
           position: 'fixed',
@@ -63,12 +63,14 @@ export default function SelectMenu() {
           borderBottom: '0.25rem solid black'
         }}
         transition={{
-          duration: 0.2,
-          easing: 'easeInOut',
+          type: 'spring',
+          stiffness: 500,
+          damping: 70,
           delay: 0.2,
           scale: {
-            duration: 0.2,
-            easing: 'easeInOut',
+            type: 'spring',
+            stiffness: 500,
+            damping: 70,
             delay: 0
           },
         }}
