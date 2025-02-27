@@ -153,6 +153,7 @@ export default function SelectMenu() {
                       position: 'absolute',
                       height: '100%',
                       backgroundColor: '#ef4444',
+                      boxShadow: '0px 0.1rem 0.2rem #888888'
                     }}
                   >
                     <Typography
