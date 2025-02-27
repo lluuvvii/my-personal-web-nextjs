@@ -153,9 +153,20 @@ export default function SelectMenu() {
                       position: 'absolute',
                       height: '100%',
                       backgroundColor: '#ef4444',
-                      boxShadow: '0px 0.1rem 0.2rem #888888'
+                      boxShadow: '0rem 0.1rem 0.1rem #888888'
                     }}
                   >
+                    <Box
+                      sx={{
+                        position: 'absolute',
+                        backgroundImage: 'url(/assets/img/background_texture.jpg)',
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'center',
+                        backgroundRepeat: 'no-repeat',
+                        width: '100%',
+                        height: '100%',
+                        mixBlendMode: 'darken'
+                      }} />
                     <Typography
                       component={motion.div}
                       initial={{ x: '0%', scaleX: 2, scaleY: 1.5 }}
@@ -191,7 +202,7 @@ export default function SelectMenu() {
                   marginLeft: '35%',
                   color: selectedIndex === index && completeAnimation1 ? 'white' : 'black',
                   transition: 'color 0.1s ease-in-out, left 0.1s ease-in-out, transform 0.15s ease-in-out',
-                  transitionDelay: '0.05s, 0s, 0s'
+                  transitionDelay: '0.05s, 0s, 0s',
                 }}
               >
                 {item}
