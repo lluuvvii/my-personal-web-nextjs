@@ -153,7 +153,7 @@ export default function SelectMenu() {
                       position: 'absolute',
                       height: '100%',
                       backgroundColor: '#ef4444',
-                      boxShadow: '0rem 0.1rem 0.1rem #888888'
+                      boxShadow: '0rem 0.1rem 0.1rem #888888',
                     }}
                   >
                     <Box
@@ -165,6 +165,7 @@ export default function SelectMenu() {
                         backgroundRepeat: 'no-repeat',
                         width: '100%',
                         height: '100%',
+                        transform: 'scaleX(-1)',
                         mixBlendMode: 'darken'
                       }} />
                     <Typography
