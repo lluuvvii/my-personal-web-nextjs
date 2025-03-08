@@ -35,7 +35,7 @@ export default function SelectMenu() {
       ref={menuRef}
       tabIndex={0}
       onKeyDown={handleKeyDown}
-      sx={{ overflow: 'hidden', height: '100vh', width: '100vw' }}>
+      sx={{ overflow: 'hidden', height: '100dvh', width: '100vw' }}>
       <Box
         sx={{
           position: 'fixed',
@@ -44,7 +44,7 @@ export default function SelectMenu() {
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
           width: '100vw',
-          height: '100vh'
+          height: '100dvh'
         }} />
       <Box
         component={motion.div}
@@ -140,7 +140,7 @@ export default function SelectMenu() {
                 position: 'relative',
                 transformOrigin: `0% 50%`,
                 marginTop: index === 0 ? null : { xs: '-0.5rem', sm: '-0.7rem', md: '-0.9rem', lg: '-1.1rem' },
-                perspective: '100vh'
+                perspective: '100dvh'
               }}>
               {selectedIndex === index && completeAnimation1 ?
                 <>
