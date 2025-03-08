@@ -140,7 +140,6 @@ export default function SelectMenu() {
                 position: 'relative',
                 transformOrigin: `0% 50%`,
                 marginTop: index === 0 ? null : { xs: '-0.5rem', sm: '-0.7rem', md: '-0.9rem', lg: '-1.1rem' },
-                perspective: '100dvh'
               }}>
               {selectedIndex === index && completeAnimation1 ?
                 <>
@@ -189,6 +188,32 @@ export default function SelectMenu() {
                     </Typography>
                   </Box>
                 </>
+                : null}
+              {selectedIndex === index && completeAnimation1 ?
+                <Typography
+                  component={motion.div}
+                  initial={{ opacity: 0, x: '5rem', scale: '6, 3.5' }}
+                  animate={{ opacity: 1, x: '0' }}
+                  transition={{
+                    ease: 'easeInOut',
+                    duration: 0.2
+                  }}
+                  variant='h4'
+                  sx={{
+                    right: { xs: '1.7rem', sm: '2.2rem', md: '2.7rem', lg: '3.2rem' },
+                    bottom: { xs: '0.7rem', sm: '0.9rem', md: '1.3rem', lg: '1.7rem' },
+                    position: 'fixed',
+                    fontSize: { xs: '1.5rem', sm: '2rem', md: '2.5rem', lg: '3rem' },
+                    fontVariant: 'small-caps',
+                    fontFamily: 'serif',
+                    fontWeight: 'bold',
+                    textAlign: 'end',
+                    color: '#ef4444',
+                    mixBlendMode: 'difference'
+                  }}
+                >
+                  {index + 1}
+                </Typography>
                 : null}
               <Typography
                 variant='h4'
