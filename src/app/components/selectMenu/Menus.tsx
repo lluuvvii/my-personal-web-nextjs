@@ -203,7 +203,7 @@ export default function SelectMenu() {
                   sx={{
                     position: 'absolute',
                     top: '100%',
-                    translate: '0% -15%',
+                    translate: '0% -5%',
                     right: '0vw',
                     background: 'linear-gradient(90deg, transparent, #242424, #242424)',
                     paddingRight: { xs: '0.5rem', sm: '0.7rem', md: '0.9rem', lg: '1.1rem' },
@@ -214,7 +214,7 @@ export default function SelectMenu() {
                       position: 'absolute',
                       left: '-50%',
                       width: '150%',
-                      height: '15%',
+                      height: '5%',
                       background: 'linear-gradient(90deg, transparent, white, white)'
                     }}
                   />
