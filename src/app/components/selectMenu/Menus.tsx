@@ -203,7 +203,7 @@ export default function SelectMenu() {
                   sx={{
                     position: 'absolute',
                     top: '100%',
-                    translate: '0% -18%',
+                    translate: '0% -15%',
                     right: '0vw',
                     background: 'linear-gradient(90deg, transparent, #242424, #242424)',
                     paddingRight: { xs: '0.5rem', sm: '0.7rem', md: '0.9rem', lg: '1.1rem' },
@@ -213,10 +213,8 @@ export default function SelectMenu() {
                     sx={{
                       position: 'absolute',
                       left: '-50%',
-                      width: '200%',
+                      width: '150%',
                       height: '15%',
-                      borderTopLeftRadius: '50%',
-                      borderBottomLeftRadius: '50%',
                       background: 'linear-gradient(90deg, transparent, white, white)'
                     }}
                   />
@@ -224,7 +222,7 @@ export default function SelectMenu() {
                     variant='body1'
                     sx={{
                       marginTop: '5%',
-                      fontSize: { xs: '0.5rem', sm: '0.7rem', md: '0.9rem', lg: '1.1rem' },
+                      fontSize: { xs: '0.7rem', sm: '0.9rem', md: '1.1rem', lg: '1.3rem' },
                       color: 'white',
                       fontVariant: 'small-caps',
                     }}>
@@ -237,7 +235,7 @@ export default function SelectMenu() {
                 sx={{
                   left: leftTextPosition,
                   position: 'relative',
-                  fontSize: { xs: '1.5rem', sm: '2rem', md: '2.5rem', lg: '3rem' },
+                  fontSize: { xs: '1.7rem', sm: '2.4rem', md: '3.1rem', lg: '3.7rem' },
                   transform: selectedIndex === index && completeAnimation1 ? 'scale(2, 1.5)' : 'scale(1.7, 1.3)',
                   fontVariant: 'small-caps',
                   fontWeight: 'bold',
