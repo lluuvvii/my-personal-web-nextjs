@@ -6,6 +6,7 @@ import { Box, Typography } from '@mui/material'
 import { useRouter } from 'next/navigation'
 
 const menuItems = ['Introduction', 'Projects', 'Galleries', 'Journey', 'Contact Me']
+const smallItems = ['紹介', 'プロジェクト', 'ギャラリー', '旅', 'お問い合わせ']
 
 export default function SelectMenu() {
   const router = useRouter()
@@ -182,6 +183,7 @@ export default function SelectMenu() {
                         textAlign: 'start',
                         color: '#f06262',
                         opacity: 0.5,
+                        letterSpacing: '-0.15rem',
                       }}
                     >
                       {item}
@@ -190,30 +192,45 @@ export default function SelectMenu() {
                 </>
                 : null}
               {selectedIndex === index && completeAnimation1 ?
-                <Typography
+                <Box
                   component={motion.div}
-                  initial={{ opacity: 0, x: '5rem', scale: '6, 3.5' }}
-                  animate={{ opacity: 1, x: '0' }}
+                  initial={{ opacity: 0, x: '100%' }}
+                  animate={{ opacity: 1, x: '0%' }}
                   transition={{
                     ease: 'easeInOut',
                     duration: 0.2
                   }}
-                  variant='h4'
                   sx={{
-                    right: { xs: '1.7rem', sm: '2.2rem', md: '2.7rem', lg: '3.2rem' },
-                    bottom: { xs: '0.7rem', sm: '0.9rem', md: '1.3rem', lg: '1.7rem' },
-                    position: 'fixed',
-                    fontSize: { xs: '1.5rem', sm: '2rem', md: '2.5rem', lg: '3rem' },
-                    fontVariant: 'small-caps',
-                    fontFamily: 'serif',
-                    fontWeight: 'bold',
-                    textAlign: 'end',
-                    color: '#ef4444',
-                    mixBlendMode: 'difference'
-                  }}
-                >
-                  {index + 1}
-                </Typography>
+                    position: 'absolute',
+                    top: '100%',
+                    translate: '0% -18%',
+                    right: '0vw',
+                    background: 'linear-gradient(90deg, transparent, #242424, #242424)',
+                    paddingRight: { xs: '0.5rem', sm: '0.7rem', md: '0.9rem', lg: '1.1rem' },
+                    paddingLeft: { xs: '2.5rem', sm: '3.2rem', md: '3.9rem', lg: '4.8rem' },
+                  }}>
+                  <Box
+                    sx={{
+                      position: 'absolute',
+                      left: '-50%',
+                      width: '200%',
+                      height: '15%',
+                      borderTopLeftRadius: '50%',
+                      borderBottomLeftRadius: '50%',
+                      background: 'linear-gradient(90deg, transparent, white, white)'
+                    }}
+                  />
+                  <Typography
+                    variant='body1'
+                    sx={{
+                      marginTop: '5%',
+                      fontSize: { xs: '0.5rem', sm: '0.7rem', md: '0.9rem', lg: '1.1rem' },
+                      color: 'white',
+                      fontVariant: 'small-caps',
+                    }}>
+                    {smallItems[index]}
+                  </Typography>
+                </Box>
                 : null}
               <Typography
                 variant='h4'
@@ -226,6 +243,7 @@ export default function SelectMenu() {
                   fontWeight: 'bold',
                   textAlign: 'start',
                   marginLeft: '35%',
+                  letterSpacing: '-0.15rem',
                   color: selectedIndex === index && completeAnimation1 ? 'white' : 'black',
                   transition: 'color 0.1s ease-in-out, left 0.1s ease-in-out, transform 0.15s ease-in-out',
                   transitionDelay: '0.05s, 0s, 0s',
