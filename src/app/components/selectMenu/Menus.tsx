@@ -110,13 +110,14 @@ export default function SelectMenu() {
         animate={{ x: '0vw', opacity: 1, rotate: '0deg' }}
         onAnimationComplete={() => setCompleteAnimation1(true)}
         transition={{
+          delay: 0.2,
           type: 'spring',
           stiffness: 500,
           damping: 50,
           opacity: {
             ease: 'easeInOut',
             duration: 0.1,
-            delay: 0
+            delay: 0.2
           }
         }}
         sx={{
@@ -140,7 +141,8 @@ export default function SelectMenu() {
               transition={{
                 type: 'spring',
                 stiffness: 500,
-                damping: 45
+                damping: 45,
+                delay: completeAnimation1 ? 0 : 0.2
               }}
               sx={{
                 cursor: 'pointer',
