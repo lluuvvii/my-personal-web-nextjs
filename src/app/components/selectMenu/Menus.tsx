@@ -71,7 +71,7 @@ export default function SelectMenu() {
           scale: {
             type: 'spring',
             stiffness: 500,
-            damping: 70,
+            damping: 50,
             delay: 0
           },
         }}
@@ -79,16 +79,16 @@ export default function SelectMenu() {
           position: 'fixed',
           top: '50%',
           translate: '-50% -50%',
-          width: { xs: '50vh', sm: '60vh', md: '70vh', lg: '80vh' },
-          height: { xs: '50vh', sm: '60vh', md: '70vh', lg: '80vh' },
+          width: { xs: '20rem', sm: '30rem', md: '40rem', lg: '50rem' },
+          height: { xs: '20rem', sm: '30rem', md: '40rem', lg: '50rem' },
           color: 'transparent',
           borderRadius: '50%',
         }}
       />
       <Box
         component={motion.div}
-        initial={{ opacity: 0, height: '0.5rem', width: '100vw', x: '100vw' }}
-        animate={{ opacity: 1, height: '0.5rem', x: '-100vw' }}
+        initial={{ opacity: 0, x: '100vw' }}
+        animate={{ opacity: 1, x: '-100vw' }}
         transition={{
           duration: 0.2,
           delay: 0.2,
@@ -97,6 +97,8 @@ export default function SelectMenu() {
           }
         }}
         sx={{
+          height: { xs: '0.2rem', sm: '0.3rem', md: '0.4rem', lg: '0.5rem' },
+          width: '100vw',
           position: 'fixed',
           top: '38vh',
           backgroundColor: '#d93f3f',
@@ -104,14 +106,18 @@ export default function SelectMenu() {
       />
       <Box
         component={motion.div}
-        initial={{ opacity: 0, originX: '0%', rotate: '135deg' }}
-        animate={{ opacity: 1, rotate: '0deg' }}
+        initial={{ originX: '0%', x: '-10vw', opacity: 0, rotate: '45deg' }}
+        animate={{ x: '0vw', opacity: 1, rotate: '0deg' }}
         onAnimationComplete={() => setCompleteAnimation1(true)}
         transition={{
-          delay: 0.2,
           type: 'spring',
           stiffness: 500,
           damping: 50,
+          opacity: {
+            ease: 'easeInOut',
+            duration: 0.1,
+            delay: 0
+          }
         }}
         sx={{
           position: 'relative',
@@ -189,46 +195,44 @@ export default function SelectMenu() {
                       {item}
                     </Typography>
                   </Box>
-                </>
-                : null}
-              {selectedIndex === index && completeAnimation1 ?
-                <Box
-                  component={motion.div}
-                  initial={{ opacity: 0, x: '100%' }}
-                  animate={{ opacity: 1, x: '0%' }}
-                  transition={{
-                    ease: 'easeInOut',
-                    duration: 0.2
-                  }}
-                  sx={{
-                    position: 'absolute',
-                    top: '100%',
-                    translate: '0% -5%',
-                    right: '0vw',
-                    background: 'linear-gradient(90deg, transparent, #242424, #242424)',
-                    paddingRight: { xs: '0.5rem', sm: '0.7rem', md: '0.9rem', lg: '1.1rem' },
-                    paddingLeft: { xs: '2.5rem', sm: '3.2rem', md: '3.9rem', lg: '4.8rem' },
-                  }}>
                   <Box
+                    component={motion.div}
+                    initial={{ opacity: 0, x: '100%' }}
+                    animate={{ opacity: 1, x: '0%' }}
+                    transition={{
+                      ease: 'easeInOut',
+                      duration: 0.2
+                    }}
                     sx={{
                       position: 'absolute',
-                      left: '-50%',
-                      width: '150%',
-                      height: '5%',
-                      background: 'linear-gradient(90deg, transparent, white, white)'
-                    }}
-                  />
-                  <Typography
-                    variant='body1'
-                    sx={{
-                      marginTop: '5%',
-                      fontSize: { xs: '0.7rem', sm: '0.9rem', md: '1.1rem', lg: '1.3rem' },
-                      color: 'white',
-                      fontVariant: 'small-caps',
+                      top: '100%',
+                      translate: '0% -5%',
+                      right: '0vw',
+                      background: 'linear-gradient(90deg, transparent, #242424, #242424)',
+                      paddingRight: { xs: '0.5rem', sm: '0.7rem', md: '0.9rem', lg: '1.1rem' },
+                      paddingLeft: { xs: '2.5rem', sm: '3.2rem', md: '3.9rem', lg: '4.8rem' },
                     }}>
-                    {smallItems[index]}
-                  </Typography>
-                </Box>
+                    <Box
+                      sx={{
+                        position: 'absolute',
+                        left: '-50%',
+                        width: '150%',
+                        height: '5%',
+                        background: 'linear-gradient(90deg, transparent, white, white)'
+                      }}
+                    />
+                    <Typography
+                      variant='body1'
+                      sx={{
+                        marginTop: '5%',
+                        fontSize: { xs: '0.7rem', sm: '0.9rem', md: '1.1rem', lg: '1.3rem' },
+                        color: 'white',
+                        fontVariant: 'small-caps',
+                      }}>
+                      {smallItems[index]}
+                    </Typography>
+                  </Box>
+                </>
                 : null}
               <Typography
                 variant='h4'
