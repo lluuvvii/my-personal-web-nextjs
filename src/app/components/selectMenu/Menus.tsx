@@ -148,7 +148,7 @@ export default function SelectMenu() {
                 cursor: 'pointer',
                 position: 'relative',
                 transformOrigin: `0% 50%`,
-                marginTop: index === 0 ? null : { xs: '-0.5rem', sm: '-0.7rem', md: '-0.9rem', lg: '-1.1rem' },
+                marginTop: index === 0 ? null : { xs: '-0.7rem', sm: '-1rem', md: '-1.3rem', lg: '-1.6rem' },
               }}>
               {selectedIndex === index && completeAnimation1 ?
                 <>
@@ -247,7 +247,7 @@ export default function SelectMenu() {
                   fontWeight: 'bold',
                   textAlign: 'start',
                   marginLeft: '35%',
-                  letterSpacing: '-0.15rem',
+                  letterSpacing: { xs: '-0.15rem', sm: '-0.2rem', md: '-0.25rem', lg: '-0.3rem' },
                   color: selectedIndex === index && completeAnimation1 ? 'white' : 'black',
                   transition: 'color 0.1s ease-in-out, left 0.1s ease-in-out, transform 0.15s ease-in-out',
                   transitionDelay: '0.05s, 0s, 0s',
