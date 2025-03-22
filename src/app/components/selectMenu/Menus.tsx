@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from 'react'
 import { domAnimation, LazyMotion, m, motion } from 'framer-motion'
 import { Box, Typography } from '@mui/material'
+import { CloseSharp } from '@mui/icons-material'
 import { useRouter } from 'next/navigation'
 import Image from 'next/image'
 
@@ -199,6 +200,22 @@ export default function SelectMenu() {
                           priority
                         />
                       </Box>
+                    </Box>
+                    <Box
+                      component={motion.div}
+                      initial={{ opacity: 0, x: '100%', scaleX: 3, scaleY: 2.5 }}
+                      animate={{ opacity: 1, x: '-120%' }}
+                      transition={{
+                        ease: 'easeInOut',
+                        duration: 0.2
+                      }}
+                      sx={{
+                        position: 'absolute',
+                        bottom: '120%',
+                        translate: '0% 0%',
+                        right: '0vw',
+                      }}>
+                      <CloseSharp color='info' sx={{ color: 'black', fontSize: { xs: '0.5rem', sm: '0.7rem', md: '0.9rem', lg: '1.1rem', xl: '1.3rem' } }} />
                     </Box>
                     <Box
                       component={motion.div}
