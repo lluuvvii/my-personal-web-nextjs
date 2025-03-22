@@ -85,8 +85,8 @@ export default function SelectMenu() {
             position: 'fixed',
             top: '50%',
             translate: '-50% -50%',
-            width: { xs: '20rem', sm: '30rem', md: '40rem', lg: '50rem' },
-            height: { xs: '20rem', sm: '30rem', md: '40rem', lg: '50rem' },
+            width: { xs: '20rem', sm: '30rem', md: '40rem', lg: '50rem', xl: '60rem' },
+            height: { xs: '20rem', sm: '30rem', md: '40rem', lg: '50rem', xl: '60rem' },
             color: 'transparent',
             borderRadius: '50%',
           }}
@@ -103,7 +103,7 @@ export default function SelectMenu() {
             }
           }}
           sx={{
-            height: { xs: '0.2rem', sm: '0.3rem', md: '0.4rem', lg: '0.5rem' },
+            height: { xs: '0.2rem', sm: '0.3rem', md: '0.4rem', lg: '0.5rem', xl: '0.6rem' },
             width: '100vw',
             position: 'fixed',
             top: '38vh',
@@ -154,7 +154,7 @@ export default function SelectMenu() {
                   cursor: 'pointer',
                   position: 'relative',
                   transformOrigin: `0% 50%`,
-                  marginTop: index === 0 ? null : { xs: '-0.7rem', sm: '-1rem', md: '-1.3rem', lg: '-1.6rem' },
+                  marginTop: index === 0 ? null : { xs: '-0.7rem', sm: '-1.1rem', md: '-1.5rem', lg: '-2rem', xl: '-2.8rem' },
                 }}>
                 {selectedIndex === index && completeAnimation1 ?
                   <>
@@ -195,7 +195,7 @@ export default function SelectMenu() {
                         sx={{
                           position: 'absolute',
                           bottom: '-40%',
-                          fontSize: { xs: '1.5rem', sm: '2rem', md: '2.5rem', lg: '3rem' },
+                          fontSize: { xs: '1.5rem', sm: '2rem', md: '2.5rem', lg: '3rem', xl: '3.5rem' },
                           fontVariant: 'small-caps',
                           fontWeight: 'bold',
                           textAlign: 'start',
@@ -221,8 +221,8 @@ export default function SelectMenu() {
                         translate: '0% -5%',
                         right: '0vw',
                         background: 'linear-gradient(90deg, transparent, #242424, #242424)',
-                        paddingRight: { xs: '0.5rem', sm: '0.7rem', md: '0.9rem', lg: '1.1rem' },
-                        paddingLeft: { xs: '2.5rem', sm: '3.2rem', md: '3.9rem', lg: '4.8rem' },
+                        paddingRight: { xs: '0.5rem', sm: '0.7rem', md: '0.9rem', lg: '1.1rem', xl: '1.3rem' },
+                        paddingLeft: { xs: '2.5rem', sm: '3.2rem', md: '3.9rem', lg: '4.8rem', xl: '5rem' },
                       }}>
                       <Box
                         sx={{
@@ -237,7 +237,7 @@ export default function SelectMenu() {
                         variant='body1'
                         sx={{
                           marginTop: '5%',
-                          fontSize: { xs: '0.7rem', sm: '0.9rem', md: '1.1rem', lg: '1.3rem' },
+                          fontSize: { xs: '0.7rem', sm: '0.9rem', md: '1.1rem', lg: '1.3rem', xl: '1.5rem' },
                           color: 'white',
                           fontVariant: 'small-caps',
                         }}>
@@ -251,13 +251,13 @@ export default function SelectMenu() {
                   sx={{
                     left: leftTextPosition,
                     position: 'relative',
-                    fontSize: { xs: '1.7rem', sm: '2.4rem', md: '3.1rem', lg: '3.7rem' },
+                    fontSize: { xs: '1.7rem', sm: '2.4rem', md: '3.1rem', lg: '3.7rem', xl: '4.4rem' },
                     transform: selectedIndex === index && completeAnimation1 ? 'scale(2, 1.5)' : 'scale(1.7, 1.3)',
                     fontVariant: 'small-caps',
                     fontWeight: 'bold',
                     textAlign: 'start',
                     marginLeft: '35%',
-                    letterSpacing: { xs: '-0.15rem', sm: '-0.2rem', md: '-0.25rem', lg: '-0.3rem' },
+                    letterSpacing: { xs: '-0.15rem', sm: '-0.2rem', md: '-0.25rem', lg: '-0.3rem', xl: '-0.35rem' },
                     color: selectedIndex === index && completeAnimation1 ? 'white' : 'black',
                     transition: 'color 0.1s ease-in-out, left 0.1s ease-in-out, transform 0.15s ease-in-out',
                     transitionDelay: '0.05s, 0s, 0s',
