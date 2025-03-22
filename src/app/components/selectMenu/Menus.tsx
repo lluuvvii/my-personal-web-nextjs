@@ -7,7 +7,7 @@ import { useRouter } from 'next/navigation'
 import Image from 'next/image'
 
 const menuItems = ['Introduction', 'Projects', 'Galleries', 'Journey', 'Contact Me']
-const smallItems = ['紹介', 'プロジェクト', 'ギャラリー', '旅', 'お問い合わせ']
+const smallItems = ['イントロダクション', 'プロジェクト', 'ギャラリー', 'ジャーニー', 'コンタクトミー']
 
 export default function SelectMenu() {
   const router = useRouter()
@@ -67,7 +67,7 @@ export default function SelectMenu() {
             borderRight: '0rem solid black',
             borderLeft: '0.25rem solid black',
             borderTop: '0.25rem solid black',
-            borderBottom: '0.25rem solid black'
+            borderBottom: '0.25rem solid black',
           }}
           transition={{
             type: 'spring',
@@ -167,9 +167,22 @@ export default function SelectMenu() {
                         position: 'absolute',
                         height: '100%',
                         backgroundColor: '#ef4444',
-                        boxShadow: '0rem 0.1rem 0.1rem #888888',
                       }}
                     >
+                      <Box
+                        component={motion.div}
+                        initial={{ width: '0%' }}
+                        animate={{ width: '100%' }}
+                        transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.05 }}
+                        sx={{
+                          position: 'absolute',
+                          left: '0vw',
+                          top: '85%',
+                          width: '100vw',
+                          height: '5%',
+                          background: 'linear-gradient(90deg, white, white, transparent)'
+                        }}
+                      />
                       <Box
                         sx={{
                           position: 'absolute',
@@ -186,26 +199,6 @@ export default function SelectMenu() {
                           priority
                         />
                       </Box>
-                      <Typography
-                        component={motion.div}
-                        initial={{ x: '0%', scaleX: 2, scaleY: 1.5 }}
-                        animate={{ x: '50%' }}
-                        transition={{ duration: 0.2, ease: 'easeInOut' }}
-                        variant='h4'
-                        sx={{
-                          position: 'absolute',
-                          bottom: '-40%',
-                          fontSize: { xs: '1.5rem', sm: '2rem', md: '2.5rem', lg: '3rem', xl: '3.5rem' },
-                          fontVariant: 'small-caps',
-                          fontWeight: 'bold',
-                          textAlign: 'start',
-                          color: '#f06262',
-                          opacity: 0.5,
-                          letterSpacing: '-0.15rem',
-                        }}
-                      >
-                        {item}
-                      </Typography>
                     </Box>
                     <Box
                       component={motion.div}
@@ -218,27 +211,18 @@ export default function SelectMenu() {
                       sx={{
                         position: 'absolute',
                         top: '100%',
-                        translate: '0% -5%',
+                        translate: '0% 0%',
                         right: '0vw',
-                        background: 'linear-gradient(90deg, transparent, #242424, #242424)',
                         paddingRight: { xs: '0.5rem', sm: '0.7rem', md: '0.9rem', lg: '1.1rem', xl: '1.3rem' },
                         paddingLeft: { xs: '2.5rem', sm: '3.2rem', md: '3.9rem', lg: '4.8rem', xl: '5rem' },
                       }}>
-                      <Box
-                        sx={{
-                          position: 'absolute',
-                          left: '-50%',
-                          width: '150%',
-                          height: '5%',
-                          background: 'linear-gradient(90deg, transparent, white, white)'
-                        }}
-                      />
                       <Typography
                         variant='body1'
                         sx={{
-                          marginTop: '5%',
+                          marginTop: { xs: '0.1rem', sm: '0.2rem', md: '0.3rem', lg: '0.4rem', xl: '0.5rem' },
                           fontSize: { xs: '0.7rem', sm: '0.9rem', md: '1.1rem', lg: '1.3rem', xl: '1.5rem' },
-                          color: 'white',
+                          fontWeight: 1000,
+                          color: 'red',
                           fontVariant: 'small-caps',
                         }}>
                         {smallItems[index]}
