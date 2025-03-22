@@ -46,11 +46,10 @@ export default function SelectMenu() {
             height: '100dvh'
           }}>
           <Image
-            src='/assets/img/background_texture.jpg'
+            src='/assets/img/background_texture.webp'
             alt='Background texture'
             layout='fill'
             objectFit='cover'
-            quality={80}
             priority
           />
         </Box>
@@ -180,11 +179,10 @@ export default function SelectMenu() {
                           mixBlendMode: 'darken'
                         }}>
                         <Image
-                          src='/assets/img/background_texture.jpg'
+                          src='/assets/img/background_texture.webp'
                           alt='Background texture'
                           layout='fill'
                           objectFit='cover'
-                          quality={80}
                           priority
                         />
                       </Box>
