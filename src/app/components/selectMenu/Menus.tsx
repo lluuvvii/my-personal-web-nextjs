@@ -240,9 +240,8 @@ export default function SelectMenu() {
                         sx={{
                           marginTop: { xs: '0.1rem', sm: '0.4rem', md: '0.7rem', lg: '1rem', xl: '1.3rem' },
                           fontSize: { xs: '0.7rem', sm: '0.9rem', md: '1.1rem', lg: '1.3rem', xl: '1.5rem' },
-                          fontWeight: 1000,
+                          fontWeight: 'bold',
                           color: 'red',
-                          fontVariant: 'small-caps',
                         }}>
                         {smallItems[index]}
                       </Typography>
