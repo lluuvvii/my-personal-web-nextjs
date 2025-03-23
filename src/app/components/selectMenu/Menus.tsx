@@ -166,7 +166,8 @@ export default function SelectMenu() {
                       transition={{ duration: 0.2, ease: 'easeInOut', delay: 0.05 }}
                       sx={{
                         position: 'absolute',
-                        height: '100%',
+                        top: '-45%',
+                        height: '190%',
                         backgroundColor: '#ef4444',
                       }}
                     >
@@ -230,13 +231,14 @@ export default function SelectMenu() {
                         top: '100%',
                         translate: '0% 0%',
                         right: '0vw',
+                        marginTop: '0.5rem',
                         paddingRight: { xs: '0.5rem', sm: '0.7rem', md: '0.9rem', lg: '1.1rem', xl: '1.3rem' },
                         paddingLeft: { xs: '2.5rem', sm: '3.2rem', md: '3.9rem', lg: '4.8rem', xl: '5rem' },
                       }}>
                       <Typography
                         variant='body1'
                         sx={{
-                          marginTop: { xs: '0.1rem', sm: '0.2rem', md: '0.3rem', lg: '0.4rem', xl: '0.5rem' },
+                          marginTop: { xs: '0.1rem', sm: '0.4rem', md: '0.7rem', lg: '1rem', xl: '1.3rem' },
                           fontSize: { xs: '0.7rem', sm: '0.9rem', md: '1.1rem', lg: '1.3rem', xl: '1.5rem' },
                           fontWeight: 1000,
                           color: 'red',
@@ -251,6 +253,8 @@ export default function SelectMenu() {
                   variant='h4'
                   sx={{
                     left: leftTextPosition,
+                    marginBottom: { xs: '0.95rem', sm: '1.25rem', md: '1.55rem', lg: '1.85rem', xl: '2.15rem' },
+                    lineHeight: 0.7,
                     position: 'relative',
                     fontSize: { xs: '1.7rem', sm: '2.4rem', md: '3.1rem', lg: '3.7rem', xl: '4.4rem' },
                     transform: selectedIndex === index && completeAnimation1 ? 'scale(2, 1.5)' : 'scale(1.7, 1.3)',
