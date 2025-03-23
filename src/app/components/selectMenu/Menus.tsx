@@ -113,6 +113,23 @@ export default function SelectMenu() {
         />
         <Box
           component={motion.div}
+          initial={{ opacity: 0, x: '100%', rotate: '180deg' }}
+          animate={{ opacity: 1, x: '0%', rotate: '0deg' }}
+          transition={{
+            type: 'spring',
+            stiffness: 500,
+            damping: 60,
+          }}
+          sx={{
+            position: 'fixed',
+            top: '2dvh',
+            right: '2vw',
+            cursor: 'pointer'
+          }}>
+          <CloseSharp color='info' sx={{ color: 'black', fontSize: { xs: '1.5rem', sm: '2rem', md: '2.5rem', lg: '3rem', xl: '3.5rem' } }} />
+        </Box>
+        <Box
+          component={motion.div}
           initial={{ originX: '0%', x: '-10vw', opacity: 0, rotate: '45deg' }}
           animate={{ x: '0vw', opacity: 1, rotate: '0deg' }}
           onAnimationComplete={() => setCompleteAnimation1(true)}
@@ -143,8 +160,7 @@ export default function SelectMenu() {
                 key={item}
                 initial={{ transform: `rotate(0deg)` }}
                 animate={{ transform: `rotate(${angle}deg)` }}
-                onHoverStart={() => setSelectedIndex(index)}
-                onTouchStart={() => setSelectedIndex(index)}
+                onClick={() => setSelectedIndex(index)}
                 transition={{
                   type: 'spring',
                   stiffness: 500,
@@ -204,22 +220,6 @@ export default function SelectMenu() {
                     </Box>
                     <Box
                       component={motion.div}
-                      initial={{ opacity: 0, x: '100%', scaleX: 3, scaleY: 2.5 }}
-                      animate={{ opacity: 1, x: '-120%' }}
-                      transition={{
-                        ease: 'easeInOut',
-                        duration: 0.2
-                      }}
-                      sx={{
-                        position: 'absolute',
-                        bottom: '120%',
-                        translate: '0% 0%',
-                        right: '0vw',
-                      }}>
-                      <CloseSharp color='info' sx={{ color: 'black', fontSize: { xs: '0.5rem', sm: '0.7rem', md: '0.9rem', lg: '1.1rem', xl: '1.3rem' } }} />
-                    </Box>
-                    <Box
-                      component={motion.div}
                       initial={{ opacity: 0, x: '100%' }}
                       animate={{ opacity: 1, x: '0%' }}
                       transition={{
@@ -264,8 +264,11 @@ export default function SelectMenu() {
                     marginLeft: '35%',
                     letterSpacing: { xs: '-0.15rem', sm: '-0.2rem', md: '-0.25rem', lg: '-0.3rem', xl: '-0.35rem' },
                     color: selectedIndex === index && completeAnimation1 ? 'white' : 'black',
-                    transition: 'color 0.1s ease-in-out, left 0.1s ease-in-out, transform 0.15s ease-in-out',
-                    transitionDelay: '0.05s, 0s, 0s',
+                    transition: 'color 0.1s ease-in-out, left 0.1s ease-in-out, transform 0.15s ease-in-out, margin-left 0.1s ease-in-out',
+                    transitionDelay: '0.05s, 0s, 0s, 0s',
+                    '&:hover': {
+                      marginLeft: selectedIndex === index && completeAnimation1 ? '35%' : '34%',
+                    },
                   }}
                 >
                   {item}
