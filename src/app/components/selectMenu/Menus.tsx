@@ -5,7 +5,6 @@ import { domAnimation, LazyMotion, m, motion } from 'framer-motion'
 import { Box, Typography } from '@mui/material'
 import { CloseSharp } from '@mui/icons-material'
 import { useRouter } from 'next/navigation'
-import Image from 'next/image'
 
 const menuItems = ['Introduction', 'Projects', 'Galleries', 'Journey', 'Contact Me']
 const smallItems = ['イントロダクション', 'プロジェクト', 'ギャラリー', 'ジャーニー', 'コンタクトミー']
@@ -44,27 +43,24 @@ export default function SelectMenu() {
           sx={{
             position: 'fixed',
             width: '100vw',
-            height: '100dvh'
+            height: '100dvh',
+            backgroundImage: 'url(/assets/img/background_texture.webp)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
           }}>
-          <Image
-            src='/assets/img/background_texture.webp'
-            alt='Background texture'
-            layout='fill'
-            objectFit='cover'
-            priority
-          />
         </Box>
         <Box
           component={motion.div}
           initial={{
-            scale: '0.1%',
+            scale: 0,
             borderRight: '5rem solid black',
             borderLeft: '5rem solid black',
             borderTop: '5rem solid black',
-            borderBottom: '5rem solid black'
+            borderBottom: '5rem solid black',
           }}
           animate={{
-            scale: '100%',
+            scale: 1,
             borderRight: '0rem solid black',
             borderLeft: '0.25rem solid black',
             borderTop: '0.25rem solid black',
@@ -111,23 +107,6 @@ export default function SelectMenu() {
             backgroundColor: '#d93f3f',
           }}
         />
-        <Box
-          component={motion.div}
-          initial={{ opacity: 0, x: '100%', rotate: '180deg' }}
-          animate={{ opacity: 1, x: '0%', rotate: '0deg' }}
-          transition={{
-            type: 'spring',
-            stiffness: 500,
-            damping: 60,
-          }}
-          sx={{
-            position: 'fixed',
-            top: '2dvh',
-            right: '2vw',
-            cursor: 'pointer'
-          }}>
-          <CloseSharp color='info' sx={{ color: 'black', fontSize: { xs: '1.5rem', sm: '2rem', md: '2.5rem', lg: '3rem', xl: '3.5rem' } }} />
-        </Box>
         <Box
           component={motion.div}
           initial={{ originX: '0%', x: '-10vw', opacity: 0, rotate: '45deg' }}
@@ -207,15 +186,12 @@ export default function SelectMenu() {
                           width: '100%',
                           height: '100%',
                           transform: 'scaleX(-1)',
-                          mixBlendMode: 'darken'
+                          mixBlendMode: 'darken',
+                          backgroundImage: 'url(/assets/img/background_texture.webp)',
+                          backgroundSize: 'cover',
+                          backgroundPosition: 'center',
+                          backgroundRepeat: 'no-repeat',
                         }}>
-                        <Image
-                          src='/assets/img/background_texture.webp'
-                          alt='Background texture'
-                          layout='fill'
-                          objectFit='cover'
-                          priority
-                        />
                       </Box>
                     </Box>
                     <Box
@@ -276,6 +252,23 @@ export default function SelectMenu() {
             )
           })}
         </Box>
+      </Box>
+      <Box
+        component={motion.div}
+        initial={{ opacity: 0, x: '100%', rotate: '180deg' }}
+        animate={{ opacity: 1, x: '0%', rotate: '0deg' }}
+        transition={{
+          type: 'spring',
+          stiffness: 500,
+          damping: 60,
+        }}
+        sx={{
+          position: 'fixed',
+          top: '2dvh',
+          right: '2vw',
+          cursor: 'pointer'
+        }}>
+        <CloseSharp color='info' sx={{ color: 'black', fontSize: { xs: '1.5rem', sm: '2rem', md: '2.5rem', lg: '3rem', xl: '3.5rem' } }} />
       </Box>
     </LazyMotion>
   )
