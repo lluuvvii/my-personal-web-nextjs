@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from 'react'
 import { domAnimation, LazyMotion, m, motion } from 'framer-motion'
 import { Box, Typography } from '@mui/material'
-import { CloseSharp } from '@mui/icons-material'
+import { ArrowRight, CloseSharp } from '@mui/icons-material'
 import { useRouter } from 'next/navigation'
 
 const menuItems = ['Introduction', 'Projects', 'Galleries', 'Journey', 'Contact Me']
@@ -222,7 +222,50 @@ export default function SelectMenu() {
                       animate={{ opacity: 1, x: '0%' }}
                       transition={{
                         ease: 'easeInOut',
-                        duration: 0.2
+                        duration: 0.2,
+                        delay: 0.1
+                      }}
+                      sx={{
+                        position: 'absolute',
+                        bottom: '90%',
+                        translate: '0% 0%',
+                        right: '0vw',
+                        marginBottom: '0.5rem',
+                        paddingRight: { xs: '0.5rem', sm: '0.7rem', md: '0.9rem', lg: '1.1rem', xl: '1.3rem' },
+                        paddingLeft: { xs: '2.5rem', sm: '3.2rem', md: '3.9rem', lg: '4.8rem', xl: '5rem' },
+                        display: 'flex',
+                      }}>
+                      <Typography
+                        variant='body1'
+                        sx={{
+                          position: 'relative',
+                          marginBottom: { xs: '0.1rem', sm: '0.4rem', md: '0.7rem', lg: '1rem', xl: '1.3rem' },
+                          fontSize: { xs: '0.7rem', sm: '0.9rem', md: '1.1rem', lg: '1.3rem', xl: '1.5rem' },
+                          fontWeight: 'bold',
+                          fontStyle: 'italic',
+                          color: 'red',
+                        }}>
+                        <Box sx={{ position: 'absolute', backgroundColor: 'red', height: '1.5%', width: '100%', top: '55%', right: '55%' }} />
+                        <Box sx={{ position: 'absolute', backgroundColor: 'red', height: '1.5%', width: '30%', top: '40%', right: '100%' }} />
+                        GO!
+                        <ArrowRight
+                          sx={{
+                            color: 'red',
+                            position: 'relative',
+                            top: '-5%',
+                            fontSize: { xs: '0.7rem', sm: '1rem', md: '1.3rem', lg: '1.5rem', xl: '2rem' },
+                            right: '5%'
+                          }} />
+                      </Typography>
+                    </Box>
+                    <Box
+                      component={motion.div}
+                      initial={{ opacity: 0, x: '100%' }}
+                      animate={{ opacity: 1, x: '0%' }}
+                      transition={{
+                        ease: 'easeInOut',
+                        duration: 0.2,
+                        delay: 0.1
                       }}
                       sx={{
                         position: 'absolute',
