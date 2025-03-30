@@ -38,12 +38,20 @@ export default function SelectMenu() {
         ref={menuRef}
         tabIndex={0}
         onKeyDown={handleKeyDown}
-        sx={{ overflow: 'hidden', height: '100dvh', width: '100vw', backgroundColor: '#f2f2f2', boxShadow: '0 0 10rem rgba(0, 0, 0, 0.2) inset' }}>
+        sx={{ overflow: 'hidden', height: '100dvh', width: '100vw', backgroundColor: 'white', boxShadow: '0 0 10rem rgba(0, 0, 0, 0.2) inset' }}>
         <Box
           component={motion.div}
-          initial={{ opacity: 0.5, scale: 0.7 }}
-          animate={{ rotate: -360 }}
-          transition={{ repeat: Infinity, duration: 30, ease: 'linear' }}
+          initial={{ opacity: 0, scale: 1.2 }}
+          animate={{ rotate: -360, opacity: 0.5 }}
+          transition={{
+            opacity: {
+              duration: 4,
+              repeat: Infinity,
+              repeatType: 'reverse',
+              ease: 'easeInOut',
+            },
+            rotate: { repeat: Infinity, duration: 30, ease: 'linear' }
+          }}
           sx={{
             position: 'fixed',
             top: '50%',
@@ -58,9 +66,17 @@ export default function SelectMenu() {
         </Box>
         <Box
           component={motion.div}
-          initial={{ scale: 2, opacity: 0.3 }}
-          animate={{ rotate: -360 }}
-          transition={{ repeat: Infinity, duration: 60, ease: 'linear' }}
+          initial={{ scale: 2, opacity: 0 }}
+          animate={{ rotate: -360, opacity: 0.7 }}
+          transition={{
+            opacity: {
+              duration: 7,
+              repeat: Infinity,
+              repeatType: 'reverse',
+              ease: 'easeInOut',
+            },
+            rotate: { repeat: Infinity, duration: 60, ease: 'linear' }
+          }}
           sx={{
             position: 'fixed',
             top: '50%',
@@ -218,11 +234,12 @@ export default function SelectMenu() {
                     </Box>
                     <Box
                       component={motion.div}
-                      initial={{ opacity: 0, x: '100%' }}
+                      initial={{ opacity: 0, x: '-100%' }}
                       animate={{ opacity: 1, x: '0%' }}
                       transition={{
-                        ease: 'easeInOut',
-                        duration: 0.2,
+                        type: 'spring',
+                        stiffness: 500,
+                        damping: 50,
                         delay: 0.1
                       }}
                       sx={{
@@ -245,8 +262,28 @@ export default function SelectMenu() {
                           fontStyle: 'italic',
                           color: 'red',
                         }}>
-                        <Box sx={{ position: 'absolute', backgroundColor: 'red', height: '1.5%', width: '100%', top: '55%', right: '55%' }} />
-                        <Box sx={{ position: 'absolute', backgroundColor: 'red', height: '1.5%', width: '30%', top: '40%', right: '100%' }} />
+                        <Box
+                          component={motion.div}
+                          initial={{ height: '1.5%', width: '80%' }}
+                          animate={{ width: '100%' }}
+                          transition={{
+                            duration: 0.4,
+                            repeat: Infinity,
+                            repeatType: 'reverse',
+                            ease: 'easeInOut',
+                          }}
+                          sx={{ position: 'absolute', backgroundColor: 'red', top: '55%', right: '55%' }} />
+                        <Box
+                          component={motion.div}
+                          initial={{ height: '1.5%', width: '30%', }}
+                          animate={{ width: '10%' }}
+                          transition={{
+                            duration: 0.5,
+                            repeat: Infinity,
+                            repeatType: 'reverse',
+                            ease: 'easeInOut',
+                          }}
+                          sx={{ position: 'absolute', backgroundColor: 'red', top: '40%', right: '100%' }} />
                         GO!
                         <ArrowRight
                           sx={{
@@ -260,12 +297,13 @@ export default function SelectMenu() {
                     </Box>
                     <Box
                       component={motion.div}
-                      initial={{ opacity: 0, x: '100%' }}
+                      initial={{ opacity: 0, x: '-100%' }}
                       animate={{ opacity: 1, x: '0%' }}
                       transition={{
-                        ease: 'easeInOut',
-                        duration: 0.2,
-                        delay: 0.1
+                        type: 'spring',
+                        stiffness: 500,
+                        damping: 50,
+                        delay: 0.15
                       }}
                       sx={{
                         position: 'absolute',
