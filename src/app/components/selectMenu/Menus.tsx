@@ -38,18 +38,40 @@ export default function SelectMenu() {
         ref={menuRef}
         tabIndex={0}
         onKeyDown={handleKeyDown}
-        sx={{ overflow: 'hidden', height: '100dvh', width: '100vw' }}>
+        sx={{ overflow: 'hidden', height: '100dvh', width: '100vw', backgroundColor: '#f2f2f2', boxShadow: '0 0 10rem rgba(0, 0, 0, 0.2) inset' }}>
         <Box
+          component={motion.div}
+          initial={{ opacity: 0.5, scale: 0.7 }}
+          animate={{ rotate: -360 }}
+          transition={{ repeat: Infinity, duration: 30, ease: 'linear' }}
           sx={{
             position: 'fixed',
+            top: '50%',
+            translate: '-50% -50%',
             width: '100vw',
             height: '100dvh',
-            backgroundImage: 'url(/assets/img/background_texture.webp)',
+            backgroundImage: 'url(/assets/img/pngwing.com1.png)',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
           }}>
         </Box>
+        <Box
+          component={motion.div}
+          initial={{ scale: 2, opacity: 0.3 }}
+          animate={{ rotate: -360 }}
+          transition={{ repeat: Infinity, duration: 60, ease: 'linear' }}
+          sx={{
+            position: 'fixed',
+            top: '50%',
+            translate: '-50% -50%',
+            width: '100vw',
+            height: '100dvh',
+            backgroundImage: 'url(/assets/img/pngwing.com1.png)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+          }} />
         <Box
           component={motion.div}
           initial={{
@@ -187,7 +209,7 @@ export default function SelectMenu() {
                           height: '100%',
                           transform: 'scaleX(-1)',
                           mixBlendMode: 'darken',
-                          backgroundImage: 'url(/assets/img/background_texture.webp)',
+                          backgroundImage: 'url(/assets/img/pngwing.com1.png)',
                           backgroundSize: 'cover',
                           backgroundPosition: 'center',
                           backgroundRepeat: 'no-repeat',
@@ -270,6 +292,6 @@ export default function SelectMenu() {
         }}>
         <CloseSharp color='info' sx={{ color: 'black', fontSize: { xs: '1.5rem', sm: '2rem', md: '2.5rem', lg: '3rem', xl: '3.5rem' } }} />
       </Box>
-    </LazyMotion>
+    </LazyMotion >
   )
 }
