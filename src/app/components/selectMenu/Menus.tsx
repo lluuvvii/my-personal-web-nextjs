@@ -92,17 +92,17 @@ export default function SelectMenu() {
           component={motion.div}
           initial={{
             scale: 0,
-            borderRight: '5rem solid black',
-            borderLeft: '5rem solid black',
-            borderTop: '5rem solid black',
-            borderBottom: '5rem solid black',
+            borderRight: '20dvh solid black',
+            borderLeft: '20dvh solid black',
+            borderTop: '20dvh solid black',
+            borderBottom: '20dvh solid black',
           }}
           animate={{
             scale: 1,
-            borderRight: '0rem solid black',
-            borderLeft: '0.25rem solid black',
-            borderTop: '0.25rem solid black',
-            borderBottom: '0.25rem solid black',
+            borderRight: '0dvh solid black',
+            borderLeft: '0.5dvh solid black',
+            borderTop: '0.5dvh solid black',
+            borderBottom: '0.5dvh solid black',
           }}
           transition={{
             type: 'spring',
@@ -120,8 +120,8 @@ export default function SelectMenu() {
             position: 'fixed',
             top: '50%',
             translate: '-50% -50%',
-            width: { xs: '20rem', sm: '30rem', md: '40rem', lg: '50rem', xl: '60rem' },
-            height: { xs: '20rem', sm: '30rem', md: '40rem', lg: '50rem', xl: '60rem' },
+            width: { xs: '50dvh', sm: '60dvh', md: '70dvh', lg: '80dvh', xl: '90dvh' },
+            height: { xs: '50dvh', sm: '60dvh', md: '70dvh', lg: '80dvh', xl: '90dvh' },
             color: 'transparent',
             borderRadius: '50%',
           }}
@@ -187,7 +187,7 @@ export default function SelectMenu() {
                 sx={{
                   cursor: 'pointer',
                   position: 'relative',
-                  transformOrigin: `0% 50%`,
+                  transformOrigin: `0% 0%`,
                   marginTop: index === 0 ? null : { xs: '-0.7rem', sm: '-1.1rem', md: '-1.5rem', lg: '-2rem', xl: '-2.8rem' },
                 }}>
                 {selectedIndex === index && completeAnimation1 ?
@@ -331,21 +331,24 @@ export default function SelectMenu() {
                   variant='h4'
                   sx={{
                     left: leftTextPosition,
-                    marginBottom: { xs: '0.95rem', sm: '1.25rem', md: '1.55rem', lg: '1.85rem', xl: '2.15rem' },
+                    opacity: 1 - differenceVal / 9,
+                    textShadow: selectedIndex === index && completeAnimation1 ? null : `0 0 ${differenceVal * 0.02}rem black`,
+                    mixBlendMode: selectedIndex === index && completeAnimation1 ? null : 'difference',
+                    marginBottom: { xs: '0.95rem', sm: '1.5rem', md: '1.75rem', lg: '2.5rem', xl: '3rem' },
                     lineHeight: 0.7,
                     position: 'relative',
                     fontSize: { xs: '1.7rem', sm: '2.4rem', md: '3.1rem', lg: '3.7rem', xl: '4.4rem' },
-                    transform: selectedIndex === index && completeAnimation1 ? 'scale(2, 1.5)' : 'scale(1.7, 1.3)',
+                    transform: selectedIndex === index && completeAnimation1 ? 'scale(1.9, 1.5)' : `scale(1.7, 1.3)`,
                     fontVariant: 'small-caps',
                     fontWeight: 'bold',
                     textAlign: 'start',
-                    marginLeft: '35%',
+                    marginLeft: selectedIndex === index && completeAnimation1 ? { xs: '37%', sm: '34%', md: '35%', lg: '34%' } : { xs: '35%', sm: '32%', md: '32%', lg: '30%', xl: '30%' },
                     letterSpacing: { xs: '-0.15rem', sm: '-0.2rem', md: '-0.25rem', lg: '-0.3rem', xl: '-0.35rem' },
                     color: selectedIndex === index && completeAnimation1 ? 'white' : 'black',
-                    transition: 'color 0.1s ease-in-out, left 0.1s ease-in-out, transform 0.15s ease-in-out, margin-left 0.1s ease-in-out',
+                    transition: 'color 0.15s ease-in-out, left 0.1s ease-in-out, transform 0.15s ease-in-out, margin-left 0.1s ease-in-out',
                     transitionDelay: '0.05s, 0s, 0s, 0s',
                     '&:hover': {
-                      marginLeft: selectedIndex === index && completeAnimation1 ? '35%' : '34%',
+                      marginLeft: selectedIndex === index && completeAnimation1 ? null : { xs: '34%', sm: '31%', md: '30%', lg: '29%' },
                     },
                   }}
                 >
