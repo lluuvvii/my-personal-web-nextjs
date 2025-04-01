@@ -473,7 +473,7 @@ export default function SelectMenu() {
         }}
         sx={{
           position: 'fixed',
-          top: '2dvh',
+          top: '2vw',
           right: '2vw',
           cursor: 'pointer'
         }}>
