@@ -425,7 +425,16 @@ export default function SelectMenu() {
                   sx={{
                     left: leftTextPosition,
                     opacity: 1 - differenceVal / 6,
-                    textShadow: selectedIndex === index && completeAnimation1 ? null : `0 0 ${differenceVal * 0.04}rem black`,
+                    textShadow: selectedIndex === index && completeAnimation1 ?
+                      null
+                      :
+                      {
+                        xs: `0 0 ${differenceVal * 0.02}rem black`,
+                        sm: `0 0 ${differenceVal * 0.025}rem black`,
+                        md: `0 0 ${differenceVal * 0.03}rem black`,
+                        lg: `0 0 ${differenceVal * 0.04}rem black`,
+                        xl: `0 0 ${differenceVal * 0.05}rem black`
+                      },
                     mixBlendMode: selectedIndex === index && completeAnimation1 ? null : 'difference',
                     marginBottom: { xs: '0.95rem', sm: '1.5rem', md: '1.75rem', lg: '2.5rem', xl: '3rem' },
                     lineHeight: 0.7,
