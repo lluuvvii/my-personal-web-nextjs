@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from 'react'
 import { domAnimation, LazyMotion, m, motion } from 'framer-motion'
 import { Box, Typography } from '@mui/material'
-import { ArrowRight, CloseSharp } from '@mui/icons-material'
+import { ArrowDropDown, ArrowDropUp, ArrowRight, CloseSharp, KeyboardArrowDown, KeyboardArrowUp } from '@mui/icons-material'
 import { useRouter } from 'next/navigation'
 
 const menuItems = ['Introduction', 'Projects', 'Galleries', 'Journey', 'Contact Me']
@@ -92,17 +92,17 @@ export default function SelectMenu() {
           component={motion.div}
           initial={{
             scale: 0,
-            borderRight: '20dvh solid black',
-            borderLeft: '20dvh solid black',
-            borderTop: '20dvh solid black',
-            borderBottom: '20dvh solid black',
+            borderRight: '5rem solid black',
+            borderLeft: '5rem solid black',
+            borderTop: '5rem solid black',
+            borderBottom: '5rem solid black',
           }}
           animate={{
             scale: 1,
-            borderRight: '0dvh solid black',
-            borderLeft: '0.5dvh solid black',
-            borderTop: '0.5dvh solid black',
-            borderBottom: '0.5dvh solid black',
+            borderRight: '0rem solid black',
+            borderLeft: '0.25rem solid black',
+            borderTop: '0.25rem solid black',
+            borderBottom: '0.25rem solid black',
           }}
           transition={{
             type: 'spring',
@@ -120,8 +120,8 @@ export default function SelectMenu() {
             position: 'fixed',
             top: '50%',
             translate: '-50% -50%',
-            width: { xs: '50dvh', sm: '60dvh', md: '70dvh', lg: '80dvh', xl: '90dvh' },
-            height: { xs: '50dvh', sm: '60dvh', md: '70dvh', lg: '80dvh', xl: '90dvh' },
+            width: { xs: '50dvh', sm: '70dvh', md: '70dvh', lg: '70dvh', xl: '50dvh' },
+            height: { xs: '50dvh', sm: '70dvh', md: '70dvh', lg: '70dvh', xl: '50dvh' },
             color: 'transparent',
             borderRadius: '50%',
           }}
@@ -234,6 +234,99 @@ export default function SelectMenu() {
                     </Box>
                     <Box
                       component={motion.div}
+                      initial={{ opacity: 0, y: '50%' }}
+                      animate={{ opacity: 0.7, y: '-20%' }}
+                      transition={{
+                        type: 'spring',
+                        stiffness: 500,
+                        damping: 50,
+                        opacity: {
+                          repeatType: 'reverse',
+                          repeat: Infinity,
+                          duration: 1,
+                          easing: 'linear'
+                        }
+                      }}
+                      sx={{
+                        position: 'absolute',
+                        bottom: '90%',
+                        translate: '0% 0%',
+                        left: '0vw',
+                        marginBottom: '0.5rem',
+                        paddingLeft: { xs: '0.5rem', sm: '0.7rem', md: '0.9rem', lg: '1.1rem', xl: '1.3rem' },
+                        paddingRight: { xs: '2.5rem', sm: '3.2rem', md: '3.9rem', lg: '4.8rem', xl: '5rem' },
+                        display: 'flex',
+                      }}>
+                      <Typography
+                        variant='body1'
+                        sx={{
+                          position: 'relative',
+                          marginBottom: { xs: '0.1rem', sm: '0.4rem', md: '0.7rem', lg: '1rem', xl: '1.3rem' },
+                          fontSize: { xs: '0.7rem', sm: '0.9rem', md: '1.1rem', lg: '1.3rem', xl: '1.5rem' },
+                          fontWeight: 'bold',
+                          fontStyle: 'italic',
+                          color: 'red',
+                        }}>
+                        <KeyboardArrowUp
+                          sx={{
+                            color: 'red',
+                            position: 'relative',
+                            top: '-5%',
+                            fontSize: { xs: '0.7rem', sm: '1rem', md: '1.3rem', lg: '1.5rem', xl: '2rem' },
+                            right: '5%',
+                            transform: 'scale(2)'
+                          }} />
+                      </Typography>
+                    </Box>
+                    <Box
+                      component={motion.div}
+                      initial={{ opacity: 0, y: '-50%' }}
+                      animate={{ opacity: 1, y: '20%' }}
+                      transition={{
+                        type: 'spring',
+                        stiffness: 500,
+                        damping: 50,
+                        delay: 0.1,
+                        opacity: {
+                          repeatType: 'reverse',
+                          repeat: Infinity,
+                          duration: 1,
+                          easing: 'linear'
+                        }
+                      }}
+                      sx={{
+                        position: 'absolute',
+                        top: '90%',
+                        translate: '0% 0%',
+                        left: '0vw',
+                        marginTop: '0.5rem',
+                        paddingLeft: { xs: '0.5rem', sm: '0.7rem', md: '0.9rem', lg: '1.1rem', xl: '1.3rem' },
+                        paddingRight: { xs: '2.5rem', sm: '3.2rem', md: '3.9rem', lg: '4.8rem', xl: '5rem' },
+                        display: 'flex',
+                      }}>
+                      <Typography
+                        variant='body1'
+                        sx={{
+                          position: 'relative',
+                          marginTop: { xs: '0.1rem', sm: '0.4rem', md: '0.7rem', lg: '1rem', xl: '1.3rem' },
+                          fontSize: { xs: '0.7rem', sm: '0.9rem', md: '1.1rem', lg: '1.3rem', xl: '1.5rem' },
+                          fontWeight: 'bold',
+                          fontStyle: 'italic',
+                          color: 'red',
+                        }}>
+                        <KeyboardArrowDown
+                          sx={{
+                            color: 'red',
+                            position: 'relative',
+                            top: '-5%',
+                            fontSize: { xs: '0.7rem', sm: '1rem', md: '1.3rem', lg: '1.5rem', xl: '2rem' },
+                            right: '5%',
+                            transform: 'scale(2)'
+                          }} />
+                      </Typography>
+                    </Box>
+                    <Box
+                      component={motion.div}
                       initial={{ opacity: 0, x: '-100%' }}
                       animate={{ opacity: 1, x: '0%' }}
                       transition={{
@@ -331,8 +424,8 @@ export default function SelectMenu() {
                   variant='h4'
                   sx={{
                     left: leftTextPosition,
-                    opacity: 1 - differenceVal / 9,
-                    textShadow: selectedIndex === index && completeAnimation1 ? null : `0 0 ${differenceVal * 0.02}rem black`,
+                    opacity: 1 - differenceVal / 6,
+                    textShadow: selectedIndex === index && completeAnimation1 ? null : `0 0 ${differenceVal * 0.04}rem black`,
                     mixBlendMode: selectedIndex === index && completeAnimation1 ? null : 'difference',
                     marginBottom: { xs: '0.95rem', sm: '1.5rem', md: '1.75rem', lg: '2.5rem', xl: '3rem' },
                     lineHeight: 0.7,
@@ -344,11 +437,12 @@ export default function SelectMenu() {
                     textAlign: 'start',
                     marginLeft: selectedIndex === index && completeAnimation1 ? { xs: '37%', sm: '34%', md: '35%', lg: '34%' } : { xs: '35%', sm: '32%', md: '32%', lg: '30%', xl: '30%' },
                     letterSpacing: { xs: '-0.15rem', sm: '-0.2rem', md: '-0.25rem', lg: '-0.3rem', xl: '-0.35rem' },
-                    color: selectedIndex === index && completeAnimation1 ? 'white' : 'black',
+                    color: selectedIndex === index && completeAnimation1 ? 'white' : 'rgba(0, 0, 0, 0.5)',
                     transition: 'color 0.15s ease-in-out, left 0.1s ease-in-out, transform 0.15s ease-in-out, margin-left 0.1s ease-in-out',
                     transitionDelay: '0.05s, 0s, 0s, 0s',
                     '&:hover': {
-                      marginLeft: selectedIndex === index && completeAnimation1 ? null : { xs: '34%', sm: '31%', md: '30%', lg: '29%' },
+                      color: selectedIndex === index && completeAnimation1 ? null : '#ef4444',
+                      textShadow: selectedIndex === index && completeAnimation1 ? null : `0 0 ${differenceVal * 0.04}rem #ef4444`
                     },
                   }}
                 >
