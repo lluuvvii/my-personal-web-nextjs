@@ -10,9 +10,9 @@ const menuItems = ['Introduction', 'Projects', 'Galleries', 'Journey', 'Contact 
 const smallItems = ['イントロダクション', 'プロジェクト', 'ギャラリー', 'ジャーニー', 'コンタクトミー']
 
 export default function SelectMenu() {
-  const theme = useTheme();
-  const isMdUp = useMediaQuery(theme.breakpoints.up('md'))
-  const isXsUp = useMediaQuery(theme.breakpoints.up('xs'))
+  const theme = useTheme()
+  // const isMdUp = useMediaQuery(theme.breakpoints.up('md'))
+  // const isXsUp = useMediaQuery(theme.breakpoints.up('xs'))
 
   const router = useRouter()
   const [completeAnimation1, setCompleteAnimation1] = useState(false)
@@ -42,7 +42,7 @@ export default function SelectMenu() {
         ref={menuRef}
         tabIndex={0}
         onKeyDown={handleKeyDown}
-        sx={{ overflow: 'hidden', height: '100dvh', width: '100vw', backgroundColor: 'white', boxShadow: '0 0 10rem rgba(0, 0, 0, 0.2) inset' }}>
+        sx={{ overflow: 'hidden', height: '100dvh', width: { xs: '100vw', md: '55vw' }, backgroundColor: 'white' }}>
         <Box
           component={motion.div}
           initial={{ opacity: 0, scale: 1.2 }}
@@ -199,7 +199,7 @@ export default function SelectMenu() {
                     <Box
                       component={motion.div}
                       initial={{ width: '0%' }}
-                      animate={{ width: isMdUp ? '55%' : '100%' }}
+                      animate={{ width: '100%' }}
                       transition={{ duration: 0.2, ease: 'easeInOut', delay: 0.05 }}
                       sx={{
                         position: 'absolute',
@@ -343,7 +343,7 @@ export default function SelectMenu() {
                         position: 'absolute',
                         bottom: '90%',
                         translate: '0% 0%',
-                        right: { xs: '0%', md: '45%' },
+                        right: '0%',
                         marginBottom: '0.5rem',
                         paddingRight: { xs: '0.5rem', sm: '0.7rem', md: '0.9rem', lg: '1.1rem', xl: '1.3rem' },
                         paddingLeft: { xs: '2.5rem', sm: '3.2rem', md: '3.9rem', lg: '4.8rem', xl: '5rem' },
@@ -406,7 +406,7 @@ export default function SelectMenu() {
                         position: 'absolute',
                         top: '100%',
                         translate: '0% 0%',
-                        right: { xs: '0%', md: '45%' },
+                        right: '0%',
                         marginTop: '0.5rem',
                         paddingRight: { xs: '0.5rem', sm: '0.7rem', md: '0.9rem', lg: '1.1rem', xl: '1.3rem' },
                         paddingLeft: { xs: '2.5rem', sm: '3.2rem', md: '3.9rem', lg: '4.8rem', xl: '5rem' },
@@ -483,6 +483,6 @@ export default function SelectMenu() {
         }}>
         <CloseSharp color='info' sx={{ color: 'black', fontSize: { xs: '1.5rem', sm: '2rem', md: '2.5rem', lg: '3rem', xl: '3.5rem' } }} />
       </Box>
-    </LazyMotion >
+    </LazyMotion>
   )
 }
