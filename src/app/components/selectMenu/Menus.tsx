@@ -199,13 +199,13 @@ export default function SelectMenu() {
                     <Box
                       component={motion.div}
                       initial={{ width: '0%' }}
-                      animate={{ width: isMdUp ? '60%' : '100%' }}
+                      animate={{ width: isMdUp ? '55%' : '100%' }}
                       transition={{ duration: 0.2, ease: 'easeInOut', delay: 0.05 }}
                       sx={{
                         position: 'absolute',
                         top: '-45%',
                         height: '190%',
-                        background: 'linear-gradient(90deg, #ef4444, #ef4444, #ef4444, transparent)',
+                        backgroundColor: '#ef4444',
                       }}
                     >
                       <Box
@@ -343,7 +343,7 @@ export default function SelectMenu() {
                         position: 'absolute',
                         bottom: '90%',
                         translate: '0% 0%',
-                        right: { xs: '0%', md: '50%' },
+                        right: { xs: '0%', md: '45%' },
                         marginBottom: '0.5rem',
                         paddingRight: { xs: '0.5rem', sm: '0.7rem', md: '0.9rem', lg: '1.1rem', xl: '1.3rem' },
                         paddingLeft: { xs: '2.5rem', sm: '3.2rem', md: '3.9rem', lg: '4.8rem', xl: '5rem' },
@@ -406,7 +406,7 @@ export default function SelectMenu() {
                         position: 'absolute',
                         top: '100%',
                         translate: '0% 0%',
-                        right: { xs: '0%', md: '50%' },
+                        right: { xs: '0%', md: '45%' },
                         marginTop: '0.5rem',
                         paddingRight: { xs: '0.5rem', sm: '0.7rem', md: '0.9rem', lg: '1.1rem', xl: '1.3rem' },
                         paddingLeft: { xs: '2.5rem', sm: '3.2rem', md: '3.9rem', lg: '4.8rem', xl: '5rem' },
