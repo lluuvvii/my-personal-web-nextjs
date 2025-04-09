@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react'
 import { domAnimation, LazyMotion, m, motion } from 'framer-motion'
-import { Box, Typography, useMediaQuery, useTheme } from '@mui/material'
+import { Box, Typography, useTheme } from '@mui/material'
 import { ArrowRight, CloseSharp, KeyboardArrowDown, KeyboardArrowUp } from '@mui/icons-material'
 import { useRouter } from 'next/navigation'
 
@@ -10,11 +10,11 @@ const menuItems = ['Introduction', 'Projects', 'Galleries', 'Journey', 'Contact 
 const smallItems = ['イントロダクション', 'プロジェクト', 'ギャラリー', 'ジャーニー', 'コンタクトミー']
 
 export default function SelectMenu() {
-  const theme = useTheme()
+  // const theme = useTheme()
   // const isMdUp = useMediaQuery(theme.breakpoints.up('md'))
   // const isXsUp = useMediaQuery(theme.breakpoints.up('xs'))
 
-  const router = useRouter()
+  // const router = useRouter()
   const [completeAnimation1, setCompleteAnimation1] = useState(false)
   const [selectedIndex, setSelectedIndex] = useState(0)
   const menuRef = useRef<HTMLUListElement>(null)
@@ -42,7 +42,7 @@ export default function SelectMenu() {
         ref={menuRef}
         tabIndex={0}
         onKeyDown={handleKeyDown}
-        sx={{ overflow: 'hidden', height: '100dvh', width: { xs: '100vw', md: '55vw' }, backgroundColor: 'white' }}>
+        sx={{ overflow: 'hidden', height: '100dvh', width: { xs: '100vw', md: '55vw' }, backgroundColor: 'white', outline: 'none' }}>
         <Box
           component={motion.div}
           initial={{ opacity: 0, scale: 1.2 }}
