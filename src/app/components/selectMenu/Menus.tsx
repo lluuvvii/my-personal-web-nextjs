@@ -2,19 +2,13 @@
 
 import { useState, useEffect, useRef } from 'react'
 import { domAnimation, LazyMotion, m, motion } from 'framer-motion'
-import { Box, Typography, useTheme } from '@mui/material'
+import { Box, Typography } from '@mui/material'
 import { ArrowRight, CloseSharp, KeyboardArrowDown, KeyboardArrowUp } from '@mui/icons-material'
-import { useRouter } from 'next/navigation'
 
 const menuItems = ['Introduction', 'Projects', 'Galleries', 'Journey', 'Contact Me']
 const smallItems = ['イントロダクション', 'プロジェクト', 'ギャラリー', 'ジャーニー', 'コンタクトミー']
 
 export default function SelectMenu() {
-  // const theme = useTheme()
-  // const isMdUp = useMediaQuery(theme.breakpoints.up('md'))
-  // const isXsUp = useMediaQuery(theme.breakpoints.up('xs'))
-
-  // const router = useRouter()
   const [completeAnimation1, setCompleteAnimation1] = useState(false)
   const [selectedIndex, setSelectedIndex] = useState(0)
   const menuRef = useRef<HTMLUListElement>(null)
