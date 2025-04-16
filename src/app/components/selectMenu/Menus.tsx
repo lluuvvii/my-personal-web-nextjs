@@ -478,7 +478,7 @@ export default function SelectMenu() {
                 fontWeight: 'bold',
                 textAlign: 'center',
                 height: '80%',
-                borderLeft: '0.5rem solid #ef4444',
+                borderLeft: '0.2rem solid #ef4444',
               }}>
               メニュー
             </Typography>
