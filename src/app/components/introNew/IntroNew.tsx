@@ -1,10 +1,15 @@
+'use client'
+
 import { Box, Button, Typography } from '@mui/material'
 import { motion } from 'framer-motion'
 import React from 'react'
 
 function IntroNew() {
   return (
-    <main style={{ backgroundColor: "#000", color: "#fff", minHeight: "100vh" }}>
+    <Box sx={{
+      backgroundColor: "white", height: "100vh", width: '100vw', position: { xs: 'absolute', md: 'relative' },
+      zIndex: { xs: -1 }
+    }}>
       <Box
         component={motion.div}
         initial={{ opacity: 0, y: 30 }}
@@ -43,7 +48,7 @@ function IntroNew() {
           Lihat Portofolio
         </Button>
       </Box>
-    </main>
+    </Box>
   )
 }
 
