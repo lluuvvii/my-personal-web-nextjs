@@ -13,6 +13,8 @@ export default function SelectMenu() {
   const [selectedIndex, setSelectedIndex] = useState(0)
   const menuRef = useRef<HTMLUListElement>(null)
 
+  const [onClose, setOnClose] = useState(false)
+
   useEffect(() => {
     menuRef.current?.focus()
   }, [])
@@ -41,7 +43,8 @@ export default function SelectMenu() {
           height: '100dvh',
           width: { xs: '100vw', md: '55vw' },
           backgroundColor: 'white',
-          outline: 'none'
+          outline: 'none',
+          // transition: 'width 0.4s ease'
         }}>
         <Box
           component={motion.div}
@@ -60,7 +63,7 @@ export default function SelectMenu() {
             position: 'fixed',
             top: '50%',
             translate: '-50% -50%',
-            width: '55vw',
+            width: onClose ? '0vw' : '55vw',
             height: '100dvh',
             backgroundImage: 'url(/assets/img/pngwing.com1.png)',
             backgroundSize: 'cover',
@@ -85,7 +88,7 @@ export default function SelectMenu() {
             position: 'fixed',
             top: '50%',
             translate: '-50% -50%',
-            width: '55vw',
+            width: onClose ? '0vw' : '55vw',
             height: '100dvh',
             backgroundImage: 'url(/assets/img/pngwing.com1.png)',
             backgroundSize: 'cover',
@@ -102,11 +105,11 @@ export default function SelectMenu() {
             borderBottom: '5rem solid black',
           }}
           animate={{
-            scale: 1,
-            borderRight: '0rem solid black',
-            borderLeft: '0.25rem solid black',
-            borderTop: '0.25rem solid black',
-            borderBottom: '0.25rem solid black',
+            scale: onClose ? 0 : 1,
+            borderRight: onClose ? '5rem solid black' : '0rem solid black',
+            borderLeft: onClose ? '5rem solid black' : '0.25rem solid black',
+            borderTop: onClose ? '5rem solid black' : '0.25rem solid black',
+            borderBottom: onClose ? '5rem solid black' : '0.25rem solid black',
           }}
           transition={{
             type: 'spring',
@@ -469,7 +472,8 @@ export default function SelectMenu() {
       <Box
         component={motion.div}
         initial={{ opacity: 0, x: '100%', rotate: '180deg' }}
-        animate={{ opacity: 1, x: '0%', rotate: '0deg' }}
+        animate={{ opacity: onClose ? 0 : 1, x: onClose ? '100%' : '0%', rotate: onClose ? '180deg' : '0deg' }}
+        onClick={() => setOnClose(true)}
         transition={{
           type: 'spring',
           stiffness: 500,
