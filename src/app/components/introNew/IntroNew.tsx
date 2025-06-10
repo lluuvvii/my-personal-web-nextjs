@@ -24,10 +24,10 @@ function IntroNew() {
         px={2}
       >
         <Typography variant='h2' fontWeight='bold' gutterBottom>
-          Halo, Saya <span style={{ color: '#888' }}>Nama Anda</span>
+          Halo, I'm <span style={{ color: '#888' }}>Your Name</span>
         </Typography>
         <Typography variant='h6' maxWidth='600px' gutterBottom>
-          Seorang web developer yang berfokus pada pembuatan pengalaman digital yang bersih, minimalis, dan responsif.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt placeat, sint fuga sequi quas eius dicta ut necessitatibus eum doloribus voluptatibus similique tempore sed quae explicabo in tenetur adipisci delectus.
         </Typography>
         <Button
           variant='outlined'

@@ -5,20 +5,22 @@ import React from 'react'
 
 const page = () => {
   return (
-    <Box
-      sx={{
-        width: '100vw',
-        overflow: 'hidden'
-      }}>
-      <Box
-        sx={{
-          display: 'flex',
-          width: '155vw'
-        }}>
-        <SelectMenu />
-        <IntroNew />
-      </Box>
-    </Box>
+    // <Box
+    //   sx={{
+    //     width: '100vw',
+    //     overflow: 'hidden'
+    //   }}>
+    //   <Box
+    //     sx={{
+    //       display: 'flex',
+    //       width: '155vw'
+    //     }}>
+    <>
+      {/* <SelectMenu /> */}
+      <IntroNew />
+    </>
+    //   </Box>
+    // </Box>
   )
 }
 

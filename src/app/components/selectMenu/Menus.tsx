@@ -41,10 +41,10 @@ export default function SelectMenu() {
         sx={{
           overflow: 'hidden',
           height: '100dvh',
-          width: { xs: '100vw', md: '55vw' },
+          width: { xs: onClose ? '0vw' : '100vw', md: onClose ? '0vw' : '55vw' },
           backgroundColor: 'white',
           outline: 'none',
-          // transition: 'width 0.4s ease'
+          transition: 'width 0.4s ease'
         }}>
         <Box
           component={motion.div}
@@ -471,8 +471,8 @@ export default function SelectMenu() {
       </Box>
       <Box
         component={motion.div}
-        initial={{ opacity: 0, x: '100%', rotate: '180deg' }}
-        animate={{ opacity: onClose ? 0 : 1, x: onClose ? '100%' : '0%', rotate: onClose ? '180deg' : '0deg' }}
+        initial={{ opacity: 0, x: '100%', rotate: '180deg', scale: 0 }}
+        animate={{ opacity: 1, x: '0%', rotate: onClose ? '180deg' : '0deg', scale: onClose ? 0 : 1 }}
         onClick={() => setOnClose(true)}
         transition={{
           type: 'spring',
@@ -483,7 +483,8 @@ export default function SelectMenu() {
           position: 'fixed',
           top: '2vw',
           right: { xs: '2vw', md: '47vw' },
-          cursor: 'pointer'
+          cursor: 'pointer',
+          transition: 'right 0.4s ease'
         }}>
         <CloseSharp color='info' sx={{ color: 'black', fontSize: { xs: '1.5rem', sm: '2rem', md: '2.5rem', lg: '3rem', xl: '3.5rem' } }} />
       </Box>
