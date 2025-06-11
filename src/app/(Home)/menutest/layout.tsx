@@ -4,7 +4,7 @@ import SelectMenu from '@/app/components/selectMenu/Menus'
 import { Box } from '@mui/material'
 import React, { useState } from 'react'
 
-const layout = ({ children }: Readonly<{ children: React.ReactNode }>) => {
+const Layout = ({ children }: Readonly<{ children: React.ReactNode }>) => {
   const [onClose, setOnClose] = useState(false)
   return (
     <Box
@@ -24,4 +24,4 @@ const layout = ({ children }: Readonly<{ children: React.ReactNode }>) => {
   )
 }
 
-export default layout
+export default Layout
