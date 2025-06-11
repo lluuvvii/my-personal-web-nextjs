@@ -1,8 +1,11 @@
+'use client'
+
 import SelectMenu from '@/app/components/selectMenu/Menus'
 import { Box } from '@mui/material'
-import React from 'react'
+import React, { useState } from 'react'
 
 const layout = ({ children }: Readonly<{ children: React.ReactNode }>) => {
+  const [onClose, setOnClose] = useState(false)
   return (
     <Box
       sx={{
@@ -14,7 +17,7 @@ const layout = ({ children }: Readonly<{ children: React.ReactNode }>) => {
           display: 'flex',
           width: '155vw'
         }}>
-        <SelectMenu />
+        <SelectMenu onClose={onClose} setOnClose={setOnClose} />
         {children}
       </Box>
     </Box>

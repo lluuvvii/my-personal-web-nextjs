@@ -8,12 +8,10 @@ import { ArrowRight, CloseSharp, KeyboardArrowDown, KeyboardArrowUp } from '@mui
 const menuItems = ['Introduction', 'Projects', 'Galleries', 'Journey', 'Contact Me']
 const smallItems = ['イントロダクション', 'プロジェクト', 'ギャラリー', 'ジャーニー', 'コンタクトミー']
 
-export default function SelectMenu() {
+export default function SelectMenu({ onClose, setOnClose }: { onClose: boolean, setOnClose: (val: boolean) => void }) {
   const [completeAnimation1, setCompleteAnimation1] = useState(false)
   const [selectedIndex, setSelectedIndex] = useState(0)
   const menuRef = useRef<HTMLUListElement>(null)
-
-  const [onClose, setOnClose] = useState(false)
 
   useEffect(() => {
     menuRef.current?.focus()
@@ -54,7 +52,13 @@ export default function SelectMenu() {
                 component={motion.div}
                 initial={{ opacity: 0, scale: 1.2 }}
                 animate={{ rotate: -360, opacity: 0.5 }}
-                exit={{ opacity: 0, scale: 0 }}
+                exit={{
+                  opacity: 0,
+                  transition: {
+                    duration: 0.5,
+                    ease: 'easeOut',
+                  }
+                }}
                 transition={{
                   opacity: {
                     duration: 4,
@@ -80,7 +84,13 @@ export default function SelectMenu() {
                 component={motion.div}
                 initial={{ scale: 2, opacity: 0 }}
                 animate={{ rotate: -360, opacity: 0.7 }}
-                exit={{ scale: 0, opacity: 0 }}
+                exit={{
+                  opacity: 0,
+                  transition: {
+                    duration: 0.5,
+                    ease: 'easeOut',
+                  }
+                }}
                 transition={{
                   opacity: {
                     duration: 7,
