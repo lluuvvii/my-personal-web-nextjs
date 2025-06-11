@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from 'react'
 import { AnimatePresence, domAnimation, LazyMotion, m, motion } from 'framer-motion'
 import { Box, Typography } from '@mui/material'
-import { ArrowRight, CloseSharp, KeyboardArrowDown, KeyboardArrowUp } from '@mui/icons-material'
+import { ArrowRight, CloseSharp, KeyboardArrowDown, KeyboardArrowUp, Menu } from '@mui/icons-material'
 
 const menuItems = ['Introduction', 'Projects', 'Galleries', 'Journey', 'Contact Me']
 const smallItems = ['イントロダクション', 'プロジェクト', 'ギャラリー', 'ジャーニー', 'コンタクトミー']
@@ -502,8 +502,8 @@ export default function SelectMenu({ onClose, setOnClose }: { onClose: boolean, 
       </Box>
       <Box
         component={motion.div}
-        initial={{ opacity: 0, x: '100%', rotate: '180deg', scale: 0 }}
-        animate={{ opacity: 1, x: '0%', rotate: onClose ? '180deg' : '0deg', scale: 1 }}
+        initial={{ opacity: 0, x: '100%' }}
+        animate={{ opacity: 1, x: '0%' }}
         onClick={() => {
           setOnClose(!onClose)
           setCompleteAnimation1(false)
@@ -515,13 +515,42 @@ export default function SelectMenu({ onClose, setOnClose }: { onClose: boolean, 
         }}
         sx={{
           position: 'fixed',
-          top: '2vw',
-          right: { xs: '2vw', md: '47vw' },
+          top: { xs: '-0.5vw', md: '0vw' },
+          right: { xs: onClose ? '100vw' : '0vw', md: onClose ? '100vw' : '45vw' },
+          translate: `${onClose ? '100%' : '0%'} 0%`,
           cursor: 'pointer',
           transition: 'right 0.4s ease'
         }}>
-        <CloseSharp color='info' sx={{ color: 'black', fontSize: { xs: '1.5rem', sm: '2rem', md: '2.5rem', lg: '3rem', xl: '3.5rem' } }} />
+        {onClose ?
+          <Menu
+            sx={{
+              backgroundColor: '#ef4444',
+              color: 'white',
+              fontSize: {
+                xs: '1.5rem',
+                sm: '2rem',
+                md: '2.5rem',
+                lg: '3rem',
+                xl: '3.5rem',
+              },
+            }}
+          />
+          :
+          <CloseSharp
+            sx={{
+              backgroundColor: '#ef4444',
+              color: 'white',
+              fontSize: {
+                xs: '1.5rem',
+                sm: '2rem',
+                md: '2.5rem',
+                lg: '3rem',
+                xl: '3.5rem',
+              },
+            }}
+          />
+        }
       </Box>
-    </LazyMotion >
+    </LazyMotion>
   )
 }
