@@ -519,7 +519,7 @@ export default function SelectMenu({ onClose, setOnClose }: { onClose: boolean, 
           right: { xs: onClose ? '100vw' : '0vw', md: onClose ? '100vw' : '45vw' },
           translate: `${onClose ? '100%' : '0%'} 0%`,
           cursor: 'pointer',
-          transition: 'right 0.4s ease'
+          transition: 'right 0.4s ease, translate 0.2s ease'
         }}>
         {onClose ?
           <Menu
