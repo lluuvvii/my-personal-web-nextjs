@@ -133,6 +133,18 @@ export default function SelectMenu({ onClose, setOnClose }: { onClose: boolean, 
                   borderLeft: '5rem solid black',
                   borderTop: '5rem solid black',
                   borderBottom: '5rem solid black',
+                  transition: {
+                    type: 'spring',
+                    stiffness: 500,
+                    damping: 50,
+                    delay: 0,
+                    scale: {
+                      type: 'spring',
+                      stiffness: 500,
+                      damping: 70,
+                      delay: 0.2
+                    },
+                  }
                 }}
                 transition={{
                   type: 'spring',
