@@ -109,24 +109,24 @@ export default function SelectMenu({ onClose, setOnClose }: { onClose: boolean, 
                 component={motion.div}
                 initial={{
                   scale: 0,
-                  borderRight: '5rem solid black',
-                  borderLeft: '5rem solid black',
-                  borderTop: '5rem solid black',
-                  borderBottom: '5rem solid black',
+                  borderRight: '10rem solid black',
+                  borderLeft: '10rem solid black',
+                  borderTop: '10rem solid black',
+                  borderBottom: '10rem solid black',
                 }}
                 animate={{
                   scale: onClose ? 0 : 1,
-                  borderRight: onClose ? '5rem solid black' : '0rem solid black',
-                  borderLeft: onClose ? '5rem solid black' : '0.25rem solid black',
-                  borderTop: onClose ? '5rem solid black' : '0.25rem solid black',
-                  borderBottom: onClose ? '5rem solid black' : '0.25rem solid black',
+                  borderRight: onClose ? '10rem solid black' : '0rem solid black',
+                  borderLeft: onClose ? '10rem solid black' : '0.25rem solid black',
+                  borderTop: onClose ? '10rem solid black' : '0.25rem solid black',
+                  borderBottom: onClose ? '10rem solid black' : '0.25rem solid black',
                 }}
                 exit={{
                   scale: 0,
-                  borderRight: '5rem solid black',
-                  borderLeft: '5rem solid black',
-                  borderTop: '5rem solid black',
-                  borderBottom: '5rem solid black',
+                  borderRight: '10rem solid black',
+                  borderLeft: '10rem solid black',
+                  borderTop: '10rem solid black',
+                  borderBottom: '10rem solid black',
                   transition: {
                     type: 'spring',
                     stiffness: 500,
@@ -522,7 +522,7 @@ export default function SelectMenu({ onClose, setOnClose }: { onClose: boolean, 
         sx={{
           position: 'fixed',
           top: { xs: '-0.5vw', md: '0vw' },
-          right: { xs: onClose ? '100vw' : '0vw', md: onClose ? '100vw' : '40dvw' },
+          right: { xs: onClose ? '100vw' : '0vw', md: onClose ? '100vw' : '41.9dvw' },
           translate: `${onClose ? '100%' : '0%'} 0%`,
           cursor: 'pointer',
           transition: 'right 0.4s ease, translate 0.2s ease'
