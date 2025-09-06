@@ -109,24 +109,24 @@ export default function SelectMenu({ onClose, setOnClose }: { onClose: boolean, 
                 component={motion.div}
                 initial={{
                   scale: 0,
-                  borderRight: '10rem solid black',
-                  borderLeft: '10rem solid black',
-                  borderTop: '10rem solid black',
-                  borderBottom: '10rem solid black',
+                  borderRight: '7rem solid black',
+                  borderLeft: '7rem solid black',
+                  borderTop: '7rem solid black',
+                  borderBottom: '7rem solid black',
                 }}
                 animate={{
                   scale: onClose ? 0 : 1,
-                  borderRight: onClose ? '10rem solid black' : '0rem solid black',
-                  borderLeft: onClose ? '10rem solid black' : '0.25rem solid black',
-                  borderTop: onClose ? '10rem solid black' : '0.25rem solid black',
-                  borderBottom: onClose ? '10rem solid black' : '0.25rem solid black',
+                  borderRight: onClose ? '7rem solid black' : '0rem solid black',
+                  borderLeft: onClose ? '7rem solid black' : '0.25rem solid black',
+                  borderTop: onClose ? '7rem solid black' : '0.25rem solid black',
+                  borderBottom: onClose ? '7rem solid black' : '0.25rem solid black',
                 }}
                 exit={{
                   scale: 0,
-                  borderRight: '10rem solid black',
-                  borderLeft: '10rem solid black',
-                  borderTop: '10rem solid black',
-                  borderBottom: '10rem solid black',
+                  borderRight: '7rem solid black',
+                  borderLeft: '7rem solid black',
+                  borderTop: '7rem solid black',
+                  borderBottom: '7rem solid black',
                   transition: {
                     type: 'spring',
                     stiffness: 500,
