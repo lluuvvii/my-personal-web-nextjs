@@ -31,10 +31,10 @@ const RiveDemo = () => {
 
   return (
     <Box>
-      <Box sx={{ p: '10px', width: '100%', height: { xs: '200px', sm: '420px', md: '640px', lg: '860px', xl: '1080px' } }}>
+      <Box sx={{ width: '100%', aspectRatio: "16/9"/* height: { xs: '200px', sm: '420px', md: '640px', lg: '860px', xl: '1080px' } */ }}>
         <DumbWays />
       </Box>
-      <Box sx={{ p: '10px', width: '100%', height: { xs: '200px', sm: '420px', md: '640px', lg: '860px', xl: '1080px' } }}>
+      <Box sx={{ width: '100%', aspectRatio: "16/9"/* height: { xs: '200px', sm: '420px', md: '640px', lg: '860px', xl: '1080px' } */ }}>
         <IsoToy />
       </Box>
     </Box>
